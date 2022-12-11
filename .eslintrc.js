@@ -44,5 +44,9 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'no-param-reassign': [
+      'error',
+      { props: true, ignorePropertyModificationsFor: ['state'] },
+    ],
   },
 };
