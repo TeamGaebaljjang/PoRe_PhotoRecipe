@@ -3,7 +3,7 @@ import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
 
-:root{
+:root {
     --black : #1C1C1C;
     --light-red : #FF5757;
     --deep-red : #FF1818;
