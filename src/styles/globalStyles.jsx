@@ -3,17 +3,40 @@ import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
 
-:root {
-    --black : #1C1C1C;
-    --light-red : #FF5757;
-    --deep-red : #FF1818;
-    --light-gray : #E8E8E8;
-    --gray : #CDCDCD;
-    --deep-gray: #B4B4B4;
-    --super-gray : #767676;
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
 ${reset}
+
+:root {
+    --font: 'Pretendard';
+    --black: #1C1C1C;
+    --light-red: #FF5757;
+    --deep-red: #FF1818;
+    --light-gray: #E8E8E8;
+    --gray: #CDCDCD;
+    --deep-gray: #B4B4B4;
+    --super-gray: #767676;
+}
+
+html {
+    max-width: 390px;
+    height: 100vh;
+    background-color: var(--light-gray);
+    margin: 0 auto;
+}
+
+body {
+    height: 100%;
+    color: var(--black);
+    line-height: 1.4;
+    background-color: white;
+    font-family: var(--font);
+}
 
 .ir {
     position: absolute;
