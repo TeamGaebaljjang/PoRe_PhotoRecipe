@@ -1,7 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-//여기에 reset과 전역 스타일을 넣으면 될 것 같습니당 ~.~
+
+${reset}
+
+.ir {
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 `;
 
 export default GlobalStyle;
