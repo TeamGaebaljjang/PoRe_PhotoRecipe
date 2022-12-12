@@ -4,28 +4,38 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
 
 @font-face {
-    font-family: 'Pretendard-Regular';
+    font-family: 'Pretendard';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 ${reset}
+
 *{
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 input, button {
     background-color: transparent;
     border: none;
     outline: none;
+    font-family: var(--font);
 }
+
+label {
+  color: var(--super-gray);
+}
+
 ol, ul, li {
     list-style: none;
 }
+
 img{
     display: block;
 }
@@ -49,11 +59,13 @@ html {
 }
 
 body {
+    position: relative;
     height: 100%;
     color: var(--black);
     line-height: 1.4;
     background-color: white;
     font-family: var(--font);
+    box-shadow: 0 0 10px var(--deep-gray);
 }
 
 .ir {
