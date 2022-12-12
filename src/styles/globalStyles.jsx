@@ -26,6 +26,7 @@ input, button {
     border: none;
     outline: none;
     font-family: var(--font);
+    cursor: pointer;
 }
 
 label {
