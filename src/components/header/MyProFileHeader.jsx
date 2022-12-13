@@ -7,20 +7,19 @@ const NavBar = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 58px;
-  //background-color: orange;
+  height: 48px;
 `;
 
 const Icon = styled.button`
   width: 24px;
   height: 24px;
   margin-right: 24px;
-  //margin-bottom: 12px;
+  // margin-bottom: 12px;
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
 `;
 
-const NavBarMy = () => {
+const MyProFileHeader = () => {
   return (
     <NavBar>
       <Icon type="button" src={Search} alt="search" />
@@ -30,4 +29,4 @@ const NavBarMy = () => {
   );
 };
 
-export default NavBarMy;
+export default MyProFileHeader;

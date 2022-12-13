@@ -13,19 +13,18 @@ const PhotoZone = styled.div`
     font-size: 16px;
     font-weight: 500;
   }
-`;
-
-const Photo = styled.div`
-  width: 80px;
-  height: 80px;
-  background-color: var(--gray);
-  border-radius: 50%;
+  div {
+    width: 80px;
+    height: 80px;
+    background-color: var(--gray);
+    border-radius: 50%;
+  }
 `;
 
 const OnePhotoZone = () => {
   return (
     <PhotoZone>
-      <Photo />
+      <div />
       <p>성수</p>
     </PhotoZone>
   );
@@ -33,7 +32,8 @@ const OnePhotoZone = () => {
 
 const List = styled.div`
   display: flex;
-  margin: 52px 20px 0px;
+  margin-top: 52px;
+  margin-left: 20px;
   gap: 20px;
   height: 128px;
   overflow: auto;
@@ -46,7 +46,7 @@ const List = styled.div`
 const PhotoZoneList = () => {
   return (
     <List>
-      <OnePhotoZone style={{ display: 'inline' }} />
+      <OnePhotoZone />
       <OnePhotoZone />
       <OnePhotoZone />
       <OnePhotoZone />

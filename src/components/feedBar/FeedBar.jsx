@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+// import { useState } from 'react';
 import AlbumOn from '../../assets/icons/icon-post-album-on.svg';
-import AlbumOff from '../../assets/icons/icon-post-album-off.svg';
-import ListOn from '../../assets/icons/icon-post-list-on.svg';
+// import AlbumOff from '../../assets/icons/icon-post-album-off.svg';
+// import ListOn from '../../assets/icons/icon-post-list-on.svg';
 import ListOff from '../../assets/icons/icon-post-list-off.svg';
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 32px 0px 24px;
+  padding: 30px 0px 24px;
 
   div {
     display: flex;
@@ -27,7 +27,7 @@ const WhoseFeed = styled.p`
   font-weight: 500;
 `;
 
-const [btn, setBtn] = useState(true);
+// const [btn, setBtn] = useState(true);
 
 const FeedBar = () => {
   return (
@@ -35,22 +35,22 @@ const FeedBar = () => {
       <WhoseFeed>내 피드</WhoseFeed>
       <div>
         <button
-          onClick={() => {
-            setBtn(!btn);
-          }}
+          //   onClick={() => {
+          //     setBtn(!btn);
+          //   }}
           style={{ marginRight: '12px' }}
           type="button"
         >
-          <img src={btn ? AlbumOn : AlbumOff} alt="앨범형으로 보기 아이콘" />
+          <img src={AlbumOn} alt="앨범형으로 보기 아이콘" />
         </button>
         <button
-          onClick={() => {
-            setBtn(!btn);
-          }}
+          //   onClick={() => {
+          //     setBtn(!btn);
+          //   }}
           style={{ marginRight: '32px' }}
           type="button"
         >
-          <img src={btn ? ListOff : ListOn} alt="리스트형으로 보기 아이콘" />
+          <img src={ListOff} alt="리스트형으로 보기 아이콘" />
         </button>
       </div>
     </Container>

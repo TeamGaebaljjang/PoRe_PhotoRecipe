@@ -3,7 +3,7 @@ import ProFileBasic from '../../assets/icons/basic-profile-rec.svg';
 import PhotoUpload from '../../assets/icons/icon-photo-upload-black.svg';
 
 const Img = styled.img`
-  margin-top: 12px;
+  margin-top: 22px;
   margin-left: 38px;
   background-image: url(${(props) => props.src});
   background-color: var(--gray);
@@ -49,7 +49,7 @@ const AddPhotoZone = styled.button`
   border-radius: 80px;
 `;
 
-const ProFile = () => {
+const ProFileInfo = () => {
   return (
     <div>
       <Img src={ProFileBasic} />
@@ -70,4 +70,4 @@ const ProFile = () => {
   );
 };
 
-export default ProFile;
+export default ProFileInfo;

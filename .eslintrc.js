@@ -54,5 +54,6 @@ module.exports = {
         labelAttributes: ['htmlFor'],
       },
     ],
+    'react/prop-types': 'off',
   },
 };
