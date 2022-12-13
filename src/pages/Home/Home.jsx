@@ -2,6 +2,7 @@ import { useState } from 'react';
 import thumbnail from '../../assets/img/main-thumbnail.jpeg';
 import search from '../../assets/icons/icon-search-white.svg';
 import * as styled from './HomeStyle';
+import NavBar from '../../components/navBar/NavBar';
 
 const Home = () => {
   const place = ['서울', '경기', '강원', '제주', '부산'];
@@ -47,6 +48,7 @@ const Home = () => {
         <styled.Feed> </styled.Feed>
         <styled.Feed> </styled.Feed>
       </styled.FeedList>
+      <NavBar />
     </styled.Wrap>
   );
 };
