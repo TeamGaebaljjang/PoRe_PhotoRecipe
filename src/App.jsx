@@ -7,6 +7,10 @@
 // import User from './components/user/User';
 // import Following from './pages/Profile/Follow/Following';
 // import Follower from './pages/Profile/Follow/Follower';
+// import NavBarMy from './components/navBar/NavBarMy';
+// import ProFile from './components/proFile/ProFile';
+// import PhotoZoneList from './components/photoZoneList/PhotoZoneList';
+// import FeedBar from './components/feedBar/FeedBar';
 
 const App = () => {
   return <div>App</div>;
