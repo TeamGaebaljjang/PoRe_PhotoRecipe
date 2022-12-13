@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 import search from '../../assets/icons/icon-search.svg';
 import Post from '../../components/card/Post';
+import NavBar from '../../components/navBar/NavBar';
 
 const Wrap = styled.div`
   height: 100vh;
@@ -41,6 +42,7 @@ const Feed = () => {
       <Post />
       <Post />
       <Post />
+      <NavBar />
     </Wrap>
   );
 };

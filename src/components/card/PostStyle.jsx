@@ -3,19 +3,25 @@ import styled from 'styled-components';
 export const PostCard = styled.article`
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 20px 20px 40px;
+`;
+
+export const User = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const UserProfile = styled.img`
-  float: left;
   background-color: var(--gray);
   border-radius: 50%;
   margin-right: 12px;
 `;
 
 export const UserInfo = styled.div`
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   margin-top: 3px;
 `;
 
@@ -26,6 +32,14 @@ export const UserName = styled.p`
 export const UserId = styled.p`
   font-size: 12px;
   color: var(--super-gray);
+`;
+
+export const More = styled.img`
+  position: absolute;
+  right: 0;
+  width: 22px;
+  height: 20px;
+  cursor: pointer;
 `;
 
 export const PostImg = styled.img`

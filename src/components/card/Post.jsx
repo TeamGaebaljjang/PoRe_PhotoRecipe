@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import profile from '../../assets/icons/basic-profile-round.svg';
+import more from '../../assets/icons/icon-more-vertical-gray.svg';
 import postImg from '../../assets/img/main-thumbnail.jpeg';
 import heartOn from '../../assets/icons/icon-heart-on.svg';
 import heartOff from '../../assets/icons/icon-heart-off.svg';
@@ -15,13 +16,14 @@ const Post = () => {
 
   return (
     <styled.PostCard>
-      <div>
+      <styled.User>
         <styled.UserProfile src={profile} alt="" />
         <styled.UserInfo>
           <styled.UserName>포토레시피</styled.UserName>
           <styled.UserId>@ PoRe_PhotoRecipe</styled.UserId>
         </styled.UserInfo>
-      </div>
+        <styled.More src={more} alt="" />
+      </styled.User>
 
       <div>
         <styled.PostImg src={postImg} alt="" />
