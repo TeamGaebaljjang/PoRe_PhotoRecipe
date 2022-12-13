@@ -6,7 +6,7 @@ import {
   ChatWrap,
   BtnPhoto,
 } from './chatRoomStyle';
-import chatProfile from '../../../assets/img/chatProfile.png';
+import chatProfile from '../../../assets/img/profile.png';
 
 const ChatRoom = () => {
   return (

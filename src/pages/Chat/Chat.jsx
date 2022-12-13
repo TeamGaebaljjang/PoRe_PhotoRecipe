@@ -1,12 +1,12 @@
 import { ChatList, ChatName, ChatDate, ChatCont, ChatOn } from './chatStyle';
-import chatProfile from '../../assets/img/chatProfile.png';
+import profile from '../../assets/img/profile.png';
 import chatOn from '../../assets/img/chatOn.png';
 
 const Chat = () => {
   return (
     <>
       <ChatList>
-        <img src={chatProfile} alt="" />
+        <img src={profile} alt="" />
         <ChatOn>
           <img src={chatOn} alt="" />
         </ChatOn>
@@ -20,7 +20,7 @@ const Chat = () => {
         <ChatDate>2020.10.26</ChatDate>
       </ChatList>
       <ChatList>
-        <img src={chatProfile} alt="" />{' '}
+        <img src={profile} alt="" />
         <ChatOn>
           <img src={chatOn} alt="" />
         </ChatOn>
@@ -31,7 +31,7 @@ const Chat = () => {
         <ChatDate>2020.10.26</ChatDate>
       </ChatList>
       <ChatList>
-        <img src={chatProfile} alt="" />
+        <img src={profile} alt="" />
         <div>
           <ChatName>배이솔</ChatName>
           <ChatCont>나는 api를 자유자재로 다룰 수 있지 후후</ChatCont>
