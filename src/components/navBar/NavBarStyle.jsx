@@ -24,9 +24,4 @@ export const NavItemStyle = styled.li`
   gap: 4px;
   font-size: 10px;
   color: var(--gray);
-
-  &:hover {
-    color: var(--black);
-    font-weight: 600;
-  }
 `;

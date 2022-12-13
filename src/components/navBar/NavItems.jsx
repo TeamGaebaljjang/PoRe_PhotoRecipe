@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { NavUlStyle, NavItemStyle } from './NavBarStyle';
 import iconHome from '../../assets/icons/icon-home.svg';
@@ -13,48 +13,50 @@ import iconUser from '../../assets/icons/icon-user.svg';
 import iconUserActive from '../../assets/icons/icon-user-active.svg';
 
 const NavItems = () => {
-  const [hover, setHover] = useState(false);
-
-  const handleHoverOn = (e) => {
-    console.log(e.currentTarget);
-    setHover(true);
-  };
-
-  const handleHoverOff = () => {
-    setHover(false);
-  };
+  const [navIcon, setNavIcon] = useState(1);
 
   return (
     <NavUlStyle>
-      <NavLink to="">
-        <NavItemStyle onMouseOver={handleHoverOn} onMouseOut={handleHoverOff}>
-          <img src={hover ? iconHomeActive : iconHome} alt="" />홈
+      <Link to="/home" onClick={() => setNavIcon(1)}>
+        <img src={navIcon === 1 ? iconHomeActive : iconHome} alt="" />
+        <NavItemStyle
+          style={navIcon === 1 ? { color: 'black' } : { color: 'var(--gray)' }}
+        >
+          홈
         </NavItemStyle>
-      </NavLink>
-      <NavLink to="">
-        <NavItemStyle>
-          <img src={hover ? iconFeedActive : iconFeed} alt="" />
+      </Link>
+      <Link to="/feed" onClick={() => setNavIcon(2)}>
+        <img src={navIcon === 2 ? iconFeedActive : iconFeed} alt="" />
+        <NavItemStyle
+          style={navIcon === 2 ? { color: 'black' } : { color: 'var(--gray)' }}
+        >
           피드
         </NavItemStyle>
-      </NavLink>
-      <NavLink to="">
-        <NavItemStyle onMouseOver={handleHoverOn} onMouseOut={handleHoverOff}>
-          <img src={hover ? iconMapActive : iconMap} alt="" />
+      </Link>
+      <Link to="/map" onClick={() => setNavIcon(3)}>
+        <img src={navIcon === 3 ? iconMapActive : iconMap} alt="" />
+        <NavItemStyle
+          style={navIcon === 3 ? { color: 'black' } : { color: 'var(--gray)' }}
+        >
           지도
         </NavItemStyle>
-      </NavLink>
-      <NavLink to="">
-        <NavItemStyle onMouseOver={handleHoverOn} onMouseOut={handleHoverOff}>
-          <img src={hover ? iconMessageActive : iconMessage} alt="" />
+      </Link>
+      <Link to="/chat" onClick={() => setNavIcon(4)}>
+        <img src={navIcon === 4 ? iconMessageActive : iconMessage} alt="" />
+        <NavItemStyle
+          style={navIcon === 4 ? { color: 'black' } : { color: 'var(--gray)' }}
+        >
           채팅
         </NavItemStyle>
-      </NavLink>
-      <NavLink to="">
-        <NavItemStyle onMouseOver={handleHoverOn} onMouseOut={handleHoverOff}>
-          <img src={hover ? iconUserActive : iconUser} alt="" />
+      </Link>
+      <Link to="/profile" onClick={() => setNavIcon(5)}>
+        <img src={navIcon === 5 ? iconUserActive : iconUser} alt="" />
+        <NavItemStyle
+          style={navIcon === 5 ? { color: 'black' } : { color: 'var(--gray)' }}
+        >
           프로필
         </NavItemStyle>
-      </NavLink>
+      </Link>
     </NavUlStyle>
   );
 };
