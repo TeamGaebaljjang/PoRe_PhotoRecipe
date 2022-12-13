@@ -27,13 +27,13 @@ const Home = () => {
       <styled.SpotList>
         {place.map((spotName) => {
           return (
-            <styled.Spot
+            <styled.SpotBtn
               value={spotName}
               className={spotName === btnActive ? 'active' : ''}
               onClick={handleActive}
             >
               {spotName}
-            </styled.Spot>
+            </styled.SpotBtn>
           );
         })}
       </styled.SpotList>

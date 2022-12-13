@@ -47,7 +47,7 @@ export const SpotList = styled.div`
   }
 `;
 
-export const Spot = styled.button`
+export const SpotBtn = styled.button`
   border: 2px solid var(--super-gray);
   border-radius: 50px;
   padding: 12px 26px;
