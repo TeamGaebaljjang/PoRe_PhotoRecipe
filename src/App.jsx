@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/navBar/NavBar';
 
 import Test1 from './pages/Home/Home';
-import Test2 from './pages/Login/Login';
+import Test2 from './pages/Profile/UploadPhotoZone/UploadPhotoZone';
 import Test3 from './pages/Profile/Follow/Follower';
 import Chat from './pages/Chat/Chat';
 import Test4 from './components/proFile/ProFile';
