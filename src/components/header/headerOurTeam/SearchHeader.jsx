@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import back from '../../assets/icons/icon-arrow-left.svg';
 
-const TopBar = styled.article`
+export const TopBar = styled.article`
   position: relative;
   display: flex;
   align-items: center;
@@ -9,11 +9,11 @@ const TopBar = styled.article`
   border-bottom: 1px solid var(--light-gray);
 `;
 
-const BackBtn = styled.img`
+export const BackBtn = styled.img`
   margin: 0 16px;
 `;
 
-const SearchInp = styled.input`
+export const SearchInp = styled.input`
   width: 310px;
   height: 32px;
   background-color: var(--light-gray);

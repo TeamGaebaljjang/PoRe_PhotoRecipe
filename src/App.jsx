@@ -1,7 +1,5 @@
-import Test from './pages/Search/SearchDetail';
-
 const App = () => {
-  return <Test />;
+  return <div>App </div>;
 };
 
 export default App;
