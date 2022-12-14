@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Post from '../../components/card/Post';
 import NavBar from '../../components/navBar/NavBar';
-import FeedHeader from '../../components/header/FeedHeader';
+import HeaderFeed from '../../components/header/HeaderFeed';
 
 export const Wrap = styled.div`
   height: 100vh;
@@ -11,7 +11,7 @@ export const Wrap = styled.div`
 const Feed = () => {
   return (
     <Wrap>
-      <FeedHeader />
+      <HeaderFeed />
       <Post />
       <Post />
       <Post />

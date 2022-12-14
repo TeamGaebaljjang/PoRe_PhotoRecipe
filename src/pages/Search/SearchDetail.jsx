@@ -1,5 +1,5 @@
 // import styled from 'styled-components';
-import SearchHeader from '../../components/header/SearchHeader';
+import HeaderBSU from '../../components/header/HeaderBSU';
 import { Wrap } from './Search';
 import NavBar from '../../components/navBar/NavBar';
 import SearchUser from './SearchUser';
@@ -7,7 +7,7 @@ import SearchUser from './SearchUser';
 const Search = () => {
   return (
     <Wrap>
-      <SearchHeader />
+      <HeaderBSU />
       <SearchUser />
       <SearchUser />
       <SearchUser />

@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import BtnAddPic from '../../../components/button/BtnAddPic';
-import OnlyBackBtnHeader from '../../../components/header/OnlyBackBtnHeader';
+import HeaderB from '../../../components/header/HeaderB';
 import FormStyle from '../FormStyle';
 
 const ProfileContDiv = styled.div`
   background-color: white;
   min-height: 614px;
+  margin-top: 20px;
   padding: 0 20px;
 
   h2 {
@@ -71,7 +72,7 @@ const SetProfile = () => {
 
   return (
     <>
-      <OnlyBackBtnHeader />
+      <HeaderB />
       <ProfileContDiv>
         <FormStyle>
           <h2>프로필 설정</h2>

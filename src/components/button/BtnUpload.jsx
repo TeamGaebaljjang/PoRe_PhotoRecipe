@@ -6,6 +6,9 @@ const BtnUpload = styled.button`
   border-radius: 32px;
   color: white;
   background-color: var(--gray);
+  position: absolute;
+  top: 8px;
+  right: 16px;
 
   &:hover {
     background-color: black;

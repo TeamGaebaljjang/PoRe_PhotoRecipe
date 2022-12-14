@@ -9,6 +9,7 @@ import {
   Input,
   BtnSubmit,
 } from './postCardStyle';
+import HeaderBM from '../../../components/header/HeaderBM';
 
 const PostCard = () => {
   const textRef = useRef();
@@ -18,28 +19,31 @@ const PostCard = () => {
   }, []);
 
   return (
-    <CardWrap>
-      <Post />
-      <CommentWrap>
-        <Comment />
-        <Comment />
-        <Comment />
-        <Comment />
-        <Comment />
-        <Comment />
-        <Comment />
-      </CommentWrap>
-      <Form>
-        <ProfileImg />
-        <Input
-          placeholder="댓글 입력하기..."
-          ref={textRef}
-          onInput={handleResizeHeight}
-          rows="1"
-        />
-        <BtnSubmit type="submit">게시</BtnSubmit>
-      </Form>
-    </CardWrap>
+    <>
+      <HeaderBM />
+      <CardWrap>
+        <Post />
+        <CommentWrap>
+          <Comment />
+          <Comment />
+          <Comment />
+          <Comment />
+          <Comment />
+          <Comment />
+          <Comment />
+        </CommentWrap>
+        <Form>
+          <ProfileImg />
+          <Input
+            placeholder="댓글 입력하기..."
+            ref={textRef}
+            onInput={handleResizeHeight}
+            rows="1"
+          />
+          <BtnSubmit type="submit">게시</BtnSubmit>
+        </Form>
+      </CardWrap>
+    </>
   );
 };
 

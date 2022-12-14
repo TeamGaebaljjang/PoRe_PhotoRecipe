@@ -1,9 +1,11 @@
 import User from '../../../components/user/User';
 import { BtnFollow, Li } from './followStyle';
+import HeaderFollower from '../../../components/header/HeaderFollower';
 
 const Follower = () => {
   return (
     <>
+      <HeaderFollower />
       <Li>
         <User />
         <BtnFollow type="button">팔로우</BtnFollow>

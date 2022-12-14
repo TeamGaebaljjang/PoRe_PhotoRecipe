@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
-import OnlyBackBtnHeader from '../../../components/header/OnlyBackBtnHeader';
+import HeaderB from '../../../components/header/HeaderB';
 import FormStyle from '../FormStyle';
 
 const SignUpContDiv = styled.div`
   background-color: white;
   min-height: 614px;
   padding: 0 20px;
+  margin-top: 20px;
 
   h2 {
     font-size: 24px;
@@ -42,7 +43,7 @@ const InvalidSpan = styled.span`
 const SignUp = () => {
   return (
     <>
-      <OnlyBackBtnHeader />
+      <HeaderB />
       <SignUpContDiv>
         <h2>이메일로 회원가입</h2>
         <FormStyle>

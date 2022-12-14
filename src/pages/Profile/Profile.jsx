@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MyProFileHeader from '../../components/header/MyProFileHeader';
+import HeaderProfile from '../../components/header/HeaderProfile';
 // import YourProFileHeader from '../../components/header/YourProFileHeader';
 import ProFileInfo from '../../components/proFile/ProFileInfo';
 import PhotoZoneList from '../../components/photoZoneList/PhotoZoneList';
@@ -19,7 +19,7 @@ const FeedContainer = styled.div`
 const ProFile = () => {
   return (
     <div>
-      <MyProFileHeader />
+      <HeaderProfile />
       {/* <YourProFileHeader /> */}
       <ProFileInfo />
       <PhotoZoneList />

@@ -2,11 +2,13 @@ import { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
 import addPic from '../../../assets/icons/icon-photo-upload-white.svg';
 import BtnUpload from '../../../components/button/BtnUpload';
+import HeaderB from '../../../components/header/HeaderB';
 
 const Wrap = styled.div`
   margin: 0 20px;
 `;
 const Input = styled.textarea`
+  margin-top: 20px;
   width: 100%;
   max-height: 400px;
   resize: none;
@@ -59,27 +61,30 @@ const UploadPost = () => {
   };
 
   return (
-    <Wrap>
-      <form action="submit">
-        <div>
-          <Input
-            placeholder="게시글 입력하기..."
-            ref={textRef}
-            onInput={handleResizeHeight}
+    <>
+      <HeaderB />
+      <Wrap>
+        <form action="submit">
+          <div>
+            <Input
+              placeholder="게시글 입력하기..."
+              ref={textRef}
+              onInput={handleResizeHeight}
+            />
+            <PreviewImg src={imgFile || null} alt="" />
+          </div>
+          <BtnUpload type="submit">업로드</BtnUpload>
+          <input
+            id="photo"
+            type="file"
+            style={{ display: 'none' }}
+            onChange={saveImgFile}
+            ref={imgRef}
           />
-          <PreviewImg src={imgFile || null} alt="" />
-        </div>
-        <BtnUpload type="submit">업로드</BtnUpload>
-        <input
-          id="photo"
-          type="file"
-          style={{ display: 'none' }}
-          onChange={saveImgFile}
-          ref={imgRef}
-        />
-        <SubmitImg htmlFor="photo" />
-      </form>
-    </Wrap>
+          <SubmitImg htmlFor="photo" />
+        </form>
+      </Wrap>
+    </>
   );
 };
 

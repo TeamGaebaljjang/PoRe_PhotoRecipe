@@ -1,10 +1,12 @@
 import { ChatList, ChatName, ChatDate, ChatCont, ChatOn } from './chatStyle';
 import profile from '../../assets/img/profile.png';
 import chatOn from '../../assets/img/chatOn.png';
+import HeaderBM from '../../components/header/HeaderBM';
 
 const Chat = () => {
   return (
     <>
+      <HeaderBM />
       <ChatList>
         <img src={profile} alt="" />
         <ChatOn>

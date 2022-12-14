@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import BtnAddPic from '../../../components/button/BtnAddPic';
-import OnlyBackBtnHeader from '../../../components/header/OnlyBackBtnHeader';
+import HeaderB from '../../../components/header/HeaderB';
 import FormStyle from './FormStyle';
 
 const EditProfileContDiv = styled.div`
   background-color: white;
   min-height: 614px;
+  margin-top: 20px;
   padding: 0 20px;
 
   h2 {
@@ -64,7 +65,7 @@ const EditProfile = () => {
 
   return (
     <>
-      <OnlyBackBtnHeader />
+      <HeaderB />
       <EditProfileContDiv>
         <h2>프로필 수정</h2>
         <div className="profile-img-wrap">
