@@ -7,7 +7,7 @@ const Container = styled.div`
   align-items: center;
   height: 48px;
   border-bottom: 1px var(--light-gray) solid;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 `;
 
 const Btn = styled.button`

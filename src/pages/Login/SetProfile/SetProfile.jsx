@@ -2,12 +2,12 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import BtnAddPic from '../../../components/button/BtnAddPic';
 import OnlyBackBtnHeader from '../../../components/header/OnlyBackBtnHeader';
+import FormStyle from '../FormStyle';
 
 const ProfileContDiv = styled.div`
   background-color: white;
   min-height: 614px;
   padding: 0 20px;
-  border-radius: 20px 20px 0 0;
 
   h2 {
     font-size: 24px;
@@ -30,45 +30,9 @@ const ProfileContDiv = styled.div`
     background-color: var(--light-gray);
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
+  .profile-img-wrap img {
+    width: 100%;
   }
-
-  label {
-    font-size: 12px;
-  }
-
-  input {
-    font-size: 14px;
-    height: 32px;
-    border-bottom: 1px solid var(--gray);
-  }
-
-  input::placeholder {
-    font-size: 14px;
-    color: var(--light-gray);
-  }
-
-  input + label {
-    margin-top: 16px;
-  }
-
-  a {
-    margin-top: 22px;
-    font-size: 12px;
-    text-align: center;
-    color: var(--super-gray);
-  }
-
-  /* invalidSpan 추가시 스타일 */
-  span + label {
-    margin-top: 16px;
-  }
-`;
-
-const ProfileImg = styled.img`
-  width: 100%;
 `;
 
 const StyledButton = styled.button`
@@ -109,13 +73,13 @@ const SetProfile = () => {
     <>
       <OnlyBackBtnHeader />
       <ProfileContDiv>
-        <h2>프로필 설정</h2>
-        <p>나중에 언제든지 변경할 수 있습니다.</p>
-        <div className="profile-img-wrap">
-          <ProfileImg src={profileImg || null} alt="" />
-          <AddPickBtn onClick={profileUpload} />
-        </div>
-        <form>
+        <FormStyle>
+          <h2>프로필 설정</h2>
+          <p>나중에 언제든지 변경할 수 있습니다.</p>
+          <div className="profile-img-wrap">
+            <img src={profileImg || null} alt="" />
+            <AddPickBtn onClick={profileUpload} />
+          </div>
           <label htmlFor="userName">사용자 이름</label>
           <input
             id="userName"
@@ -142,7 +106,7 @@ const SetProfile = () => {
             placeholder="자신에 대해 간단하게 소개해주세요!"
           />
           <StyledButton type="submit">PORE 시작하기</StyledButton>
-        </form>
+        </FormStyle>
       </ProfileContDiv>
     </>
   );

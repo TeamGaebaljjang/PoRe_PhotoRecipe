@@ -2,12 +2,12 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import BtnAddPic from '../../../components/button/BtnAddPic';
 import OnlyBackBtnHeader from '../../../components/header/OnlyBackBtnHeader';
+import FormStyle from './FormStyle';
 
 const EditProfileContDiv = styled.div`
   background-color: white;
   min-height: 614px;
   padding: 0 20px;
-  border-radius: 20px 20px 0 0;
 
   h2 {
     font-size: 24px;
@@ -23,45 +23,9 @@ const EditProfileContDiv = styled.div`
     background-color: var(--light-gray);
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
+  .profile-img-wrap img {
+    width: 100%;
   }
-
-  label {
-    font-size: 12px;
-  }
-
-  input {
-    font-size: 14px;
-    height: 32px;
-    border-bottom: 1px solid var(--gray);
-  }
-
-  input::placeholder {
-    font-size: 14px;
-    color: var(--light-gray);
-  }
-
-  input + label {
-    margin-top: 16px;
-  }
-
-  a {
-    margin-top: 22px;
-    font-size: 12px;
-    text-align: center;
-    color: var(--super-gray);
-  }
-
-  /* invalidSpan 추가시 스타일 */
-  span + label {
-    margin-top: 16px;
-  }
-`;
-
-const ProfileImg = styled.img`
-  width: 100%;
 `;
 
 const StyledButton = styled.button`
@@ -90,7 +54,7 @@ const InvalidSpan = styled.span`
   padding-top: 6px;
 `;
 
-const SetProfile = () => {
+const EditProfile = () => {
   const [profileImg, setProfileImg] = useState('');
 
   const profileUpload = () => {
@@ -104,10 +68,10 @@ const SetProfile = () => {
       <EditProfileContDiv>
         <h2>프로필 수정</h2>
         <div className="profile-img-wrap">
-          <ProfileImg src={profileImg || null} alt="" />
+          <img src={profileImg || null} alt="" />
           <AddPickBtn onClick={profileUpload} />
         </div>
-        <form>
+        <FormStyle>
           <label htmlFor="userName">사용자 이름</label>
           <input
             id="userName"
@@ -134,10 +98,10 @@ const SetProfile = () => {
             placeholder="자신에 대해 간단하게 소개해주세요!"
           />
           <StyledButton type="submit">저장</StyledButton>
-        </form>
+        </FormStyle>
       </EditProfileContDiv>
     </>
   );
 };
 
-export default SetProfile;
+export default EditProfile;
