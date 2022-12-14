@@ -40,7 +40,7 @@ const SubmitImg = styled.label`
 `;
 
 const UploadPost = () => {
-  const [imgFile, setImgFile] = useState;
+  const [imgFile, setImgFile] = useState('');
   const imgRef = useRef();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
