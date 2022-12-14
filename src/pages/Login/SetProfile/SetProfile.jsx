@@ -1,18 +1,18 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
 import styled from 'styled-components';
 import BtnAddPic from '../../../components/button/BtnAddPic';
+import SetProFileHeader from '../../../components/header/OnlyBackBtnHeader';
 
-const LoginContDiv = styled.div`
+const ProfileContDiv = styled.div`
   background-color: white;
   min-height: 614px;
-  padding: 60px 20px;
+  padding: 0 20px;
   border-radius: 20px 20px 0 0;
 
   h2 {
     font-size: 24px;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
   }
 
   p {
@@ -106,8 +106,9 @@ const SetProfile = () => {
   };
 
   return (
-    <article>
-      <LoginContDiv>
+    <>
+      <SetProFileHeader />
+      <ProfileContDiv>
         <h2>프로필 설정</h2>
         <p>나중에 언제든지 변경할 수 있습니다.</p>
         <div className="profile-img-wrap">
@@ -142,8 +143,8 @@ const SetProfile = () => {
           />
           <StyledButton type="submit">PORE 시작하기</StyledButton>
         </form>
-      </LoginContDiv>
-    </article>
+      </ProfileContDiv>
+    </>
   );
 };
 
