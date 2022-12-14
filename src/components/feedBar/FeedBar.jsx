@@ -8,7 +8,7 @@ import ListOff from '../../assets/icons/icon-post-list-off.svg';
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 30px 0px 24px;
+  padding: 32px 0px 24px;
 
   div {
     display: flex;
