@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import BtnAddPic from '../../../components/button/BtnAddPic';
-import SetProFileHeader from '../../../components/header/OnlyBackBtnHeader';
+import OnlyBackBtnHeader from '../../../components/header/OnlyBackBtnHeader';
 
 const ProfileContDiv = styled.div`
   background-color: white;
@@ -107,7 +107,7 @@ const SetProfile = () => {
 
   return (
     <>
-      <SetProFileHeader />
+      <OnlyBackBtnHeader />
       <ProfileContDiv>
         <h2>프로필 설정</h2>
         <p>나중에 언제든지 변경할 수 있습니다.</p>

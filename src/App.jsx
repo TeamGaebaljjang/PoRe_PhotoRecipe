@@ -1,5 +1,11 @@
+import SetProfile from './pages/Profile/EditProfile/EditProfile';
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <SetProfile />
+    </div>
+  );
 };
 
 export default App;
