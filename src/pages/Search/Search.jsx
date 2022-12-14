@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import searchMain from '../../assets/icons/icon-feed-search.svg';
-import NavBar from '../../components/navBar/NavBar';
 import SearchHeader from '../../components/header/SearchHeader';
+import NavBar from '../../components/navBar/NavBar';
 
 export const Wrap = styled.div`
   height: 100vh;
