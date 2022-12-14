@@ -52,6 +52,7 @@ img{
     --super-gray: #767676;
 }
 
+
 html {
     max-width: 390px;
     height: 100vh;

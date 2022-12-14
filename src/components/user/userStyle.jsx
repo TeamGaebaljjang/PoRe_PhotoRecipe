@@ -10,6 +10,7 @@ export const UserLi = styled.li`
   gap: 10px;
 `;
 export const UserName = styled.strong`
+  display: inline-block;
   font-size: 14px;
 `;
 export const UserCont = styled.p`

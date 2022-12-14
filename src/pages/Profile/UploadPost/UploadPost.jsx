@@ -40,10 +40,11 @@ const SubmitImg = styled.label`
 `;
 
 const UploadPost = () => {
-  const [imgFile, setImgFile] = useState('');
+  const [imgFile, setImgFile] = useState;
   const imgRef = useRef();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
+    textRef.current.style.height = '1px';
     textRef.current.style.height = `${textRef.current.scrollHeight}px`;
   }, []);
 
