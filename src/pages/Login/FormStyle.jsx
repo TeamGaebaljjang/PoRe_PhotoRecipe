@@ -29,4 +29,11 @@ const FormStyle = styled.div`
   }
 `;
 
-export default FormStyle;
+const InvalidSpan = styled.span`
+  display: block;
+  color: var(--light-red);
+  font-size: 12px;
+  padding-top: 6px;
+`;
+
+export { FormStyle, InvalidSpan };

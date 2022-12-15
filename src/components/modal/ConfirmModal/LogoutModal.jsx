@@ -1,4 +1,4 @@
-import { ConfirmModal, Btnwrap } from './ConfirmModalStyle';
+import { ConfirmModal, Btnwrap } from './confirmModalStyle';
 
 const LogoutModal = () => {
   return (

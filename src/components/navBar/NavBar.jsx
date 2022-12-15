@@ -1,5 +1,5 @@
 import NavItems from './NavItems';
-import { NavWrap } from './NavBarStyle';
+import { NavWrap } from './navBarStyle';
 
 const NavBar = () => {
   return (

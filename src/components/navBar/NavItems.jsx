@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { NavUlStyle, NavItemStyle } from './NavBarStyle';
+import { NavUlStyle, NavItemStyle } from './navBarStyle';
 import iconHome from '../../assets/icons/icon-home.svg';
 import iconHomeActive from '../../assets/icons/icon-home-active.svg';
 import iconFeed from '../../assets/icons/icon-feed.svg';
