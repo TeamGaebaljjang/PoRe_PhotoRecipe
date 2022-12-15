@@ -20,8 +20,6 @@ export const UserProfile = styled.img`
 `;
 
 export const UserInfo = styled.div`
-  /* display: flex;
-  flex-direction: column; */
   margin-top: 3px;
 `;
 
