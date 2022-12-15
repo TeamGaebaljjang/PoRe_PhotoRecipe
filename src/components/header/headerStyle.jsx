@@ -10,6 +10,7 @@ export const HeaderContainer = styled.article`
   align-items: center;
   position: relative;
   border-bottom: 1px solid var(--light-gray);
+  background-color: white;
 `;
 export const HeaderProfileContainer = styled.article`
   height: 48px;
