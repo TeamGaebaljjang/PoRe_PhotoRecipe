@@ -1,23 +1,29 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100vh;
+  overflow: auto;
 `;
 
 export const Carousel = styled.article`
   position: relative;
+  display: flex;
+  flex-direction: column-reverse;
 `;
 
 export const Title = styled.h1`
   position: absolute;
-  left: 30px;
-  bottom: 40px;
   width: 260px;
+  margin: 0 0 30px 30px;
   font-size: 1.25rem;
   font-weight: 700;
   color: white;
+`;
+
+export const Search = styled.button`
+  position: absolute;
+  top: 20px;
+  right: 20px;
 `;
 
 export const Thumbnail = styled.img`
@@ -27,18 +33,14 @@ export const Thumbnail = styled.img`
   border-radius: 0 0 30px 30px;
 `;
 
-export const Search = styled.button`
-  position: absolute;
-  top: 20px;
-  right: 20px;
-`;
-
-export const SpotList = styled.div`
+export const SpotTab = styled.div`
+  position: sticky;
   display: flex;
-  flex-shrink: 0;
-  flex-direction: row;
+  top: 0;
   gap: 20px;
-  margin: 22px 0 22px 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 7px -4px var(--gray);
   overflow: auto;
   white-space: nowrap;
 
@@ -66,7 +68,8 @@ export const FeedList = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin: 0 20px;
+  margin: 20px;
+  padding-bottom: 60px;
   overflow: auto;
 `;
 
