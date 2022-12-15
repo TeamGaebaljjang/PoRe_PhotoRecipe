@@ -1,4 +1,4 @@
-import { PostCont, PostDate } from './PostStyle';
+import { PostCont, PostDate } from './postStyle';
 
 const PostContent = () => {
   return (

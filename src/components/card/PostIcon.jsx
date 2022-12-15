@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Icon, IconImg, IconCount } from './PostStyle';
+import { Icon, IconImg, IconCount } from './postStyle';
 import heartOn from '../../assets/icons/icon-heart-on.svg';
 import heartOff from '../../assets/icons/icon-heart-off.svg';
 import chat from '../../assets/icons/icon-chat.svg';

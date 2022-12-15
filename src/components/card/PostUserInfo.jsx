@@ -5,7 +5,7 @@ import {
   UserName,
   UserId,
   More,
-} from './PostStyle';
+} from './postStyle';
 import profile from '../../assets/icons/basic-profile-round.svg';
 import more from '../../assets/icons/icon-more-vertical-gray.svg';
 

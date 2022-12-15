@@ -1,5 +1,5 @@
 import postImg from '../../assets/img/main-thumbnail.jpeg';
-import { PostCard, PostImg } from './PostStyle';
+import { PostCard, PostImg } from './postStyle';
 import PostUserInfo from './PostUserInfo';
 import PostIcon from './PostIcon';
 import PostContent from './PostContent';
