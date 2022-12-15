@@ -1,13 +1,13 @@
-// import styled from 'styled-components';
 import HeaderBSU from '../../components/header/HeaderBSU';
-import { Wrap } from './Search';
-import NavBar from '../../components/navBar/NavBar';
+import { Wrap } from './searchStyle';
 import SearchUser from './SearchUser';
+import NavBar from '../../components/navBar/NavBar';
 
-const Search = () => {
+const SearchDetail = () => {
   return (
     <Wrap>
       <HeaderBSU />
+      <SearchUser />
       <SearchUser />
       <SearchUser />
       <SearchUser />
@@ -16,4 +16,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchDetail;

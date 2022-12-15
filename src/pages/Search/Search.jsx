@@ -1,25 +1,7 @@
-import styled from 'styled-components';
-import searchMain from '../../assets/icons/icon-feed-search.svg';
 import HeaderBSU from '../../components/header/HeaderBSU';
+import { Wrap, SearchCont, SearchMsg } from './searchStyle';
 import NavBar from '../../components/navBar/NavBar';
-
-export const Wrap = styled.div`
-  height: 100vh;
-  overflow: auto;
-`;
-
-const SearchCont = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 658px;
-`;
-
-const SearchMsg = styled.p`
-  font-size: 14px;
-  color: var(--super-gray);
-`;
+import searchMain from '../../assets/icons/icon-feed-search.svg';
 
 const Search = () => {
   return (
