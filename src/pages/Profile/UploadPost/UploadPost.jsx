@@ -1,45 +1,7 @@
 import { useCallback, useRef, useState } from 'react';
-import styled from 'styled-components';
-import addPic from '../../../assets/icons/icon-photo-upload-white.svg';
 import BtnUpload from '../../../components/button/BtnUpload';
 import HeaderB from '../../../components/header/HeaderB';
-
-const Wrap = styled.div`
-  margin: 0 20px;
-`;
-const Input = styled.textarea`
-  margin-top: 20px;
-  width: 100%;
-  max-height: 400px;
-  resize: none;
-  border: none;
-
-  &::placeholder {
-    color: var(--light-gray);
-  }
-  &:focus {
-    outline: none;
-  }
-`;
-const PreviewImg = styled.img`
-  width: 100%;
-  max-height: 230px;
-  margin: 18px 0;
-  border-radius: 10px;
-`;
-
-const SubmitImg = styled.label`
-  width: 36px;
-  height: 36px;
-  background-color: var(--black);
-  border-radius: 50%;
-  background-image: url(${addPic});
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-`;
+import { Input, PreviewImg, SubmitImg, Wrap } from './uploadPostStyle';
 
 const UploadPost = () => {
   const [imgFile, setImgFile] = useState('');

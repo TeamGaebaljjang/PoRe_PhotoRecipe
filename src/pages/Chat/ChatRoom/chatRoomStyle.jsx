@@ -1,10 +1,13 @@
 import styled, { css } from 'styled-components';
-import photoUp from '../../../assets/icons/icon-photo-upload-white.svg';
+import addPic from '../../../assets/icons/icon-photo-upload-white.svg';
 
 export const ChatWrap = styled.div`
   width: 100%;
+  height: 100%;
+  padding-top: 48px;
   position: absolute;
   bottom: 60px;
+  overflow: auto;
 `;
 export const ChatBallon = styled.div`
   margin: 10px;
@@ -61,14 +64,15 @@ export const ChatInputWrap = styled.div`
   width: 390px;
   height: 60px;
 `;
-export const BtnPhoto = styled.button`
-  background-color: var(--gray);
-  width: 35px;
-  height: 35px;
+
+export const InputChat = styled.input``;
+
+export const SubmitImg = styled.label`
+  width: 36px;
+  height: 36px;
+  background-color: var(--deep-gray);
   border-radius: 50%;
-  background-image: url(${photoUp});
+  background-image: url(${addPic});
   background-repeat: no-repeat;
   background-position: center;
 `;
-
-export const InputChat = styled.form``;

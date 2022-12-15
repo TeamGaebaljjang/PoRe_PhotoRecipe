@@ -4,7 +4,8 @@ import {
   ChatTime,
   Chatting,
   ChatWrap,
-  BtnPhoto,
+  SubmitImg,
+  InputChat,
 } from './chatRoomStyle';
 import chatProfile from '../../../assets/img/profile.png';
 import HeaderChat from '../../../components/header/HeaderChat';
@@ -13,7 +14,13 @@ const ChatRoom = () => {
   return (
     <>
       <HeaderChat />
-      <div style={{ height: '100vh', backgroundColor: 'var(--gray)' }}>
+      <div
+        style={{
+          height: '100vh',
+          backgroundColor: 'var(--gray)',
+          marginTop: '-48px',
+        }}
+      >
         <ChatWrap>
           <ChatBallon>
             <div>
@@ -21,6 +28,33 @@ const ChatRoom = () => {
             </div>
             <Chatting>
               안녕하세요<ChatTime>12:39</ChatTime>
+            </Chatting>
+          </ChatBallon>
+          <ChatBallon>
+            <div>
+              <img src={chatProfile} alt="" />
+            </div>
+            <Chatting>
+              안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+              <ChatTime>12:39</ChatTime>
+            </Chatting>
+          </ChatBallon>
+          <ChatBallon>
+            <div>
+              <img src={chatProfile} alt="" />
+            </div>
+            <Chatting>
+              안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+              <ChatTime>12:39</ChatTime>
+            </Chatting>
+          </ChatBallon>
+          <ChatBallon>
+            <div>
+              <img src={chatProfile} alt="" />
+            </div>
+            <Chatting>
+              안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+              <ChatTime>12:39</ChatTime>
             </Chatting>
           </ChatBallon>
           <ChatBallon>
@@ -78,9 +112,12 @@ const ChatRoom = () => {
           </ChatBallon>
         </ChatWrap>
         <ChatInputWrap>
-          <BtnPhoto />
-          <form>
-            <input
+          <input type="file" style={{ display: 'none' }} />
+          <SubmitImg htmlFor="photo" />
+          <form action="submit">
+            <input id="photo" type="file" style={{ display: 'none' }} />
+            <SubmitImg />
+            <InputChat
               style={{ width: '270px', color: 'var(--super-gray)' }}
               type="text"
               placeholder="메시지 입력하기..."

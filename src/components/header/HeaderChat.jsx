@@ -8,7 +8,7 @@ import {
 
 const HeaderTest = () => {
   return (
-    <HeaderContainer>
+    <HeaderContainer style={{ zIndex: '5' }}>
       <BackBtn />
       <Title>상대닉네임</Title>
       <BtnWrapper>
