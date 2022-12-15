@@ -1,6 +1,6 @@
 import { HeaderContainer, BackBtn, SearchInp } from './headerStyle';
 
-const HeaderBSU = () => {
+const HeaderBSM = () => {
   return (
     <HeaderContainer>
       <BackBtn />
@@ -9,4 +9,4 @@ const HeaderBSU = () => {
   );
 };
 
-export default HeaderBSU;
+export default HeaderBSM;
