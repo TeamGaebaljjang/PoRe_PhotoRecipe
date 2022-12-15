@@ -26,6 +26,8 @@ input, button {
     border: none;
     outline: none;
     font-family: var(--font);
+    padding: 0;
+    margin: 0;
     cursor: pointer;
 }
 
