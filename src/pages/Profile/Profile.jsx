@@ -1,45 +1,39 @@
-import styled from 'styled-components';
-import HeaderProfile from '../../components/header/HeaderProfile';
-// import YourProFileHeader from '../../components/header/YourProFileHeader';
-import ProFileInfo from '../../components/proFile/ProFileInfo';
-import PhotoZoneList from '../../components/photoZoneList/PhotoZoneList';
-import FeedBar from '../../components/feedBar/FeedBar';
-// import Nothing from '../../components/errorMessage/Nothing';
-import NavBar from '../../components/navBar/NavBar';
-// import { FeedList, Feed } from './pages/Home/HomeStyle';
-import Post from '../../components/card/Post';
+import * as styled from './profileStyle';
 
-const FeedContainer = styled.div`
-  height: 398px;
-  overflow: auto;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
+import HeaderProfile from '../../components/header/HeaderProfile';
+// import HeaderBMProfile from '../../components/header/HeaderBMProfile';
+
+import ProFileInfo from '../../components/proFile/ProFileInfo';
+import PhotoZoneList from '../../components/proFile/Photozonelist';
+// import FeedBar from '../../components/proFile/Feedbar';
+// import Nothing from '../../components/proFile/Nothing';
+
+// import { FeedList, Feed } from './pages/Home/HomeStyle';
+// import Feed from '../Home/HomeFeed';
+
+import PhotoZoneModal from '../../components/modal/PhotozoneModal/PhotozoneModal';
+
+import NavBar from '../../components/navBar/NavBar';
+
 const ProFile = () => {
   return (
-    <div>
+    <styled.Wrapper>
+      {/* <BackDrop /> */}
+
       <HeaderProfile />
-      {/* <YourProFileHeader /> */}
+      {/* <HeaderBMProfile /> */}
       <ProFileInfo />
       <PhotoZoneList />
-      <FeedBar />
+
+      {/* <FeedBar /> */}
       {/* <Nothing /> */}
 
-      <FeedContainer>
-        <Post />
-        <Post />
-        {/* <FeedList>
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-        </FeedList> */}
-      </FeedContainer>
+      {/* <Feed /> */}
+
+      <PhotoZoneModal />
+
       <NavBar />
-    </div>
+    </styled.Wrapper>
   );
 };
 export default ProFile;

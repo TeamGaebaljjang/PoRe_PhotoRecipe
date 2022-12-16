@@ -70,6 +70,7 @@ body {
     background-color: white;
     font-family: var(--font);
     box-shadow: 0 0 10px var(--deep-gray);
+    margin: 0;
 }
 
 .ir {
