@@ -16,6 +16,14 @@ const Follower = () => {
       </Li>
       <Li>
         <User />
+        <BtnFollow type="button">팔로우</BtnFollow>
+      </Li>
+      <Li>
+        <User />
+        <BtnFollow type="button">팔로우</BtnFollow>
+      </Li>
+      <Li>
+        <User />
         <BtnFollow type="button" cancel>
           취소
         </BtnFollow>

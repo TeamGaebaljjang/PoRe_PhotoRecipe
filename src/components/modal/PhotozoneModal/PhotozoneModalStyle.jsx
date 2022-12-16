@@ -6,7 +6,7 @@ const Container = styled.div`
   width: 390px;
   height: calc(100vh - (100vh / 2.6));
   background-color: white;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   border-radius: 20px 20px 0px 0px;
   box-shadow: 0 0 10px var(--deep-gray);
   overflow: hidden;

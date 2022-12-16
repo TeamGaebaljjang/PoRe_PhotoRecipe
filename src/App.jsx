@@ -1,11 +1,5 @@
-import ProFile from './pages/Profile/Profile';
-
 const App = () => {
-  return (
-    <div>
-      <ProFile />
-    </div>
-  );
+  return <div>App</div>;
 };
 
 export default App;

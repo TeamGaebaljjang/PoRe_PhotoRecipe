@@ -26,7 +26,7 @@ export const AddTime = styled.p`
 `;
 
 export const CommentCont = styled.p`
-  width: 300px;
+  width: 280px;
   font-size: 12px;
   color: var(--super-gray);
   white-space: auto;

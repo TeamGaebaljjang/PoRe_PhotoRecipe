@@ -10,8 +10,12 @@ const ProFileInfo = () => {
         <styled.Info>
           <styled.Name>개발짱</styled.Name>
           <styled.Follow>
-            <styled.Follower>팔로워 0</styled.Follower>
-            <styled.Following>팔로잉 0</styled.Following>
+            <styled.Follower>
+              팔로워 <span>0</span>
+            </styled.Follower>
+            <styled.Following>
+              팔로잉 <span>0</span>
+            </styled.Following>
           </styled.Follow>
         </styled.Info>
         <styled.AddPhotoZone>

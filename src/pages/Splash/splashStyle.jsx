@@ -42,7 +42,7 @@ export const Logo = styled.figure`
     height: 12px;
     background-color: white;
     border-radius: 3px;
-    animation: ${Light} 0.1s 5 forwards;
+    animation: ${Light} 0.15s 4 forwards;
     box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #fff, 0 0 10px #fff,
       0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff,
       0 0 70px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff;

@@ -2,6 +2,7 @@ import { ChatList, ChatName, ChatDate, ChatCont, ChatOn } from './chatStyle';
 import profile from '../../assets/img/profile.png';
 import chatOn from '../../assets/img/chatOn.png';
 import HeaderBM from '../../components/header/HeaderBM';
+import NavBar from '../../components/navBar/NavBar';
 
 const Chat = () => {
   return (
@@ -40,6 +41,7 @@ const Chat = () => {
         </div>
         <ChatDate>2020.10.26</ChatDate>
       </ChatList>
+      <NavBar />
     </>
   );
 };

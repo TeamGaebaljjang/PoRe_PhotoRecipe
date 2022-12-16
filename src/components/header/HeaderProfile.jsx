@@ -11,8 +11,8 @@ const HeaderProfile = () => {
     <HeaderProfileContainer>
       <BtnWrapper>
         <SearchBtn />
-        <MoreBtn />
         <EditProfileBtn />
+        <MoreBtn />
       </BtnWrapper>
     </HeaderProfileContainer>
   );

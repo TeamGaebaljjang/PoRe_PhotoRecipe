@@ -18,7 +18,7 @@ import NavBar from '../../components/navBar/NavBar';
 const ProFile = () => {
   return (
     <styled.Wrapper>
-      {/* <BackDrop /> */}
+      {/* <styled.BackDrop /> */}
 
       <HeaderProfile />
       {/* <HeaderBMProfile /> */}
