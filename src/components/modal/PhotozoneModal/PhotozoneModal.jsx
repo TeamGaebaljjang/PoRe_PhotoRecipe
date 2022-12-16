@@ -1,5 +1,5 @@
-import Container from './PhotozoneModalStyle';
-import PhotoZone from '../../card/Photozone';
+import Container from './photoZoneModalStyle';
+import PhotoZone from '../../card/PhotoZone';
 
 import Test from '../../../assets/img/main-thumbnail.jpeg';
 

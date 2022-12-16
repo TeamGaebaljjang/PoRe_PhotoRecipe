@@ -1,5 +1,10 @@
 import styled, { css } from 'styled-components';
 
+export const Wrap = styled.div`
+  height: calc(100vh - 48px);
+  overflow: auto;
+`;
+
 export const Li = styled.li`
   position: relative;
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import chatOn from '../../assets/img/chatOn.png';
 
 export const ChatList = styled.div`
   margin: 0 10px;
@@ -29,5 +30,9 @@ export const ChatCont = styled.p`
 `;
 export const ChatOn = styled.div`
   position: absolute;
+  background-image: url(${chatOn});
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
   top: 15px;
 `;

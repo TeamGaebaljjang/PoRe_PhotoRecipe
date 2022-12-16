@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as styled from './photozoneStyle';
+import * as styled from './photoZoneStyle';
 
 const PhotoZone = ({ src }) => {
   const [test, setTest] = useState(false);

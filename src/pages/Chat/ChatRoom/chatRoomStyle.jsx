@@ -4,10 +4,11 @@ import addPic from '../../../assets/icons/icon-photo-upload-white.svg';
 export const ChatWrap = styled.div`
   width: 100%;
   height: 100%;
-  padding-top: 48px;
+  padding-top: 108px;
   position: absolute;
   bottom: 60px;
   overflow: auto;
+  overflow-x: hidden;
 `;
 export const ChatBallon = styled.div`
   margin: 10px;

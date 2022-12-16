@@ -30,7 +30,7 @@ export const Input = styled.textarea`
   width: 250px;
   resize: none;
   border: none;
-
+  overflow: hidden;
   &::placeholder {
     color: var(--gray);
   }

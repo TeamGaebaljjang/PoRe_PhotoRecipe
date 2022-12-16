@@ -1,6 +1,5 @@
 import { ChatList, ChatName, ChatDate, ChatCont, ChatOn } from './chatStyle';
 import profile from '../../assets/img/profile.png';
-import chatOn from '../../assets/img/chatOn.png';
 import HeaderBM from '../../components/header/HeaderBM';
 import NavBar from '../../components/navBar/NavBar';
 
@@ -10,9 +9,7 @@ const Chat = () => {
       <HeaderBM />
       <ChatList>
         <img src={profile} alt="" />
-        <ChatOn>
-          <img src={chatOn} alt="" />
-        </ChatOn>
+        <ChatOn />
         <div>
           <ChatName>장희수</ChatName>
           <ChatCont>
@@ -24,9 +21,7 @@ const Chat = () => {
       </ChatList>
       <ChatList>
         <img src={profile} alt="" />
-        <ChatOn>
-          <img src={chatOn} alt="" />
-        </ChatOn>
+        <ChatOn />
         <div>
           <ChatName>조민지</ChatName>
           <ChatCont>나는 디자인대마왕이다 </ChatCont>
