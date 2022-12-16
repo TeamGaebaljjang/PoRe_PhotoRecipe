@@ -1,10 +1,10 @@
 import styled from 'styled-components';
+import HeaderFeed from '../../components/header/HeaderFeed';
 import Post from '../../components/card/Post';
 import NavBar from '../../components/navBar/NavBar';
-import HeaderFeed from '../../components/header/HeaderFeed';
 
 export const Wrap = styled.div`
-  height: 100vh;
+  height: calc(100vh - 60px);
   overflow: auto;
 `;
 

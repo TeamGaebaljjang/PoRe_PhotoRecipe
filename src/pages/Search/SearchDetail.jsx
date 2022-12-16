@@ -11,6 +11,14 @@ const SearchDetail = () => {
       <SearchUser />
       <SearchUser />
       <SearchUser />
+      <SearchUser />
+      <SearchUser />
+      <SearchUser />
+      <SearchUser />
+      <SearchUser />
+      <SearchUser />
+      <SearchUser />
+      <SearchUser />
       <NavBar />
     </Wrap>
   );

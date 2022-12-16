@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
-  height: 100vh;
+  height: calc(100vh - 60px);
   overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const SearchCont = styled.div`

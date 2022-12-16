@@ -2,14 +2,17 @@ import styled from 'styled-components';
 import map from '../../assets/img/map.png';
 
 export const Wrap = styled.div`
-  height: 100vh;
+  height: calc(100vh - 60px);
   overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const MapCont = styled.div`
   position: relative;
   background: url(${map}) no-repeat;
-  height: 100vh;
+  height: calc(100vh - 108px);
   background-size: cover;
   overflow: auto;
 `;
@@ -18,7 +21,7 @@ export const MapWrap = styled.article`
   position: absolute;
   display: flex;
   flex-direction: row;
-  bottom: 130px;
+  bottom: 24px;
   padding-right: 24px;
 `;
 

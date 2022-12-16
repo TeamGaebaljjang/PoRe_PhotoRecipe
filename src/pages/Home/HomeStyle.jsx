@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
-  height: 100vh;
+  height: calc(100vh - 60px);
   overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Carousel = styled.article`
@@ -69,7 +72,6 @@ export const FeedList = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin: 20px;
-  padding-bottom: 60px;
   overflow: auto;
 `;
 
