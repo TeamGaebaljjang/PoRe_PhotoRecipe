@@ -6,6 +6,9 @@ import NavBar from '../../components/navBar/NavBar';
 export const Wrap = styled.div`
   height: calc(100vh - 60px);
   overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const Feed = () => {
