@@ -16,7 +16,7 @@ const Splash = () => {
 
   setTimeout(() => {
     navigate('/login');
-  }, 3500);
+  }, 3400);
 
   return (
     <Wrap>

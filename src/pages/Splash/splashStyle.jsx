@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-export const Light = keyframes`
+export const Animation = keyframes`
     0%{
       opacity: 0;
     }
@@ -10,15 +10,6 @@ export const Light = keyframes`
     100%{
       opacity: 0;
     }
-`;
-
-export const FadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 `;
 
 export const Wrap = styled.div`
@@ -31,7 +22,7 @@ export const Wrap = styled.div`
 
 export const Logo = styled.figure`
   position: relative;
-  animation: ${FadeIn} 2s 1.4s 1;
+  animation: ${Animation} 2s 1.4s 1;
 
   &::after {
     position: absolute;
@@ -42,7 +33,7 @@ export const Logo = styled.figure`
     height: 12px;
     background-color: white;
     border-radius: 3px;
-    animation: ${Light} 0.15s 4 forwards;
+    animation: ${Animation} 0.15s 5 forwards;
     box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #fff, 0 0 10px #fff,
       0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff,
       0 0 70px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff;
