@@ -1,7 +1,13 @@
-import React from 'react'
+import HeaderB from '../../../components/header/HeaderB';
+import SetProfileForm from './SetProfileForm';
 
-export default function SetProfile() {
+const SetProfile = () => {
   return (
-    <div>SetProfile</div>
-  )
-}
+    <>
+      <HeaderB />
+      <SetProfileForm />
+    </>
+  );
+};
+
+export default SetProfile;
