@@ -1,5 +1,5 @@
-import { FormStyle, InvalidSpan } from './formStyle';
-import StyledButton from '../../components/button/btnForm';
+import { FormStyle, InvalidSpan } from './FormStyle';
+import StyledButton from '../../components/button/BtnForm';
 import { LoginContDiv, SignupLink } from './loginStyle';
 
 const LoginForm = () => {

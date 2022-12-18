@@ -7,12 +7,14 @@ import Map from '../pages/Map/Map';
 import NotFound from '../pages/NotFound/NotFound';
 import Profile from '../pages/Profile/Profile';
 import Splash from '../pages/Splash/Splash';
+import Signup from '../pages/Login/SignUp/SignUp';
 
 const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Splash />} />
       <Route path="login" element={<Login />} />
+      <Route path="signup" element={<Signup />} />
       <Route path="/home" element={<Home />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/map" element={<Map />} />

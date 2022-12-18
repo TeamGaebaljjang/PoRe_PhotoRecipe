@@ -1,6 +1,6 @@
-import { FormStyle, InvalidSpan } from '../formStyle';
+import { FormStyle, InvalidSpan } from '../FormStyle';
 import SignUpContDiv from './signUpStyle';
-import StyledButton from '../../../components/button/btnForm';
+import StyledButton from '../../../components/button/BtnForm';
 
 const SignUpForm = () => {
   return (
