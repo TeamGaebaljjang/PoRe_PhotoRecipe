@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Chat from '../pages/Chat/Chat';
 import Feed from '../pages/Feed/Feed';
+import Search from '../pages/Search/Search';
 import Home from '../pages/Home/Home';
 import Login from '../pages/Login/Login';
 import Map from '../pages/Map/Map';
@@ -17,6 +18,7 @@ const Routing = () => {
       <Route path="signup" element={<Signup />} />
       <Route path="/home" element={<Home />} />
       <Route path="/feed" element={<Feed />} />
+      <Route path="/feed/search" element={<Search />} />
       <Route path="/map" element={<Map />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/profile" element={<Profile />} />
