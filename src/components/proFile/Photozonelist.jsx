@@ -1,23 +1,23 @@
-import * as styled from './photozonelistStyle';
+import { Container, Photo, Region, List } from './photoZonelistStyle';
 
 const PhotoZone = () => {
   return (
-    <styled.Container>
-      <styled.Photo />
-      <styled.Region>성수</styled.Region>
-    </styled.Container>
+    <Container>
+      <Photo />
+      <Region>성수</Region>
+    </Container>
   );
 };
 
 const PhotoZoneList = () => {
   return (
-    <styled.List>
+    <List>
       <PhotoZone />
       <PhotoZone />
       <PhotoZone />
       <PhotoZone />
       <PhotoZone />
-    </styled.List>
+    </List>
   );
 };
 

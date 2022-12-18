@@ -4,8 +4,8 @@ export const BackDrop = styled.div`
   position: absolute;
   width: 390px;
   height: 100vh;
-  background-color: black;
-  opacity: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
 `;
 
 export const Wrapper = styled.div`

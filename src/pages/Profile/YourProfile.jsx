@@ -1,36 +1,40 @@
 import { Wrapper, BackDrop } from './profileStyle';
 
-import HeaderProfile from '../../components/header/HeaderProfile';
+import HeaderBMProfile from '../../components/header/HeaderBMProfile';
 
 import ProFileInfo from '../../components/proFile/ProFileInfo';
 import PhotoZoneList from '../../components/proFile/PhotoZonelist';
-// import FeedBar from '../../components/proFile/Feedbar';
+import FeedBar from '../../components/proFile/Feedbar';
 // import Nothing from '../../components/proFile/Nothing';
 
 // import Feed from '../Home/HomeFeed';
+import Post from '../../components/card/Post';
 
-import PhotoZoneModal from '../../components/modal/PhotoZoneModal/PhotoZoneModal';
+// import PhotoZoneModal from '../../components/modal/PhotozoneModal/PhotozoneModal';
 
 import NavBar from '../../components/navBar/NavBar';
 
-const ProFile = () => {
+const YourProFile = () => {
   return (
     <Wrapper>
       <BackDrop />
 
-      <HeaderProfile />
+      <HeaderBMProfile />
       <ProFileInfo />
       <PhotoZoneList />
 
-      {/* <FeedBar /> */}
+      <FeedBar />
       {/* <Nothing /> */}
 
       {/* <Feed /> */}
+      <Post />
+      <Post />
+      <Post />
 
-      <PhotoZoneModal />
+      {/* <PhotoZoneModal /> */}
 
       <NavBar />
     </Wrapper>
   );
 };
-export default ProFile;
+export default YourProFile;

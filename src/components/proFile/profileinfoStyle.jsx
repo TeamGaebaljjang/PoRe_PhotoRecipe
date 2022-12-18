@@ -41,6 +41,7 @@ export const Following = styled.button`
   font-size: 14px;
 `;
 
+// 버튼 컴포넌트를 파일로 따로 빼기?!
 export const AddPhotoZone = styled.button`
   display: flex;
   justify-content: center;
@@ -53,6 +54,24 @@ export const AddPhotoZone = styled.button`
   border-radius: 80px;
 
   p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+`;
+
+export const GoFollow = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+  height: 40px;
+  margin-right: 20px;
+  border: 1px var(--black) solid;
+  border-radius: 80px;
+
+  p {
+    font-size: 14px;
     font-weight: 500;
   }
 `;
