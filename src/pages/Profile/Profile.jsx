@@ -2,8 +2,8 @@ import { Wrapper, BackDrop } from './profileStyle';
 
 import HeaderProfile from '../../components/header/HeaderProfile';
 
-import ProFileInfo from '../../components/proFile/ProFileInfo';
-import PhotoZoneList from '../../components/proFile/PhotoZonelist';
+import ProfileInfo from '../../components/profile/ProfileInfo';
+import PhotoZoneList from '../../components/profile/PhotoZoneList';
 // import FeedBar from '../../components/proFile/Feedbar';
 // import Nothing from '../../components/proFile/Nothing';
 
@@ -13,13 +13,13 @@ import PhotoZoneModal from '../../components/modal/PhotoZoneModal/PhotoZoneModal
 
 import NavBar from '../../components/navBar/NavBar';
 
-const ProFile = () => {
+const Profile = () => {
   return (
     <Wrapper>
       <BackDrop />
 
       <HeaderProfile />
-      <ProFileInfo />
+      <ProfileInfo />
       <PhotoZoneList />
 
       {/* <FeedBar /> */}
@@ -33,4 +33,4 @@ const ProFile = () => {
     </Wrapper>
   );
 };
-export default ProFile;
+export default Profile;

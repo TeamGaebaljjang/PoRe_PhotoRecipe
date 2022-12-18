@@ -1,4 +1,4 @@
-import { Container, Photo, Region, List } from './photoZonelistStyle';
+import { Container, Photo, Region, List } from './photoZoneListStyle';
 
 const PhotoZone = () => {
   return (

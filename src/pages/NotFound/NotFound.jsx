@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import error from '../../assets/icons/logo-error.svg';
 
@@ -23,11 +24,17 @@ const HomeBtn = styled.button`
 `;
 
 const NotFound = () => {
+  const navigate = useNavigate();
+  const buttonHandler = () => {
+    navigate(`/home`);
+  };
   return (
     <Wrap>
       <img src={error} alt="404error" />
       <ErrorMsg>요청하신 페이지를 찾을 수 없어요 :(</ErrorMsg>
-      <HomeBtn type="button">홈으로</HomeBtn>
+      <HomeBtn type="button" onClick={buttonHandler}>
+        홈으로
+      </HomeBtn>
     </Wrap>
   );
 };

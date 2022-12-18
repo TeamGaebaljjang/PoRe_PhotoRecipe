@@ -10,7 +10,7 @@ import {
   Following,
   AddPhotoZone,
   GoFollow,
-} from './proFileInfoStyle';
+} from './profileInfoStyle';
 
 const ProFileInfo = () => {
   return (
