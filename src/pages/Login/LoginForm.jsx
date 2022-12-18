@@ -1,4 +1,4 @@
-import { FormStyle, InvalidSpan } from './FormStyle';
+import { FormStyle, InvalidSpan } from './formStyle';
 import StyledButton from '../../components/button/BtnForm';
 import { LoginContDiv, SignupLink } from './loginStyle';
 
