@@ -1,10 +1,21 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+// import axios from 'axios';
 import { FormStyle, InvalidSpan } from '../formStyle';
 import { ProfileContDiv, ProfileImgWrap, AddPickBtn } from './setProfileStyle';
-import StyledButton from '../../../components/button/btnForm';
+import StyledButton from '../../../components/button/BtnForm';
 
 const SetProfileForm = () => {
   const [profileImg, setProfileImg] = useState('');
+  const location = useLocation();
+  // const { email, password } = [...location.state];
+  // const { email } = location.state;
+  // const { password } = location.state;
+
+  // console.log(email);
+  // console.log(password);
+  console.log(location.state);
 
   const profileUpload = () => {
     console.log('click됨');
