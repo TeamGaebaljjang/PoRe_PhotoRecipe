@@ -55,7 +55,7 @@ const LoginForm = () => {
         <StyledButton type="submit" onClick={login}>
           로그인
         </StyledButton>
-        <SignupLink to="/">이메일로 회원가입</SignupLink>
+        <SignupLink to="/signup">이메일로 회원가입</SignupLink>
       </FormStyle>
     </LoginContDiv>
   );
