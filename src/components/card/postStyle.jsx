@@ -14,6 +14,8 @@ export const User = styled.div`
 `;
 
 export const UserProfile = styled.img`
+  width: 42px;
+  height: 42px;
   background-color: var(--gray);
   border-radius: 50%;
   margin-right: 12px;
