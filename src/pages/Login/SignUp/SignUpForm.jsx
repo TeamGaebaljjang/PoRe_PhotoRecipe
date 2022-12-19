@@ -11,7 +11,7 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, SetPassword] = useState('');
 
-  // 오류 메시지 상태 저장
+  // 오류 메시지 상태
   const [emailMsg, setEmailMsg] = useState('');
   const [passwordMsg, setPasswordMsg] = useState('');
 
