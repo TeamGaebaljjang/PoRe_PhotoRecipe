@@ -21,8 +21,12 @@ const LoginForm = () => {
 
       if (res.data.message) {
         setErrorMsg(res.data.message);
-        console.log('안되용~');
       } else {
+        localStorage.setItem(
+          'accountname',
+          JSON.stringify(res.data.user.accountname),
+        );
+        localStorage.setItem('token', JSON.stringify(res.data.user.token));
         navigate('/home');
       }
     } catch (error) {
