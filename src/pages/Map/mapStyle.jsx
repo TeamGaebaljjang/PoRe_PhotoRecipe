@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import map from '../../assets/img/map.png';
 
 export const Wrap = styled.div`
   height: calc(100vh - 60px);
@@ -11,18 +10,22 @@ export const Wrap = styled.div`
 
 export const MapCont = styled.div`
   position: relative;
-  background: url(${map}) no-repeat;
+  width: 390px;
   height: calc(100vh - 108px);
-  background-size: cover;
-  overflow: auto;
+  overflow: hidden;
 `;
 
 export const MapWrap = styled.article`
+  width: 390px;
   position: absolute;
   display: flex;
   flex-direction: row;
   bottom: 24px;
   padding-right: 24px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const MapCard = styled.div`

@@ -1,9 +1,14 @@
-import Routes from './routes/Routes';
+// import Routes from './routes/Routes';
+import Map from './pages/Map/Map';
+
+// import KakaoMap from './pages/Map/KakaoMap';
 
 const App = () => {
   return (
     <div>
-      <Routes />
+      {/* <Routes /> */}
+      <Map />
+      {/* <KakaoMap /> */}
     </div>
   );
 };
