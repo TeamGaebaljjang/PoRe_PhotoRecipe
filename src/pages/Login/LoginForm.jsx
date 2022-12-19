@@ -13,16 +13,20 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const login = async () => {
-    const res = await axios.post(`${URL}/user/login`, {
-      user: { email: `${email}`, password: `${password}` },
-      headers: { 'Content-Type': 'application/json' },
-    });
+    try {
+      const res = await axios.post(`${URL}/user/login`, {
+        user: { email: `${email}`, password: `${password}` },
+        headers: { 'Content-Type': 'application/json' },
+      });
 
-    setErrorMsg(res.data.message);
-    if (res.data.message) {
-      console.log('안되용~');
-    } else {
-      navigate('/home');
+      if (res.data.message) {
+        setErrorMsg(res.data.message);
+        console.log('안되용~');
+      } else {
+        navigate('/home');
+      }
+    } catch (error) {
+      setErrorMsg(error.response.data);
     }
   };
 
