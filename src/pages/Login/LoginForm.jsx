@@ -40,6 +40,7 @@ const LoginForm = () => {
           id="email"
           type="email"
           required
+          placeholder="이메일을 입력해주세요."
           onChange={(e) => setEmail(e.target.value)}
         />
 
@@ -48,6 +49,7 @@ const LoginForm = () => {
           id="password"
           type="password"
           required
+          placeholder="비밀번호를 입력해주세요. (6자 이상)"
           onChange={(e) => setPassword(e.target.value)}
         />
 
