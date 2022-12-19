@@ -22,11 +22,8 @@ const LoginForm = () => {
       if (res.data.message) {
         setErrorMsg(res.data.message);
       } else {
-        localStorage.setItem(
-          'accountname',
-          JSON.stringify(res.data.user.accountname),
-        );
-        localStorage.setItem('token', JSON.stringify(res.data.user.token));
+        localStorage.setItem('accountname', res.data.user.accountname);
+        localStorage.setItem('token', res.data.user.token);
         navigate('/home');
       }
     } catch (error) {
