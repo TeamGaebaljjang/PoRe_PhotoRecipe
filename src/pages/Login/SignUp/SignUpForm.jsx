@@ -74,15 +74,13 @@ const SignUpForm = () => {
   };
 
   const handleNextStep = () => {
-    if (!(isValidEmail && isValidPassword)) {
+    if (isValidEmail && isValidPassword) {
       navigate('/signup/setprofile', {
         state: {
-          email: '이메일',
-          password: 123123,
+          email: `${email}`,
         },
       });
     }
-    navigate('/signup/setprofile');
   };
 
   return (

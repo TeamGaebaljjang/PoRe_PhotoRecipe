@@ -9,13 +9,9 @@ import StyledButton from '../../../components/button/BtnForm';
 const SetProfileForm = () => {
   const [profileImg, setProfileImg] = useState('');
   const location = useLocation();
-  // const { email, password } = [...location.state];
-  // const { email } = location.state;
-  // const { password } = location.state;
+  const { email } = location.state;
 
-  // console.log(email);
-  // console.log(password);
-  console.log(location.state);
+  console.log(email);
 
   const profileUpload = () => {
     console.log('click됨');
@@ -38,6 +34,7 @@ const SetProfileForm = () => {
           required
           placeholder="2~10자 이내여야 합니다."
         />
+        {/* 유효성 검사 해야함 ex)@heesu.u */}
         <label htmlFor="userId">계정 ID</label>
         <input
           id="userId"
