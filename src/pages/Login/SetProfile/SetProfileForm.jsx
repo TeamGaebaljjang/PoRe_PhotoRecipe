@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-// import { useLocation } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { FormStyle, InvalidSpan } from '../formStyle';
 import {
@@ -13,15 +12,21 @@ import StyledButton from '../../../components/button/BtnForm';
 import profileBasicImg from '../../../assets/icons/basic-profile-round.svg';
 
 const SetProfileForm = () => {
-  // 이메일 가져오기
-  // const location = useLocation();
-  // const { email } = location.state;
-  // console.log(email);
+  // 이메일, 비밀번호 가져오기
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { email, password } = { ...location.state };
+  console.log(`이메일: ${email}`);
+  console.log(`비번: ${password}`);
+
+  // API 서버
+  const URL = 'https://mandarin.api.weniv.co.kr';
 
   // 사용자 이미지, 사용자 이름, 계정ID
   const [profileImg, setProfileImg] = useState(profileBasicImg);
   const [userName, setUserName] = useState('');
   const [userId, setUserId] = useState('');
+  const [userIntro, setUserIntro] = useState('');
   const fileInput = useRef(null);
 
   // 오류 메시지 상태
@@ -31,6 +36,34 @@ const SetProfileForm = () => {
   // 유효성 검사
   const [isValidUserName, setIsValidUserName] = useState(false);
   const [isValidUserId, setIsValidUserId] = useState(false);
+
+  // 회원가입 API
+  const handleSingUp = async () => {
+    try {
+      const response = await axios.post(`${URL}/user`, {
+        user: {
+          username: `${userName}`,
+          email: `${email}`,
+          password: `${password}`,
+          accountname: `${userId}`,
+          intro: `${userIntro}`,
+          image: `${profileImg}`,
+        },
+        headers: {
+          'Content-type': 'application/json',
+        },
+      });
+
+      if (response) {
+        console.log('response 성공!!!!!!!!!!!!!!!!!!!!1');
+        navigate('/home');
+      } else {
+        console.log(response.data.message);
+      }
+    } catch (error) {
+      console.log(error.response.data);
+    }
+  };
 
   // 사용자 이름 유효성 검사
   const validUserName = () => {
@@ -51,7 +84,6 @@ const SetProfileForm = () => {
 
   // 계정ID 유효성 검사
   const validUserId = async () => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
     try {
       const response = await axios.post(`${URL}/user/accountnamevalid`, {
         user: {
@@ -70,7 +102,7 @@ const SetProfileForm = () => {
         setIsValidUserId(false);
       }
     } catch (error) {
-      console.log(error.response);
+      console.log(error.response.data);
     }
   };
 
@@ -84,8 +116,12 @@ const SetProfileForm = () => {
       setUserName(e.target.value);
     } else if (e.target.id === 'userId') {
       setUserId(e.target.value);
+    } else if (e.target.id === 'userIntro') {
+      setUserIntro(e.target.value);
     }
   };
+
+  // 이미지 API
 
   // 프로필 사진 바꾸기
   const profileChange = (e) => {
@@ -155,15 +191,17 @@ const SetProfileForm = () => {
           </InvalidSpan>
         )}
 
-        <label htmlFor="userDesc">소개</label>
+        <label htmlFor="userIntro">소개</label>
         <input
-          id="userDesc"
+          id="userIntro"
           type="text"
           placeholder="자신에 대해 간단하게 소개해주세요!"
+          onChange={checkInput}
         />
         <StyledButton
           type="submit"
           disabled={!(isValidUserName && isValidUserId)}
+          onClick={handleSingUp}
         >
           PORE 시작하기
         </StyledButton>

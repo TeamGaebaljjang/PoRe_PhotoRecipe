@@ -37,14 +37,19 @@ const SignUpForm = () => {
       });
 
       if (response && emailRegex.test(email)) {
-        setEmailMsg(response.data.message);
-        setIsValidEmail(true);
+        if (response.data.message === '이미 가입된 이메일 주소 입니다.') {
+          setEmailMsg(response.data.message);
+          setIsValidEmail(false);
+        } else {
+          setEmailMsg(response.data.message);
+          setIsValidEmail(true);
+        }
       } else {
         setEmailMsg('이메일 형식이 잘못되었습니다.');
         setIsValidEmail(false);
       }
     } catch (error) {
-      console.log(error.response);
+      console.log(error.response.data);
     }
   };
 
@@ -78,6 +83,7 @@ const SignUpForm = () => {
       navigate('/signup/setprofile', {
         state: {
           email: `${email}`,
+          password: `${password}`,
         },
       });
     }
