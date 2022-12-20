@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import BtnUpload from '../../../components/button/BtnUpload';
-import { Input, Form } from '../../../components/input/Input';
+import { Input, Form, TextInput } from '../../../components/input/Input';
 import HeaderB from '../../../components/header/HeaderB';
 import { PreviewImg, SubmitImg } from './uploadPhotoZoneStyle';
 
@@ -12,6 +12,11 @@ const UploadPhotoZone = () => {
   const [date, setDate] = useState('');
   const [desc, setDesc] = useState('');
   const imgRef = useRef();
+  const textRef = useRef();
+  const handleResizeHeight = useCallback(() => {
+    textRef.current.style.height = '1px';
+    textRef.current.style.height = `${textRef.current.scrollHeight}px`;
+  }, []);
   const navigate = useNavigate();
   const URL = 'https://mandarin.api.weniv.co.kr';
 
@@ -82,7 +87,7 @@ const UploadPhotoZone = () => {
     <>
       <HeaderB />
       <Form action="submit">
-        <label htmlFor="photo">포토존등록</label>
+        <label htmlFor="photo">포토존 등록</label>
         <SubmitImg htmlFor="photo" />
         <PreviewImg src={imgFile || null} alt="" />
         <Input
@@ -111,12 +116,15 @@ const UploadPhotoZone = () => {
           placeholder="숫자만 입력 가능합니다. 예)20221212"
         />
         <label htmlFor="cont">설명</label>
-        <Input
+        <TextInput
           id="cont"
           type="text"
           required
           onChange={(e) => setDesc(e.target.value)}
           placeholder="포토존에 대한 상세한 설명을 입력해주세요."
+          ref={textRef}
+          onInput={handleResizeHeight}
+          rows="1"
         />
         <BtnUpload type="button" onClick={uploadPhoto}>
           저장
