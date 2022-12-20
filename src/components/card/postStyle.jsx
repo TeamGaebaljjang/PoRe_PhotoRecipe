@@ -15,6 +15,9 @@ export const User = styled.div`
 
 export const UserProfile = styled.img`
   background-color: var(--gray);
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
   border-radius: 50%;
   margin-right: 12px;
 `;
@@ -45,12 +48,13 @@ export const PostImg = styled.img`
   height: 228px;
   object-fit: cover;
   border-radius: 10px;
-  margin: 20px 0 14px;
+  margin: 20px 0 0;
 `;
 
 export const Icon = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 export const IconImg = styled.img`

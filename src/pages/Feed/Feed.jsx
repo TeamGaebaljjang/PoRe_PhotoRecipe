@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import HeaderFeed from '../../components/header/HeaderFeed';
-import Post from '../../components/card/Post';
+// import Post from '../../components/card/Post';
+import PostWrapper from '../../components/card/PostWrapper';
 import NavBar from '../../components/navBar/NavBar';
 
 export const Wrap = styled.div`
@@ -14,7 +15,7 @@ export const Wrap = styled.div`
 `;
 
 const Feed = () => {
-  const [items, setItems] = useState('');
+  const [posts, setPosts] = useState([]);
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   const token =
@@ -28,22 +29,19 @@ const Feed = () => {
           'Content-type': 'application/json',
         },
       });
-      setItems(res.data);
+      setPosts(res.data.posts);
       console.log(res);
+      console.log(posts);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => getFeed, []);
-
   return (
     <Wrap>
       <HeaderFeed />
-      <Post items={items} />
-      <Post items={items} />
-      <Post items={items} />
-      <Post items={items} />
+      <PostWrapper posts={posts} />
       <NavBar />
     </Wrap>
   );
