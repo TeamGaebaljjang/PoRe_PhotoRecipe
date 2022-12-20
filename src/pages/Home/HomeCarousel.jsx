@@ -14,7 +14,7 @@ const HomeCarousel = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.get(
-        `${URL}/product/PoRe_PhotoRecipe/?limit=1&skip=1`,
+        `${URL}/product/PoRe_PhotoRecipe/?limit=4`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -41,16 +41,14 @@ const HomeCarousel = () => {
   return (
     <Carousel>
       {thumbnail.map((item) => (
-        <Title key={item.id}>{item.itemName}</Title>
+        <ThumbnailWrap>
+          <Title key={item.id}>{item.itemName}</Title>
+          <Thumbnail key={item.id} src={item.itemImage} alt="thumbnail" />
+        </ThumbnailWrap>
       ))}
       <Search type="button" to="/feed/search">
         <img src={search} alt="검색" />
       </Search>
-      <ThumbnailWrap>
-        {thumbnail.map((item) => (
-          <Thumbnail key={item.id} src={item.itemImage} alt="" />
-        ))}
-      </ThumbnailWrap>
     </Carousel>
   );
 };

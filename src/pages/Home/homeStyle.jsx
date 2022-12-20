@@ -1,5 +1,23 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+
+export const Move = keyframes`
+  0% {
+    transform: translateX(0px);
+  }
+  25%{
+    transform: translateX(-390px);
+  }
+  50%{
+    transform: translateX(-780px);
+  }
+  75%{
+    transform: translateX(-1170px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+`;
 
 export const Wrap = styled.div`
   height: calc(100vh - 60px);
@@ -12,16 +30,11 @@ export const Wrap = styled.div`
 export const Carousel = styled.article`
   position: relative;
   display: flex;
-  flex-direction: column-reverse;
-`;
-
-export const Title = styled.h1`
-  position: absolute;
-  width: 260px;
-  margin: 0 0 30px 30px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: white;
+  flex-direction: row;
+  overflow: hidden;
+  /* &::-webkit-scrollbar {
+    display: none;
+  } */
 `;
 
 export const Search = styled(Link)`
@@ -31,10 +44,22 @@ export const Search = styled(Link)`
 `;
 
 export const ThumbnailWrap = styled.div`
+  display: flex;
+  flex-shrink: 0;
   width: 390px;
   height: 380px;
-  overflow: hidden;
+  overflow: auto;
   border-radius: 0 0 30px 30px;
+  animation: ${Move} 9s ease-in-out infinite;
+`;
+
+export const Title = styled.h1`
+  position: absolute;
+  width: 260px;
+  margin: 290px 0 0 30px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
 `;
 
 export const Thumbnail = styled.img`
