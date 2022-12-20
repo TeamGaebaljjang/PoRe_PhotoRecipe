@@ -54,7 +54,7 @@ export const PostImg = styled.img`
 export const Icon = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 `;
 
 export const IconImg = styled.img`
@@ -69,7 +69,7 @@ export const IconCount = styled.p`
 
 export const PostCont = styled.p`
   font-size: 14px;
-  margin: 16px 0;
+  margin: 20px 0;
 `;
 
 export const PostDate = styled.p`
