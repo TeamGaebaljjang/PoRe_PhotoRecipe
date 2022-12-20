@@ -14,7 +14,7 @@ const Post = ({ posts }) => {
       />
       <PostContent posts={posts} />
       <PostIcon posts={posts} />
-      <PostDate>{posts.createdAt}</PostDate>
+      <PostDate>{posts.createdAt.substring(0, 10)}</PostDate>
     </PostCard>
   );
 };
