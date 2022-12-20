@@ -20,56 +20,29 @@ const UploadPhotoZone = () => {
   const navigate = useNavigate();
   const URL = 'https://mandarin.api.weniv.co.kr';
 
-  // 패치
-  const uploadPhoto = () => {
-    const authToken = localStorage.getItem('token');
-    const body = {
-      product: {
-        itemName: address,
-        price: Number(date),
-        link: desc,
-        itemImage: imgFile,
-      },
-    };
-    fetch(`${URL}/product`, {
-      method: 'POST',
-      body: JSON.stringify(body),
-      headers: {
-        Authorization: `Bearer ${authToken}`,
-        'Content-type': 'application/json',
-      },
-    }).then(
-      // (res) => console.log(res.json())
-      navigate(`/profile`),
-    );
+  const uploadPhoto = async () => {
+    try {
+      const authToken = localStorage.getItem('token');
+      const body = {
+        product: {
+          itemName: address,
+          price: Number(date),
+          link: desc,
+          itemImage: imgFile,
+        },
+      };
+      const res = await axios.post(`${URL}/product`, JSON.stringify(body), {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          'Content-type': 'application/json',
+        },
+      });
+      console.log(res);
+      navigate(`/profile`);
+    } catch (error) {
+      console.log('에러입니다');
+    }
   };
-
-  // 엑시오스 왜 안되는거지,,
-  // const uploadPhoto = async () => {
-  //   try {
-  //     const authToken = localStorage.getItem('token');
-  //     const res = await axios.post(`${URL}/product`, {
-  //       body: {
-  //         product: {
-  //           itemName: address,
-  //           price: Number(date),
-  //           link: desc,
-  //           itemImage: imgFile,
-  //         },
-  //       },
-  //       headers: {
-  //         Authorization: `Bearer ${authToken}`,
-  //         'Content-type': 'application/json',
-  //       },
-  //     });
-  //     console.log(res);
-  //     navigate(`/profile`);
-  //   } catch (error) {
-  //     const authToken = localStorage.getItem('token');
-  //     console.log(authToken);
-  //     console.log('에러입니다');
-  //   }
-  // };
 
   const imgApi = async () => {
     try {
