@@ -14,6 +14,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 24px;
+  margin-bottom: 20px;
 `;
 
 export const Info = styled.div`

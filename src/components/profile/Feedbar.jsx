@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, WhoseFeed } from './feedBarStyle';
+import { Container, WhoseFeed } from './feedbarStyle';
 
 import AlbumOn from '../../assets/icons/icon-post-album-on.svg';
 import AlbumOff from '../../assets/icons/icon-post-album-off.svg';

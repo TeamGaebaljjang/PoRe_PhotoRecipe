@@ -2,9 +2,9 @@ import { Wrapper, BackDrop } from './profileStyle';
 
 import HeaderBMProfile from '../../components/header/HeaderBMProfile';
 
-import ProFileInfo from '../../components/proFile/ProFileInfo';
-import PhotoZoneList from '../../components/proFile/PhotoZonelist';
-import FeedBar from '../../components/proFile/Feedbar';
+import ProFileInfo from '../../components/profile/ProfileInfo';
+import PhotoZoneList from '../../components/profile/PhotoZoneList';
+import FeedBar from '../../components/profile/Feedbar';
 // import Nothing from '../../components/proFile/Nothing';
 
 // import Feed from '../Home/HomeFeed';
