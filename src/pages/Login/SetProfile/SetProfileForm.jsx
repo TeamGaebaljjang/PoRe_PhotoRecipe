@@ -1,10 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 // import { useLocation } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { FormStyle, InvalidSpan } from '../formStyle';
-import { ProfileContDiv, ProfileImgWrap, AddPickBtn } from './setProfileStyle';
+import {
+  ProfileContDiv,
+  ProfileImgWrap,
+  ProfileImg,
+  AddPickBtn,
+} from './setProfileStyle';
 import StyledButton from '../../../components/button/BtnForm';
+import profileBasicImg from '../../../assets/icons/basic-profile-round.svg';
 
 const SetProfileForm = () => {
   // 이메일 가져오기
@@ -13,9 +19,10 @@ const SetProfileForm = () => {
   // console.log(email);
 
   // 사용자 이미지, 사용자 이름, 계정ID
-  const [profileImg, setProfileImg] = useState('');
+  const [profileImg, setProfileImg] = useState(profileBasicImg);
   const [userName, setUserName] = useState('');
   const [userId, setUserId] = useState('');
+  const fileInput = useRef(null);
 
   // 오류 메시지 상태
   const [userNameMsg, setUserNameMsg] = useState('');
@@ -80,10 +87,22 @@ const SetProfileForm = () => {
     }
   };
 
-  // 사용자 이미지 업로드
-  const profileUpload = () => {
-    console.log('click됨');
-    setProfileImg();
+  // 프로필 사진 바꾸기
+  const profileChange = (e) => {
+    if (e.target.files[0]) {
+      setProfileImg(e.target.files[0]);
+    } else {
+      setProfileImg(profileBasicImg);
+    }
+
+    // 화면에 프로필 사진 표시
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (reader.readyState === 2) {
+        setProfileImg(reader.result);
+      }
+    };
+    reader.readAsDataURL(e.target.files[0]);
   };
 
   return (
@@ -92,9 +111,21 @@ const SetProfileForm = () => {
         <h2>프로필 설정</h2>
         <p>나중에 언제든지 변경할 수 있습니다.</p>
         <ProfileImgWrap>
-          <img src={profileImg || null} alt="" />
-          <AddPickBtn onClick={profileUpload} />
+          <ProfileImg src={profileImg} alt="프로필 이미지" />
+          <input
+            type="file"
+            style={{ display: 'none' }}
+            accept="image/jpg,image/png,image/jpeg"
+            name="profile_img"
+            onChange={profileChange}
+            ref={fileInput}
+          />
         </ProfileImgWrap>
+        <AddPickBtn
+          onClick={() => {
+            fileInput.current.click();
+          }}
+        />
         <label htmlFor="userName">사용자 이름</label>
         <input
           id="userName"

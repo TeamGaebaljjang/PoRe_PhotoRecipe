@@ -27,16 +27,19 @@ const ProfileImgWrap = styled.div`
   border-radius: 50%;
   margin: 26px auto;
   background-color: var(--light-gray);
+  overflow: hidden;
+`;
 
-  img {
-    width: 100%;
-  }
+const ProfileImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const AddPickBtn = styled(BtnAddPic)`
   position: absolute;
-  top: 80px;
-  left: 88px;
+  top: 230px;
+  right: 130px;
 `;
 
-export { ProfileContDiv, ProfileImgWrap, AddPickBtn };
+export { ProfileContDiv, ProfileImgWrap, ProfileImg, AddPickBtn };
