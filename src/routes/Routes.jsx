@@ -10,6 +10,7 @@ import Profile from '../pages/Profile/Profile';
 import Splash from '../pages/Splash/Splash';
 import Signup from '../pages/Login/SignUp/SignUp';
 import SetProfile from '../pages/Login/SetProfile/SetProfile';
+import UploadPhotoZone from '../pages/Profile/UploadPhotoZone/UploadPhotoZone';
 
 const Routing = () => {
   return (
@@ -24,6 +25,7 @@ const Routing = () => {
       <Route path="/map" element={<Map />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/profile/uploadphotozone" element={<UploadPhotoZone />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );

@@ -1,16 +1,20 @@
-import postImg from '../../assets/img/main-thumbnail.jpeg';
-import { PostCard, PostImg } from './postStyle';
+import { PostCard, PostImg, PostDate } from './postStyle';
 import PostUserInfo from './PostUserInfo';
 import PostIcon from './PostIcon';
 import PostContent from './PostContent';
 
-const Post = () => {
+const Post = ({ posts }) => {
   return (
     <PostCard>
-      <PostUserInfo />
-      <PostImg src={postImg} alt="" />
-      <PostIcon />
-      <PostContent />
+      <PostUserInfo posts={posts} />
+      <PostImg
+        style={posts.image ? { display: 'block' } : { display: 'none' }}
+        src={posts.image}
+        alt=""
+      />
+      <PostContent posts={posts} />
+      <PostIcon posts={posts} />
+      <PostDate>{posts.createdAt.substring(0, 10)}</PostDate>
     </PostCard>
   );
 };

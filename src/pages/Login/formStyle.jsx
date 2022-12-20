@@ -22,6 +22,10 @@ const FormStyle = styled.div`
     color: var(--light-gray);
   }
 
+  input:focus {
+    border-bottom: 1px solid var(--black);
+  }
+
   input + label {
     margin-top: 16px;
   }
