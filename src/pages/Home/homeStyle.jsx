@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Wrap = styled.div`
   height: calc(100vh - 60px);
@@ -23,17 +24,23 @@ export const Title = styled.h1`
   color: white;
 `;
 
-export const Search = styled.button`
+export const Search = styled(Link)`
   position: absolute;
   top: 20px;
   right: 20px;
 `;
 
-export const Thumbnail = styled.img`
+export const ThumbnailWrap = styled.div`
   width: 390px;
   height: 380px;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 0 0 30px 30px;
+`;
+
+export const Thumbnail = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const SpotTab = styled.div`

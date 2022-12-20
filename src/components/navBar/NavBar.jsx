@@ -29,10 +29,19 @@ const NavBar = () => {
           </NavItemStyle>
         </Link>
         <Link to="/feed">
-          <img src={target === '/feed' ? iconFeedActive : iconFeed} alt="" />
+          <img
+            src={
+              target === '/feed' || target === '/feed/search'
+                ? iconFeedActive
+                : iconFeed
+            }
+            alt=""
+          />
           <NavItemStyle
             style={
-              target === '/feed' ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/feed' || target === '/feed/search'
+                ? { color: 'black' }
+                : { color: 'var(--gray)' }
             }
           >
             피드
