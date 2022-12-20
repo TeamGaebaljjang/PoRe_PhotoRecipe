@@ -1,4 +1,5 @@
 // import BasicProFile from '../../assets/icons/basic-profile-rec.svg';
+import { useNavigate } from 'react-router-dom';
 import PhotoUpload from '../../assets/icons/icon-photo-upload-black.svg';
 import {
   Img,
@@ -13,6 +14,8 @@ import {
 } from './profileInfoStyle';
 
 const ProfileInfo = ({ info }) => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <Img src={info.image} />
@@ -28,7 +31,11 @@ const ProfileInfo = ({ info }) => {
             </Following>
           </Follow>
         </Info>
-        <AddPhotoZone>
+        <AddPhotoZone
+          onClick={() => {
+            navigate(`/profile/uploadphotozone`);
+          }}
+        >
           <img src={PhotoUpload} alt="포토존 등록 버튼 이미지" />
           <p>포토존 등록</p>
         </AddPhotoZone>
