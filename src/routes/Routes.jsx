@@ -9,14 +9,16 @@ import NotFound from '../pages/NotFound/NotFound';
 import Profile from '../pages/Profile/Profile';
 import Splash from '../pages/Splash/Splash';
 import Signup from '../pages/Login/SignUp/SignUp';
+import SetProfile from '../pages/Login/SetProfile/SetProfile';
 import UploadPhotoZone from '../pages/Profile/UploadPhotoZone/UploadPhotoZone';
 
 const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Splash />} />
-      <Route path="login" element={<Login />} />
-      <Route path="signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/signup/setprofile" element={<SetProfile />} />
       <Route path="/home" element={<Home />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/feed/search" element={<Search />} />

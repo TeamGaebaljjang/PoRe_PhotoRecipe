@@ -8,7 +8,7 @@ const StyledButton = styled.button`
   border-radius: 50px;
   background-color: var(--deep-gray);
 
-  &:active {
+  &:enabled {
     background-color: var(--black);
   }
 `;

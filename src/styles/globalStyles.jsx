@@ -52,6 +52,7 @@ img{
     --gray: #CDCDCD;
     --deep-gray: #B4B4B4;
     --super-gray: #767676;
+    --success-green: #50c927;
 }
 
 
