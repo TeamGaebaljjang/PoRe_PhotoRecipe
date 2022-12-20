@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import BtnAddPic from '../../../components/button/BtnAddPic';
+import addPic from '../../../assets/icons/icon-photo-upload-white.svg';
 
-const ProfileContDiv = styled.div`
+export const ProfileContDiv = styled.div`
   background-color: white;
   min-height: 614px;
   margin-top: 20px;
@@ -20,7 +20,7 @@ const ProfileContDiv = styled.div`
   }
 `;
 
-const ProfileImgWrap = styled.div`
+export const ProfileImgWrap = styled.div`
   position: relative;
   width: 116px;
   height: 116px;
@@ -30,16 +30,21 @@ const ProfileImgWrap = styled.div`
   overflow: hidden;
 `;
 
-const ProfileImg = styled.img`
+export const ProfileImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
 
-const AddPickBtn = styled(BtnAddPic)`
+export const ProfileImgLabel = styled.label`
   position: absolute;
   top: 230px;
   right: 130px;
+  width: 36px;
+  height: 36px;
+  background-color: var(--black);
+  border-radius: 50%;
+  background-image: url(${addPic});
+  background-repeat: no-repeat;
+  background-position: center;
 `;
-
-export { ProfileContDiv, ProfileImgWrap, ProfileImg, AddPickBtn };

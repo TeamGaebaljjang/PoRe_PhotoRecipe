@@ -6,7 +6,7 @@ import {
   ProfileContDiv,
   ProfileImgWrap,
   ProfileImg,
-  AddPickBtn,
+  ProfileImgLabel,
 } from './setProfileStyle';
 import StyledButton from '../../../components/button/BtnForm';
 import profileBasicImg from '../../../assets/icons/basic-profile-round.svg';
@@ -55,7 +55,6 @@ const SetProfileForm = () => {
       });
 
       if (response) {
-        console.log('response 성공!!!!!!!!!!!!!!!!!!!!1');
         navigate('/home');
       } else {
         console.log(response.data.message);
@@ -122,23 +121,20 @@ const SetProfileForm = () => {
   };
 
   // 이미지 API
+  const profileChange = async () => {
+    try {
+      const file = fileInput.current.files[0];
+      const formData = new FormData();
 
-  // 프로필 사진 바꾸기
-  const profileChange = (e) => {
-    if (e.target.files[0]) {
-      setProfileImg(e.target.files[0]);
-    } else {
-      setProfileImg(profileBasicImg);
+      formData.append('image', file);
+
+      const res = await axios.post(`${URL}/image/uploadfile`, formData);
+      const fileName = res.data.filename;
+
+      setProfileImg(`${URL}/${fileName}`);
+    } catch (error) {
+      console.log('에러입니다');
     }
-
-    // 화면에 프로필 사진 표시
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (reader.readyState === 2) {
-        setProfileImg(reader.result);
-      }
-    };
-    reader.readAsDataURL(e.target.files[0]);
   };
 
   return (
@@ -148,19 +144,16 @@ const SetProfileForm = () => {
         <p>나중에 언제든지 변경할 수 있습니다.</p>
         <ProfileImgWrap>
           <ProfileImg src={profileImg} alt="프로필 이미지" />
-          <input
-            type="file"
-            style={{ display: 'none' }}
-            accept="image/jpg,image/png,image/jpeg"
-            name="profile_img"
-            onChange={profileChange}
-            ref={fileInput}
-          />
         </ProfileImgWrap>
-        <AddPickBtn
-          onClick={() => {
-            fileInput.current.click();
-          }}
+        <ProfileImgLabel htmlFor="profileImg" />
+        <input
+          id="profileImg"
+          type="file"
+          style={{ display: 'none' }}
+          accept="image/jpg,image/png,image/jpeg"
+          name="profile_img"
+          onChange={profileChange}
+          ref={fileInput}
         />
         <label htmlFor="userName">사용자 이름</label>
         <input
