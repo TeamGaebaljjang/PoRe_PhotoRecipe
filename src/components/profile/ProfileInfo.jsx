@@ -23,10 +23,18 @@ const ProfileInfo = ({ info }) => {
         <Info>
           <Name>{info.username}</Name>
           <Follow>
-            <Follower>
+            <Follower
+              onClick={() => {
+                navigate(`/profile/follower`);
+              }}
+            >
               팔로워 <span>{info.followerCount}</span>
             </Follower>
-            <Following>
+            <Following
+              onClick={() => {
+                navigate(`/profile/following`);
+              }}
+            >
               팔로잉 <span>{info.followingCount}</span>
             </Following>
           </Follow>
