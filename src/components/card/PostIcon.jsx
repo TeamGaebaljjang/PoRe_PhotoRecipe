@@ -10,6 +10,7 @@ const PostIcon = ({ posts }) => {
   const handleHeart = () => {
     if (like ? setLike(false) : setLike(true));
   };
+
   return (
     <Icon>
       <IconImg

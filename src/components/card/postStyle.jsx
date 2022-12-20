@@ -17,6 +17,9 @@ export const UserProfile = styled.img`
   width: 42px;
   height: 42px;
   background-color: var(--gray);
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
   border-radius: 50%;
   margin-right: 12px;
 `;
@@ -47,12 +50,13 @@ export const PostImg = styled.img`
   height: 228px;
   object-fit: cover;
   border-radius: 10px;
-  margin: 20px 0 14px;
+  margin: 20px 0 0;
 `;
 
 export const Icon = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 `;
 
 export const IconImg = styled.img`
@@ -67,7 +71,7 @@ export const IconCount = styled.p`
 
 export const PostCont = styled.p`
   font-size: 14px;
-  margin: 16px 0;
+  margin: 20px 0;
 `;
 
 export const PostDate = styled.p`
