@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import HeaderFeed from '../../components/header/HeaderFeed';
-// import Post from '../../components/card/Post';
 import PostWrapper from '../../components/card/PostWrapper';
 import NavBar from '../../components/navBar/NavBar';
 
@@ -23,7 +22,7 @@ const Feed = () => {
 
   const getFeed = async () => {
     try {
-      const res = await axios.get(`${URL}/post/feed/?limit=4`, {
+      const res = await axios.get(`${URL}/post/feed`, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-type': 'application/json',

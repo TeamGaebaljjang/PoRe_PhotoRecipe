@@ -1,4 +1,3 @@
-// import postImg from '../../assets/img/main-thumbnail.jpeg';
 import { PostCard, PostImg, PostDate } from './postStyle';
 import PostUserInfo from './PostUserInfo';
 import PostIcon from './PostIcon';
