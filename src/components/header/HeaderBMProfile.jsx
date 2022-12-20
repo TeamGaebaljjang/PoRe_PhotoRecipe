@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import {
   BtnWrapper,
   HeaderProfileContainer,
@@ -6,9 +7,14 @@ import {
 } from './headerStyle';
 
 const HeaderBMProfile = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1);
+  };
   return (
     <HeaderProfileContainer>
-      <BackBtn />
+      <BackBtn onClick={handleBack} />
       <BtnWrapper>
         <MoreBtn />
       </BtnWrapper>
