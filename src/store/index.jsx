@@ -1,9 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-
-import userInfoSlice from './userInfoSlice';
+import followSlice from './followSlice';
 
 const store = configureStore({
-  reducer: { userInfo: userInfoSlice },
+  reducer: { follow: followSlice },
 });
 
 export default store;

@@ -4,10 +4,11 @@ export const Wrap = styled.div`
   height: calc(100vh - 48px);
   overflow: auto;
 `;
-
+// 제거예정
 export const Li = styled.li`
   position: relative;
 `;
+
 export const BtnFollow = styled.button`
   position: absolute;
   top: 20px;
