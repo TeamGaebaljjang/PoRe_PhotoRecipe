@@ -13,7 +13,7 @@ export const Container = styled.div`
   position: sticky;
   align-self: flex-start;
   top: -1px;
-  z-index: 100;
+  z-index: 10;
 
   button {
     margin-right: 16px;

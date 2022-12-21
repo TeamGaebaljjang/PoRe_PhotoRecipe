@@ -1,20 +1,31 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import Container from './photoZoneModalStyle';
 import PhotoZone from '../../card/PhotoZone';
+// import Test from '../../../assets/img/main-thumbnail.jpeg';
+import { getPhotoZone } from '../../../store/photoZoneSlice';
 
-import Test from '../../../assets/img/main-thumbnail.jpeg';
+const PhotoZoneModal = ({ name }) => {
+  const dispatch = useDispatch();
+  const getPhotoZoneData = useSelector(
+    (state) => state.photoZone.photoZoneData,
+  );
+  useEffect(() => {
+    dispatch(getPhotoZone());
+  }, []);
+  const photoZoneList = getPhotoZoneData.payload?.product;
 
-const PhotoZoneModal = () => {
   return (
     <Container>
       <div className="region">
-        <p>my broken mental,,,</p>
+        <p>{name}</p>
       </div>
-
       <div className="scroll">
-        <PhotoZone src={Test} />
-        <PhotoZone />
-        <PhotoZone />
-        <PhotoZone />
+        {photoZoneList
+          .filter((v) => v.itemName === name)
+          .map((v) => (
+            <PhotoZone props={v} />
+          ))}
       </div>
     </Container>
   );

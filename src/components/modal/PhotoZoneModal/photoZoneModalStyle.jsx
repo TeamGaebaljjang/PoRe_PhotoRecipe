@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 390px;
   height: calc(100vh - (100vh / 3));
@@ -10,6 +11,7 @@ const Container = styled.div`
   border-radius: 20px 20px 0px 0px;
   box-shadow: 0 0 10px var(--deep-gray);
   overflow: hidden;
+  z-index: 30;
 
   animation-name: appear;
   animation-duration: 2s;
