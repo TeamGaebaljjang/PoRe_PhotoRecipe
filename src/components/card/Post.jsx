@@ -14,7 +14,11 @@ const Post = ({ posts }) => {
       />
       <PostContent posts={posts} />
       <PostIcon posts={posts} />
-      <PostDate>{posts.createdAt.substring(0, 10)}</PostDate>
+      <PostDate>
+        {posts.createdAt.substring(0, 4)}년&nbsp;
+        {posts.createdAt.substring(5, 7)}월&nbsp;
+        {posts.createdAt.substring(8, 10)}일
+      </PostDate>
     </PostCard>
   );
 };

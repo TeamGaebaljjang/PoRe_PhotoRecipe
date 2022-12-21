@@ -15,22 +15,21 @@ export const Wrap = styled.div`
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
-  const URL = 'https://mandarin.api.weniv.co.kr';
-
-  const token =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTZjYjUyMTdhZTY2NjU4MWMzMzQ0MyIsImV4cCI6MTY3NjYxODE4MiwiaWF0IjoxNjcxNDM0MTgyfQ.dnnDfwwnekAWwoNEhCQiog5t8TaQ3msfRBRcNbdX3c8';
 
   const getFeed = async () => {
+    const URL = 'https://mandarin.api.weniv.co.kr';
+    const authToken = localStorage.getItem('token');
+
     try {
       const res = await axios.get(`${URL}/post/feed`, {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${authToken}`,
           'Content-type': 'application/json',
         },
       });
       setPosts(res.data.posts);
-      console.log(res);
-      console.log(posts);
+      // console.log('feed 응답 : ', res);
+      // console.log('feed 데이터 : ', posts);
     } catch (error) {
       console.log(error);
     }
