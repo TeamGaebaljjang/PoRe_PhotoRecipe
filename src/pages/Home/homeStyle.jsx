@@ -52,7 +52,7 @@ export const ThumbnailWrap = styled.div`
   height: 380px;
   overflow: hidden;
   border-radius: 0 0 30px 30px;
-  animation: ${Move} 10s ease-in-out infinite;
+  animation: ${Move} 15s 2s ease-in-out infinite;
 `;
 
 export const Title = styled.h1`

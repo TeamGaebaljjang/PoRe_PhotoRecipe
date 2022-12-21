@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import {
   Carousel,
@@ -15,6 +16,7 @@ const HomeCarousel = () => {
   const slideRef = useRef([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [thumbnail, setThumbnail] = useState([]);
+  const navigate = useNavigate();
 
   // API 서버
   const URL = 'https://mandarin.api.weniv.co.kr';
@@ -49,8 +51,26 @@ const HomeCarousel = () => {
   }, []);
 
   // 캐러셀 클릭시 상세페이지 이동
-  const test = () => {
-    alert('이미지 상세보기');
+  const getDetailPage = async ({ item }) => {
+    console.log(item.itemName);
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.get(`${URL}/product/detail/${item.id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-type': 'application/json',
+        },
+      });
+
+      if (response) {
+        console.log(response.data);
+        navigate('/photodetail');
+      } else {
+        console.log(response.data.message);
+      }
+    } catch (error) {
+      console.log(error.response);
+    }
   };
 
   // 캐러셀
@@ -80,18 +100,18 @@ const HomeCarousel = () => {
   return (
     <Carousel ref={slideRef}>
       {thumbnail.map((item) => (
-        <ThumbnailWrap>
+        <ThumbnailWrap key={item.id}>
           <Title key={item.id}>{item.itemName}</Title>
           <Thumbnail
             key={item.id}
             src={item.itemImage}
             alt="thumbnail"
-            onClick={test}
+            onClick={() => getDetailPage({ item })}
           />
         </ThumbnailWrap>
       ))}
-      <MoveBtn className="left" type="button" onClick={handleLeft} />
-      <MoveBtn className="right" type="button" onClick={handleRight} />
+      <MoveBtn className="left" type="button" onClick={() => handleLeft()} />
+      <MoveBtn className="right" type="button" onClick={() => handleRight()} />
       <Search type="button" to="/feed/search">
         <img src={search} alt="검색" />
       </Search>
