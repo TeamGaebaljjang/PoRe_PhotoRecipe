@@ -1,18 +1,20 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+import leftBtn from '../../assets/icons/icon-left-btn.svg';
+import rightBtn from '../../assets/icons/icon-right-btn.svg';
 
 export const Move = keyframes`
   0% {
     transform: translateX(0px);
   }
   25%{
-    transform: translateX(-390px);
+    transform: translateX(-100%);
   }
   50%{
-    transform: translateX(-780px);
+    transform: translateX(-200%);
   }
   75%{
-    transform: translateX(-1170px);
+    transform: translateX(-300%);
   }
   100%{
     transform: translateX(0px);
@@ -48,9 +50,9 @@ export const ThumbnailWrap = styled.div`
   flex-shrink: 0;
   width: 390px;
   height: 380px;
-  overflow: auto;
+  overflow: hidden;
   border-radius: 0 0 30px 30px;
-  animation: ${Move} 9s ease-in-out infinite;
+  animation: ${Move} 10s ease-in-out infinite;
 `;
 
 export const Title = styled.h1`
@@ -66,6 +68,23 @@ export const Thumbnail = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+export const MoveBtn = styled.button`
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 160px;
+  opacity: 0.8;
+
+  &.left {
+    background: url(${leftBtn}) no-repeat center;
+    left: 0;
+  }
+  &.right {
+    background: url(${rightBtn}) no-repeat center;
+    right: 0;
+  }
 `;
 
 export const SpotTab = styled.div`

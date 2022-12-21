@@ -1,9 +1,19 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { Carousel, Title, Search, ThumbnailWrap, Thumbnail } from './homeStyle';
+import { useState, useEffect, useRef } from 'react';
+import {
+  Carousel,
+  Title,
+  Search,
+  ThumbnailWrap,
+  Thumbnail,
+  MoveBtn,
+} from './homeStyle';
 import search from '../../assets/icons/icon-search-white.svg';
 
 const HomeCarousel = () => {
+  const TOTAL_SLIDES = 4;
+  const slideRef = useRef([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [thumbnail, setThumbnail] = useState([]);
 
   // API 서버
@@ -38,14 +48,50 @@ const HomeCarousel = () => {
     getThumbnail();
   }, []);
 
+  // 캐러셀 클릭시 상세페이지 이동
+  const test = () => {
+    alert('이미지 상세보기');
+  };
+
+  // 캐러셀
+  const handleLeft = () => {
+    if (currentSlide === 0) {
+      setCurrentSlide(TOTAL_SLIDES);
+    } else {
+      setCurrentSlide(currentSlide - 1);
+    }
+  };
+
+  const handleRight = () => {
+    if (currentSlide >= TOTAL_SLIDES) {
+      setCurrentSlide(0);
+    } else {
+      setCurrentSlide(currentSlide + 1);
+      console.log(currentSlide);
+    }
+  };
+
+  useEffect(() => {
+    console.log(slideRef.current);
+    slideRef.current.style.transition = 'all 0.5s ease-in-out';
+    slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
+  }, [currentSlide]);
+
   return (
-    <Carousel>
+    <Carousel ref={slideRef}>
       {thumbnail.map((item) => (
         <ThumbnailWrap>
           <Title key={item.id}>{item.itemName}</Title>
-          <Thumbnail key={item.id} src={item.itemImage} alt="thumbnail" />
+          <Thumbnail
+            key={item.id}
+            src={item.itemImage}
+            alt="thumbnail"
+            onClick={test}
+          />
         </ThumbnailWrap>
       ))}
+      <MoveBtn className="left" type="button" onClick={handleLeft} />
+      <MoveBtn className="right" type="button" onClick={handleRight} />
       <Search type="button" to="/feed/search">
         <img src={search} alt="검색" />
       </Search>
