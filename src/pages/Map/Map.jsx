@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import HeaderBSM from '../../components/header/HeaderBSM';
-import { Wrap, MapCont, MapWrap } from './mapStyle';
-import MapModal from './MapModal';
+import { Wrap, MapCont } from './mapStyle';
+import MapWrapper from './MapWrapper';
 import NavBar from '../../components/navBar/NavBar';
 import KakaoMap from './KakaoMap';
 
@@ -10,7 +11,6 @@ const Map = () => {
   const [result, setResult] = useState('');
   const onChange = (e) => {
     setText(e.target.value);
-    console.log('it works!');
   };
   const onKeyPress = (e) => {
     if (e.key === 'Enter') {
@@ -18,16 +18,40 @@ const Map = () => {
     }
   };
 
+  // mandarin api*
+  const [modals, setModals] = useState([]);
+  const URL = 'https://mandarin.api.weniv.co.kr';
+  const authToken =
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTE1ZTQ4MTdhZTY2NjU4MWQ0ZmRmZCIsImV4cCI6MTY3NjcwMzkzOSwiaWF0IjoxNjcxNTE5OTM5fQ.8rFholhXAFkJWP5Cdg1zoinbxD7t-_L2MQS4pHr1rak';
+  //   const accountName = '2sol';
+  const getModal = async () => {
+    try {
+      //   const authToken = localStorage.getItem('token');
+      //   const accountName = localStorage.getItem('accountname');
+      const res = await axios.get(`${URL}/product`, {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          'Content-type': 'application/json',
+        },
+      });
+      setModals(res.data.product);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => getModal, []);
+  //
+
   return (
     <Wrap>
       <HeaderBSM text={text} onChange={onChange} onKeyPress={onKeyPress} />
+
       <MapCont>
-        <KakaoMap text={text} result={result} />
-        <MapWrap>
+        <KakaoMap result={result} />
+        <MapWrapper modals={modals} />
+        {/* <MapModal />
           <MapModal />
-          <MapModal />
-          <MapModal />
-        </MapWrap>
+          <MapModal /> */}
       </MapCont>
       <NavBar />
     </Wrap>

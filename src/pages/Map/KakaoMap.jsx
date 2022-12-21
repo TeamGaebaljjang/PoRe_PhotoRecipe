@@ -7,7 +7,7 @@ const KakaoMap = ({ result }) => {
   // const [info, setInfo] = useState();
   const [markers, setMarkers] = useState([]);
   const [map, setMap] = useState();
-  console.log(result);
+  //   console.log(result);
 
   useEffect(() => {
     if (!map) return;
@@ -48,7 +48,7 @@ const KakaoMap = ({ result }) => {
       }}
       style={{
         width: '390px',
-        height: 'calc(100vh - 108px)',
+        height: '100%',
         zIndex: '0',
       }}
       level={3}
