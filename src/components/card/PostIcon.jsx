@@ -7,43 +7,42 @@ import chat from '../../assets/icons/icon-chat.svg';
 
 const PostIcon = ({ posts }) => {
   const [like, setLike] = useState(false);
-  const [likeData, setLikeData] = useState('');
-  const [postId, setPostId] = useState('');
+  // const [heartCount, setHeartCount] = useState('');
 
   const handleHeart = () => {
     if (like ? setLike(false) : setLike(true));
   };
 
-  const URL = 'https://mandarin.api.weniv.co.kr';
-  const token =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTZjYjUyMTdhZTY2NjU4MWMzMzQ0MyIsImV4cCI6MTY3NjYxODE4MiwiaWF0IjoxNjcxNDM0MTgyfQ.dnnDfwwnekAWwoNEhCQiog5t8TaQ3msfRBRcNbdX3c8';
+  const handleSetLike = async () => {
+    const URL = 'https://mandarin.api.weniv.co.kr';
+    const authToken = localStorage.getItem('token');
+    const postId = posts?.id;
 
-  const handleLike = async () => {
     try {
-      const res = await axios.post(`${URL}/post/${postId}/heart`, {
+      const res = await axios.post(`${URL}/post/${postId}/heart`, [], {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${authToken}`,
           'Content-type': 'application/json',
         },
       });
-      setLikeData(res.data);
-      setPostId(res.data.post);
-      console.log('like', res);
+      console.log('좋아요 res : ', res);
+      console.log('좋아요 data : ', res.data);
+      console.log('postId : ', postId);
     } catch (error) {
       console.log(error);
     }
   };
 
-  useEffect(() => handleLike, []);
+  useEffect(() => handleSetLike, []);
+  useEffect(() => {
+    // setHeartCount(posts?.heartCount);
+    setLike(posts?.hearted);
+  }, []);
 
   return (
     <Icon>
-      <IconCount likeData={likeData}>
-        <IconImg
-          src={like ? heartOn : heartOff}
-          alt="좋아요"
-          onClick={handleHeart}
-        />
+      <IconCount onClick={handleHeart}>
+        <IconImg src={like ? heartOn : heartOff} alt="좋아요" />
         {posts.heartCount}
       </IconCount>
 
