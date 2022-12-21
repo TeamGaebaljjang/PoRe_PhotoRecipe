@@ -14,7 +14,7 @@ const Container = styled.div`
   z-index: 30;
 
   animation-name: appear;
-  animation-duration: 2s;
+  animation-duration: 0.8s;
   @keyframes appear {
     0% {
       bottom: calc(-1 * (100vh - (100vh / 2.6)));

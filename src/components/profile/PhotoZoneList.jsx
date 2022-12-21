@@ -23,6 +23,15 @@ const PhotoZoneList = () => {
     ...new Set(photoZoneList && photoZoneList.map((v) => v.itemName)),
   ];
 
+  const thumbNail = [];
+  setPhotoZoneList.map((v, i) =>
+    photoZoneList.map((k) =>
+      v === k.itemName && thumbNail.length === i
+        ? thumbNail.push(k.itemImage)
+        : null,
+    ),
+  );
+
   return (
     <List ref={nameRef}>
       {setPhotoZoneList.map((item, i) => (
@@ -32,7 +41,7 @@ const PhotoZoneList = () => {
             setName(nameRef.current.children[i].innerText);
           }}
         >
-          <Photo src="" />
+          <Photo src={thumbNail[i]} />
           <Region>{item}</Region>
         </Container>
       ))}
@@ -42,7 +51,7 @@ const PhotoZoneList = () => {
             setModal(!modal);
           }}
         />
-      ) : null}{' '}
+      ) : null}
       {modal ? <PhotoZoneModal name={name} /> : null}
     </List>
   );

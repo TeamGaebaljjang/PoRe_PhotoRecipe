@@ -7,7 +7,6 @@ const PhotoZone = ({ props }) => {
   const testHandle = () => {
     setDesc(!desc);
   };
-  console.log(props);
   return (
     <Div src={props.itemImage}>
       <Cont
