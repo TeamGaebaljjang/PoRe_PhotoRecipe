@@ -9,7 +9,7 @@ const PhotoZoneCard = () => {
       <HeaderB />
       <PostCard>
         <PostUserInfo />
-        <PostImg src={postImg} alt="" />
+        <PostImg src={postImg} alt="상세이미지" />
       </PostCard>
     </>
   );
