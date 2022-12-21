@@ -1,72 +1,27 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import User from '../../../components/user/User';
-import { BtnFollow, Li, Wrap } from './followStyle';
+import { Wrap } from './followStyle';
 import HeaderFollower from '../../../components/header/HeaderFollower';
+import { getFollower } from '../../../store/followSlice';
 
 const Follower = () => {
+  const dispatch = useDispatch();
+  const getfollowerData = useSelector((state) => state.follow.followerData);
+  useEffect(() => {
+    dispatch(getFollower());
+  }, []);
+  const followerList = getfollowerData.payload;
+
+  console.log(followerList);
+
   return (
     <>
       <HeaderFollower />
       <Wrap>
-        <Li>
-          <User />
-          <BtnFollow type="button">팔로우</BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button">팔로우</BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button">팔로우</BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button">팔로우</BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button">팔로우</BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button" cancel>
-            취소
-          </BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button">팔로우</BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button" cancel>
-            취소
-          </BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button" cancel>
-            취소
-          </BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button" cancel>
-            취소
-          </BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button" cancel>
-            취소
-          </BtnFollow>
-        </Li>
-        <Li>
-          <User />
-          <BtnFollow type="button" cancel>
-            취소
-          </BtnFollow>
-        </Li>
+        <Wrap>
+          {followerList && followerList.map((item) => <User item={item} />)}
+        </Wrap>
       </Wrap>
     </>
   );

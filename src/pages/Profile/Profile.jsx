@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Wrapper } from './profileStyle';
 import HeaderProfile from '../../components/header/HeaderProfile';
 import ProfileInfo from '../../components/profile/ProfileInfo';
-// import PhotoZoneList from '../../components/profile/PhotoZoneList';
+import PhotoZoneList from '../../components/profile/PhotoZoneList';
 import FeedBar from '../../components/profile/Feedbar';
 import Nothing from '../../components/profile/Nothing';
 // import Feed from '../Home/HomeFeed';
@@ -54,7 +54,7 @@ const Profile = () => {
       {/* <BackDrop /> */}
       <HeaderProfile />
       <ProfileInfo info={info} />
-      {/* <PhotoZoneList /> */}
+      <PhotoZoneList />
       <FeedBar />
       {posts.length === 0 ? <Nothing /> : <PostWrapper posts={posts} />}
       {/* <PhotoZoneModal /> */}
