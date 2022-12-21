@@ -7,7 +7,7 @@ import { getFollowing } from '../../../store/followSlice';
 
 const Following = () => {
   const dispatch = useDispatch();
-  const getfollowingData = useSelector((state) => state.follow.followData);
+  const getfollowingData = useSelector((state) => state.follow.followingData);
   useEffect(() => {
     dispatch(getFollowing());
   }, []);

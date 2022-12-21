@@ -2,7 +2,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialFollowState = {
-  followData: [],
+  followerData: [],
+  followingData: [],
   error: null,
   loading: false,
 };
@@ -52,7 +53,7 @@ const followSlice = createSlice({
       .addCase(getFollowing.fulfilled, (state, payload) => {
         state.error = null;
         state.loading = false;
-        state.followData = payload;
+        state.followingData = payload;
       })
       .addCase(getFollowing.rejected, (state, payload) => {
         state.error = payload;
@@ -65,7 +66,7 @@ const followSlice = createSlice({
       .addCase(getFollower.fulfilled, (state, payload) => {
         state.error = null;
         state.loading = false;
-        state.followData = payload;
+        state.followerData = payload;
       })
       .addCase(getFollower.rejected, (state, payload) => {
         state.error = payload;
