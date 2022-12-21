@@ -54,25 +54,29 @@ export const PostImg = styled.img`
 export const Icon = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin: 0 7px 15px 7px;
 `;
 
 export const IconImg = styled.img`
   cursor: pointer;
 `;
 
-export const IconCount = styled.p`
-  margin: 0 16px 0 6px;
+export const IconCount = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 16px 0 0;
   font-size: 12px;
   color: var(--super-gray);
 `;
 
 export const PostCont = styled.p`
   font-size: 14px;
-  margin: 20px 0;
+  margin: 20px 7px;
 `;
 
 export const PostDate = styled.p`
+  margin: 0 7px;
   font-size: 10px;
   color: var(--super-gray);
 `;
