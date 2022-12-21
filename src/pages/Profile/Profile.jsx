@@ -7,7 +7,6 @@ import PhotoZoneList from '../../components/profile/PhotoZoneList';
 import FeedBar from '../../components/profile/Feedbar';
 import Nothing from '../../components/profile/Nothing';
 // import Feed from '../Home/HomeFeed';
-// import PhotoZoneModal from '../../components/modal/PhotoZoneModal/PhotoZoneModal';
 import NavBar from '../../components/navBar/NavBar';
 import PostWrapper from '../../components/card/PostWrapper';
 
@@ -51,13 +50,11 @@ const Profile = () => {
   }, []);
   return (
     <Wrapper>
-      {/* <BackDrop /> */}
       <HeaderProfile />
       <ProfileInfo info={info} />
       <PhotoZoneList />
       <FeedBar />
       {posts.length === 0 ? <Nothing /> : <PostWrapper posts={posts} />}
-      {/* <PhotoZoneModal /> */}
       <NavBar />
     </Wrapper>
   );

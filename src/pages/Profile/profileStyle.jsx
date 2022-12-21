@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const BackDrop = styled.div`
   position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
   width: 390px;
   height: 100vh;
   background: rgba(0, 0, 0, 0.35);
