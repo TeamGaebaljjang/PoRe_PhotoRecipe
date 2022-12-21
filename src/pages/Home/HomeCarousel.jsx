@@ -50,29 +50,6 @@ const HomeCarousel = () => {
     getThumbnail();
   }, []);
 
-  // 캐러셀 클릭시 상세페이지 이동
-  const getDetailPage = async ({ item }) => {
-    console.log(item.itemName);
-    try {
-      const token = localStorage.getItem('token');
-      const response = await axios.get(`${URL}/product/detail/${item.id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-type': 'application/json',
-        },
-      });
-
-      if (response) {
-        console.log(response.data);
-        navigate('/photodetail');
-      } else {
-        console.log(response.data.message);
-      }
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
-
   // 캐러셀
   const handleLeft = () => {
     if (currentSlide === 0) {
@@ -97,6 +74,21 @@ const HomeCarousel = () => {
     slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
   }, [currentSlide]);
 
+  const handleDetailPost = ({ item }) => {
+    navigate('/photodetail', {
+      state: {
+        image: `${item.author.image}`,
+        username: `${item.author.username}`,
+        accountname: `${item.author.accountname}`,
+
+        itemImage: `${item.itemImage}`,
+        itemName: `${item.itemName}`,
+        link: `${item.link}`,
+        updatedAt: `${item.updatedAt}`,
+      },
+    });
+  };
+
   return (
     <Carousel ref={slideRef}>
       {thumbnail.map((item) => (
@@ -106,7 +98,7 @@ const HomeCarousel = () => {
             key={item.id}
             src={item.itemImage}
             alt="thumbnail"
-            onClick={() => getDetailPage({ item })}
+            onClick={() => handleDetailPost({ item })}
           />
         </ThumbnailWrap>
       ))}

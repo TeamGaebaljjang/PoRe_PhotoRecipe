@@ -14,6 +14,8 @@ export const User = styled.div`
 `;
 
 export const UserProfile = styled.img`
+  width: 42px;
+  height: 42px;
   background-color: var(--gray);
   border-radius: 50%;
   margin-right: 12px;
@@ -61,6 +63,11 @@ export const IconCount = styled.p`
   margin: 0 16px 0 6px;
   font-size: 12px;
   color: var(--super-gray);
+`;
+
+export const PostTitle = styled.h1`
+  font-size: 18px;
+  font-weight: 700;
 `;
 
 export const PostCont = styled.p`
