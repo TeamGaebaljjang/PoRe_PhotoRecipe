@@ -89,6 +89,10 @@ const HomeCarousel = () => {
     });
   };
 
+  const test = () => {
+    console.log('마우스올림');
+  };
+
   return (
     <Carousel ref={slideRef}>
       {thumbnail.map((item) => (
@@ -98,6 +102,7 @@ const HomeCarousel = () => {
             key={item.id}
             src={item.itemImage}
             alt="thumbnail"
+            onMouseOver={() => test()}
             onClick={() => handleDetailPost({ item })}
           />
         </ThumbnailWrap>

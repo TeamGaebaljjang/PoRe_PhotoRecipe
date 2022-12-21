@@ -13,38 +13,12 @@ import {
   PostCont,
   PostDate,
 } from '../../../components/card/postStyle';
+import NavBar from '../../../components/navBar/NavBar';
 
 const PhotoZoneCard = () => {
   const location = useLocation();
   const { image, username, accountname, itemImage, itemName, link, updatedAt } =
     { ...location.state };
-
-  // 캐러셀 클릭시 상세페이지 이동
-  // const getDetailPage = async ({ item }) => {
-  //   console.log(item.itemName);
-  //   try {
-  //     const token = localStorage.getItem('token');
-  //     const response = await axios.get(`${URL}/product/detail/${item.id}`, {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //         'Content-type': 'application/json',
-  //       },
-  //     });
-
-  //     if (response) {
-  //       console.log(response.data);
-  //       navigate('/photodetail');
-  //     } else {
-  //       console.log(response.data.message);
-  //     }
-  //   } catch (error) {
-  //     console.log(error.response);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getDetailPage();
-  // }, []);
 
   return (
     <>
@@ -57,11 +31,16 @@ const PhotoZoneCard = () => {
             <UserId>@ {accountname}</UserId>
           </UserInfo>
         </User>
-        <PostImg src={itemImage} alt="상세이미지" />
+        <PostImg className="admin-post-img" src={itemImage} alt="상세이미지" />
         <PostTitle>{itemName}</PostTitle>
         <PostCont>{link}</PostCont>
-        <PostDate>{updatedAt}</PostDate>
+        <PostDate>
+          {updatedAt.substring(0, 4)}년&nbsp;
+          {updatedAt.substring(5, 7)}월&nbsp;
+          {updatedAt.substring(8, 10)}일
+        </PostDate>
       </PostCard>
+      <NavBar />
     </>
   );
 };

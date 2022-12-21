@@ -48,6 +48,9 @@ export const PostImg = styled.img`
   object-fit: cover;
   border-radius: 10px;
   margin: 20px 0 14px;
+  &.admin-post-img {
+    height: 350px;
+  }
 `;
 
 export const Icon = styled.div`
