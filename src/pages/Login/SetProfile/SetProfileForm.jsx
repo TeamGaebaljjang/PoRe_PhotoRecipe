@@ -94,8 +94,13 @@ const SetProfileForm = () => {
       });
 
       if (response && userIdRegex.test(userId)) {
-        setUserIdMsg(response.data.message);
-        setIsValidUserId(true);
+        if (response.data.message === '이미 가입된 계정ID 입니다.') {
+          setUserIdMsg(response.data.message);
+          setIsValidUserId(false);
+        } else {
+          setUserIdMsg(response.data.message);
+          setIsValidUserId(true);
+        }
       } else {
         setUserIdMsg('계정ID 형식이 잘못되었습니다.');
         setIsValidUserId(false);
