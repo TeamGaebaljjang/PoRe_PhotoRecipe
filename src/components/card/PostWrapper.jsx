@@ -1,11 +1,17 @@
 import Post from './Post';
+import PostSmall from './PostSmall';
 
-const PostWrapper = ({ posts }) => {
+const PostWrapper = ({ posts, view }) => {
+  console.log(view);
   return (
     <>
-      {posts.map((v) => (
-        <Post key={v.id} posts={v} />
-      ))}
+      {posts.map((v) =>
+        view ? (
+          <PostSmall key={v.id} posts={v} />
+        ) : (
+          <Post key={v.id} posts={v} />
+        ),
+      )}
     </>
   );
 };

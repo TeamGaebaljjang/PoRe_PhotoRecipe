@@ -50,7 +50,7 @@ export const PostImg = styled.img`
   height: 228px;
   object-fit: cover;
   border-radius: 10px;
-  margin: 20px 0 0;
+  margin-top: 20px;
 `;
 
 export const Icon = styled.div`

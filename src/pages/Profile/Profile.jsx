@@ -14,6 +14,10 @@ const Profile = () => {
   const [info, setInfo] = useState('');
   const [posts, setPosts] = useState([]);
   const URL = 'https://mandarin.api.weniv.co.kr';
+  const [view, setView] = useState(false);
+  const viewHandler = () => {
+    setView(!view);
+  };
 
   useEffect(() => {
     (async function getMyInfo() {
@@ -53,8 +57,12 @@ const Profile = () => {
       <HeaderProfile />
       <ProfileInfo info={info} />
       <PhotoZoneList />
-      <FeedBar />
-      {posts.length === 0 ? <Nothing /> : <PostWrapper posts={posts} />}
+      <FeedBar viewHandler={viewHandler} />
+      {posts.length === 0 ? (
+        <Nothing />
+      ) : (
+        <PostWrapper posts={posts} view={view} />
+      )}
       <NavBar />
     </Wrapper>
   );
