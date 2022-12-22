@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const UnderModalWrap = styled.ul`
+  background-color: white;
   position: fixed;
   bottom: 0;
-  margin-bottom: 60px;
+  margin-bottom: 56px;
   padding: 0 25px;
   width: 390px;
   border-radius: 10px 10px 0 0;
