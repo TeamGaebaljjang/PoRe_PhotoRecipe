@@ -55,7 +55,7 @@ const SetProfileForm = () => {
       });
 
       if (response) {
-        navigate('/home');
+        navigate('/login');
       } else {
         console.log(response.data.message);
       }

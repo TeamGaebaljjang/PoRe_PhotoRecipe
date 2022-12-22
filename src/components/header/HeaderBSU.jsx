@@ -7,6 +7,7 @@ const HeaderBSU = () => {
   const handleBack = () => {
     navigate(-1);
   };
+
   return (
     <HeaderContainer>
       <BackBtn onClick={handleBack} />

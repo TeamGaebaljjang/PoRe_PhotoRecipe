@@ -25,6 +25,7 @@ const LoginForm = () => {
         localStorage.setItem('accountname', res.data.user.accountname);
         localStorage.setItem('token', res.data.user.token);
         navigate('/home');
+        console.log(res.data);
       }
     } catch (error) {
       setErrorMsg(error.response.data);

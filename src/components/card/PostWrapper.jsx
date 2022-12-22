@@ -2,7 +2,6 @@ import Post from './Post';
 import PostSmall from './PostSmall';
 
 const PostWrapper = ({ posts, view }) => {
-  console.log(view);
   return (
     <>
       {posts.map((v) =>

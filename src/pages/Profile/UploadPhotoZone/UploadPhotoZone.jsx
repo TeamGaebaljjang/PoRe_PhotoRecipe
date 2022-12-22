@@ -80,9 +80,9 @@ const UploadPhotoZone = () => {
           onChange={(e) => setAddress(e.target.value)}
           placeholder="정확한 주소지를 입력해주세요."
         />
-        <label htmlFor="day">촬영 날짜</label>
+        <label htmlFor="date">촬영 날짜</label>
         <Input
-          id="day"
+          id="date"
           type="number"
           required
           onChange={(e) => setDate(e.target.value)}
