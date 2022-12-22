@@ -1,10 +1,12 @@
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
 
 const HomeFeed = () => {
   const [feedPost, setFeedPost] = useState([]);
   const [btnActive, setBtnActive] = useState('');
+  const navigate = useNavigate();
 
   // API 서버
   const URL = 'https://mandarin.api.weniv.co.kr';
@@ -43,6 +45,22 @@ const HomeFeed = () => {
     ...new Set(feedPost && feedPost.map((item) => item.itemName)),
   ];
 
+  const handleDetailPost = ({ item }) => {
+    console.log(item);
+    navigate('/userphotodetail', {
+      state: {
+        image: `${item.author.image}`,
+        username: `${item.author.username}`,
+        accountname: `${item.author.accountname}`,
+
+        itemImage: `${item.itemImage}`,
+        itemName: `${item.itemName}`,
+        link: `${item.link}`,
+        createdAt: `${item.createdAt}`,
+      },
+    });
+  };
+
   return (
     <>
       <SpotTab>
@@ -60,7 +78,12 @@ const HomeFeed = () => {
       <FeedList>
         {feedPost.map((item) => (
           <Feed>
-            <FeedImg key={item.id} src={item.itemImage} alt="" />
+            <FeedImg
+              key={item.id}
+              src={item.itemImage}
+              alt=""
+              onClick={() => handleDetailPost({ item })}
+            />
           </Feed>
         ))}
       </FeedList>
