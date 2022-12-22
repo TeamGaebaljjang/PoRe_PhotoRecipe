@@ -4,12 +4,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 200px;
-  padding: 16px 0px 16px;
+  padding: 16px 0;
   width: 390px;
   height: 60px;
-  border-top: 1px var(--gray) solid;
+  margin-bottom: 10px;
   background-color: white;
-
+  box-shadow: 0 4px 7px -4px var(--light-gray);
   position: sticky;
   align-self: flex-start;
   top: -1px;
