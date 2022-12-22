@@ -2,7 +2,7 @@
 import { MapCard, SpotName, SpotImg, SpotTxt } from './mapStyle';
 
 const MapModal = ({ modals }) => {
-  console.log(modals);
+  //   console.log(modals);
   return (
     <MapCard>
       <SpotName>{modals.itemName}</SpotName>

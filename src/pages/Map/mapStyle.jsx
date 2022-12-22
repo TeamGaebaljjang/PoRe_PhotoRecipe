@@ -15,7 +15,7 @@ export const MapCont = styled.div`
   overflow: hidden;
 `;
 
-export const MapWrap = styled.article`
+export const ModalWrap = styled.article`
   width: 390px;
   position: absolute;
   display: flex;
@@ -52,4 +52,12 @@ export const SpotTxt = styled.p`
   font-size: 14px;
   margin: 20px;
   text-align: center;
+
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: keep-all;
 `;

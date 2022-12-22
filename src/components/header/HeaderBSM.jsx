@@ -1,15 +1,15 @@
-import { HeaderContainer, BackBtn, SearchInp } from './headerStyle';
+import { HeaderContainer, SearchInp } from './headerStyle';
 
 const HeaderBSM = ({ text, onChange, onKeyPress }) => {
   return (
     <HeaderContainer>
-      <BackBtn />
       <SearchInp
         type="text"
         placeholder="지역 검색"
         value={text}
         onChange={onChange}
         onKeyPress={onKeyPress}
+        style={{ width: '350px' }}
       />
     </HeaderContainer>
   );

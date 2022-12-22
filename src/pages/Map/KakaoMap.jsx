@@ -1,70 +1,41 @@
 import { useState, useEffect } from 'react';
-import { Map, MapMarker } from 'react-kakao-maps-sdk';
+import { Map } from 'react-kakao-maps-sdk';
 
 const { kakao } = window;
 
+// modals props 받아오기
 const KakaoMap = ({ result }) => {
-  // const [info, setInfo] = useState();
-  const [markers, setMarkers] = useState([]);
-  const [map, setMap] = useState();
-  //   console.log(result);
+  const [state, setState] = useState({
+    // 지도의 초기 위치
+    center: { lat: 37.49676871972202, lng: 127.02474726969814 },
+    // 지도 위치 변경시 panto를 이용(부드럽게 이동)
+    isPanto: true,
+  });
 
+  // 입력한 키워드의 위치로 이동
   useEffect(() => {
-    if (!map) return;
+    // if (!map) return;
     const ps = new kakao.maps.services.Places();
-
-    ps.keywordSearch(`${result}`, (data, status) => {
+    const photoZoneSearchCB = (data, status) => {
       if (status === kakao.maps.services.Status.OK) {
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
-        // LatLngBounds 객체에 좌표를 추가
-        const bounds = new kakao.maps.LatLngBounds();
-        const Markers = [];
-
-        for (let i = 0; i < data.length; i += 1) {
-          // @ts-ignore
-          Markers.push({
-            position: {
-              lat: data[i].y,
-              lng: data[i].x,
-            },
-            content: data[i].place_name,
-          });
-          // @ts-ignore
-          bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
-        }
-        setMarkers(Markers);
-
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정
-        map.setBounds(bounds);
+        const newSearch = data[0];
+        setState({ center: { lat: newSearch.y, lng: newSearch.x } });
       }
-    });
+    };
+    ps.keywordSearch(`${result}`, photoZoneSearchCB);
   }, [result]);
 
   return (
-    <Map // 로드뷰를 표시할 Container
-      center={{
-        lat: 37.566826,
-        lng: 126.9786567,
-      }}
+    <Map // 지도를 표시할 Container
+      center={state.center}
       style={{
         width: '390px',
         height: '100%',
         zIndex: '0',
       }}
       level={3}
-      onCreate={setMap}
     >
-      {markers.map((marker) => (
-        <MapMarker
-          key={`marker-${marker.content}-${marker.position.lat},${marker.position.lng}`}
-          position={marker.position}
-          //   onClick={() => setInfo(marker)}
-        />
-        //   {info && info.content === marker.content && (
-        //     <div style={{ color: '#000' }}>{marker.content}</div>
-        //   )}
-        // </MapMarker>
-      ))}
+      {/* 등록해둔 전체 포토존들 마커 찍어두기 */}
     </Map>
   );
 };
