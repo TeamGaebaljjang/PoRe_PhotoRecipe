@@ -11,8 +11,7 @@ export const Container = styled.div`
 export const Photo = styled.div`
   width: 80px;
   height: 80px;
-  background: var(--gray) url(${(props) => props.src}) no-repeat center/ 80px
-    80px;
+  background: var(--gray) url(${(props) => props.src}) no-repeat center / cover;
   border-radius: 50%;
 `;
 
@@ -24,7 +23,7 @@ export const Region = styled.p`
 
 export const List = styled.div`
   display: flex;
-  margin: 25px 0px 15px 20px;
+  margin: 35px 0px 20px 20px;
   gap: 20px;
   overflow: auto;
   &::-webkit-scrollbar {
