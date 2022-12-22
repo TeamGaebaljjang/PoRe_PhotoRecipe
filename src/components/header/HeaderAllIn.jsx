@@ -6,7 +6,7 @@ import {
   SearchBtn,
   Title,
   BackBtn,
-  EditProfileBtn,
+  UploadPostBtn,
   SearchInp,
 } from './headerStyle';
 
@@ -24,7 +24,7 @@ const HeaderTest = () => {
       <BtnWrapper>
         <SearchBtn />
         <MoreBtn />
-        <EditProfileBtn />
+        <UploadPostBtn />
       </BtnWrapper>
     </HeaderContainer>
   );
