@@ -1,9 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { FeedList, Feed, FeedImg } from './homeStyle';
+import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
 
 const HomeFeed = () => {
   const [feedPost, setFeedPost] = useState([]);
+  const [btnActive, setBtnActive] = useState('');
+  const [place, setPlace] = useState([]);
+  // const place = ['서울', '경기', '강원', '제주', '부산'];
 
   // API 서버
   const URL = 'https://mandarin.api.weniv.co.kr';
@@ -11,8 +14,9 @@ const HomeFeed = () => {
   // 썸네일 리스트 API
   const getFeed = async () => {
     try {
+      // const accountname = localStorage.getItem('accountname');
       const token = localStorage.getItem('token');
-      const response = await axios.get(`${URL}/product/PoRe_PhotoRecipe`, {
+      const response = await axios.get(`${URL}/product/?limit=20`, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-type': 'application/json',
@@ -21,6 +25,7 @@ const HomeFeed = () => {
 
       if (response) {
         console.log(response.data);
+        setPlace(response.data.product);
         setFeedPost(response.data.product);
       }
     } catch (error) {
@@ -32,14 +37,34 @@ const HomeFeed = () => {
     getFeed();
   }, []);
 
+  const handleActive = (e) => {
+    setBtnActive(() => {
+      return e.target.value;
+    });
+  };
+
   return (
-    <FeedList>
-      {feedPost.map((item) => (
-        <Feed>
-          <FeedImg key={item.id} src={item.itemImage} alt="" />
-        </Feed>
-      ))}
-    </FeedList>
+    <>
+      <SpotTab>
+        {place.map((item) => (
+          <SpotBtn
+            key={item.id}
+            value={item.itemName}
+            className={item.itemName === btnActive ? 'active' : ''}
+            onClick={handleActive}
+          >
+            {item.itemName}
+          </SpotBtn>
+        ))}
+      </SpotTab>
+      <FeedList>
+        {feedPost.map((item) => (
+          <Feed>
+            <FeedImg key={item.id} src={item.itemImage} alt="" />
+          </Feed>
+        ))}
+      </FeedList>
+    </>
   );
 };
 
