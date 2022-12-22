@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const ConfirmModal = styled.article`
   position: absolute;
   top: calc(100vh / 2.5);
-  left: 110px;
-  max-width: 250px;
+  left: 85px;
+  width: 220px;
   text-align: center;
   border-radius: 10px;
   background-color: white;
