@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 const ConfirmModal = styled.article`
-  position: relative;
-  top: calc(100vh / 2);
-  max-width: 250px;
-  margin: 0 auto;
+  position: absolute;
+  top: calc(100vh / 2.5);
+  left: 85px;
+  width: 220px;
   text-align: center;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 0 10px var(--deep-gray);
+  z-index: 20;
 
   h3 {
     font-size: 16px;
