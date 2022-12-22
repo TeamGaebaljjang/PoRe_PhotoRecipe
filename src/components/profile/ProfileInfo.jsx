@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import BasicProFile from '../../assets/icons/basic-profile-rec.svg';
 import PhotoUpload from '../../assets/icons/icon-photo-upload-black.svg';
 import {
   Img,
@@ -10,7 +9,6 @@ import {
   Follower,
   Following,
   AddPhotoZone,
-  // GoFollow,
 } from './profileInfoStyle';
 
 const ProfileInfo = ({ info }) => {
@@ -18,7 +16,7 @@ const ProfileInfo = ({ info }) => {
 
   return (
     <div>
-      <Img src={info.image ? info.image : BasicProFile} />
+      <Img src={info.image} />
       <Container>
         <Info>
           <Name>{info.username}</Name>
