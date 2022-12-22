@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
 import HeaderB from '../../../components/header/HeaderB';
 import {
+  Wrap,
   PostCard,
   PostImg,
   User,
@@ -21,8 +22,8 @@ const PhotoZoneCard = () => {
     { ...location.state };
 
   return (
-    <>
-      <HeaderB />
+    <Wrap>
+      <HeaderB style={{ position: 'sticky' }} />
       <PostCard>
         <User>
           <UserProfile src={image} alt="" />
@@ -31,7 +32,7 @@ const PhotoZoneCard = () => {
             <UserId>@ {accountname}</UserId>
           </UserInfo>
         </User>
-        <PostImg className="admin-post-img" src={itemImage} alt="상세이미지" />
+        <PostImg className="detail-post-img" src={itemImage} alt="상세이미지" />
         <PostTitle>{itemName}</PostTitle>
         <PostCont>{link}</PostCont>
         <PostDate>
@@ -41,7 +42,7 @@ const PhotoZoneCard = () => {
         </PostDate>
       </PostCard>
       <NavBar />
-    </>
+    </Wrap>
   );
 };
 

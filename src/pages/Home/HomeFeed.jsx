@@ -47,7 +47,7 @@ const HomeFeed = () => {
 
   const handleDetailPost = ({ item }) => {
     console.log(item);
-    navigate('/userphotodetail', {
+    navigate('/photodetail', {
       state: {
         image: `${item.author.image}`,
         username: `${item.author.username}`,
