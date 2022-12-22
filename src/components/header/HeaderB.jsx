@@ -7,7 +7,7 @@ const HeaderB = () => {
   const handleBack = () => {
     navigate(-1);
   };
-  
+
   return (
     <HeaderContainer>
       <BackBtn onClick={handleBack} />

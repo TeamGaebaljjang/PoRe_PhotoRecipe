@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const Wrap = styled.div`
+  height: calc(100vh - 60px);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
 export const PostCard = styled.article`
   display: flex;
   flex-direction: column;
@@ -51,7 +59,7 @@ export const PostImg = styled.img`
   object-fit: cover;
   border-radius: 10px;
   margin-top: 20px;
-  &.admin-post-img {
+  &.detail-post-img {
     height: 350px;
   }
 `;
@@ -78,11 +86,12 @@ export const IconCount = styled.button`
 export const PostTitle = styled.h1`
   font-size: 18px;
   font-weight: 700;
+  margin-top: 14px;
 `;
 
 export const PostCont = styled.p`
   font-size: 14px;
-  margin: 20px 7px;
+  margin: 14px 7px;
 `;
 
 export const PostDate = styled.p`

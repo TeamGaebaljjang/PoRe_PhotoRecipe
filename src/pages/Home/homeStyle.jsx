@@ -97,6 +97,7 @@ export const SpotTab = styled.div`
   box-shadow: 0 4px 7px -4px var(--gray);
   overflow: auto;
   white-space: nowrap;
+  z-index: 10;
 
   &::-webkit-scrollbar {
     display: none;
@@ -110,6 +111,7 @@ export const SpotBtn = styled.button`
   line-height: 16px;
   color: var(--super-gray);
   font-size: 1rem;
+  background-color: white;
 
   &.active {
     background-color: var(--black);
@@ -123,12 +125,20 @@ export const FeedList = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin: 20px;
-  overflow: auto;
 `;
 
 export const Feed = styled.li`
+  position: relative;
   width: 170px;
   height: 190px;
   border: 1px solid var(--gray);
   border-radius: 10px;
+  overflow: auto;
+`;
+
+export const FeedImg = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
