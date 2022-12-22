@@ -5,8 +5,7 @@ export const Img = styled.div`
   height: 90px;
   margin-top: 8px;
   margin-left: 38px;
-  background: var(--gray) url(${(props) => props.src}) no-repeat center/ 90px
-    90px;
+  background: var(--gray) url(${(props) => props.src}) no-repeat center/ cover;
 `;
 
 export const Container = styled.div`
