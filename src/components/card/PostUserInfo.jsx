@@ -6,16 +6,16 @@ import {
   UserId,
   More,
 } from './postStyle';
-import profile from '../../assets/icons/basic-profile-round.svg';
+// import profile from '../../assets/icons/basic-profile-round.svg';
 import more from '../../assets/icons/icon-more-vertical-gray.svg';
 
-const PostUserInfo = () => {
+const PostUserInfo = ({ posts }) => {
   return (
     <User>
-      <UserProfile src={profile} alt="" />
+      <UserProfile src={posts.author.image} alt="" />
       <UserInfo>
-        <UserName>포토레시피</UserName>
-        <UserId>@ PoRe_PhotoRecipe</UserId>
+        <UserName>{posts.author.username}</UserName>
+        <UserId>@ {posts.author.accountname}</UserId>
       </UserInfo>
       <More src={more} alt="" />
     </User>

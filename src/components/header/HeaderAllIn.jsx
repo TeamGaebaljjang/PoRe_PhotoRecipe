@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import {
   BtnWrapper,
   HeaderContainer,
@@ -5,20 +6,25 @@ import {
   SearchBtn,
   Title,
   BackBtn,
-  EditProfileBtn,
+  UploadPostBtn,
   SearchInp,
 } from './headerStyle';
 
 const HeaderTest = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1);
+  };
   return (
     <HeaderContainer>
-      <BackBtn />
+      <BackBtn onClick={handleBack} />
       <Title>테스트</Title>
       <SearchInp type="text" placeholder="계정 검색" />
       <BtnWrapper>
         <SearchBtn />
         <MoreBtn />
-        <EditProfileBtn />
+        <UploadPostBtn />
       </BtnWrapper>
     </HeaderContainer>
   );

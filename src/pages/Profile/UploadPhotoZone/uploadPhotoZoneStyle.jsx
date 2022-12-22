@@ -21,4 +21,5 @@ export const PreviewImg = styled.img`
   border-radius: 10px;
   border: 1px solid var(--deep-gray);
   margin: 18px 0;
+  object-fit: cover;
 `;

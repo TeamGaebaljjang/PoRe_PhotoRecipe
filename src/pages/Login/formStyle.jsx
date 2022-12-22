@@ -12,6 +12,9 @@ const FormStyle = styled.div`
     font-size: 14px;
     height: 32px;
     border-bottom: 1px solid var(--gray);
+    :focus {
+      border-bottom: 1px solid var(--black);
+    }
   }
 
   input::placeholder {
@@ -35,9 +38,15 @@ const FormStyle = styled.div`
 
 const InvalidSpan = styled.span`
   display: block;
-  color: var(--light-red);
+  /* color: var(--light-red); */
   font-size: 12px;
   padding-top: 6px;
+  &.success {
+    color: var(--success-green);
+  }
+  &.error {
+    color: var(--light-red);
+  }
 `;
 
 export { FormStyle, InvalidSpan };

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Div = styled.div`
+  width: 340px;
+  height: 190px;
   flex-shrink: 0;
   border-radius: 10px;
   background: url(${(props) => props.src}) no-repeat center / cover;
@@ -23,9 +25,16 @@ export const Cont = styled.div`
   justify-content: center;
 `;
 
+export const Desc = styled.p`
+  width: 90%;
+  word-wrap: break-word;
+`;
+
 export const Date = styled.p`
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
   font-size: 14px;
   font-weight: 500;
-  padding: 150px 10px 10px 265px;
   color: white;
 `;

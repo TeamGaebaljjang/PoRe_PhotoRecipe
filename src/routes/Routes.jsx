@@ -10,13 +10,19 @@ import NotFound from '../pages/NotFound/NotFound';
 import Profile from '../pages/Profile/Profile';
 import Splash from '../pages/Splash/Splash';
 import Signup from '../pages/Login/SignUp/SignUp';
+import SetProfile from '../pages/Login/SetProfile/SetProfile';
+import UploadPhotoZone from '../pages/Profile/UploadPhotoZone/UploadPhotoZone';
+import Following from '../pages/Profile/Follow/Following';
+import Follower from '../pages/Profile/Follow/Follower';
+import UploadPost from '../pages/Profile/UploadPost/UploadPost';
 
 const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Splash />} />
-      <Route path="login" element={<Login />} />
-      <Route path="signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/signup/setprofile" element={<SetProfile />} />
       <Route path="/home" element={<Home />} />
       <Route path="/photodetail" element={<PhotoZoneDetail />} />
       <Route path="/feed" element={<Feed />} />
@@ -24,6 +30,10 @@ const Routing = () => {
       <Route path="/map" element={<Map />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/profile/following" element={<Following />} />
+      <Route path="/profile/follower" element={<Follower />} />
+      <Route path="/profile/uploadphotozone" element={<UploadPhotoZone />} />
+      <Route path="/profile/uploadpost" element={<UploadPost />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );
