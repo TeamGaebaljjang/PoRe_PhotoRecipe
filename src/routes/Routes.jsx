@@ -13,6 +13,7 @@ import SetProfile from '../pages/Login/SetProfile/SetProfile';
 import UploadPhotoZone from '../pages/Profile/UploadPhotoZone/UploadPhotoZone';
 import Following from '../pages/Profile/Follow/Following';
 import Follower from '../pages/Profile/Follow/Follower';
+import UploadPost from '../pages/Profile/UploadPost/UploadPost';
 
 const Routing = () => {
   return (
@@ -30,6 +31,7 @@ const Routing = () => {
       <Route path="/profile/following" element={<Following />} />
       <Route path="/profile/follower" element={<Follower />} />
       <Route path="/profile/uploadphotozone" element={<UploadPhotoZone />} />
+      <Route path="/profile/uploadpost" element={<UploadPost />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );
