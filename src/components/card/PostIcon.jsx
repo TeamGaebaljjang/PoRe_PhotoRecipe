@@ -38,13 +38,11 @@ const PostIcon = ({ posts }) => {
         setHeartCount(res.data.post.heartCount);
         setLike(false);
       }
-      // console.log('postId : ', postId);
     } catch (error) {
       console.log(error);
     }
   };
 
-  // useEffect(() => handleLike, []);
   useEffect(() => {
     setHeartCount(heartCount);
     setLike(posts?.hearted);

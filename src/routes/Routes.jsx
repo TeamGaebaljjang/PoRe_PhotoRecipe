@@ -14,6 +14,7 @@ import SetProfile from '../pages/Login/SetProfile/SetProfile';
 import UploadPhotoZone from '../pages/Profile/UploadPhotoZone/UploadPhotoZone';
 import Following from '../pages/Profile/Follow/Following';
 import Follower from '../pages/Profile/Follow/Follower';
+import PostCard from '../pages/PostDetail/PostCard/PostCard';
 import UploadPost from '../pages/Profile/UploadPost/UploadPost';
 
 const Routing = () => {
@@ -27,6 +28,7 @@ const Routing = () => {
       <Route path="/photodetail" element={<PhotoZoneDetail />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/feed/search" element={<Search />} />
+      <Route path="/feed/feeddetail" element={<PostCard />} />
       <Route path="/map" element={<Map />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/profile" element={<Profile />} />
