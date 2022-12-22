@@ -6,7 +6,6 @@ import ProfileInfo from '../../components/profile/ProfileInfo';
 import PhotoZoneList from '../../components/profile/PhotoZoneList';
 import FeedBar from '../../components/profile/Feedbar';
 import Nothing from '../../components/profile/Nothing';
-// import Feed from '../Home/HomeFeed';
 import NavBar from '../../components/navBar/NavBar';
 import PostWrapper from '../../components/card/PostWrapper';
 
