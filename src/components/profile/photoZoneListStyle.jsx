@@ -18,6 +18,9 @@ export const Photo = styled.div`
 export const Region = styled.p`
   margin-top: 6px;
   font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-weight: 500;
 `;
 
