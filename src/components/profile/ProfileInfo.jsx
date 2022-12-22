@@ -1,5 +1,5 @@
-// import BasicProFile from '../../assets/icons/basic-profile-rec.svg';
 import { useNavigate } from 'react-router-dom';
+import BasicProFile from '../../assets/icons/basic-profile-rec.svg';
 import PhotoUpload from '../../assets/icons/icon-photo-upload-black.svg';
 import {
   Img,
@@ -18,7 +18,7 @@ const ProfileInfo = ({ info }) => {
 
   return (
     <div>
-      <Img src={info.image} />
+      <Img src={info.image ? info.image : BasicProFile} />
       <Container>
         <Info>
           <Name>{info.username}</Name>
