@@ -5,8 +5,6 @@ import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
 const HomeFeed = () => {
   const [feedPost, setFeedPost] = useState([]);
   const [btnActive, setBtnActive] = useState('');
-  const [place, setPlace] = useState([]);
-  // const place = ['서울', '경기', '강원', '제주', '부산'];
 
   // API 서버
   const URL = 'https://mandarin.api.weniv.co.kr';
@@ -14,7 +12,6 @@ const HomeFeed = () => {
   // 썸네일 리스트 API
   const getFeed = async () => {
     try {
-      // const accountname = localStorage.getItem('accountname');
       const token = localStorage.getItem('token');
       const response = await axios.get(`${URL}/product/?limit=20`, {
         headers: {
@@ -25,7 +22,6 @@ const HomeFeed = () => {
 
       if (response) {
         console.log(response.data);
-        setPlace(response.data.product);
         setFeedPost(response.data.product);
       }
     } catch (error) {
@@ -43,17 +39,21 @@ const HomeFeed = () => {
     });
   };
 
+  const placeFilter = [
+    ...new Set(feedPost && feedPost.map((item) => item.itemName)),
+  ];
+
   return (
     <>
       <SpotTab>
-        {place.map((item) => (
+        {placeFilter.map((item) => (
           <SpotBtn
             key={item.id}
-            value={item.itemName}
-            className={item.itemName === btnActive ? 'active' : ''}
+            value={item}
+            className={item === btnActive ? 'active' : ''}
             onClick={handleActive}
           >
-            {item.itemName}
+            {item}
           </SpotBtn>
         ))}
       </SpotTab>
