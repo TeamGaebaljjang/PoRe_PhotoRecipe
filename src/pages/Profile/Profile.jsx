@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Wrapper } from './profileStyle';
+import { Wrapper, BackDrop } from './profileStyle';
 import HeaderProfile from '../../components/header/HeaderProfile';
 import ProfileInfo from '../../components/profile/ProfileInfo';
 import PhotoZoneList from '../../components/profile/PhotoZoneList';
@@ -67,7 +67,14 @@ const Profile = () => {
       ) : (
         <PostWrapper posts={posts} view={view} />
       )}
-      {modal ? <ProfileUnderModal /> : null}
+      {modal ? (
+        <BackDrop
+          onClick={() => {
+            setModal(!modal);
+          }}
+        />
+      ) : null}
+      {modal ? <ProfileUnderModal modalHandler={modalHandler} /> : null}
       <NavBar />
     </Wrapper>
   );
