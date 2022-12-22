@@ -22,6 +22,7 @@ export const HeaderProfileContainer = styled.article`
 export const BtnWrapper = styled.div`
   position: absolute;
   right: 0;
+  top: 0;
 `;
 
 export const Title = styled.h1`
