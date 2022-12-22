@@ -29,13 +29,14 @@ const Feed = () => {
       });
       setPosts(res.data.posts);
       // console.log('feed 응답 : ', res);
-      // console.log('feed 데이터 : ', posts);
+      // console.log('feed 데이터 : ', res.data.posts);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => getFeed, []);
+
   return (
     <Wrap>
       <HeaderFeed />

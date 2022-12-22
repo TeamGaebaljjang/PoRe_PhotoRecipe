@@ -1,7 +1,7 @@
 import { PostCont } from './postStyle';
 
-const PostContent = ({ posts }) => {
-  return <PostCont>{posts.content}</PostCont>;
+const PostContent = ({ posts, postDetailId }) => {
+  return <PostCont onClick={postDetailId}>{posts.content}</PostCont>;
 };
 
 export default PostContent;
