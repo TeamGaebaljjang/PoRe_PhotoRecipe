@@ -84,7 +84,7 @@ const HomeCarousel = () => {
         itemImage: `${item.itemImage}`,
         itemName: `${item.itemName}`,
         link: `${item.link}`,
-        updatedAt: `${item.updatedAt}`,
+        createdAt: `${item.createdAt}`,
       },
     });
   };

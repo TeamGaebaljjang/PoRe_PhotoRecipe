@@ -17,7 +17,7 @@ import NavBar from '../../../components/navBar/NavBar';
 
 const PhotoZoneCard = () => {
   const location = useLocation();
-  const { image, username, accountname, itemImage, itemName, link, updatedAt } =
+  const { image, username, accountname, itemImage, itemName, link, createdAt } =
     { ...location.state };
 
   return (
@@ -35,9 +35,9 @@ const PhotoZoneCard = () => {
         <PostTitle>{itemName}</PostTitle>
         <PostCont>{link}</PostCont>
         <PostDate>
-          {updatedAt.substring(0, 4)}년&nbsp;
-          {updatedAt.substring(5, 7)}월&nbsp;
-          {updatedAt.substring(8, 10)}일
+          {createdAt.substring(0, 4)}년&nbsp;
+          {createdAt.substring(5, 7)}월&nbsp;
+          {createdAt.substring(8, 10)}일
         </PostDate>
       </PostCard>
       <NavBar />
