@@ -91,7 +91,7 @@ export const PostTitle = styled.h1`
 
 export const PostCont = styled.p`
   font-size: 14px;
-  margin: 20px 7px;
+  margin: 14px 7px;
 `;
 
 export const PostDate = styled.p`

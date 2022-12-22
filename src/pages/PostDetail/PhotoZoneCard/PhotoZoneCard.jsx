@@ -23,7 +23,7 @@ const PhotoZoneCard = () => {
 
   return (
     <Wrap>
-      <HeaderB style={{ position: 'sticky' }} />
+      <HeaderB />
       <PostCard>
         <User>
           <UserProfile src={image} alt="" />

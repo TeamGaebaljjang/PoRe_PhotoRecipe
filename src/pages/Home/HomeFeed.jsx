@@ -6,6 +6,8 @@ import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
 const HomeFeed = () => {
   const [feedPost, setFeedPost] = useState([]);
   const [btnActive, setBtnActive] = useState('');
+  const [name, setName] = useState('');
+  const [btnOn, setBtnOn] = useState(true);
   const navigate = useNavigate();
 
   // API 서버
@@ -35,16 +37,7 @@ const HomeFeed = () => {
     getFeed();
   }, []);
 
-  const handleActive = (e) => {
-    setBtnActive(() => {
-      return e.target.value;
-    });
-  };
-
-  const placeFilter = [
-    ...new Set(feedPost && feedPost.map((item) => item.itemName)),
-  ];
-
+  // 포토존 이미지 클릭시 상세 페이지로 이동
   const handleDetailPost = ({ item }) => {
     console.log(item);
     navigate('/photodetail', {
@@ -61,31 +54,62 @@ const HomeFeed = () => {
     });
   };
 
+  // 지역명 중복 체크
+  const placeFilter = [
+    ...new Set(feedPost && feedPost.map((item) => item.itemName)),
+  ];
+
+  // 지역 버튼 클릭시 해당 게시글 렌더링
+  const handlePlace = (e, { item }) => {
+    console.log(item);
+    setBtnActive(() => {
+      return e.target.value;
+    });
+  };
+
   return (
     <>
       <SpotTab>
         {placeFilter.map((item) => (
           <SpotBtn
-            key={item.id}
+            // key={item.id}
             value={item}
             className={item === btnActive ? 'active' : ''}
-            onClick={handleActive}
+            onClick={(e) => {
+              setName(item);
+              handlePlace(e, { item });
+              setBtnOn(false);
+            }}
           >
             {item}
           </SpotBtn>
         ))}
       </SpotTab>
+
       <FeedList>
-        {feedPost.map((item) => (
-          <Feed>
-            <FeedImg
-              key={item.id}
-              src={item.itemImage}
-              alt=""
-              onClick={() => handleDetailPost({ item })}
-            />
-          </Feed>
-        ))}
+        {btnOn
+          ? feedPost.map((item) => (
+              <Feed>
+                <FeedImg
+                  key={item.id}
+                  src={item.itemImage}
+                  alt=""
+                  onClick={() => handleDetailPost({ item })}
+                />
+              </Feed>
+            ))
+          : feedPost
+              .filter((item) => item.itemName === name)
+              .map((item) => (
+                <Feed>
+                  <FeedImg
+                    key={item.id}
+                    src={item.itemImage}
+                    alt=""
+                    onClick={() => handleDetailPost({ item })}
+                  />
+                </Feed>
+              ))}
       </FeedList>
     </>
   );
