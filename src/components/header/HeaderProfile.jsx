@@ -7,7 +7,7 @@ import {
   UploadPostBtn,
 } from './headerStyle';
 
-const HeaderProfile = () => {
+const HeaderProfile = ({ modalHandler }) => {
   const navigate = useNavigate();
   return (
     <HeaderProfileContainer>
@@ -18,7 +18,7 @@ const HeaderProfile = () => {
             navigate(`/profile/uploadpost`);
           }}
         />
-        <MoreBtn />
+        <MoreBtn onClick={modalHandler} />
       </BtnWrapper>
     </HeaderProfileContainer>
   );

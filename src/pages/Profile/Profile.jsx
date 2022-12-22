@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Wrapper } from './profileStyle';
+import { Wrapper, BackDrop } from './profileStyle';
 import HeaderProfile from '../../components/header/HeaderProfile';
 import ProfileInfo from '../../components/profile/ProfileInfo';
 import PhotoZoneList from '../../components/profile/PhotoZoneList';
@@ -8,12 +8,17 @@ import FeedBar from '../../components/profile/Feedbar';
 import Nothing from '../../components/profile/Nothing';
 import NavBar from '../../components/navBar/NavBar';
 import PostWrapper from '../../components/card/PostWrapper';
+import ProfileUnderModal from '../../components/modal/UnderModal/ProfileUnderModal';
 
 const Profile = () => {
   const [info, setInfo] = useState('');
   const [posts, setPosts] = useState([]);
+  const [modal, setModal] = useState(false);
   const URL = 'https://mandarin.api.weniv.co.kr';
   const [view, setView] = useState(false);
+  const modalHandler = () => {
+    setModal(!modal);
+  };
   const viewHandler = () => {
     setView(!view);
   };
@@ -53,7 +58,7 @@ const Profile = () => {
   }, []);
   return (
     <Wrapper>
-      <HeaderProfile />
+      <HeaderProfile modalHandler={modalHandler} />
       <ProfileInfo info={info} />
       <PhotoZoneList />
       <FeedBar viewHandler={viewHandler} />
@@ -62,6 +67,14 @@ const Profile = () => {
       ) : (
         <PostWrapper posts={posts} view={view} />
       )}
+      {modal ? (
+        <BackDrop
+          onClick={() => {
+            setModal(!modal);
+          }}
+        />
+      ) : null}
+      {modal ? <ProfileUnderModal modalHandler={modalHandler} /> : null}
       <NavBar />
     </Wrapper>
   );

@@ -4,10 +4,10 @@ import {
   UnderModalCloseBtn,
 } from './underModalStyle';
 
-const UnderModal2 = () => {
+const ProfileUnderModal = ({ modalHandler }) => {
   return (
     <UnderModalWrap>
-      <UnderModalCloseBtn />
+      <UnderModalCloseBtn onClick={modalHandler} />
       <UnderModalCont>
         <button type="button">설정 및 개인정보</button>
       </UnderModalCont>
@@ -18,4 +18,4 @@ const UnderModal2 = () => {
   );
 };
 
-export default UnderModal2;
+export default ProfileUnderModal;
