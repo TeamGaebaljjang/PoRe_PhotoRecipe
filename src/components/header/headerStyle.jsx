@@ -53,7 +53,7 @@ export const BackBtn = styled.button`
   margin-right: -15px;
 `;
 
-export const EditProfileBtn = styled.button`
+export const UploadPostBtn = styled.button`
   width: 48px;
   height: 48px;
   background: no-repeat center;
