@@ -22,6 +22,7 @@ export const HeaderProfileContainer = styled.article`
 export const BtnWrapper = styled.div`
   position: absolute;
   right: 0;
+  top: 0;
 `;
 
 export const Title = styled.h1`
@@ -52,7 +53,7 @@ export const BackBtn = styled.button`
   margin-right: -15px;
 `;
 
-export const EditProfileBtn = styled.button`
+export const UploadPostBtn = styled.button`
   width: 48px;
   height: 48px;
   background: no-repeat center;

@@ -7,7 +7,7 @@ import chat from '../../assets/icons/icon-chat.svg';
 
 const PostIcon = ({ posts }) => {
   const [like, setLike] = useState('');
-  const [heartCount, setHeartCount] = useState('');
+  const [heartCount, setHeartCount] = useState(posts.heartCount);
 
   const handleLike = async () => {
     const URL = 'https://mandarin.api.weniv.co.kr';
@@ -44,7 +44,7 @@ const PostIcon = ({ posts }) => {
     }
   };
 
-  useEffect(() => handleLike, []);
+  // useEffect(() => handleLike, []);
   useEffect(() => {
     setHeartCount(heartCount);
     setLike(posts?.hearted);

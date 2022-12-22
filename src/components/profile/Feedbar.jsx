@@ -6,7 +6,7 @@ import AlbumOff from '../../assets/icons/icon-post-album-off.svg';
 import ListOn from '../../assets/icons/icon-post-list-on.svg';
 import ListOff from '../../assets/icons/icon-post-list-off.svg';
 
-const FeedBar = () => {
+const FeedBar = ({ viewHandler }) => {
   const [click, setClick] = useState(true);
   const IconHandle = () => {
     setClick(!click);
@@ -16,10 +16,22 @@ const FeedBar = () => {
     <Container>
       <WhoseFeed>내 피드</WhoseFeed>
       <div>
-        <button type="button" onClick={IconHandle}>
+        <button
+          type="button"
+          onClick={() => {
+            IconHandle();
+            viewHandler();
+          }}
+        >
           <img src={click ? AlbumOn : AlbumOff} alt="앨범형으로 보기 아이콘" />
         </button>
-        <button type="button" onClick={IconHandle}>
+        <button
+          type="button"
+          onClick={() => {
+            IconHandle();
+            viewHandler();
+          }}
+        >
           <img src={click ? ListOff : ListOn} alt="리스트형으로 보기 아이콘" />
         </button>
       </div>

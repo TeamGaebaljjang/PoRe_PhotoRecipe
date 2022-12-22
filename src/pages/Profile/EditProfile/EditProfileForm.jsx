@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { FormStyle, InvalidSpan } from './formStyle';
-import StyledButton from '../../../components/button/btnForm';
+import { FormStyle, InvalidSpan } from './FormStyle';
+import StyledButton from '../../../components/button/BtnForm';
 import {
   EditProfileContDiv,
   ProfileImgWrap,

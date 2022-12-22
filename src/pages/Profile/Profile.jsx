@@ -6,8 +6,6 @@ import ProfileInfo from '../../components/profile/ProfileInfo';
 import PhotoZoneList from '../../components/profile/PhotoZoneList';
 import FeedBar from '../../components/profile/Feedbar';
 import Nothing from '../../components/profile/Nothing';
-// import Feed from '../Home/HomeFeed';
-// import PhotoZoneModal from '../../components/modal/PhotoZoneModal/PhotoZoneModal';
 import NavBar from '../../components/navBar/NavBar';
 import PostWrapper from '../../components/card/PostWrapper';
 
@@ -15,6 +13,10 @@ const Profile = () => {
   const [info, setInfo] = useState('');
   const [posts, setPosts] = useState([]);
   const URL = 'https://mandarin.api.weniv.co.kr';
+  const [view, setView] = useState(false);
+  const viewHandler = () => {
+    setView(!view);
+  };
 
   useEffect(() => {
     (async function getMyInfo() {
@@ -51,13 +53,15 @@ const Profile = () => {
   }, []);
   return (
     <Wrapper>
-      {/* <BackDrop /> */}
       <HeaderProfile />
       <ProfileInfo info={info} />
       <PhotoZoneList />
-      <FeedBar />
-      {posts.length === 0 ? <Nothing /> : <PostWrapper posts={posts} />}
-      {/* <PhotoZoneModal /> */}
+      <FeedBar viewHandler={viewHandler} />
+      {posts.length === 0 ? (
+        <Nothing />
+      ) : (
+        <PostWrapper posts={posts} view={view} />
+      )}
       <NavBar />
     </Wrapper>
   );

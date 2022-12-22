@@ -3,6 +3,7 @@ import Chat from '../pages/Chat/Chat';
 import Feed from '../pages/Feed/Feed';
 import Search from '../pages/Search/Search';
 import Home from '../pages/Home/Home';
+import PhotoZoneDetail from '../pages/PostDetail/PhotoZoneCard/PhotoZoneCard';
 import Login from '../pages/Login/Login';
 import Map from '../pages/Map/Map';
 import NotFound from '../pages/NotFound/NotFound';
@@ -13,6 +14,7 @@ import SetProfile from '../pages/Login/SetProfile/SetProfile';
 import UploadPhotoZone from '../pages/Profile/UploadPhotoZone/UploadPhotoZone';
 import Following from '../pages/Profile/Follow/Following';
 import Follower from '../pages/Profile/Follow/Follower';
+import UploadPost from '../pages/Profile/UploadPost/UploadPost';
 
 const Routing = () => {
   return (
@@ -22,6 +24,7 @@ const Routing = () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="/signup/setprofile" element={<SetProfile />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/photodetail" element={<PhotoZoneDetail />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/feed/search" element={<Search />} />
       <Route path="/map" element={<Map />} />
@@ -30,6 +33,7 @@ const Routing = () => {
       <Route path="/profile/following" element={<Following />} />
       <Route path="/profile/follower" element={<Follower />} />
       <Route path="/profile/uploadphotozone" element={<UploadPhotoZone />} />
+      <Route path="/profile/uploadpost" element={<UploadPost />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );

@@ -1,17 +1,23 @@
+import { useNavigate } from 'react-router-dom';
 import {
   BtnWrapper,
   HeaderProfileContainer,
   MoreBtn,
   SearchBtn,
-  EditProfileBtn,
+  UploadPostBtn,
 } from './headerStyle';
 
 const HeaderProfile = () => {
+  const navigate = useNavigate();
   return (
     <HeaderProfileContainer>
       <BtnWrapper>
         <SearchBtn />
-        <EditProfileBtn />
+        <UploadPostBtn
+          onClick={() => {
+            navigate(`/profile/uploadpost`);
+          }}
+        />
         <MoreBtn />
       </BtnWrapper>
     </HeaderProfileContainer>
