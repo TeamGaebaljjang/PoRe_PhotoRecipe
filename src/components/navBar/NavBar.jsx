@@ -19,20 +19,38 @@ const NavBar = () => {
     <NavWrap>
       <NavUlStyle>
         <Link to="/home">
-          <img src={target === '/home' ? iconHomeActive : iconHome} alt="" />
+          <img
+            src={
+              target === '/home' || target === '/photodetail'
+                ? iconHomeActive
+                : iconHome
+            }
+            alt=""
+          />
           <NavItemStyle
             style={
-              target === '/home' ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/home' || target === '/photodetail'
+                ? { color: 'black' }
+                : { color: 'var(--gray)' }
             }
           >
             홈
           </NavItemStyle>
         </Link>
         <Link to="/feed">
-          <img src={target === '/feed' ? iconFeedActive : iconFeed} alt="" />
+          <img
+            src={
+              target === '/feed' || target === '/feed/search'
+                ? iconFeedActive
+                : iconFeed
+            }
+            alt=""
+          />
           <NavItemStyle
             style={
-              target === '/feed' ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/feed' || target === '/feed/search'
+                ? { color: 'black' }
+                : { color: 'var(--gray)' }
             }
           >
             피드

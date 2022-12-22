@@ -51,6 +51,9 @@ export const PostImg = styled.img`
   object-fit: cover;
   border-radius: 10px;
   margin-top: 20px;
+  &.admin-post-img {
+    height: 350px;
+  }
 `;
 
 export const Icon = styled.div`
@@ -70,6 +73,11 @@ export const IconCount = styled.button`
   margin: 0 16px 0 0;
   font-size: 12px;
   color: var(--super-gray);
+`;
+
+export const PostTitle = styled.h1`
+  font-size: 18px;
+  font-weight: 700;
 `;
 
 export const PostCont = styled.p`
