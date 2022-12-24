@@ -5,7 +5,6 @@ import Post from '../../../components/card/Post';
 import { CardWrap } from './postCardStyle';
 import HeaderBM from '../../../components/header/HeaderBM';
 import CommentWrapper from '../../../components/comment/CommentWrapper';
-import CommentForm from '../../../components/comment/CommentForm';
 
 const PostCard = () => {
   const [posts, setPosts] = useState('');
@@ -39,7 +38,6 @@ const PostCard = () => {
       <CardWrap>
         {posts && <Post posts={posts} />}
         <CommentWrapper posts={posts} postDetailId={postDetailId} />
-        <CommentForm />
       </CardWrap>
     </>
   );

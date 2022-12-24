@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Comment from './Comment';
-import { CommentWrap } from '../../pages/PostDetail/PostCard/postCardStyle';
+import { Comments } from '../../pages/PostDetail/PostCard/postCardStyle';
+import CommentForm from './CommentForm';
 
 const CommentWrapper = ({ posts, postDetailId }) => {
   const [commentList, setCommentList] = useState([]);
@@ -31,13 +32,16 @@ const CommentWrapper = ({ posts, postDetailId }) => {
   useEffect(() => getComments, []);
 
   return (
-    <CommentWrap>
-      {commentList.map((item) =>
-        commentList ? (
-          <Comment key={item.id} posts={posts} commentList={item} />
-        ) : null,
-      )}
-    </CommentWrap>
+    <>
+      <Comments>
+        {commentList.map((item) =>
+          commentList ? (
+            <Comment key={item.id} posts={posts} commentList={item} />
+          ) : null,
+        )}
+      </Comments>
+      <CommentForm postDetailId={postDetailId} />
+    </>
   );
 };
 
