@@ -1,11 +1,12 @@
 import MapModal from './MapModal';
 import { ModalWrap } from './mapStyle';
 
-const ModalWrapper = ({ result, modals, keyword }) => {
+const ModalWrapper = ({ modals, input }) => {
+  //   console.log(modals);
   return (
     <ModalWrap>
       {modals.map((v) =>
-        result === keyword ? <MapModal key={v.id} modals={v} /> : null,
+        v.itemName.split('/')[2] === input ? <MapModal key={v.id} /> : null,
       )}
     </ModalWrap>
   );
