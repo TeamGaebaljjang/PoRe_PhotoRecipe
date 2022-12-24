@@ -23,6 +23,7 @@ const PostCard = () => {
   const [posts, setPosts] = useState('');
   const location = useLocation();
   const postDetailId = { ...location.state };
+  console.log('getPostDetail 데이터 : ', posts);
 
   const getPostDetail = async () => {
     const URL = 'https://mandarin.api.weniv.co.kr';
@@ -37,7 +38,6 @@ const PostCard = () => {
       });
       setPosts(res?.data.post);
       console.log('getPostDetail 응답 : ', res);
-      // console.log('feed 데이터 : ', posts);
       console.log(postDetailId);
     } catch (error) {
       console.log(error);
@@ -45,14 +45,39 @@ const PostCard = () => {
   };
   useEffect(() => getPostDetail, []);
 
+  const [commentList, setCommentList] = useState([]);
+  const comment = true;
+
+  const getComments = async () => {
+    const URL = 'https://mandarin.api.weniv.co.kr';
+    const authToken = localStorage.getItem('token');
+
+    try {
+      const res = await axios.get(`${URL}/post/${postDetailId.id}/comments`, {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          'Content-type': 'application/json',
+        },
+      });
+      setCommentList(res.data.comments);
+      // console.log('comment 응답 : ', res);
+      console.log('comment 데이터 : ', res.data.comments);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => getComments, []);
+
   return (
     <>
       <HeaderBM />
       <CardWrap>
         {posts && <Post posts={posts} />}
         <CommentWrap>
-          <Comment />
-          <Comment />
+          {commentList.map((item) =>
+            comment ? <Comment posts={posts} commentList={item} /> : null,
+          )}
         </CommentWrap>
         <Form>
           <ProfileImg />
