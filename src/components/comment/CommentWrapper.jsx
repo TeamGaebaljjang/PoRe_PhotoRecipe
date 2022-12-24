@@ -5,19 +5,21 @@ import { CommentWrap } from '../../pages/PostDetail/PostCard/postCardStyle';
 
 const CommentWrapper = ({ posts, postDetailId }) => {
   const [commentList, setCommentList] = useState([]);
-  const comment = true;
 
   const getComments = async () => {
     const URL = 'https://mandarin.api.weniv.co.kr';
     const authToken = localStorage.getItem('token');
 
     try {
-      const res = await axios.get(`${URL}/post/${postDetailId.id}/comments`, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          'Content-type': 'application/json',
+      const res = await axios.get(
+        `${URL}/post/${postDetailId.id}/comments?limit=30`,
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+            'Content-type': 'application/json',
+          },
         },
-      });
+      );
       setCommentList(res.data.comments);
       console.log('comment 응답 : ', res);
       console.log('comment 데이터 : ', res.data.comments);
@@ -31,7 +33,9 @@ const CommentWrapper = ({ posts, postDetailId }) => {
   return (
     <CommentWrap>
       {commentList.map((item) =>
-        comment ? <Comment posts={posts} commentList={item} /> : null,
+        commentList ? (
+          <Comment key={item.id} posts={posts} commentList={item} />
+        ) : null,
       )}
     </CommentWrap>
   );

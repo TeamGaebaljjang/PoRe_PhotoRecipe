@@ -13,6 +13,7 @@ export const CommentWrap = styled.div`
   background-color: white;
   overflow: auto;
 `;
+
 export const Form = styled.form`
   position: fixed;
   bottom: 0px;

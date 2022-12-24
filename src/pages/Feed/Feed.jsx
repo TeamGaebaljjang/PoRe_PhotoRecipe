@@ -21,7 +21,7 @@ const Feed = () => {
     const authToken = localStorage.getItem('token');
 
     try {
-      const res = await axios.get(`${URL}/post/feed`, {
+      const res = await axios.get(`${URL}/post/feed?limit=30`, {
         headers: {
           Authorization: `Bearer ${authToken}`,
           'Content-type': 'application/json',
