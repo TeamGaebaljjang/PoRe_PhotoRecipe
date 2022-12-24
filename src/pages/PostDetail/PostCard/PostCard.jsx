@@ -2,16 +2,9 @@ import axios from 'axios';
 import { useCallback, useRef, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Post from '../../../components/card/Post';
-import Comment from '../../../components/comment/Comment';
-import {
-  CardWrap,
-  CommentWrap,
-  Form,
-  ProfileImg,
-  Input,
-  BtnSubmit,
-} from './postCardStyle';
+import { CardWrap, Form, ProfileImg, Input, BtnSubmit } from './postCardStyle';
 import HeaderBM from '../../../components/header/HeaderBM';
+import CommentWrapper from '../../../components/comment/CommentWrapper';
 
 const PostCard = () => {
   const textRef = useRef();
@@ -45,40 +38,12 @@ const PostCard = () => {
   };
   useEffect(() => getPostDetail, []);
 
-  const [commentList, setCommentList] = useState([]);
-  const comment = true;
-
-  const getComments = async () => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
-    const authToken = localStorage.getItem('token');
-
-    try {
-      const res = await axios.get(`${URL}/post/${postDetailId.id}/comments`, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          'Content-type': 'application/json',
-        },
-      });
-      setCommentList(res.data.comments);
-      // console.log('comment 응답 : ', res);
-      console.log('comment 데이터 : ', res.data.comments);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => getComments, []);
-
   return (
     <>
       <HeaderBM />
       <CardWrap>
         {posts && <Post posts={posts} />}
-        <CommentWrap>
-          {commentList.map((item) =>
-            comment ? <Comment posts={posts} commentList={item} /> : null,
-          )}
-        </CommentWrap>
+        <CommentWrapper posts={posts} postDetailId={postDetailId} />
         <Form>
           <ProfileImg />
           <Input
