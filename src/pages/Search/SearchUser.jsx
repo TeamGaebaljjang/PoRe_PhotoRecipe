@@ -1,13 +1,12 @@
 import { User, UserProfile, UserInfo, UserName, UserId } from './searchStyle';
-import profile from '../../assets/icons/basic-profile-round.svg';
 
-const SearchUser = () => {
+const SearchUser = ({ userimg, name, id }) => {
   return (
     <User>
-      <UserProfile src={profile} alt="" />
+      <UserProfile src={userimg} alt="" />
       <UserInfo>
-        <UserName>포토레시피</UserName>
-        <UserId>@ PoRe_PhotoRecipe</UserId>
+        <UserName>{name}</UserName>
+        <UserId>@ {id}</UserId>
       </UserInfo>
     </User>
   );
