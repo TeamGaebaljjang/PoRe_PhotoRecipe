@@ -18,22 +18,21 @@ const Map = () => {
     }
   };
 
+  const [keyword, setKeyword] = useState('');
+  //   keyword는 또 넘겨야하니까 state 끌어올리기
+  setKeyword('');
+
   // mandarin API*
   const [modals, setModals] = useState([]);
   const URL = 'https://mandarin.api.weniv.co.kr';
   const authToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTE1ZTQ4MTdhZTY2NjU4MWQ0ZmRmZCIsImV4cCI6MTY3NjcwMzkzOSwiaWF0IjoxNjcxNTE5OTM5fQ.8rFholhXAFkJWP5Cdg1zoinbxD7t-_L2MQS4pHr1rak';
-
-  //   const realauthToken =
-  //     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTMxZWRkMTdhZTY2NjU4MWU1NjY5NiIsImV4cCI6MTY3NjgxODkzNSwiaWF0IjoxNjcxNjM0OTM1fQ.Nm7Rc38FYzTTWAuRqWHiVpxLafCLFiNWzx29Q2jyp0g';
-  //   const accountName = 'pore_photozone';
-
-  //   포토존 등록하는대로 realauthToken -> authToken, /${accountName} ?
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTMxZWRkMTdhZTY2NjU4MWU1NjY5NiIsImV4cCI6MTY3NjgxODkzNSwiaWF0IjoxNjcxNjM0OTM1fQ.Nm7Rc38FYzTTWAuRqWHiVpxLafCLFiNWzx29Q2jyp0g';
+  const accountName = 'pore_photozone';
   const getModal = async () => {
     try {
       //   const authToken = localStorage.getItem('token');
       //   const accountName = localStorage.getItem('accountname');
-      const res = await axios.get(`${URL}/product?limit=150`, {
+      const res = await axios.get(`${URL}/product/${accountName}?limit=150`, {
         headers: {
           Authorization: `Bearer ${authToken}`,
           'Content-type': 'application/json',
@@ -52,8 +51,8 @@ const Map = () => {
     <Wrap>
       <HeaderBSM text={text} onChange={onChange} onKeyPress={onKeyPress} />
       <MapCont>
-        <KakaoMap result={result} modals={modals} />
-        <ModalWrapper result={result} modals={modals} />
+        <KakaoMap result={result} modals={modals} keyword={keyword} />
+        <ModalWrapper result={result} modals={modals} keyword={keyword} />
       </MapCont>
       <NavBar />
     </Wrap>
