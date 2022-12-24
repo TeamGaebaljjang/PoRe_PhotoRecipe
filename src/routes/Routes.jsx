@@ -1,21 +1,22 @@
 import { Route, Routes } from 'react-router-dom';
-import Chat from '../pages/Chat/Chat';
-import Feed from '../pages/Feed/Feed';
-import Search from '../pages/Search/Search';
-import Home from '../pages/Home/Home';
-import PhotoZoneDetail from '../pages/PostDetail/PhotoZoneCard/PhotoZoneCard';
-import Login from '../pages/Login/Login';
-import Map from '../pages/Map/Map';
-import NotFound from '../pages/NotFound/NotFound';
-import Profile from '../pages/Profile/Profile';
 import Splash from '../pages/Splash/Splash';
+import Login from '../pages/Login/Login';
 import Signup from '../pages/Login/SignUp/SignUp';
 import SetProfile from '../pages/Login/SetProfile/SetProfile';
-import UploadPhotoZone from '../pages/Profile/UploadPhotoZone/UploadPhotoZone';
+import Home from '../pages/Home/Home';
+import PhotoZoneDetail from '../pages/PostDetail/PhotoZoneCard/PhotoZoneCard';
+import Feed from '../pages/Feed/Feed';
+import Search from '../pages/Search/Search';
+import OtherUserProfile from '../pages/Profile/YourProfile';
+import PostCard from '../pages/PostDetail/PostCard/PostCard';
+import Map from '../pages/Map/Map';
+import Chat from '../pages/Chat/Chat';
+import Profile from '../pages/Profile/Profile';
 import Following from '../pages/Profile/Follow/Following';
 import Follower from '../pages/Profile/Follow/Follower';
-import PostCard from '../pages/PostDetail/PostCard/PostCard';
+import UploadPhotoZone from '../pages/Profile/UploadPhotoZone/UploadPhotoZone';
 import UploadPost from '../pages/Profile/UploadPost/UploadPost';
+import NotFound from '../pages/NotFound/NotFound';
 
 const Routing = () => {
   return (
@@ -28,6 +29,7 @@ const Routing = () => {
       <Route path="/photodetail" element={<PhotoZoneDetail />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/feed/search" element={<Search />} />
+      <Route path="/otherProfile" element={<OtherUserProfile />} />
       <Route path="/feed/feeddetail" element={<PostCard />} />
       <Route path="/map" element={<Map />} />
       <Route path="/chat" element={<Chat />} />

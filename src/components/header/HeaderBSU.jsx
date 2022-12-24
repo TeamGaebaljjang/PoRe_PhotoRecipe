@@ -1,5 +1,3 @@
-// import axios from 'axios';
-// import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HeaderContainer, BackBtn, SearchInp } from './headerStyle';
 
@@ -8,6 +6,12 @@ const HeaderBSU = ({ search, onSearch, checkInp }) => {
 
   const handleBack = () => {
     navigate(-1);
+  };
+
+  const handleKey = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+    }
   };
 
   return (
@@ -19,6 +23,7 @@ const HeaderBSU = ({ search, onSearch, checkInp }) => {
           value={search}
           placeholder="계정 검색"
           onChange={checkInp}
+          onKeyDown={(e) => handleKey(e)}
         />
       </form>
     </HeaderContainer>

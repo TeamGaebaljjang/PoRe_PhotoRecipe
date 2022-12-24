@@ -37,10 +37,10 @@ const Search = () => {
     searchUser();
   }, [search]);
 
+  // 검색된 값으로 필터링
   const onSearch = (e) => {
     e.preventDefault();
     if (search) {
-      console.log(search);
       const filterData = user.filter((item) =>
         (item.accountname || item.username).includes(search),
       );
@@ -49,10 +49,10 @@ const Search = () => {
     setSearch('');
   };
 
+  // 입력 체크
   const checkInp = (e) => {
     e.preventDefault();
     setSearch(e.target.value);
-    console.log(e.target.value);
   };
 
   return (
