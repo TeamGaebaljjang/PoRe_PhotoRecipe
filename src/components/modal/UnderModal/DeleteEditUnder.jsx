@@ -4,7 +4,7 @@ import {
   UnderModalCloseBtn,
 } from './underModalStyle';
 
-const UnderModal1 = () => {
+const DeleteEditUnder = () => {
   return (
     <UnderModalWrap>
       <UnderModalCloseBtn />
@@ -18,4 +18,4 @@ const UnderModal1 = () => {
   );
 };
 
-export default UnderModal1;
+export default DeleteEditUnder;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import moreIcon from '../../assets/icons/icon-more-vertical-gray.svg';
 
 export const Div = styled.div`
   width: 340px;
@@ -37,4 +38,13 @@ export const Date = styled.p`
   font-size: 14px;
   font-weight: 500;
   color: white;
+`;
+
+export const MoreBtn = styled.button`
+  position: absolute;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background: no-repeat center;
+  background-image: url(${moreIcon});
 `;

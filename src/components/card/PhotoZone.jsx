@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Div, Cont, Date, Desc } from './photoZoneStyle';
+import { Div, Cont, Date, Desc, MoreBtn } from './photoZoneStyle';
 
 const PhotoZone = ({ props }) => {
   const [desc, setDesc] = useState(false);
@@ -9,6 +9,7 @@ const PhotoZone = ({ props }) => {
   };
   return (
     <Div src={props.itemImage}>
+      <MoreBtn />
       <Cont
         onClick={() => {
           testHandle();
@@ -18,6 +19,7 @@ const PhotoZone = ({ props }) => {
         <Desc>{props.link}</Desc>
       </Cont>
       <Date>{props.price}</Date>
+      <MoreBtn />
     </Div>
   );
 };
