@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
-import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import BtnUpload from '../../../components/button/BtnUpload';
 import { Input, Form, TextInput } from '../../../components/input/Input';
 import HeaderB from '../../../components/header/HeaderB';
@@ -12,6 +12,7 @@ import {
 const UploadPhotoZone = () => {
   const location = useLocation();
   const getProps = { ...location.state };
+  const navigate = useNavigate();
   const { props } = getProps.props;
   const [imgFile, setImgFile] = useState(props.itemImage);
   const [address, setAddress] = useState(props.itemName);
@@ -23,7 +24,6 @@ const UploadPhotoZone = () => {
     textRef.current.style.height = '1px';
     textRef.current.style.height = `${textRef.current.scrollHeight}px`;
   }, []);
-  const navigate = useNavigate();
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   const uploadPhoto = async () => {
