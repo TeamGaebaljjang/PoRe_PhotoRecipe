@@ -17,10 +17,12 @@ import Follower from '../pages/Profile/Follow/Follower';
 import PostCard from '../pages/PostDetail/PostCard/PostCard';
 import UploadPost from '../pages/Profile/UploadPost/UploadPost';
 import { LoginRoute, NotLoginRoute } from './LoginControl';
+import EditPhotoZoneCard from '../pages/PostDetail/EditPhotoZoneCard/EditPhotoZoneCard';
 
 const Routing = () => {
   return (
     <Routes>
+      <Route path="/profile/editphotozone" element={<EditPhotoZoneCard />} />
       <Route path="/" element={<Splash />} />
       <Route
         path="/login"
