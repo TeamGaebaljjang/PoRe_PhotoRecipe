@@ -1,14 +1,17 @@
 import { useState } from 'react';
-import { Div, Cont, Date, Desc } from './photoZoneStyle';
+import PZDeleteEditUnder from '../modal/UnderModal/PZDeleteEditUnder';
+import { Div, Cont, Date, Desc, MoreBtn } from './photoZoneStyle';
 
 const PhotoZone = ({ props }) => {
   const [desc, setDesc] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const testHandle = () => {
     setDesc(!desc);
   };
   return (
     <Div src={props.itemImage}>
+      <MoreBtn />
       <Cont
         onClick={() => {
           testHandle();
@@ -18,6 +21,12 @@ const PhotoZone = ({ props }) => {
         <Desc>{props.link}</Desc>
       </Cont>
       <Date>{props.price}</Date>
+      <MoreBtn
+        onClick={() => {
+          setModal(!modal);
+        }}
+      />
+      {modal ? <PZDeleteEditUnder props={props} /> : null}
     </Div>
   );
 };

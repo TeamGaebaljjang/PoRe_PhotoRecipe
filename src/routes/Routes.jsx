@@ -18,11 +18,13 @@ import UploadPhotoZone from '../pages/Profile/UploadPhotoZone/UploadPhotoZone';
 import UploadPost from '../pages/Profile/UploadPost/UploadPost';
 import NotFound from '../pages/NotFound/NotFound';
 import { LoginRoute, NotLoginRoute } from './LoginControl';
+import EditPhotoZoneCard from '../pages/PostDetail/EditPhotoZoneCard/EditPhotoZoneCard';
 
 
 const Routing = () => {
   return (
     <Routes>
+      <Route path="/profile/editphotozone" element={<EditPhotoZoneCard />} />
       <Route path="/" element={<Splash />} />
       <Route path="/otherProfile" element={<OtherUserProfile />} />
       <Route
