@@ -5,7 +5,7 @@ import {
   UnderModalCloseBtn,
 } from './underModalStyle';
 
-const DeleteEditUnder = ({ productId }) => {
+const DeleteEditUnder = ({ props }) => {
   const navigate = useNavigate();
   return (
     <UnderModalWrap style={{ marginLeft: '-26px' }}>
@@ -18,7 +18,7 @@ const DeleteEditUnder = ({ productId }) => {
           type="button"
           onClick={() => {
             navigate('/profile/editphotozone', {
-              state: { productId: `${productId}` },
+              state: { props: { props } },
             });
           }}
         >

@@ -26,7 +26,7 @@ const PhotoZone = ({ props }) => {
           setModal(!modal);
         }}
       />
-      {modal ? <PZDeleteEditUnder productId={props.id} /> : null}
+      {modal ? <PZDeleteEditUnder props={props} /> : null}
     </Div>
   );
 };

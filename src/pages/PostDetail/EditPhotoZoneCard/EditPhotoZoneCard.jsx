@@ -11,7 +11,8 @@ import {
 
 const UploadPhotoZone = () => {
   const location = useLocation();
-  const productId = { ...location.state };
+  const getProps = { ...location.state };
+  const { props } = getProps.props;
   const [imgFile, setImgFile] = useState('');
   const [address, setAddress] = useState('');
   const [date, setDate] = useState('');
@@ -37,7 +38,7 @@ const UploadPhotoZone = () => {
         },
       };
       const res = await axios.put(
-        `${URL}/product/${productId.productId}`,
+        `${URL}/product/${props.id}`,
         JSON.stringify(body),
         {
           headers: {
@@ -49,7 +50,6 @@ const UploadPhotoZone = () => {
       console.log(res);
       navigate(`/profile`);
     } catch (error) {
-      console.log(productId.productId);
       console.log('에러입니다');
     }
   };
@@ -66,6 +66,7 @@ const UploadPhotoZone = () => {
       console.log('에러입니다');
     }
   };
+
   return (
     <>
       <HeaderB />
