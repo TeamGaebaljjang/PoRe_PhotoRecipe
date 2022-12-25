@@ -40,7 +40,9 @@ const NavBar = () => {
         <Link to="/feed">
           <img
             src={
-              target === '/feed' || target === '/feed/search'
+              target === '/feed' ||
+              target === '/feed/search' ||
+              target === '/otherProfile'
                 ? iconFeedActive
                 : iconFeed
             }
@@ -48,7 +50,9 @@ const NavBar = () => {
           />
           <NavItemStyle
             style={
-              target === '/feed' || target === '/feed/search'
+              target === '/feed' ||
+              target === '/feed/search' ||
+              target === '/otherProfile'
                 ? { color: 'black' }
                 : { color: 'var(--gray)' }
             }

@@ -24,6 +24,7 @@ export const SearchMsg = styled.p`
 export const User = styled.div`
   display: flex;
   margin: 20px;
+  cursor: pointer;
 `;
 
 export const UserProfile = styled.img`

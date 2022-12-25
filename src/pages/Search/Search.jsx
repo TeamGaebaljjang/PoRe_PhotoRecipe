@@ -45,6 +45,7 @@ const Search = () => {
         (item.accountname || item.username).includes(search),
       );
       setUser(filterData);
+      console.log(user);
     }
     setSearch('');
   };
@@ -64,13 +65,7 @@ const Search = () => {
         checkInp={checkInp}
       />
       {search ? (
-        user.map((item) => (
-          <SearchUser
-            userimg={item.image}
-            name={item.username}
-            id={item.accountname}
-          />
-        ))
+        user.map((item) => <SearchUser props={item} />)
       ) : (
         <SearchCont>
           <img src={searchMain} alt="" />

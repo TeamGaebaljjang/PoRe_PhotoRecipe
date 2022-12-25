@@ -9,6 +9,7 @@ import {
   Follower,
   Following,
   AddPhotoZone,
+  GoFollow,
 } from './profileInfoStyle';
 
 const ProfileInfo = ({ info }) => {
@@ -37,16 +38,24 @@ const ProfileInfo = ({ info }) => {
             </Following>
           </Follow>
         </Info>
-        <AddPhotoZone
-          onClick={() => {
-            navigate(`/profile/uploadphotozone`);
-          }}
-        >
-          <img src={PhotoUpload} alt="포토존 등록 버튼 이미지" />
-          <p>포토존 등록</p>
-        </AddPhotoZone>
-
-        {/* <GoFollow><p>팔로우 하기</p></GoFollow> */}
+        {localStorage.getItem('accountname') === info.accountname ? (
+          <AddPhotoZone
+            onClick={() => {
+              navigate(`/profile/uploadphotozone`);
+            }}
+          >
+            <img src={PhotoUpload} alt="포토존 등록 버튼 이미지" />
+            <p>포토존 등록</p>
+          </AddPhotoZone>
+        ) : (
+          <GoFollow
+            onClick={() => {
+              console.log('클릭');
+            }}
+          >
+            {info.isfollow ? <p>언팔로우</p> : <p>팔로우</p>}
+          </GoFollow>
+        )}
       </Container>
     </div>
   );
