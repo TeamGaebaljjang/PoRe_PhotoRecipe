@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Post = styled.img`
@@ -16,7 +17,16 @@ const Post = styled.img`
 `;
 
 const PostSmall = ({ posts }) => {
-  return <Post src={posts.image} />;
+  const navigate = useNavigate();
+
+  const postDetailId = () => {
+    navigate('/feed/feeddetail', {
+      state: {
+        id: `${posts.id}`,
+      },
+    });
+  };
+  return <Post src={posts.image} onClick={() => postDetailId()} />;
 };
 
 export default PostSmall;
