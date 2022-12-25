@@ -13,7 +13,7 @@ export const SearchCont = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 658px;
+  height: calc(100vh - 108px);
 `;
 
 export const SearchMsg = styled.p`
@@ -24,16 +24,20 @@ export const SearchMsg = styled.p`
 export const User = styled.div`
   display: flex;
   margin: 20px;
+  cursor: pointer;
 `;
 
 export const UserProfile = styled.img`
+  width: 50px;
+  height: 50px;
   background-color: var(--gray);
   border-radius: 50%;
   margin-right: 12px;
+  object-fit: cover;
 `;
 
 export const UserInfo = styled.div`
-  margin-top: 3px;
+  margin-top: 6px;
 `;
 
 export const UserName = styled.p`

@@ -18,27 +18,30 @@ import NavBar from '../../../components/navBar/NavBar';
 
 const PhotoZoneCard = () => {
   const location = useLocation();
-  const { image, username, accountname, itemImage, itemName, link, createdAt } =
-    { ...location.state };
+  const props = { ...location.state };
 
   return (
     <Wrap>
       <HeaderB />
       <PostCard>
         <User>
-          <UserProfile src={image} alt="" />
+          <UserProfile src={props.image} alt="" />
           <UserInfo>
-            <UserName>{username}</UserName>
-            <UserId>@ {accountname}</UserId>
+            <UserName>{props.username}</UserName>
+            <UserId>@ {props.accountname}</UserId>
           </UserInfo>
         </User>
-        <PostImg className="detail-post-img" src={itemImage} alt="상세이미지" />
-        <PostTitle>{itemName}</PostTitle>
-        <PostCont>{link}</PostCont>
+        <PostImg
+          className="detail-post-img"
+          src={props.itemImage}
+          alt="상세이미지"
+        />
+        <PostTitle>{props.itemName}</PostTitle>
+        <PostCont>{props.link}</PostCont>
         <PostDate>
-          {createdAt.substring(0, 4)}년&nbsp;
-          {createdAt.substring(5, 7)}월&nbsp;
-          {createdAt.substring(8, 10)}일
+          {props.createdAt.substring(0, 4)}년&nbsp;
+          {props.createdAt.substring(5, 7)}월&nbsp;
+          {props.createdAt.substring(8, 10)}일
         </PostDate>
       </PostCard>
       <NavBar />

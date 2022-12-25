@@ -8,7 +8,7 @@ const HeaderBMProfile = () => {
     navigate(-1);
   };
   return (
-    <HeaderContainer>
+    <HeaderContainer style={{ border: 'none' }}>
       <BackBtn onClick={handleBack} />
       <BtnWrapper>
         <MoreBtn />
