@@ -16,6 +16,8 @@ const Profile = () => {
   const [modal, setModal] = useState(false);
   const URL = 'https://mandarin.api.weniv.co.kr';
   const [view, setView] = useState(false);
+  const accountname = localStorage.getItem('accountname');
+
   const modalHandler = () => {
     setModal(!modal);
   };
@@ -60,7 +62,7 @@ const Profile = () => {
     <Wrapper>
       <HeaderProfile modalHandler={modalHandler} />
       <ProfileInfo info={info} />
-      <PhotoZoneList />
+      <PhotoZoneList accountname={accountname} />
       <FeedBar viewHandler={viewHandler} />
       {posts.length === 0 ? (
         <Nothing />

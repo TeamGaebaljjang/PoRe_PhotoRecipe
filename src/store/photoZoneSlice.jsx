@@ -9,11 +9,11 @@ const initialZoneState = {
 
 export const getPhotoZone = createAsyncThunk(
   'photoZone/getPhotoZone',
-  async () => {
+  async (accountname) => {
     const URL = 'https://mandarin.api.weniv.co.kr';
     const authToken = localStorage.getItem('token');
-    const accountName = localStorage.getItem('accountname');
-    const res = await axios.get(`${URL}/product/${accountName}`, {
+    // const accountName = localStorage.getItem('accountname');
+    const res = await axios.get(`${URL}/product/${accountname}`, {
       headers: {
         Authorization: `Bearer ${authToken}`,
         'Content-type': 'application/json',

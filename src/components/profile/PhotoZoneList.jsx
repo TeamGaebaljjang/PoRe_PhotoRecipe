@@ -5,7 +5,7 @@ import { getPhotoZone } from '../../store/photoZoneSlice';
 import PhotoZoneModal from '../modal/PhotoZoneModal/PhotoZoneModal';
 import { BackDrop } from '../../pages/Profile/profileStyle';
 
-const PhotoZoneList = () => {
+const PhotoZoneList = ({ accountname }) => {
   const [modal, setModal] = useState(false);
   const dispatch = useDispatch();
   const nameRef = useRef();
@@ -14,7 +14,7 @@ const PhotoZoneList = () => {
     (state) => state.photoZone.photoZoneData,
   );
   useEffect(() => {
-    dispatch(getPhotoZone());
+    dispatch(getPhotoZone(accountname));
   }, []);
 
   const photoZoneList = getPhotoZoneData.payload?.product;
