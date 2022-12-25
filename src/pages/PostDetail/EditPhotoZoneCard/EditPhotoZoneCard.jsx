@@ -13,10 +13,10 @@ const UploadPhotoZone = () => {
   const location = useLocation();
   const getProps = { ...location.state };
   const { props } = getProps.props;
-  const [imgFile, setImgFile] = useState('');
-  const [address, setAddress] = useState('');
-  const [date, setDate] = useState('');
-  const [desc, setDesc] = useState('');
+  const [imgFile, setImgFile] = useState(props.itemImage);
+  const [address, setAddress] = useState(props.itemName);
+  const [date, setDate] = useState(props.price);
+  const [desc, setDesc] = useState(props.link);
   const imgRef = useRef();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
@@ -90,6 +90,7 @@ const UploadPhotoZone = () => {
           required
           onChange={(e) => setAddress(e.target.value)}
           placeholder="정확한 주소지를 입력해주세요."
+          defaultValue={props.itemName}
         />
         <label htmlFor="date">촬영 날짜</label>
         <Input
@@ -98,6 +99,7 @@ const UploadPhotoZone = () => {
           required
           onChange={(e) => setDate(e.target.value)}
           placeholder="숫자만 입력 가능합니다. 예)20221212"
+          defaultValue={props.price}
         />
         <label htmlFor="cont">설명</label>
         <TextInput
@@ -106,6 +108,7 @@ const UploadPhotoZone = () => {
           required
           onChange={(e) => setDesc(e.target.value)}
           placeholder="포토존에 대한 상세한 설명을 입력해주세요."
+          defaultValue={props.link}
           ref={textRef}
           onInput={handleResizeHeight}
           rows="1"
