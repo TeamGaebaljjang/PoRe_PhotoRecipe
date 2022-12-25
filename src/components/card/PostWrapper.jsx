@@ -3,15 +3,16 @@ import PostSmall from './PostSmall';
 
 const PostWrapper = ({ posts, view }) => {
   return (
-    <>
-      {posts.map((v) =>
-        view ? (
-          <PostSmall key={v.id} posts={v} />
-        ) : (
-          <Post key={v.id} posts={v} />
-        ),
-      )}
-    </>
+    <div>
+      {posts &&
+        posts.map((v) =>
+          view ? (
+            <PostSmall key={v.id} posts={v} />
+          ) : (
+            <Post key={v.id} posts={v} />
+          ),
+        )}
+    </div>
   );
 };
 

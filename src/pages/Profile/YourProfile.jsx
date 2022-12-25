@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Wrapper, BackDrop } from './profileStyle';
@@ -10,16 +11,22 @@ import Nothing from '../../components/profile/Nothing';
 import NavBar from '../../components/navBar/NavBar';
 import PostWrapper from '../../components/card/PostWrapper';
 import ProfileUnderModal from '../../components/modal/UnderModal/ProfileUnderModal';
+import { getFeed } from '../../store/feedSlice';
 
 const YourProFile = () => {
   const location = useLocation();
   const props = { ...location.state };
   const [info, setInfo] = useState('');
-  // const [photo, setPhoto] = useState([]);
-  const [posts, setPosts] = useState([]);
   const [modal, setModal] = useState(false);
   const [view, setView] = useState(false);
   const URL = 'https://mandarin.api.weniv.co.kr';
+
+  const dispatch = useDispatch();
+  const getPost = useSelector((state) => state.feed.feedData);
+  useEffect(() => {
+    dispatch(getFeed(props.accountname));
+  }, []);
+  const posts = getPost.payload?.post;
 
   const modalHandler = () => {
     setModal(!modal);
@@ -48,54 +55,13 @@ const YourProFile = () => {
     })();
   }, []);
 
-  // useEffect(() => {
-  //   (async function getUserPhoto() {
-  //     try {
-  //       const token = localStorage.getItem('token');
-  //       // const { accountname } = props.accountname;
-  //       const response = await axios.get(
-  //         `${URL}/product/${props.accountname}`,
-  //         {
-  //           headers: {
-  //             Authorization: `Bearer ${token}`,
-  //           },
-  //         },
-  //       );
-  //       console.log(props.accountname);
-  //       setPhoto(response.data.product);
-  //     } catch (error) {
-  //       console.log(error.response);
-  //     }
-  //   })();
-  // }, []);
-
-  useEffect(() => {
-    (async function getUserPost() {
-      try {
-        const token = localStorage.getItem('token');
-        const response = await axios.get(
-          `${URL}/post/${props.accountname}/userpost`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              'Content-type': 'application/json',
-            },
-          },
-        );
-        setPosts(response.data.post);
-      } catch (error) {
-        console.log(error.response);
-      }
-    })();
-  }, []);
-
   return (
     <Wrapper>
       <HeaderBM modalHandler={modalHandler} />
       <ProfileInfo info={info} />
       <PhotoZoneList accountname={props.accountname} />
       <FeedBar viewHandler={viewHandler} />
-      {posts.length === 0 ? (
+      {posts?.length === 0 ? (
         <Nothing />
       ) : (
         <PostWrapper posts={posts} view={view} />
