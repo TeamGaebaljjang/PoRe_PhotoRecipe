@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PZDeleteEditUnder from '../modal/UnderModal/PZDeleteEditUnder';
 import { Div, Cont, Date, Desc, MoreBtn } from './photoZoneStyle';
+import { BackDrop } from '../../pages/Profile/profileStyle';
 
 const PhotoZone = ({ props }) => {
   const [desc, setDesc] = useState(false);
@@ -26,6 +27,18 @@ const PhotoZone = ({ props }) => {
           setModal(!modal);
         }}
       />
+      {modal ? (
+        <BackDrop
+          style={{
+            backgroundColor: 'transparent',
+            position: 'fixed',
+            left: 'calc(50vw - 195px)',
+          }}
+          onClick={() => {
+            setModal(!modal);
+          }}
+        />
+      ) : null}
       {modal ? <PZDeleteEditUnder props={props} /> : null}
     </Div>
   );
