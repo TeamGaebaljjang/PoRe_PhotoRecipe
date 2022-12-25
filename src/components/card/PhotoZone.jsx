@@ -6,13 +6,13 @@ import { BackDrop } from '../../pages/Profile/profileStyle';
 const PhotoZone = ({ props }) => {
   const [desc, setDesc] = useState(false);
   const [modal, setModal] = useState(false);
-
+  const author = localStorage.getItem('accountname');
+  const checkUser = props.author.accountname;
   const testHandle = () => {
     setDesc(!desc);
   };
   return (
     <Div src={props.itemImage}>
-      <MoreBtn />
       <Cont
         onClick={() => {
           testHandle();
@@ -22,11 +22,14 @@ const PhotoZone = ({ props }) => {
         <Desc>{props.link}</Desc>
       </Cont>
       <Date>{props.price}</Date>
-      <MoreBtn
-        onClick={() => {
-          setModal(!modal);
-        }}
-      />
+      {author === checkUser ? (
+        <MoreBtn
+          onClick={() => {
+            setModal(!modal);
+          }}
+        />
+      ) : null}
+
       {modal ? (
         <BackDrop
           style={{
