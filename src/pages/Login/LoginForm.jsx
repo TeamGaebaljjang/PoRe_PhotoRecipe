@@ -54,8 +54,12 @@ const LoginForm = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <InvalidSpan>{errorMsg}</InvalidSpan>
-        <StyledButton type="submit" onClick={login}>
+        <InvalidSpan style={{ color: 'red' }}>{errorMsg}</InvalidSpan>
+        <StyledButton
+          type="submit"
+          onClick={login}
+          disabled={!(email && password)}
+        >
           로그인
         </StyledButton>
         <SignupLink to="/signup">이메일로 회원가입</SignupLink>
