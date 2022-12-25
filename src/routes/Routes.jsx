@@ -20,7 +20,6 @@ import NotFound from '../pages/NotFound/NotFound';
 import { LoginRoute, NotLoginRoute } from './LoginControl';
 import EditPhotoZoneCard from '../pages/PostDetail/EditPhotoZoneCard/EditPhotoZoneCard';
 
-
 const Routing = () => {
   return (
     <Routes>
