@@ -59,6 +59,7 @@ export const PostImg = styled.img`
   object-fit: cover;
   border-radius: 10px;
   margin-top: 20px;
+  flex-shrink: 0;
   &.detail-post-img {
     height: 350px;
   }
@@ -98,4 +99,11 @@ export const PostDate = styled.p`
   margin: 0 7px;
   font-size: 10px;
   color: var(--super-gray);
+`;
+
+export const ImgWrap = styled.div`
+  display: flex;
+  width: 350px;
+  overflow: auto;
+  border-radius: 10px;
 `;
