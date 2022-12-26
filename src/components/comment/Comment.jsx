@@ -1,6 +1,4 @@
-// import axios from 'axios';
-// import { useState } from 'react';
-// import { useEffect } from 'react';
+import { useState } from 'react';
 // import profilePic from '../../assets/img/profile.png';
 import iconMore from '../../assets/icons/icon-more-vertical-gray.svg';
 import {
@@ -11,60 +9,47 @@ import {
   CommentCont,
   CommentMoreBtn,
 } from './commentStyle';
-// import { BackDrop } from '../../pages/Profile/profileStyle';
-// import UnderModal4 from '../modal/UnderModal/underModal4';
+import { BackDropWhite } from '../../pages/Profile/profileStyle';
+import DeleteEditUnder from '../modal/UnderModal/CommentDeleteModal';
 
-const Comment = ({ commentList }) => {
-  // const [modal, setModal] = useState(false);
+const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
+  const [modal, setModal] = useState(false);
 
-  // const modalHandler = () => {
-  //   setModal(!modal);
-  // };
+  const modalHandler = () => {
+    setModal(!modal);
+  };
 
-  // const handleComment = () => {
-
-  // }
-  // const deleteComment = async () => {
-  //   try {
-  //     const URL = 'https://mandarin.api.weniv.co.kr';
-  //     const authToken = localStorage.getItem('token');
-  //     const res = await axios.delete(
-  //       `${URL}/post/${postDetailId?.id}/comments`,
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${authToken}`,
-  //           'Content-type': 'application/json',
-  //         },
-  //       },
-  //     );
-  //     setComment(res.data.comment.content);
-  //     // console.log('postComments 응답 : ', res);
-  //     getComments();
-  //     setComment('');
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
   return (
-    <UserComment>
-      <ProfileImg src={commentList.author.image} alt="" />
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <UserName>
-          {commentList.author.accountname}
-          <AddTime>{commentList.createdAt}</AddTime>
-        </UserName>
-        <CommentCont>{commentList.content}</CommentCont>
-      </div>
-      <CommentMoreBtn src={iconMore} alt="" />
-      {/* {modal ? (
-        <BackDrop
+    <>
+      <UserComment>
+        <ProfileImg src={commentList.author.image} alt="" />
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <UserName>
+            {commentList.author.accountname}
+            <AddTime>{commentList.createdAt}</AddTime>
+          </UserName>
+          <CommentCont>{commentList.content}</CommentCont>
+        </div>
+        <CommentMoreBtn src={iconMore} alt="" onClick={modalHandler} />
+      </UserComment>
+      {modal ? (
+        <BackDropWhite
+          style={{ zIndex: '10' }}
           onClick={() => {
             setModal(!modal);
           }}
         />
       ) : null}
-      {modal ? <UnderModal4 modalHandler={modalHandler} /> : null} */}
-    </UserComment>
+      {modal ? (
+        <DeleteEditUnder
+          modalHandler={modalHandler}
+          commentList={commentList}
+          setComment={setComment}
+          getComments={getComments}
+          postDetailId={postDetailId}
+        />
+      ) : null}
+    </>
   );
 };
 
