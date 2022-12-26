@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { User, UserProfile, UserInfo, UserName, UserId } from './searchStyle';
+import SearchHighlighting from './SearchHighlighting';
 
-const SearchUser = ({ props }) => {
+const SearchUser = ({ props, keyword }) => {
   const navigate = useNavigate();
 
   const handleProfile = () => {
-    console.log(props);
     navigate('/otherProfile', {
       state: {
         id: `${props.id}`,
@@ -21,12 +21,26 @@ const SearchUser = ({ props }) => {
       },
     });
   };
+
   return (
     <User onClick={() => handleProfile()}>
       <UserProfile src={props.image} alt="" />
       <UserInfo>
-        <UserName>{props.username}</UserName>
-        <UserId>@ {props.accountname}</UserId>
+        <UserName>
+          <SearchHighlighting
+            user={props.username}
+            keyword={keyword}
+            type="username"
+          />
+        </UserName>
+        <UserId>
+          @&nbsp;
+          <SearchHighlighting
+            user={props.accountname}
+            keyword={keyword}
+            type="accountname"
+          />
+        </UserId>
       </UserInfo>
     </User>
   );

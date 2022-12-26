@@ -26,7 +26,6 @@ const Routing = () => {
     <Routes>
       <Route path="/profile/editphotozone" element={<EditPhotoZoneCard />} />
       <Route path="/" element={<Splash />} />
-      <Route path="/otherProfile" element={<OtherUserProfile />} />
       <Route
         path="/login"
         element={
@@ -80,6 +79,14 @@ const Routing = () => {
         element={
           <LoginRoute>
             <Search />
+          </LoginRoute>
+        }
+      />
+      <Route
+        path="/otherProfile"
+        element={
+          <LoginRoute>
+            <OtherUserProfile />
           </LoginRoute>
         }
       />

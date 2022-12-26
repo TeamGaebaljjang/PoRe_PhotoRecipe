@@ -8,11 +8,14 @@ import searchMain from '../../assets/icons/icon-feed-search.svg';
 
 const Search = () => {
   const [user, setUser] = useState(false);
+  const [keyword, setKeyword] = useState('');
+
   // 검색 API
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   const searchUser = async (search) => {
     try {
+      // const regex = new RegExp(search, 'gi');
       const token = localStorage.getItem('token');
       const response = await axios.get(
         `${URL}/user/searchuser/?keyword=${search}`,
@@ -41,6 +44,7 @@ const Search = () => {
     timer = setTimeout(() => {
       if (search) {
         searchUser(search);
+        setKeyword(search);
       } else {
         setUser('');
       }
@@ -51,7 +55,7 @@ const Search = () => {
     <Wrap>
       <HeaderBSU checkInp={checkInp} />
       {user ? (
-        user.map((item) => <SearchUser props={item} />)
+        user.map((item) => <SearchUser props={item} keyword={keyword} />)
       ) : (
         <SearchCont>
           <img src={searchMain} alt="" />
