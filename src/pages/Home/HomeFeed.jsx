@@ -14,26 +14,25 @@ const HomeFeed = () => {
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   // 썸네일 리스트 API
-  const getFeed = async () => {
-    try {
-      const token = localStorage.getItem('token');
-      const response = await axios.get(`${URL}/product/?limit=20`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-type': 'application/json',
-        },
-      });
-
-      if (response) {
-        console.log(response.data);
-        setFeedPost(response.data.product);
-      }
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
-
   useEffect(() => {
+    const getFeed = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await axios.get(`${URL}/product/?limit=20`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-type': 'application/json',
+          },
+        });
+
+        if (response) {
+          // console.log(response.data);
+          setFeedPost(response.data.product);
+        }
+      } catch (error) {
+        console.log(error.response);
+      }
+    };
     getFeed();
   }, []);
 
