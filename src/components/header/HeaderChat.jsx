@@ -16,7 +16,7 @@ const HeaderTest = () => {
   return (
     <HeaderContainer style={{ zIndex: '5' }}>
       <BackBtn onClick={handleBack} />
-      <Title>상대닉네임</Title>
+      <Title>장희수</Title>
       <BtnWrapper>
         <MoreBtn />
       </BtnWrapper>

@@ -1,22 +1,30 @@
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 import { ChatList, ChatName, ChatDate, ChatCont, ChatOn } from './chatStyle';
 import profile from '../../assets/img/profile.png';
 import HeaderBM from '../../components/header/HeaderBM';
 import NavBar from '../../components/navBar/NavBar';
 
+const Div = styled.div``;
 const Chat = () => {
+  const navigate = useNavigate();
   return (
     <>
       <HeaderBM />
       <ChatList>
         <img src={profile} alt="" />
         <ChatOn />
-        <div>
+        <Div
+          onClick={() => {
+            navigate('chatroom');
+          }}
+        >
           <ChatName>장희수</ChatName>
           <ChatCont>
             반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도 꼭
             써보세요
           </ChatCont>
-        </div>
+        </Div>
         <ChatDate>2020.10.26</ChatDate>
       </ChatList>
       <ChatList>
