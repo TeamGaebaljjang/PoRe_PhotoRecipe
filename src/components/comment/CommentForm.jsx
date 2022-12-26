@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useCallback, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import {
   Form,
   ProfileImg,
@@ -8,23 +7,19 @@ import {
   BtnSubmit,
 } from '../../pages/PostDetail/PostCard/postCardStyle';
 
-const CommentForm = ({ postDetailId }) => {
-  // console.log(postDetailId);
-  const navigate = useNavigate();
+const CommentForm = ({ postDetailId, getComments }) => {
+  const [comment, setComment] = useState('');
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = '1px';
     textRef.current.style.height = `${textRef.current.scrollHeight}px`;
   }, []);
 
-  const [comment, setComment] = useState('');
-
   const postComment = async () => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
-    const authToken = localStorage.getItem('token');
     console.log(comment);
-
     try {
+      const URL = 'https://mandarin.api.weniv.co.kr';
+      const authToken = localStorage.getItem('token');
       const res = await axios.post(
         `${URL}/post/${postDetailId?.id}/comments`,
         { comment: { content: `${comment}` } },
@@ -35,19 +30,23 @@ const CommentForm = ({ postDetailId }) => {
           },
         },
       );
-      navigate(`/feed/feeddetail`);
-      // setComment(res.data.comment.content);
-      console.log('postComments 응답 : ', res);
-      // console.log('comment 데이터 : ', res.data.posts);
+      setComment(res.data.comment.content);
+      // console.log('postComments 응답 : ', res);
+      getComments();
+      setComment('');
     } catch (error) {
       console.log(error);
     }
   };
 
   const handleSubmit = () => {
-    console.log(postDetailId);
+    // console.log(postDetailId);
     postComment();
-    setComment('');
+  };
+
+  const handleInputText = (e) => {
+    const inputText = e.target.value;
+    setComment(inputText);
   };
 
   return (
@@ -57,7 +56,8 @@ const CommentForm = ({ postDetailId }) => {
         placeholder="댓글 입력하기..."
         ref={textRef}
         onInput={handleResizeHeight}
-        onChange={(e) => setComment(e.target.value)}
+        onChange={handleInputText}
+        value={comment}
         rows="1"
       />
       <BtnSubmit
