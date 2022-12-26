@@ -15,7 +15,7 @@ import { getFeed } from '../../store/feedSlice';
 
 const YourProFile = () => {
   const location = useLocation();
-  const props = { ...location.state };
+  const userInfo = { ...location.state };
   const [info, setInfo] = useState('');
   const [modal, setModal] = useState(false);
   const [view, setView] = useState(false);
@@ -24,7 +24,7 @@ const YourProFile = () => {
   const dispatch = useDispatch();
   const getPost = useSelector((state) => state.feed.feedData);
   useEffect(() => {
-    dispatch(getFeed(props.accountname));
+    dispatch(getFeed(userInfo.accountname));
   }, []);
   const posts = getPost.payload?.post;
 
@@ -41,7 +41,7 @@ const YourProFile = () => {
       try {
         const token = localStorage.getItem('token');
         const response = await axios.get(
-          `${URL}/profile/${props.accountname}`,
+          `${URL}/profile/${userInfo.accountname}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -59,7 +59,7 @@ const YourProFile = () => {
     <Wrapper>
       <HeaderBM modalHandler={modalHandler} />
       <ProfileInfo info={info} />
-      <PhotoZoneList accountname={props.accountname} />
+      <PhotoZoneList accountname={userInfo.accountname} />
       <FeedBar viewHandler={viewHandler} />
       {posts?.length === 0 ? (
         <Nothing />
