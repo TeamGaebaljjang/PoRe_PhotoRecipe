@@ -46,7 +46,7 @@ const UploadPost = () => {
       console.log('에러입니다');
     }
   };
-
+  const imgShow = imgFile.split(',');
   const imgApi = async () => {
     try {
       const file = imgRef.current.files[0];
@@ -54,14 +54,16 @@ const UploadPost = () => {
       formData.append('image', file);
       const res = await axios.post(`${URL}/image/uploadfile`, formData);
       const fileName = res.data.filename;
-      setImgFile(`${imgFile},${URL}/${fileName}`);
-      console.log(imgFile);
+      if (imgShow.length < 4) {
+        setImgFile(`${imgFile}, ${URL}/${fileName}`);
+        console.log(imgFile);
+      } else {
+        console.log('no - sir');
+      }
     } catch (error) {
       console.log('에러입니다');
     }
   };
-  const imgShow = imgFile.split(',');
-  console.log(imgShow);
 
   return (
     <>
