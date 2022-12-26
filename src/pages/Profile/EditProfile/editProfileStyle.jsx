@@ -17,7 +17,7 @@ const EditProfileContDiv = styled.div`
     width: 116px;
     height: 116px;
     border-radius: 50%;
-    margin: 40px auto;
+    margin: 30px auto 40px;
     background-color: var(--light-gray);
   }
 
@@ -39,10 +39,16 @@ const ProfileImgWrap = styled.div`
   }
 `;
 
+const ProfileImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 const AddPickBtn = styled(BtnAddPic)`
   position: absolute;
   top: 80px;
   left: 88px;
 `;
 
-export { EditProfileContDiv, ProfileImgWrap, AddPickBtn };
+export { EditProfileContDiv, ProfileImgWrap, ProfileImg, AddPickBtn };

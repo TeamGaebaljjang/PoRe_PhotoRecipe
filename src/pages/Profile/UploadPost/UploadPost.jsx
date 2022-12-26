@@ -46,6 +46,7 @@ const UploadPost = () => {
       console.log('에러입니다');
     }
   };
+
   const imgShow = imgFile.split(',');
   const imgApi = async () => {
     try {

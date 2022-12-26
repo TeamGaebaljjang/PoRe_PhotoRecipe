@@ -19,6 +19,7 @@ import UploadPost from '../pages/Profile/UploadPost/UploadPost';
 import NotFound from '../pages/NotFound/NotFound';
 import { LoginRoute, NotLoginRoute } from './LoginControl';
 import EditPhotoZoneCard from '../pages/PostDetail/EditPhotoZoneCard/EditPhotoZoneCard';
+import EditProfile from '../pages/Profile/EditProfile/EditProfile';
 
 const Routing = () => {
   return (
@@ -143,6 +144,14 @@ const Routing = () => {
         element={
           <LoginRoute>
             <UploadPost />
+          </LoginRoute>
+        }
+      />
+      <Route
+        path="/profile/editprofile"
+        element={
+          <LoginRoute>
+            <EditProfile />
           </LoginRoute>
         }
       />
