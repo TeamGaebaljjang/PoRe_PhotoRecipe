@@ -16,6 +16,7 @@ const HomeSpotBtn = () => {
       {place.map((spotName) => {
         return (
           <SpotBtn
+            key={crypto.randomUUID()}
             value={spotName}
             className={spotName === btnActive ? 'active' : ''}
             onClick={handleActive}
