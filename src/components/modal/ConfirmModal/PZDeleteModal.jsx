@@ -1,9 +1,10 @@
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { ConfirmModal, Btnwrap } from './confirmModalStyle';
 
 const PZDeleteModal = ({ deleteHandler, props }) => {
   const productId = props.id;
-
+  const navigate = useNavigate();
   async function deletePZ(value) {
     try {
       const URL = 'https://mandarin.api.weniv.co.kr';
@@ -14,6 +15,7 @@ const PZDeleteModal = ({ deleteHandler, props }) => {
           'Content-type': 'application/json',
         },
       });
+      navigate(0);
       console.log(res);
     } catch (error) {
       console.log('error입니다.');
