@@ -11,6 +11,17 @@ export const BackDrop = styled.div`
   backdrop-filter: blur(2px);
 `;
 
+export const BackDropWhite = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 390px;
+  height: 100vh;
+  background: transparent;
+  backdrop-filter: blur(2px);
+`;
+
 export const Wrapper = styled.div`
   height: 100vh;
   overflow: auto;

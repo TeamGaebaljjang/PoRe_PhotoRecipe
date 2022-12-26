@@ -7,9 +7,10 @@ import HeaderB from '../../../components/header/HeaderB';
 import CommentWrapper from '../../../components/comment/CommentWrapper';
 
 const PostCard = () => {
-  const [posts, setPosts] = useState('');
   const location = useLocation();
   const postDetailId = { ...location.state };
+  const [posts, setPosts] = useState('');
+
   // console.log('getPostDetail 데이터 : ', posts);
 
   const getPostDetail = async () => {
