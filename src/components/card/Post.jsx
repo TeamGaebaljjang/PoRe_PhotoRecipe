@@ -24,7 +24,7 @@ const Post = ({ posts }) => {
         onClick={() => postDetailId()}
       />
       <PostContent posts={posts} postDetailId={postDetailId} />
-      <PostIcon posts={posts} />
+      <PostIcon posts={posts} postDetailId={postDetailId} />
       <PostDate>
         {posts.createdAt.substring(0, 4)}년&nbsp;
         {posts.createdAt.substring(5, 7)}월&nbsp;

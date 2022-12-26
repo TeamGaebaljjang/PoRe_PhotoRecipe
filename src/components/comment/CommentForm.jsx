@@ -16,7 +16,6 @@ const CommentForm = ({ postDetailId, getComments }) => {
   }, []);
 
   const postComment = async () => {
-    console.log(comment);
     try {
       const URL = 'https://mandarin.api.weniv.co.kr';
       const authToken = localStorage.getItem('token');
