@@ -51,7 +51,9 @@ const Search = () => {
     <Wrap>
       <HeaderBSU checkInp={checkInp} />
       {user ? (
-        user.map((item) => <SearchUser props={item} />)
+        user.map((item) => (
+          <SearchUser key={crypto.randomUUID()} props={item} />
+        ))
       ) : (
         <SearchCont>
           <img src={searchMain} alt="" />

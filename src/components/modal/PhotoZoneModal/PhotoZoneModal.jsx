@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Container from './photoZoneModalStyle';
 import PhotoZone from '../../card/PhotoZone';
-// import Test from '../../../assets/img/main-thumbnail.jpeg';
 import { getPhotoZone } from '../../../store/photoZoneSlice';
 
 const PhotoZoneModal = ({ name }) => {
@@ -24,7 +23,7 @@ const PhotoZoneModal = ({ name }) => {
         {photoZoneList
           .filter((v) => v.itemName === name)
           .map((v) => (
-            <PhotoZone props={v} />
+            <PhotoZone key={crypto.randomUUID()} props={v} />
           ))}
       </div>
     </Container>

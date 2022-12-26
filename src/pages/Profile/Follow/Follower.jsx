@@ -20,7 +20,10 @@ const Follower = () => {
       <HeaderFollower />
       <Wrap>
         <Wrap>
-          {followerList && followerList.map((item) => <User item={item} />)}
+          {followerList &&
+            followerList.map((item) => (
+              <User key={crypto.randomUUID()} item={item} />
+            ))}
         </Wrap>
       </Wrap>
     </>

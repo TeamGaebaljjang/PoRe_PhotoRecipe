@@ -36,6 +36,7 @@ const PhotoZoneList = ({ accountname }) => {
     <List ref={nameRef}>
       {setPhotoZoneList.map((item, i) => (
         <Container
+          key={crypto.randomUUID()}
           onClick={() => {
             setModal(!modal);
             setName(nameRef.current.children[i].innerText);
