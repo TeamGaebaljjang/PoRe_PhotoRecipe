@@ -18,17 +18,10 @@ export const Input = styled.textarea`
     outline: none;
   }
 `;
-export const PreviewImg = styled.img`
-  width: 100%;
-  max-height: 230px;
-  margin: 18px 0;
-  border-radius: 10px;
-`;
-
 export const SubmitImg = styled.label`
   width: 36px;
   height: 36px;
-  background-color: var(--black);
+  background-color: var(--gray);
   border-radius: 50%;
   background-image: url(${addPic});
   background-repeat: no-repeat;
@@ -36,4 +29,23 @@ export const SubmitImg = styled.label`
   position: absolute;
   right: 16px;
   bottom: 16px;
+  :hover {
+    background-color: var(--black);
+  }
+`;
+export const SubmitImgWrap = styled.div`
+  display: flex;
+  width: 350px;
+  max-height: 230px;
+  overflow: auto;
+`;
+export const PreviewImg = styled.img`
+  width: 350px;
+  max-height: 228px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  :nth-child(1) {
+    display: none;
+  }
 `;
