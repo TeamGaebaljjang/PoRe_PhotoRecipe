@@ -4,7 +4,7 @@ const HomeThumbnail = ({ props }) => {
   return (
     <>
       {props.map((thumbnail) => (
-        <Thumbnail key={thumbnail.id} src={thumbnail.itemImage} alt="" />
+        <Thumbnail key={crypto.randomUUID()} src={thumbnail.itemImage} alt="" />
       ))}
     </>
   );

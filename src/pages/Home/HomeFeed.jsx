@@ -72,7 +72,7 @@ const HomeFeed = () => {
       <SpotTab>
         {placeFilter.map((item) => (
           <SpotBtn
-            // key={item.id}
+            key={crypto.randomUUID()}
             value={item}
             className={item === btnActive ? 'active' : ''}
             onClick={(e) => {
@@ -89,7 +89,7 @@ const HomeFeed = () => {
       <FeedList>
         {btnOn
           ? feedPost.map((item) => (
-              <Feed>
+              <Feed key={crypto.randomUUID()}>
                 <FeedImg
                   key={item.id}
                   src={item.itemImage}
@@ -101,9 +101,8 @@ const HomeFeed = () => {
           : feedPost
               .filter((item) => item.itemName === name)
               .map((item) => (
-                <Feed>
+                <Feed key={crypto.randomUUID()}>
                   <FeedImg
-                    key={item.id}
                     src={item.itemImage}
                     alt=""
                     onClick={() => handleDetailPost({ item })}

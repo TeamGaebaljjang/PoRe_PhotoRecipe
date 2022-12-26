@@ -21,6 +21,7 @@ const Post = ({ posts }) => {
       <ImgWrap>
         {imgList.map((v) => (
           <PostImg
+            key={crypto.randomUUID()}
             style={posts.image ? { display: 'block' } : { display: 'none' }}
             src={v}
             alt=""

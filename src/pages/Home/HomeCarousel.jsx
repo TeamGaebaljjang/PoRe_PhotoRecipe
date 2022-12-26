@@ -97,9 +97,8 @@ const HomeCarousel = () => {
     <Carousel ref={slideRef}>
       {thumbnail.map((item) => (
         <ThumbnailWrap key={item.id}>
-          <Title key={item.id}>{item.itemName}</Title>
+          <Title>{item.itemName}</Title>
           <Thumbnail
-            key={item.id}
             src={item.itemImage}
             alt="thumbnail"
             onMouseOver={() => test()}
