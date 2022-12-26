@@ -20,6 +20,7 @@ import NotFound from '../pages/NotFound/NotFound';
 import { LoginRoute, NotLoginRoute } from './LoginControl';
 import EditPhotoZoneCard from '../pages/PostDetail/EditPhotoZoneCard/EditPhotoZoneCard';
 import EditProfile from '../pages/Profile/EditProfile/EditProfile';
+import ChatRoom from '../pages/Chat/ChatRoom/ChatRoom';
 
 const Routing = () => {
   return (
@@ -162,6 +163,7 @@ const Routing = () => {
           </LoginRoute>
         }
       />
+      <Route path="/chat/chatroom" element={<ChatRoom />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
   );
