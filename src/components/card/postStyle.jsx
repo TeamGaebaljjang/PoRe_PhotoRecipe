@@ -59,7 +59,7 @@ export const PostImg = styled.img`
   object-fit: cover;
   border-radius: 10px;
   margin-top: 20px;
-  flex-shrink: 0;
+  flex-shrink: 0.02;
   &.detail-post-img {
     height: 350px;
   }
@@ -105,5 +105,4 @@ export const ImgWrap = styled.div`
   display: flex;
   width: 350px;
   overflow: auto;
-  border-radius: 10px;
 `;
