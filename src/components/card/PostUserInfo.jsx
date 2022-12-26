@@ -11,7 +11,6 @@ import more from '../../assets/icons/icon-more-vertical-gray.svg';
 
 const PostUserInfo = ({ posts }) => {
   const navigate = useNavigate();
-  console.log(posts.author.accountname);
   return (
     <User
       onClick={() => {

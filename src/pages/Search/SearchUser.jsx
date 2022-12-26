@@ -8,16 +8,7 @@ const SearchUser = ({ props, keyword }) => {
   const handleProfile = () => {
     navigate('/otherProfile', {
       state: {
-        id: `${props.id}`,
-        image: `${props.image}`,
-        username: `${props.username}`,
         accountname: `${props.accountname}`,
-        intro: `${props.intro}`,
-        follower: `${props.follower}`,
-        followerCount: `${props.followerCount}`,
-        following: `${props.following}`,
-        followingCount: `${props.followingCount}`,
-        infollow: `${props.infollow}`,
       },
     });
   };
