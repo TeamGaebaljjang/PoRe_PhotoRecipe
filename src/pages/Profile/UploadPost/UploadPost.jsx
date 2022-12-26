@@ -3,7 +3,13 @@ import { useCallback, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BtnUpload from '../../../components/button/BtnUpload';
 import HeaderB from '../../../components/header/HeaderB';
-import { Input, PreviewImg, SubmitImg, Wrap } from './uploadPostStyle';
+import {
+  Input,
+  PreviewImg,
+  SubmitImg,
+  SubmitImgWrap,
+  Wrap,
+} from './uploadPostStyle';
 
 const UploadPost = () => {
   const [imgFile, setImgFile] = useState('');
@@ -48,11 +54,14 @@ const UploadPost = () => {
       formData.append('image', file);
       const res = await axios.post(`${URL}/image/uploadfile`, formData);
       const fileName = res.data.filename;
-      setImgFile(`${URL}/${fileName}`);
+      setImgFile(`${imgFile},${URL}/${fileName}`);
+      console.log(imgFile);
     } catch (error) {
       console.log('에러입니다');
     }
   };
+  const imgShow = imgFile.split(',');
+  console.log(imgShow);
 
   return (
     <>
@@ -66,7 +75,11 @@ const UploadPost = () => {
               onInput={handleResizeHeight}
               onChange={(e) => setDesc(e.target.value)}
             />
-            <PreviewImg src={imgFile || null} alt="" />
+            <SubmitImgWrap>
+              {imgShow.map((img) => (
+                <PreviewImg src={img || null} alt="" />
+              ))}
+            </SubmitImgWrap>
           </div>
           <BtnUpload type="button" onClick={uploadPost}>
             업로드
