@@ -7,7 +7,7 @@ import NavBar from '../../components/navBar/NavBar';
 import searchMain from '../../assets/icons/icon-feed-search.svg';
 
 const Search = () => {
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState(false);
   // 검색 API
   const URL = 'https://mandarin.api.weniv.co.kr';
 
