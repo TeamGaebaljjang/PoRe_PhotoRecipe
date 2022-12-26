@@ -1,16 +1,16 @@
-import { useNavigate } from 'react-router-dom';
-import { HeaderContainer, BackBtn, SearchInp } from './headerStyle';
+import { HeaderContainer, SearchInp } from './headerStyle';
 
-const HeaderBSM = () => {
-  const navigate = useNavigate();
-
-  const handleBack = () => {
-    navigate(-1);
-  };
+const HeaderBSM = ({ text, onChange, onKeyPress }) => {
   return (
     <HeaderContainer>
-      <BackBtn onClick={handleBack} />
-      <SearchInp type="text" placeholder="지역 검색" />
+      <SearchInp
+        type="text"
+        placeholder="지역 검색"
+        value={text}
+        onChange={onChange}
+        onKeyPress={onKeyPress}
+        style={{ width: '350px' }}
+      />
     </HeaderContainer>
   );
 };

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   UnderModalWrap,
   UnderModalCont,
@@ -11,7 +12,8 @@ const ProfileUnderModal = ({ modalHandler }) => {
   const logoutHandler = () => {
     setLogout(!logout);
   };
-
+  const navigate = useNavigate();
+  
   return (
     <>
       {logout ? <LogoutModal logoutHandler={logoutHandler} /> : null}
@@ -19,7 +21,14 @@ const ProfileUnderModal = ({ modalHandler }) => {
       <UnderModalWrap>
         <UnderModalCloseBtn onClick={modalHandler} />
         <UnderModalCont>
-          <button type="button">설정 및 개인정보</button>
+          <button
+            type="button"
+            onClick={() => {
+              navigate(`/profile/editprofile`);
+            }}
+          >
+            설정 및 개인정보
+          </button>
         </UnderModalCont>
         <UnderModalCont>
           <button

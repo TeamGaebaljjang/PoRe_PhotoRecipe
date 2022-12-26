@@ -28,6 +28,7 @@ const CommentWrapper = ({ posts, postDetailId }) => {
       console.log(error);
     }
   };
+
   useEffect(() => getComments, []);
 
   return (
