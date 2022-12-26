@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Post from '../../../components/card/Post';
 import { CardWrap } from './postCardStyle';
-import HeaderBM from '../../../components/header/HeaderBM';
+import HeaderB from '../../../components/header/HeaderB';
 import CommentWrapper from '../../../components/comment/CommentWrapper';
 
 const PostCard = () => {
@@ -34,7 +34,7 @@ const PostCard = () => {
 
   return (
     <>
-      <HeaderBM />
+      <HeaderB />
       <CardWrap>
         {posts && <Post posts={posts} />}
         <CommentWrapper posts={posts} postDetailId={postDetailId} />

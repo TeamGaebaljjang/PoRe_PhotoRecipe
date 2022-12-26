@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import HeaderFeed from '../../components/header/HeaderFeed';
 import PostWrapper from '../../components/card/PostWrapper';
 import NavBar from '../../components/navBar/NavBar';
+import Search from '../Search/Search';
 
 export const Wrap = styled.div`
   height: calc(100vh - 60px);
@@ -39,8 +40,14 @@ const Feed = () => {
 
   return (
     <Wrap>
-      <HeaderFeed />
-      <PostWrapper posts={posts} />
+      {posts?.length === 0 ? (
+        <Search />
+      ) : (
+        <>
+          <HeaderFeed />
+          <PostWrapper posts={posts} />
+        </>
+      )}
       <NavBar />
     </Wrap>
   );
