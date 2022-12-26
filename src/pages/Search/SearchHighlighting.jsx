@@ -1,7 +1,6 @@
 import { Highlighting } from './searchStyle';
 
 const SearchHighlighting = ({ user, keyword, type }) => {
-  console.log(type);
   return user.includes(keyword) ? (
     <span type={type}>
       {user.split(keyword)[0]}
