@@ -18,7 +18,7 @@ const ConfirmModal = styled.article`
   }
 `;
 
-const Btnwrap = styled.button`
+const Btnwrap = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
