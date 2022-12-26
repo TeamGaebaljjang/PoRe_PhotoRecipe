@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { PostCard, PostImg, PostDate } from './postStyle';
+import { PostCard, PostImg, PostDate, ImgWrap } from './postStyle';
 import PostUserInfo from './PostUserInfo';
 import PostIcon from './PostIcon';
 import PostContent from './PostContent';
@@ -13,16 +13,21 @@ const Post = ({ posts }) => {
       },
     });
   };
+  const imgList = posts.image.split(',');
 
   return (
     <PostCard>
       <PostUserInfo posts={posts} />
-      <PostImg
-        style={posts.image ? { display: 'block' } : { display: 'none' }}
-        src={posts.image}
-        alt=""
-        onClick={() => postDetailId()}
-      />
+      <ImgWrap>
+        {imgList.map((v) => (
+          <PostImg
+            style={posts.image ? { display: 'block' } : { display: 'none' }}
+            src={v}
+            alt=""
+            onClick={() => postDetailId()}
+          />
+        ))}
+      </ImgWrap>
       <PostContent posts={posts} postDetailId={postDetailId} />
       <PostIcon posts={posts} />
       <PostDate>

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { HeaderContainer, BackBtn, SearchInp } from './headerStyle';
 
-const HeaderBSU = ({ search, onSearch, checkInp }) => {
+const HeaderBSU = ({ checkInp }) => {
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -17,10 +17,9 @@ const HeaderBSU = ({ search, onSearch, checkInp }) => {
   return (
     <HeaderContainer>
       <BackBtn onClick={handleBack} />
-      <form action="submit" onSubmit={(e) => onSearch(e)}>
+      <form action="submit">
         <SearchInp
           type="text"
-          value={search}
           placeholder="계정 검색"
           onChange={checkInp}
           onKeyDown={(e) => handleKey(e)}

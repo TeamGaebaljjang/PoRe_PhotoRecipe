@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import HeaderBSU from '../../components/header/HeaderBSU';
 import { Wrap, SearchCont, SearchMsg } from './searchStyle';
 import SearchUser from './SearchUser';
@@ -7,64 +7,50 @@ import NavBar from '../../components/navBar/NavBar';
 import searchMain from '../../assets/icons/icon-feed-search.svg';
 
 const Search = () => {
-  const [search, setSearch] = useState('');
   const [user, setUser] = useState([]);
-
   // 검색 API
   const URL = 'https://mandarin.api.weniv.co.kr';
 
-  useEffect(() => {
-    const searchUser = async () => {
-      try {
-        const token = localStorage.getItem('token');
-        const response = await axios.get(
-          `${URL}/user/searchuser/?keyword=${search}`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              'Content-type': 'application/json',
-            },
+  const searchUser = async (search) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.get(
+        `${URL}/user/searchuser/?keyword=${search}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-type': 'application/json',
           },
-        );
-
-        if (response) {
-          setUser(response.data);
-        }
-      } catch (error) {
-        console.log(error.response);
-      }
-    };
-    searchUser();
-  }, [search]);
-
-  // 검색된 값으로 필터링
-  const onSearch = (e) => {
-    e.preventDefault();
-    if (search) {
-      const filterData = user.filter((item) =>
-        (item.accountname || item.username).includes(search),
+        },
       );
-      setUser(filterData);
-      console.log(user);
+
+      if (response) {
+        setUser(response.data);
+      }
+    } catch (error) {
+      console.log(error.response);
     }
-    setSearch('');
   };
 
-  // 입력 체크
+  let timer;
   const checkInp = (e) => {
-    e.preventDefault();
-    setSearch(e.target.value);
+    const search = e.target.value;
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      if (search) {
+        searchUser(search);
+      } else {
+        setUser('');
+      }
+    }, 200);
   };
 
   return (
     <Wrap>
-      <HeaderBSU
-        search={search}
-        user={user}
-        onSearch={onSearch}
-        checkInp={checkInp}
-      />
-      {search ? (
+      <HeaderBSU checkInp={checkInp} />
+      {user ? (
         user.map((item) => <SearchUser props={item} />)
       ) : (
         <SearchCont>

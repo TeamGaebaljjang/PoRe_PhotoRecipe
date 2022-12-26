@@ -18,6 +18,7 @@ const Post = styled.img`
 
 const PostSmall = ({ posts }) => {
   const navigate = useNavigate();
+  const imgList = posts.image.split(',');
 
   const postDetailId = () => {
     navigate('/feed/feeddetail', {
@@ -26,7 +27,7 @@ const PostSmall = ({ posts }) => {
       },
     });
   };
-  return <Post src={posts.image} onClick={() => postDetailId()} />;
+  return <Post src={imgList[0]} onClick={() => postDetailId()} />;
 };
 
 export default PostSmall;
