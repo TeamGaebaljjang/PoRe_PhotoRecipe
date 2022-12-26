@@ -1,14 +1,16 @@
-import profilePic from '../../assets/img/profile.png';
+// import profilePic from '../../assets/img/profile.png';
+import { BtnFollow } from '../../pages/Profile/Follow/followStyle';
 import { UserCont, UserLi, UserName } from './userStyle';
 
-const User = () => {
+const User = ({ item }) => {
   return (
     <UserLi>
-      <img src={profilePic} alt="" />
+      <img src={item.image} alt="" style={{ width: '35px' }} />
       <div>
-        <UserName>닉네임</UserName>
-        <UserCont>필요한 내용</UserCont>
+        <UserName>{item.username}</UserName>
+        <UserCont>{item.accountname}</UserCont>
       </div>
+      <BtnFollow cancel>취소</BtnFollow>{' '}
     </UserLi>
   );
 };

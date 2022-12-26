@@ -1,11 +1,9 @@
-// import Routes from './routes/Routes';
-import Map from './pages/Map/Map';
+import Routes from './routes/Routes';
 
 const App = () => {
   return (
     <div>
-      {/* <Routes /> */}
-      <Map />
+      <Routes />
     </div>
   );
 };

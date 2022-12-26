@@ -4,6 +4,7 @@ export const NavWrap = styled.nav`
   position: fixed;
   width: 390px;
   bottom: 0;
+  z-index: 30;
 `;
 
 export const NavUlStyle = styled.ul`

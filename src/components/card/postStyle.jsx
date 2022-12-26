@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const Wrap = styled.div`
+  height: calc(100vh - 60px);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
 export const PostCard = styled.article`
   display: flex;
   flex-direction: column;
@@ -14,7 +22,12 @@ export const User = styled.div`
 `;
 
 export const UserProfile = styled.img`
+  width: 42px;
+  height: 42px;
   background-color: var(--gray);
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
   border-radius: 50%;
   margin-right: 12px;
 `;
@@ -45,30 +58,44 @@ export const PostImg = styled.img`
   height: 228px;
   object-fit: cover;
   border-radius: 10px;
-  margin: 20px 0 14px;
+  margin-top: 20px;
+  &.detail-post-img {
+    height: 350px;
+  }
 `;
 
 export const Icon = styled.div`
   display: flex;
   align-items: center;
+  margin: 0 7px 15px 7px;
 `;
 
 export const IconImg = styled.img`
   cursor: pointer;
 `;
 
-export const IconCount = styled.p`
-  margin: 0 16px 0 6px;
+export const IconCount = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 16px 0 0;
   font-size: 12px;
   color: var(--super-gray);
 `;
 
+export const PostTitle = styled.h1`
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 14px;
+`;
+
 export const PostCont = styled.p`
   font-size: 14px;
-  margin: 16px 0;
+  margin: 14px 7px;
 `;
 
 export const PostDate = styled.p`
+  margin: 0 7px;
   font-size: 10px;
   color: var(--super-gray);
 `;

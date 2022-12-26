@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { NavWrap, NavUlStyle, NavItemStyle } from './navBarStyle';
 import iconHome from '../../assets/icons/icon-home.svg';
 import iconHomeActive from '../../assets/icons/icon-home-active.svg';
@@ -13,56 +12,84 @@ import iconUser from '../../assets/icons/icon-user.svg';
 import iconUserActive from '../../assets/icons/icon-user-active.svg';
 
 const NavBar = () => {
-  const [navIcon, setNavIcon] = useState(1);
+  const location = useLocation();
+  const target = location.pathname;
 
   return (
     <NavWrap>
       <NavUlStyle>
-        <Link to="/home" onClick={() => setNavIcon(1)}>
-          <img src={navIcon === 1 ? iconHomeActive : iconHome} alt="" />
+        <Link to="/home">
+          <img
+            src={
+              target === '/home' || target === '/photodetail'
+                ? iconHomeActive
+                : iconHome
+            }
+            alt=""
+          />
           <NavItemStyle
             style={
-              navIcon === 1 ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/home' || target === '/photodetail'
+                ? { color: 'black' }
+                : { color: 'var(--gray)' }
             }
           >
             홈
           </NavItemStyle>
         </Link>
-        <Link to="/feed" onClick={() => setNavIcon(2)}>
-          <img src={navIcon === 2 ? iconFeedActive : iconFeed} alt="" />
+        <Link to="/feed">
+          <img
+            src={
+              target === '/feed' ||
+              target === '/feed/search' ||
+              target === '/otherProfile'
+                ? iconFeedActive
+                : iconFeed
+            }
+            alt=""
+          />
           <NavItemStyle
             style={
-              navIcon === 2 ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/feed' ||
+              target === '/feed/search' ||
+              target === '/otherProfile'
+                ? { color: 'black' }
+                : { color: 'var(--gray)' }
             }
           >
             피드
           </NavItemStyle>
         </Link>
-        <Link to="/map" onClick={() => setNavIcon(3)}>
-          <img src={navIcon === 3 ? iconMapActive : iconMap} alt="" />
+        <Link to="/map">
+          <img src={target === '/map' ? iconMapActive : iconMap} alt="" />
           <NavItemStyle
             style={
-              navIcon === 3 ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/map' ? { color: 'black' } : { color: 'var(--gray)' }
             }
           >
             지도
           </NavItemStyle>
         </Link>
-        <Link to="/chat" onClick={() => setNavIcon(4)}>
-          <img src={navIcon === 4 ? iconMessageActive : iconMessage} alt="" />
+        <Link to="/chat">
+          <img
+            src={target === '/chat' ? iconMessageActive : iconMessage}
+            alt=""
+          />
           <NavItemStyle
             style={
-              navIcon === 4 ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/chat' ? { color: 'black' } : { color: 'var(--gray)' }
             }
           >
             채팅
           </NavItemStyle>
         </Link>
-        <Link to="/profile" onClick={() => setNavIcon(5)}>
-          <img src={navIcon === 5 ? iconUserActive : iconUser} alt="" />
+        <Link to="/profile">
+          <img src={target === '/profile' ? iconUserActive : iconUser} alt="" />
           <NavItemStyle
             style={
-              navIcon === 5 ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/profile'
+                ? { color: 'black' }
+                : { color: 'var(--gray)' }
             }
           >
             프로필

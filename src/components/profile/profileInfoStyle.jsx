@@ -5,8 +5,7 @@ export const Img = styled.div`
   height: 90px;
   margin-top: 8px;
   margin-left: 38px;
-  background: var(--gray) url(${(props) => props.src}) no-repeat center/ 90px
-    90px;
+  background: var(--gray) url(${(props) => props.src}) no-repeat center/ cover;
 `;
 
 export const Container = styled.div`
@@ -14,6 +13,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 24px;
+  margin-bottom: 20px;
 `;
 
 export const Info = styled.div`

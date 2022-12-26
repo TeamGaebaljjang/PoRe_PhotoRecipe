@@ -1,4 +1,4 @@
-import BasicProFile from '../../assets/icons/basic-profile-rec.svg';
+import { useNavigate } from 'react-router-dom';
 import PhotoUpload from '../../assets/icons/icon-photo-upload-black.svg';
 import {
   Img,
@@ -12,33 +12,53 @@ import {
   GoFollow,
 } from './profileInfoStyle';
 
-const ProFileInfo = () => {
+const ProfileInfo = ({ info }) => {
+  const navigate = useNavigate();
+
   return (
     <div>
-      <Img src={BasicProFile} />
+      <Img src={info.image} />
       <Container>
         <Info>
-          <Name>개발짱</Name>
+          <Name>{info.username}</Name>
           <Follow>
-            <Follower>
-              팔로워 <span>0</span>
+            <Follower
+              onClick={() => {
+                navigate(`/profile/follower`);
+              }}
+            >
+              팔로워 <span>{info.followerCount}</span>
             </Follower>
-            <Following>
-              팔로잉 <span>0</span>
+            <Following
+              onClick={() => {
+                navigate(`/profile/following`);
+              }}
+            >
+              팔로잉 <span>{info.followingCount}</span>
             </Following>
           </Follow>
         </Info>
-        <AddPhotoZone>
-          <img src={PhotoUpload} alt="포토존 등록 버튼 이미지" />
-          <p>포토존 등록</p>
-        </AddPhotoZone>
-
-        <GoFollow>
-          <p>팔로우 하기</p>
-        </GoFollow>
+        {localStorage.getItem('accountname') === info.accountname ? (
+          <AddPhotoZone
+            onClick={() => {
+              navigate(`/profile/uploadphotozone`);
+            }}
+          >
+            <img src={PhotoUpload} alt="포토존 등록 버튼 이미지" />
+            <p>포토존 등록</p>
+          </AddPhotoZone>
+        ) : (
+          <GoFollow
+            onClick={() => {
+              console.log('클릭');
+            }}
+          >
+            {info.isfollow ? <p>언팔로우</p> : <p>팔로우</p>}
+          </GoFollow>
+        )}
       </Container>
     </div>
   );
 };
 
-export default ProFileInfo;
+export default ProfileInfo;

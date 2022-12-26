@@ -11,6 +11,8 @@ export const UserComment = styled.li`
 export const ProfileImg = styled.img`
   width: 40px;
   height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
 `;
 export const UserName = styled.strong`
   display: flex;

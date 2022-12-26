@@ -1,11 +1,30 @@
+import { useNavigate } from 'react-router-dom';
 import { HeaderContainer, BackBtn, SearchInp } from './headerStyle';
 
-const HeaderBSU = () => {
+const HeaderBSU = ({ search, onSearch, checkInp }) => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1);
+  };
+
+  const handleKey = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+    }
+  };
+
   return (
     <HeaderContainer>
-      <BackBtn />
-      <form action="submit">
-        <SearchInp type="text" placeholder="계정 검색" />
+      <BackBtn onClick={handleBack} />
+      <form action="submit" onSubmit={(e) => onSearch(e)}>
+        <SearchInp
+          type="text"
+          value={search}
+          placeholder="계정 검색"
+          onChange={checkInp}
+          onKeyDown={(e) => handleKey(e)}
+        />
       </form>
     </HeaderContainer>
   );

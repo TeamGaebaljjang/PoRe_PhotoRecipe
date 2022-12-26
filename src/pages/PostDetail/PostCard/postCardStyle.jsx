@@ -7,12 +7,13 @@ export const CardWrap = styled.div`
   overflow: auto;
 `;
 
-export const CommentWrap = styled.div`
+export const Comments = styled.div`
   border-top: 1px solid var(--gray);
   padding-bottom: 60px;
   background-color: white;
   overflow: auto;
 `;
+
 export const Form = styled.form`
   position: fixed;
   bottom: 0px;
