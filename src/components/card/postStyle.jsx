@@ -19,6 +19,7 @@ export const User = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const UserProfile = styled.img`

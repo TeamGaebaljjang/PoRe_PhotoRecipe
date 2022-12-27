@@ -10,6 +10,7 @@ const HomeFeed = () => {
   const [btnOn, setBtnOn] = useState(false);
   const navigate = useNavigate();
 
+  // 무한 스크롤
   const [feedPost, setFeedPost] = useState([]);
   const [numFeed, setNumFeed] = useState(20);
   const [loading, setLoading] = useState(false);
@@ -47,6 +48,7 @@ const HomeFeed = () => {
       setNumFeed((current) => current + 10);
     }
   }, [inView, loading]);
+
   // 포토존 이미지 클릭시 상세 페이지로 이동
   const handleDetailPost = ({ item }) => {
     console.log(item);

@@ -5,8 +5,10 @@ import {
   Input,
   BtnSubmit,
 } from '../../pages/PostDetail/PostCard/postCardStyle';
+import imageProfile from '../../assets/img/profile.png';
 
 const CommentForm = ({ postComment, comment, setComment }) => {
+  const myProfileImg = localStorage.getItem('myprofileImg');
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = '1px';
@@ -24,7 +26,13 @@ const CommentForm = ({ postComment, comment, setComment }) => {
 
   return (
     <Form>
-      <ProfileImg />
+      <ProfileImg>
+        {!myProfileImg ? (
+          <img src={imageProfile} alt="" />
+        ) : (
+          <img src={myProfileImg} alt="" />
+        )}
+      </ProfileImg>
       <Input
         placeholder="댓글 입력하기..."
         ref={textRef}
@@ -35,6 +43,7 @@ const CommentForm = ({ postComment, comment, setComment }) => {
       />
       <BtnSubmit
         type="button"
+        disabled={!comment}
         onClick={() => {
           handleSubmit();
         }}
