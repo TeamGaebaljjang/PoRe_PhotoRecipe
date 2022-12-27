@@ -8,6 +8,7 @@ import {
 import imageProfile from '../../assets/img/profile.png';
 
 const CommentForm = ({ postComment, comment, setComment }) => {
+  const myProfileImg = localStorage.getItem('myprofileImg');
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = '1px';
@@ -26,7 +27,11 @@ const CommentForm = ({ postComment, comment, setComment }) => {
   return (
     <Form>
       <ProfileImg>
-        <img src={imageProfile} alt="" />
+        {!myProfileImg ? (
+          <img src={imageProfile} alt="" />
+        ) : (
+          <img src={myProfileImg} alt="" />
+        )}
       </ProfileImg>
       <Input
         placeholder="댓글 입력하기..."

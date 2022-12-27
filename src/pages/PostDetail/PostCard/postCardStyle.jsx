@@ -43,8 +43,16 @@ export const Input = styled.textarea`
 export const ProfileImg = styled.div`
   width: 36px;
   height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
   background-image: url(${imageProfile});
   background-size: 36px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 export const BtnSubmit = styled.button`
