@@ -4,7 +4,7 @@ import Comment from './Comment';
 import { Comments } from '../../pages/PostDetail/PostCard/postCardStyle';
 import CommentForm from './CommentForm';
 
-const CommentWrapper = ({ posts, postDetailId }) => {
+const CommentWrapper = ({ postDetailId }) => {
   // console.log('posts : ', posts);
   const [commentList, setCommentList] = useState([]);
   const [comment, setComment] = useState('');
@@ -64,7 +64,6 @@ const CommentWrapper = ({ posts, postDetailId }) => {
             <Comment
               key={item.id}
               commentList={item}
-              posts={posts}
               setComment={setComment}
               getComments={getComments}
               postDetailId={postDetailId}

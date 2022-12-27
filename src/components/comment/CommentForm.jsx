@@ -5,6 +5,7 @@ import {
   Input,
   BtnSubmit,
 } from '../../pages/PostDetail/PostCard/postCardStyle';
+import imageProfile from '../../assets/img/profile.png';
 
 const CommentForm = ({ postComment, comment, setComment }) => {
   const textRef = useRef();
@@ -24,7 +25,9 @@ const CommentForm = ({ postComment, comment, setComment }) => {
 
   return (
     <Form>
-      <ProfileImg />
+      <ProfileImg>
+        <img src={imageProfile} alt="" />
+      </ProfileImg>
       <Input
         placeholder="댓글 입력하기..."
         ref={textRef}
@@ -35,6 +38,7 @@ const CommentForm = ({ postComment, comment, setComment }) => {
       />
       <BtnSubmit
         type="button"
+        disabled={!comment}
         onClick={() => {
           handleSubmit();
         }}

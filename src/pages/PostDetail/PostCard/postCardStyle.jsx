@@ -49,4 +49,8 @@ export const ProfileImg = styled.div`
 
 export const BtnSubmit = styled.button`
   color: var(--gray);
+
+  &:enabled {
+    color: var(--black);
+  }
 `;
