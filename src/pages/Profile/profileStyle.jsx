@@ -12,13 +12,12 @@ export const BackDrop = styled.div`
 `;
 
 export const BackDropWhite = styled.div`
-  position: absolute;
-  left: 0;
+  position: fixed;
+  left: calc(50vw - 203px);
   top: 0;
   z-index: 20;
   width: 390px;
   min-height: 100vh;
-  /* height: ${(props) => `${props.height}px`}; */
   background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(2px);
 `;

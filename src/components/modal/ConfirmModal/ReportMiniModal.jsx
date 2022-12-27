@@ -1,15 +1,8 @@
 // import { useState } from 'react';
 import { ConfirmModal, Btnwrap } from './confirmModalStyle';
 
-const ReportMiniModal = (props) => {
-  // const [modal, setModal] = useState(true);
-  const { onClose } = props;
+const ReportMiniModal = ({ closeModal }) => {
   const accountName = localStorage.getItem('accountname');
-
-  // const ModalHandler = () => {
-  //   console.log('click!!!!');
-  //   setModal(!modal);
-  // };
 
   return (
     <ConfirmModal>
@@ -19,7 +12,11 @@ const ReportMiniModal = (props) => {
           PORE는 해당 내용 검토 후<br /> 적절하게 조치할 예정입니다.
         </span>
       </h3>
-      <Btnwrap onClick={() => onClose(false)}>
+      <Btnwrap
+        onClick={() => {
+          closeModal();
+        }}
+      >
         <button type="button">닫기</button>
       </Btnwrap>
     </ConfirmModal>

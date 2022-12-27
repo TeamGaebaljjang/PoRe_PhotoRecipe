@@ -7,7 +7,7 @@ import {
   UnderModalCloseBtn,
 } from './underModalStyle';
 
-const ReportUnder = ({ postDetailId, commentList, setComment }) => {
+const ReportUnder = ({ postDetailId, commentList, setComment, closeModal }) => {
   const [confirm, setConfirm] = useState(false);
 
   const ReportComment = async () => {
@@ -40,7 +40,7 @@ const ReportUnder = ({ postDetailId, commentList, setComment }) => {
           <button type="button">신고하기</button>
         </UnderModalCont>
       </CommentModalWrap>
-      {confirm ? <ReportMiniModal onClose={setConfirm} /> : null}
+      {confirm ? <ReportMiniModal closeModal={closeModal} /> : null}
     </>
   );
 };

@@ -22,6 +22,10 @@ const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
     setModal(!modal);
   };
 
+  const closeModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <>
       <UserComment>
@@ -61,6 +65,7 @@ const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
             }}
           />
           <ReportUnder
+            closeModal={closeModal}
             commentList={commentList}
             postDetailId={postDetailId}
             setComment={setComment}
