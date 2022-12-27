@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { useState } from 'react';
+import ReportMiniModal from '../ConfirmModal/ReportMiniModal';
 import {
   CommentModalWrap,
   UnderModalCont,
@@ -6,9 +8,7 @@ import {
 } from './underModalStyle';
 
 const ReportUnder = ({ postDetailId, commentList, setComment }) => {
-  // const reportModalHandler = () => {
-  //   return
-  // };
+  const [confirm, setConfirm] = useState(false);
 
   const ReportComment = async () => {
     try {
@@ -25,26 +25,23 @@ const ReportUnder = ({ postDetailId, commentList, setComment }) => {
         },
       );
       console.log('ReportComment 응답 : ', res);
+      setConfirm(!confirm);
       setComment('');
-      // alert('신고하신 내용이 접수되었습니다.');
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <CommentModalWrap>
-      <UnderModalCloseBtn />
-      <UnderModalCont
-        onClick={() => {
-          ReportComment();
-          // eslint-disable-next-line no-alert
-          alert('신고하신 내용이 접수되었습니다.');
-        }}
-      >
-        <button type="button">신고하기</button>
-      </UnderModalCont>
-    </CommentModalWrap>
+    <>
+      <CommentModalWrap>
+        <UnderModalCloseBtn />
+        <UnderModalCont onClick={ReportComment}>
+          <button type="button">신고하기</button>
+        </UnderModalCont>
+      </CommentModalWrap>
+      {confirm ? <ReportMiniModal onClose={setConfirm} /> : null}
+    </>
   );
 };
 
