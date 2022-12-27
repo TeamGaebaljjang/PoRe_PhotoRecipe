@@ -12,6 +12,7 @@ export const UserLi = styled.li`
 export const UserName = styled.strong`
   display: inline-block;
   font-size: 14px;
+  font-weight: 600;
 `;
 export const UserCont = styled.p`
   width: 250px;
@@ -20,4 +21,5 @@ export const UserCont = styled.p`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 400;
 `;

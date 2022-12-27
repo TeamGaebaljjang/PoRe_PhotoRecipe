@@ -13,7 +13,7 @@ const ProfileUnderModal = ({ modalHandler }) => {
     setLogout(!logout);
   };
   const navigate = useNavigate();
-  
+
   return (
     <>
       {logout ? <LogoutModal logoutHandler={logoutHandler} /> : null}

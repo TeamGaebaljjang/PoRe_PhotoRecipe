@@ -19,6 +19,7 @@ export const BtnFollow = styled.button`
   background-color: black;
   color: white;
   border: 1px solid black;
+  font-size: 12px;
 
   ${(p) =>
     p.cancel &&
