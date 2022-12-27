@@ -23,7 +23,7 @@ const PZDeleteModal = ({ deleteHandler, props }) => {
   }
 
   return (
-    <ConfirmModal style={{ top: '0', left: '60px' }}>
+    <ConfirmModal>
       <h3>포토존을 삭제할까요?</h3>
       <Btnwrap>
         <button

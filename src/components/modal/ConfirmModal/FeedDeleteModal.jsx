@@ -24,7 +24,7 @@ const FeedDeleteModal = ({ deleteHandler, posts }) => {
   }
 
   return (
-    <ConfirmModal style={{ top: '0', left: '60px' }}>
+    <ConfirmModal>
       <h3>게시물을 삭제할까요?</h3>
       <Btnwrap>
         <button

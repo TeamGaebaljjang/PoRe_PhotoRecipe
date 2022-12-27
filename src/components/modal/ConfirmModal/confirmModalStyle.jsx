@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const ConfirmModal = styled.article`
-  position: absolute;
-  top: calc(100vh / 2.5);
-  left: 85px;
+  position: fixed;
+  top: calc(50vh - 110px);
+  left: calc(50vw - 110px);
   width: 220px;
   text-align: center;
   border-radius: 10px;

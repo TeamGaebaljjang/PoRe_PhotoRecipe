@@ -96,7 +96,7 @@ const YourProFile = () => {
         console.log(error.response);
       }
     })();
-  }, [info]);
+  }, []);
 
   return (
     <Wrapper>
