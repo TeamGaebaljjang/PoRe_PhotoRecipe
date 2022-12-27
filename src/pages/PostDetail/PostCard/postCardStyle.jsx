@@ -5,6 +5,9 @@ export const CardWrap = styled.div`
   position: relative;
   height: 100vh;
   overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Comments = styled.div`

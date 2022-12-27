@@ -1,18 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
 import HeaderFeed from '../../components/header/HeaderFeed';
 import PostWrapper from '../../components/card/PostWrapper';
 import NavBar from '../../components/navBar/NavBar';
 import Search from '../Search/Search';
-
-export const Wrap = styled.div`
-  height: calc(100vh - 60px);
-  overflow: auto;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
+import { Wrap } from '../../components/card/postStyle';
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
