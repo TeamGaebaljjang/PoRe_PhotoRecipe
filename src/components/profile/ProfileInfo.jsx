@@ -13,13 +13,15 @@ import {
   Following,
   AddPhotoZone,
   GoFollow,
+  GoUnFollow,
 } from './profileInfoStyle';
 
-const ProfileInfo = ({ info }) => {
+const ProfileInfo = ({ info, isfollow, follow, unFollow }) => {
   const navigate = useNavigate();
   const [btnOn, setBtnOn] = useState(false);
 
   return (
+    /* eslint-disable */
     <div>
       <Img src={info.image} />
       <Container>
@@ -60,17 +62,18 @@ const ProfileInfo = ({ info }) => {
             />
             <p>포토존 등록</p>
           </AddPhotoZone>
+        ) : isfollow ? (
+          <GoUnFollow onClick={unFollow}>
+            <p>언팔로우</p>
+          </GoUnFollow>
         ) : (
-          <GoFollow
-            onClick={() => {
-              console.log('클릭');
-            }}
-          >
-            {info.isfollow ? <p>언팔로우</p> : <p>팔로우</p>}
+          <GoFollow onClick={follow}>
+            <p>팔로우</p>
           </GoFollow>
         )}
       </Container>
     </div>
+    /* eslint-enable */
   );
 };
 
