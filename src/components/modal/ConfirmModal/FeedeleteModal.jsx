@@ -2,8 +2,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { ConfirmModal, Btnwrap } from './confirmModalStyle';
 
-const FeedeleteModal = ({ deleteHandler, props }) => {
-  const productId = props.id;
+const FeedeleteModal = ({ deleteHandler, posts }) => {
+  const feedId = posts.id;
   const navigate = useNavigate();
   async function deleteFeed(value) {
     try {
@@ -38,7 +38,7 @@ const FeedeleteModal = ({ deleteHandler, props }) => {
           type="button"
           className="caution-option"
           onClick={() => {
-            deleteFeed(productId);
+            deleteFeed(feedId);
           }}
         >
           삭제

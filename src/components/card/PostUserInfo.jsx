@@ -20,15 +20,16 @@ const PostUserInfo = ({ posts }) => {
 
   const userCheck = () => {
     if (accountName === userInfo) {
+      console.log(userInfo);
       navigate('/profile', {
         state: {
-          accountname: `${posts.author.accountname}`,
+          accountname: `${userInfo}`,
         },
       });
     } else {
       navigate('/otherProfile', {
         state: {
-          accountname: `${posts.author.accountname}`,
+          accountname: `${userInfo}`,
         },
       });
     }
@@ -59,12 +60,11 @@ const PostUserInfo = ({ posts }) => {
       {modal ? (
         <BackDrop
           onClick={() => {
-            console.log('모달클릭');
             setModal(!modal);
           }}
         />
       ) : null}
-      {modal ? <FeedEditUnder modalHandler={modalHandler} /> : null}
+      {modal ? <FeedEditUnder posts={posts} /> : null}
     </User>
   );
 };

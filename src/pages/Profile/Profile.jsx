@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+// import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Wrapper, BackDrop } from './profileStyle';
 import HeaderProfile from '../../components/header/HeaderProfile';
@@ -16,6 +17,9 @@ const Profile = () => {
   const [info, setInfo] = useState('');
   const [modal, setModal] = useState(false);
   const [view, setView] = useState(false);
+  // const location = useLocation();
+  // const userAccountname = location.state;
+  // console.log(userAccountname);
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   const dispatch = useDispatch();

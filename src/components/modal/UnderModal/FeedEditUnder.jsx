@@ -8,7 +8,7 @@ import {
   CommentModalWrap,
 } from './underModalStyle';
 
-const FeedEditUnder = ({ props }) => {
+const FeedEditUnder = ({ posts }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const target = location.pathname;
@@ -20,7 +20,7 @@ const FeedEditUnder = ({ props }) => {
   return (
     <>
       {del ? (
-        <FeedeleteModal deleteHandler={deleteHandler} props={props} />
+        <FeedeleteModal deleteHandler={deleteHandler} posts={posts} />
       ) : null}
 
       {target === '/profile' ? (
@@ -41,7 +41,7 @@ const FeedEditUnder = ({ props }) => {
               type="button"
               onClick={() => {
                 navigate('/profile/editfeed', {
-                  state: { props: { props } },
+                  state: { posts: { posts } },
                 });
               }}
             >
@@ -67,7 +67,7 @@ const FeedEditUnder = ({ props }) => {
               type="button"
               onClick={() => {
                 navigate('/profile/editfeed', {
-                  state: { props: { props } },
+                  state: { posts: { posts } },
                 });
               }}
             >
