@@ -45,7 +45,4 @@ export const PreviewImg = styled.img`
   border-radius: 10px;
   object-fit: cover;
   flex-shrink: 0;
-  :nth-child(1) {
-    display: none;
-  }
 `;

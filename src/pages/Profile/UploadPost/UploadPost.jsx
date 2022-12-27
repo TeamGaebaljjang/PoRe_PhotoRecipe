@@ -13,7 +13,7 @@ import {
 
 const UploadPost = () => {
   const [imgFile, setImgFile] = useState('');
-  const [desc, setDesc] = useState('');
+  const [cont, setCont] = useState('');
   const imgRef = useRef();
   const textRef = useRef();
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ const UploadPost = () => {
       const authToken = localStorage.getItem('token');
       const body = {
         post: {
-          content: desc,
+          content: cont,
           image: imgFile,
         },
       };
@@ -47,7 +47,7 @@ const UploadPost = () => {
     }
   };
 
-  const imgShow = imgFile.split(',');
+  const imgShow = imgFile.split(',').filter((value) => value !== '');
   const imgApi = async () => {
     try {
       const file = imgRef.current.files[0];
@@ -76,7 +76,7 @@ const UploadPost = () => {
               placeholder="게시글 입력하기..."
               ref={textRef}
               onInput={handleResizeHeight}
-              onChange={(e) => setDesc(e.target.value)}
+              onChange={(e) => setCont(e.target.value)}
             />
             <SubmitImgWrap>
               {imgShow.map((img) => (
