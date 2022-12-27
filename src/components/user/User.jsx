@@ -20,16 +20,7 @@ const Userfoll = ({ item }) => {
   const handleProfile = () => {
     navigate('/otherProfile', {
       state: {
-        id: `${item.id}`,
-        image: `${item.image}`,
-        username: `${item.username}`,
         accountname: `${item.accountname}`,
-        intro: `${item.intro}`,
-        follower: `${item.follower}`,
-        followerCount: `${item.followerCount}`,
-        following: `${item.following}`,
-        followingCount: `${item.followingCount}`,
-        infollow: `${item.infollow}`,
       },
     });
   };
@@ -74,14 +65,32 @@ const Userfoll = ({ item }) => {
   };
 
   return (
-    <>
-      <User onClick={() => handleProfile()}>
-        <UserProfile src={item.image} alt="" />
-        <UserInfo>
-          <UserName>{item.username}</UserName>
-          <UserId>{item.accountname}</UserId>
-        </UserInfo>
-      </User>
+    <User
+      onClick={() => handleProfile()}
+      style={{
+        position: 'relative',
+        height: '70px',
+        borderBottom: '0.5px solid var(--light-gray)',
+        margin: '0 20px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '5px',
+      }}
+    >
+      <UserProfile src={item.image} alt="" />
+      <UserInfo>
+        <UserName>{item.username}</UserName>
+        <UserId
+          style={{
+            width: '250px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {`@${item.accountname}`}
+        </UserId>
+      </UserInfo>
       {isfollow ? (
         <BtnFollow cancel onClick={UnFollow}>
           취소
@@ -89,7 +98,7 @@ const Userfoll = ({ item }) => {
       ) : (
         <BtnFollow onClick={Follow}>팔로우</BtnFollow>
       )}
-    </>
+    </User>
   );
 };
 
