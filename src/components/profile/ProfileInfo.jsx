@@ -30,14 +30,22 @@ const ProfileInfo = ({ info, isfollow, follow, unFollow }) => {
           <Follow>
             <Follower
               onClick={() => {
-                navigate(`/profile/follower`);
+                navigate(`/profile/follower`, {
+                  state: {
+                    accountname: `${info.accountname}`,
+                  },
+                });
               }}
             >
               팔로워 <span>{info.followerCount}</span>
             </Follower>
             <Following
               onClick={() => {
-                navigate(`/profile/following`);
+                navigate(`/profile/following`, {
+                  state: {
+                    accountname: `${info.accountname}`,
+                  },
+                });
               }}
             >
               팔로잉 <span>{info.followingCount}</span>
