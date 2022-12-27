@@ -11,14 +11,29 @@ import more from '../../assets/icons/icon-more-vertical-gray.svg';
 
 const PostUserInfo = ({ posts }) => {
   const navigate = useNavigate();
+  const accountName = localStorage.getItem('accountname');
+  const userInfo = posts.author.accountname;
+
+  const userCheck = () => {
+    if (accountName === userInfo) {
+      navigate('/profile', {
+        state: {
+          accountname: `${posts.author.accountname}`,
+        },
+      });
+    } else {
+      navigate('/otherProfile', {
+        state: {
+          accountname: `${posts.author.accountname}`,
+        },
+      });
+    }
+  };
+
   return (
     <User
       onClick={() => {
-        navigate('/otherProfile', {
-          state: {
-            accountname: `${posts.author.accountname}`,
-          },
-        });
+        userCheck();
       }}
     >
       <UserProfile src={posts.author.image} alt="" />
