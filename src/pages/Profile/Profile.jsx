@@ -17,9 +17,6 @@ const Profile = () => {
   const [info, setInfo] = useState('');
   const [modal, setModal] = useState(false);
   const [view, setView] = useState(false);
-  // const location = useLocation();
-  // const userAccountname = location.state;
-  // console.log(userAccountname);
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   const dispatch = useDispatch();

@@ -16,7 +16,6 @@ const EditPostCard = () => {
   const location = useLocation();
   const getPosts = { ...location.state };
   const { posts } = getPosts.posts;
-  console.log(posts.image);
 
   const [imgFile, setImgFile] = useState(posts.image);
   const [cont, setCont] = useState(posts.content);

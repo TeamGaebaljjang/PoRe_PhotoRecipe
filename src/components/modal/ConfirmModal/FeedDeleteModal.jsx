@@ -5,6 +5,7 @@ import { ConfirmModal, Btnwrap } from './confirmModalStyle';
 const FeedDeleteModal = ({ deleteHandler, posts }) => {
   const feedId = posts.id;
   const navigate = useNavigate();
+
   async function deleteFeed(value) {
     try {
       const URL = 'https://mandarin.api.weniv.co.kr';
