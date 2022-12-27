@@ -7,16 +7,19 @@ export const Move = keyframes`
   0% {
     transform: translateX(0px);
   }
-  25%{
+  20% {
     transform: translateX(-100%);
   }
-  50%{
+  40% {
     transform: translateX(-200%);
   }
-  75%{
+  60% {
     transform: translateX(-300%);
   }
-  100%{
+  80% {
+    transform: translateX(-400%);
+  }
+  100% {
     transform: translateX(0px);
   }
 `;

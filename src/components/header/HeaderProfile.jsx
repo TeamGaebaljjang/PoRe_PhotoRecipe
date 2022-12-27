@@ -12,7 +12,11 @@ const HeaderProfile = ({ modalHandler }) => {
   return (
     <HeaderProfileContainer>
       <BtnWrapper>
-        <SearchBtn />
+        <SearchBtn
+          onClick={() => {
+            navigate('/feed/search');
+          }}
+        />
         <UploadPostBtn
           onClick={() => {
             navigate(`/profile/uploadpost`);

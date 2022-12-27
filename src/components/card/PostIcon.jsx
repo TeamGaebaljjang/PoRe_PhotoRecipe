@@ -5,7 +5,7 @@ import heartOn from '../../assets/icons/icon-heart-on.svg';
 import heartOff from '../../assets/icons/icon-heart-off.svg';
 import chat from '../../assets/icons/icon-chat.svg';
 
-const PostIcon = ({ posts }) => {
+const PostIcon = ({ posts, postDetailId }) => {
   const [like, setLike] = useState('');
   const [heartCount, setHeartCount] = useState(posts.heartCount);
 
@@ -55,7 +55,7 @@ const PostIcon = ({ posts }) => {
         {heartCount}
       </IconCount>
 
-      <IconCount>
+      <IconCount onClick={() => postDetailId()}>
         <IconImg src={chat} alt="" />
         {posts.commentCount}
       </IconCount>

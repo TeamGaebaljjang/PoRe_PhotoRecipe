@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PhotoUpload from '../../assets/icons/icon-photo-upload-black.svg';
+import PhotoUploadOn from '../../assets/icons/icon-photo-upload-white.svg';
+
 import {
   Img,
   Container,
@@ -14,6 +17,7 @@ import {
 
 const ProfileInfo = ({ info }) => {
   const navigate = useNavigate();
+  const [btnOn, setBtnOn] = useState(false);
 
   return (
     <div>
@@ -40,11 +44,20 @@ const ProfileInfo = ({ info }) => {
         </Info>
         {localStorage.getItem('accountname') === info.accountname ? (
           <AddPhotoZone
+            onMouseOver={() => {
+              setBtnOn(true);
+            }}
+            onMouseOut={() => {
+              setBtnOn(false);
+            }}
             onClick={() => {
               navigate(`/profile/uploadphotozone`);
             }}
           >
-            <img src={PhotoUpload} alt="포토존 등록 버튼 이미지" />
+            <img
+              src={btnOn ? PhotoUploadOn : PhotoUpload}
+              alt="포토존 등록 버튼 이미지"
+            />
             <p>포토존 등록</p>
           </AddPhotoZone>
         ) : (

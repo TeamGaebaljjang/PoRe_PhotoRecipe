@@ -1,5 +1,4 @@
-import axios from 'axios';
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useRef } from 'react';
 import {
   Form,
   ProfileImg,
@@ -7,40 +6,14 @@ import {
   BtnSubmit,
 } from '../../pages/PostDetail/PostCard/postCardStyle';
 
-const CommentForm = ({ postDetailId, getComments }) => {
-  const [comment, setComment] = useState('');
+const CommentForm = ({ postComment, comment, setComment }) => {
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = '1px';
     textRef.current.style.height = `${textRef.current.scrollHeight}px`;
   }, []);
 
-  const postComment = async () => {
-    console.log(comment);
-    try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
-      const authToken = localStorage.getItem('token');
-      const res = await axios.post(
-        `${URL}/post/${postDetailId?.id}/comments`,
-        { comment: { content: `${comment}` } },
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        },
-      );
-      setComment(res.data.comment.content);
-      // console.log('postComments 응답 : ', res);
-      getComments();
-      setComment('');
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   const handleSubmit = () => {
-    // console.log(postDetailId);
     postComment();
   };
 

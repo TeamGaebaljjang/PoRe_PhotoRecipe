@@ -80,7 +80,11 @@ const UploadPost = () => {
             />
             <SubmitImgWrap>
               {imgShow.map((img) => (
-                <PreviewImg src={img || null} alt="" />
+                <PreviewImg
+                  key={crypto.randomUUID()}
+                  src={img || null}
+                  alt=""
+                />
               ))}
             </SubmitImgWrap>
           </div>

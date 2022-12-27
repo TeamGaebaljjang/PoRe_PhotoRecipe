@@ -48,3 +48,10 @@ export const UserId = styled.p`
   font-size: 12px;
   color: var(--super-gray);
 `;
+
+export const HighlightWrap = styled.span``;
+
+export const Highlighting = styled.span`
+  color: var(--success-green);
+  font-weight: bold;
+`;

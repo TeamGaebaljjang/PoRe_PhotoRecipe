@@ -1,23 +1,28 @@
+import { useInView } from 'react-intersection-observer';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
 
 const HomeFeed = () => {
-  const [feedPost, setFeedPost] = useState([]);
   const [btnActive, setBtnActive] = useState('');
   const [name, setName] = useState('');
-  const [btnOn, setBtnOn] = useState(true);
+  const [btnOn, setBtnOn] = useState(false);
   const navigate = useNavigate();
 
-  // API 서버
+  const [feedPost, setFeedPost] = useState([]);
+  const [numFeed, setNumFeed] = useState(20);
+  const [loading, setLoading] = useState(false);
+  const [ref, inView] = useInView();
+
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   // 썸네일 리스트 API
-  const getFeed = async () => {
+  const getFeed = useCallback(async () => {
+    setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`${URL}/product/?limit=20`, {
+      const response = await axios.get(`${URL}/product/?limit=${numFeed}`, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-type': 'application/json',
@@ -25,18 +30,23 @@ const HomeFeed = () => {
       });
 
       if (response) {
-        console.log(response.data);
         setFeedPost(response.data.product);
+        setLoading(false);
       }
     } catch (error) {
       console.log(error.response);
     }
-  };
+  }, [numFeed]);
 
   useEffect(() => {
     getFeed();
-  }, []);
+  }, [getFeed]);
 
+  useEffect(() => {
+    if (inView && !loading) {
+      setNumFeed((current) => current + 10);
+    }
+  }, [inView, loading]);
   // 포토존 이미지 클릭시 상세 페이지로 이동
   const handleDetailPost = ({ item }) => {
     console.log(item);
@@ -45,7 +55,6 @@ const HomeFeed = () => {
         image: `${item.author.image}`,
         username: `${item.author.username}`,
         accountname: `${item.author.accountname}`,
-
         itemImage: `${item.itemImage}`,
         itemName: `${item.itemName}`,
         link: `${item.link}`,
@@ -72,13 +81,13 @@ const HomeFeed = () => {
       <SpotTab>
         {placeFilter.map((item) => (
           <SpotBtn
-            // key={item.id}
+            key={crypto.randomUUID()}
             value={item}
             className={item === btnActive ? 'active' : ''}
             onClick={(e) => {
               setName(item);
               handlePlace(e, { item });
-              setBtnOn(false);
+              setBtnOn(true);
             }}
           >
             {item}
@@ -88,20 +97,22 @@ const HomeFeed = () => {
 
       <FeedList>
         {btnOn
-          ? feedPost.map((item) => (
-              <Feed>
-                <FeedImg
-                  key={item.id}
-                  src={item.itemImage}
-                  alt=""
-                  onClick={() => handleDetailPost({ item })}
-                />
-              </Feed>
-            ))
-          : feedPost
+          ? feedPost
               .filter((item) => item.itemName === name)
               .map((item) => (
-                <Feed>
+                <Feed key={crypto.randomUUID()}>
+                  <FeedImg
+                    src={item.itemImage}
+                    alt=""
+                    onClick={() => handleDetailPost({ item })}
+                  />
+                </Feed>
+              ))
+          : feedPost.map((item, i) =>
+              feedPost.length - 1 === i ? (
+                <div ref={ref} />
+              ) : (
+                <Feed key={crypto.randomUUID()}>
                   <FeedImg
                     key={item.id}
                     src={item.itemImage}
@@ -109,7 +120,8 @@ const HomeFeed = () => {
                     onClick={() => handleDetailPost({ item })}
                   />
                 </Feed>
-              ))}
+              ),
+            )}
       </FeedList>
     </>
   );
