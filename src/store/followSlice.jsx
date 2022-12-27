@@ -14,12 +14,15 @@ export const getFollowing = createAsyncThunk(
     const URL = 'https://mandarin.api.weniv.co.kr';
     const authToken = localStorage.getItem('token');
     const accountName = localStorage.getItem('accountname');
-    const res = await axios.get(`${URL}/profile/${accountName}/following`, {
-      headers: {
-        Authorization: `Bearer ${authToken}`,
-        'Content-type': 'application/json',
+    const res = await axios.get(
+      `${URL}/profile/${accountName}/following?limit=150`,
+      {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          'Content-type': 'application/json',
+        },
       },
-    });
+    );
     return res.data;
   },
 );
@@ -30,12 +33,15 @@ export const getFollower = createAsyncThunk(
     const URL = 'https://mandarin.api.weniv.co.kr';
     const authToken = localStorage.getItem('token');
     const accountName = localStorage.getItem('accountname');
-    const res = await axios.get(`${URL}/profile/${accountName}/follower`, {
-      headers: {
-        Authorization: `Bearer ${authToken}`,
-        'Content-type': 'application/json',
+    const res = await axios.get(
+      `${URL}/profile/${accountName}/follower?limit=150`,
+      {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          'Content-type': 'application/json',
+        },
       },
-    });
+    );
     return res.data;
   },
 );

@@ -65,32 +65,42 @@ const Userfoll = ({ item }) => {
   };
 
   return (
-    <User
-      onClick={() => handleProfile()}
+    <div
       style={{
-        position: 'relative',
-        height: '70px',
-        borderBottom: '0.5px solid var(--light-gray)',
-        margin: '0 20px',
         display: 'flex',
-        alignItems: 'center',
-        gap: '5px',
+        justifyContent: 'space-between',
+        alignContent: 'center',
+        width: '350px',
+        height: '70px',
+        margin: '0 auto',
+        borderBottom: '0.5px solid var(--light-gray)',
       }}
     >
-      <UserProfile src={item.image} alt="" />
-      <UserInfo>
-        <UserName>{item.username}</UserName>
-        <UserId
-          style={{
-            width: '250px',
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-          }}
-        >
-          {`@${item.accountname}`}
-        </UserId>
-      </UserInfo>
+      <User
+        onClick={() => handleProfile()}
+        style={{
+          position: 'relative',
+          margin: '0 10px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '2px',
+        }}
+      >
+        <UserProfile src={item.image} alt="" style={{}} />
+        <UserInfo>
+          <UserName>{item.username}</UserName>
+          <UserId
+            style={{
+              width: '150px',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            {`@${item.accountname}`}
+          </UserId>
+        </UserInfo>
+      </User>
       {isfollow ? (
         <BtnFollow cancel onClick={UnFollow}>
           취소
@@ -98,7 +108,7 @@ const Userfoll = ({ item }) => {
       ) : (
         <BtnFollow onClick={Follow}>팔로우</BtnFollow>
       )}
-    </User>
+    </div>
   );
 };
 
