@@ -31,10 +31,12 @@ export const UserProfile = styled.img`
   object-fit: cover;
   border-radius: 50%;
   margin-right: 12px;
+  cursor: pointer;
 `;
 
 export const UserInfo = styled.div`
   margin-top: 3px;
+  cursor: pointer;
 `;
 
 export const UserName = styled.p`
@@ -61,6 +63,7 @@ export const PostImg = styled.img`
   border-radius: 10px;
   margin-top: 20px;
   flex-shrink: 0.02;
+  cursor: pointer;
   &.detail-post-img {
     height: 350px;
   }
@@ -94,6 +97,7 @@ export const PostTitle = styled.h1`
 export const PostCont = styled.p`
   font-size: 14px;
   margin: 14px 7px;
+  cursor: pointer;
 `;
 
 export const PostDate = styled.p`
@@ -106,6 +110,9 @@ export const ImgWrap = styled.div`
   display: flex;
   width: 350px;
   overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const BackDrop = styled.div`

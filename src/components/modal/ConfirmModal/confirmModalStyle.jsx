@@ -16,6 +16,12 @@ const ConfirmModal = styled.article`
     padding: 22px 20px;
     border-bottom: 0.5px solid var(--gray);
   }
+
+  span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+  }
 `;
 
 const Btnwrap = styled.div`

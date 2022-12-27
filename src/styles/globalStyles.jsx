@@ -31,6 +31,10 @@ input, button {
     cursor: pointer;
 }
 
+::placeholder {
+  font-family: var(--font);
+}
+
 label {
   color: var(--super-gray);
 }

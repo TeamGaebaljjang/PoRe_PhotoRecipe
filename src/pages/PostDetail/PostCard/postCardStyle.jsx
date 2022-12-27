@@ -5,6 +5,9 @@ export const CardWrap = styled.div`
   position: relative;
   height: 100vh;
   overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Comments = styled.div`
@@ -17,7 +20,7 @@ export const Comments = styled.div`
 export const Form = styled.form`
   position: fixed;
   bottom: 0px;
-  padding: 12px;
+  padding: 12px 20px;
   gap: 20px;
   width: 390px;
   display: flex;

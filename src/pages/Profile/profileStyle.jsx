@@ -17,8 +17,9 @@ export const BackDropWhite = styled.div`
   top: 0;
   z-index: 20;
   width: 390px;
-  height: 100vh;
-  background: transparent;
+  min-height: 100vh;
+  /* height: ${(props) => `${props.height}px`}; */
+  background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(2px);
 `;
 

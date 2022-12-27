@@ -40,6 +40,7 @@ export const UnderModalCont = styled.li`
   font-size: 14px;
   line-height: 55px;
   color: black;
+  cursor: pointer;
 `;
 
 export const CommentModalWrap = styled.ul`
