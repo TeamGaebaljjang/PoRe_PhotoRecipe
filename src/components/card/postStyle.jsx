@@ -107,3 +107,14 @@ export const ImgWrap = styled.div`
   width: 350px;
   overflow: auto;
 `;
+
+export const BackDrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: calc(50vw - 195px);
+  z-index: 20;
+  width: 390px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+`;
