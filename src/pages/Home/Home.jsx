@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <Wrap>
       <HomeCarousel />
-      {/* <HomeSpotBtn /> */}
       <HomeFeed />
       <NavBar />
     </Wrap>

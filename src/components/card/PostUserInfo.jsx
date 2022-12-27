@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import {
   User,
   UserProfile,
@@ -6,12 +7,20 @@ import {
   UserId,
   More,
 } from './postStyle';
-// import profile from '../../assets/icons/basic-profile-round.svg';
 import more from '../../assets/icons/icon-more-vertical-gray.svg';
 
 const PostUserInfo = ({ posts }) => {
+  const navigate = useNavigate();
   return (
-    <User>
+    <User
+      onClick={() => {
+        navigate('/otherProfile', {
+          state: {
+            accountname: `${posts.author.accountname}`,
+          },
+        });
+      }}
+    >
       <UserProfile src={posts.author.image} alt="" />
       <UserInfo>
         <UserName>{posts.author.username}</UserName>

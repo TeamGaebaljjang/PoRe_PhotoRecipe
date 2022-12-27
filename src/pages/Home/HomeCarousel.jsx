@@ -12,8 +12,8 @@ import {
 import search from '../../assets/icons/icon-search-white.svg';
 
 const HomeCarousel = () => {
-  const TOTAL_SLIDES = 4;
-  const slideRef = useRef([]);
+  const TOTAL_SLIDES = 5;
+  const slideRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [thumbnail, setThumbnail] = useState([]);
   const navigate = useNavigate();
@@ -22,33 +22,49 @@ const HomeCarousel = () => {
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   // 썸네일 리스트 API
-  const getThumbnail = async () => {
-    try {
-      const token = localStorage.getItem('token');
-      const response = await axios.get(
-        `${URL}/product/PoRe_PhotoRecipe/?limit=4`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-type': 'application/json',
-          },
-        },
-      );
-
-      if (response) {
-        console.log(response.data);
-        setThumbnail(response.data.product);
-      } else {
-        console.log(response.data.message);
-      }
-    } catch (error) {
-      console.log(error.response);
-    }
-  };
-
   useEffect(() => {
+    const getThumbnail = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await axios.get(
+          `${URL}/product/PoRe_PhotoRecipe/?limit=5`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              'Content-type': 'application/json',
+            },
+          },
+        );
+
+        if (response) {
+          // console.log(response.data);
+          setThumbnail(response.data.product);
+        } else {
+          console.log(response.data.message);
+        }
+      } catch (error) {
+        console.log(error.response);
+      }
+    };
     getThumbnail();
   }, []);
+
+  // 캐러셀 이미지 상세 페이지 이동
+  const handleDetailPost = ({ item }) => {
+    console.log(slideRef.current);
+    navigate('/photodetail', {
+      state: {
+        image: `${item.author.image}`,
+        username: `${item.author.username}`,
+        accountname: `${item.author.accountname}`,
+
+        itemImage: `${item.itemImage}`,
+        itemName: `${item.itemName}`,
+        link: `${item.link}`,
+        createdAt: `${item.createdAt}`,
+      },
+    });
+  };
 
   // 캐러셀
   const handleLeft = () => {
@@ -68,39 +84,24 @@ const HomeCarousel = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(slideRef.current);
-    slideRef.current.style.transition = 'all 0.5s ease-in-out';
-    slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
-  }, [currentSlide]);
-
-  const handleDetailPost = ({ item }) => {
-    navigate('/photodetail', {
-      state: {
-        image: `${item.author.image}`,
-        username: `${item.author.username}`,
-        accountname: `${item.author.accountname}`,
-
-        itemImage: `${item.itemImage}`,
-        itemName: `${item.itemName}`,
-        link: `${item.link}`,
-        createdAt: `${item.createdAt}`,
-      },
-    });
-  };
+  // useEffect(() => {
+  //   slideRef.current.style.transition = 'all 0.5s ease-in-out';
+  //   slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
+  // }, [currentSlide]);
 
   const test = () => {
-    console.log('마우스올림');
+    // console.log('마우스올림');
   };
 
   return (
-    <Carousel ref={slideRef}>
+    <Carousel>
       {thumbnail.map((item) => (
         <ThumbnailWrap key={item.id}>
           <Title>{item.itemName}</Title>
           <Thumbnail
+            ref={slideRef}
             src={item.itemImage}
-            alt="thumbnail"
+            alt={currentSlide}
             onMouseOver={() => test()}
             onClick={() => handleDetailPost({ item })}
           />
