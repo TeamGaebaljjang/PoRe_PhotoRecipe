@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import FeedeleteModal from '../ConfirmModal/FeedeleteModal';
+import FeedDeleteModal from '../ConfirmModal/FeedDeleteModal';
 import {
   UnderModalWrap,
   UnderModalCont,
@@ -20,7 +20,7 @@ const FeedEditUnder = ({ posts }) => {
   return (
     <>
       {del ? (
-        <FeedeleteModal deleteHandler={deleteHandler} posts={posts} />
+        <FeedDeleteModal deleteHandler={deleteHandler} posts={posts} />
       ) : null}
 
       {target === '/profile' ? (

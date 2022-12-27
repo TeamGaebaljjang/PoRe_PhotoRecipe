@@ -13,7 +13,7 @@ const Post = ({ posts }) => {
       },
     });
   };
-  const imgList = posts.image.split(',');
+  const imgList = posts.image.split(',').filter((value) => value !== '');
 
   return (
     <PostCard>

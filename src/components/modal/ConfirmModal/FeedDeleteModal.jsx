@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { ConfirmModal, Btnwrap } from './confirmModalStyle';
 
-const FeedeleteModal = ({ deleteHandler, posts }) => {
+const FeedDeleteModal = ({ deleteHandler, posts }) => {
   const feedId = posts.id;
   const navigate = useNavigate();
   async function deleteFeed(value) {
@@ -48,4 +48,4 @@ const FeedeleteModal = ({ deleteHandler, posts }) => {
   );
 };
 
-export default FeedeleteModal;
+export default FeedDeleteModal;

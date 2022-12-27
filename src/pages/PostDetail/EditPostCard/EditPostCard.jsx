@@ -16,15 +16,10 @@ const EditPostCard = () => {
   const location = useLocation();
   const getPosts = { ...location.state };
   const { posts } = getPosts.posts;
-  console.log(posts);
+  console.log(posts.image);
 
   const [imgFile, setImgFile] = useState(posts.image);
   const [cont, setCont] = useState(posts.content);
-  //   const [comments,setComments] = useState(posts.comments);
-  //   const [commentCount,setCommentCount] = useState(posts.commentCount);
-  //   const [hearted,setHearted] = useState(posts.hearted);
-  //   const [heartCount,setHeartCount] = useState(posts.heartCount);
-  //   const [updateAt, setUpdateAt] = useState(posts.updateAt);
   const imgRef = useRef();
   const textRef = useRef();
   const handleResizeHeight = useCallback(() => {
@@ -60,7 +55,7 @@ const EditPostCard = () => {
     }
   };
 
-  const imgShow = imgFile.split(',');
+  const imgShow = imgFile.split(',').filter((value) => value !== '');
   console.log(imgShow);
   const imgApi = async () => {
     try {
@@ -70,7 +65,7 @@ const EditPostCard = () => {
       const res = await axios.post(`${URL}/image/uploadfile`, formData);
       const fileName = res.data.filename;
       if (imgShow.length < 4) {
-        setImgFile(`${imgFile}, ${URL}/${fileName}`);
+        setImgFile(`${imgFile},${URL}/${fileName}`);
         console.log(imgFile);
       } else {
         console.log('no - sir');
