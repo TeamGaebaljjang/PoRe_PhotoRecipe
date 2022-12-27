@@ -1,5 +1,4 @@
-import { useLocation } from 'react-router-dom';
-// import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import HeaderB from '../../../components/header/HeaderB';
 import {
   Wrap,
@@ -18,30 +17,39 @@ import NavBar from '../../../components/navBar/NavBar';
 
 const PhotoZoneCard = () => {
   const location = useLocation();
-  const props = { ...location.state };
+  const userInfo = { ...location.state };
+  const navigate = useNavigate();
+
+  const handleProfile = () => {
+    navigate('/otherProfile', {
+      state: {
+        accountname: `${userInfo.accountname}`,
+      },
+    });
+  };
 
   return (
     <Wrap>
       <HeaderB />
       <PostCard>
-        <User>
-          <UserProfile src={props.image} alt="" />
+        <User onClick={() => handleProfile()}>
+          <UserProfile src={userInfo.image} alt="" />
           <UserInfo>
-            <UserName>{props.username}</UserName>
-            <UserId>@ {props.accountname}</UserId>
+            <UserName>{userInfo.username}</UserName>
+            <UserId>@ {userInfo.accountname}</UserId>
           </UserInfo>
         </User>
         <PostImg
           className="detail-post-img"
-          src={props.itemImage}
+          src={userInfo.itemImage}
           alt="상세이미지"
         />
-        <PostTitle>{props.itemName}</PostTitle>
-        <PostCont>{props.link}</PostCont>
+        <PostTitle>{userInfo.itemName}</PostTitle>
+        <PostCont>{userInfo.link}</PostCont>
         <PostDate>
-          {props.createdAt.substring(0, 4)}년&nbsp;
-          {props.createdAt.substring(5, 7)}월&nbsp;
-          {props.createdAt.substring(8, 10)}일
+          {userInfo.createdAt.substring(0, 4)}년&nbsp;
+          {userInfo.createdAt.substring(5, 7)}월&nbsp;
+          {userInfo.createdAt.substring(8, 10)}일
         </PostDate>
       </PostCard>
       <NavBar />
