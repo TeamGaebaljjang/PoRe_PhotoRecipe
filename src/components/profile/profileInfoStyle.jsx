@@ -73,6 +73,25 @@ export const GoFollow = styled.button`
   margin-right: 20px;
   border: 1px var(--black) solid;
   border-radius: 80px;
+  background-color: black;
+  color: white;
+
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+`;
+
+export const GoUnFollow = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+  height: 40px;
+  margin-right: 20px;
+  border: 1px var(--black) solid;
+  border-radius: 80px;
 
   p {
     font-size: 14px;

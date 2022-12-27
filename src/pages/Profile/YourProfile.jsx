@@ -36,6 +36,48 @@ const YourProFile = () => {
     setView(!view);
   };
 
+  const authToken = localStorage.getItem('token');
+
+  const [isfollow, setIsFollow] = useState(info.isfollow);
+  // 팔로우
+  const follow = async () => {
+    try {
+      const res = await axios.post(
+        `${URL}/profile/${info.accountname}/follow`,
+        [],
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+            'Content-type': 'application/json',
+          },
+        },
+      );
+      console.log(res.data.profile);
+      setIsFollow(res.data.profile.isfollow);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // 언팔로우
+  const unFollow = async () => {
+    try {
+      const res = await axios.delete(
+        `${URL}/profile/${info.accountname}/unfollow`,
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+            'Content-type': 'application/json',
+          },
+        },
+      );
+      console.log(res.data.profile);
+      setIsFollow(res.data.profile.isfollow);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     (async function getUserInfo() {
       try {
@@ -49,6 +91,7 @@ const YourProFile = () => {
           },
         );
         setInfo(response.data.profile);
+        setIsFollow(response.data.profile.isfollow);
       } catch (error) {
         console.log(error.response);
       }
@@ -58,7 +101,12 @@ const YourProFile = () => {
   return (
     <Wrapper>
       <HeaderBM modalHandler={modalHandler} />
-      <ProfileInfo info={info} />
+      <ProfileInfo
+        info={info}
+        isfollow={isfollow}
+        follow={follow}
+        unFollow={unFollow}
+      />
       <PhotoZoneList accountname={userInfo.accountname} />
       <FeedBar viewHandler={viewHandler} />
       {posts?.length === 0 ? (
