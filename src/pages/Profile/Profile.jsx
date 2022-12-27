@@ -43,6 +43,7 @@ const Profile = () => {
           },
         });
         setInfo(res.data.user);
+        localStorage.setItem('myprofileImg', res.data.user.image);
       } catch (error) {
         console.log('error입니다.');
       }
