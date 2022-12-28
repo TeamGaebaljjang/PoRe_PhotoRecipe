@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import User from '../../../components/user/User';
@@ -6,14 +7,14 @@ import HeaderFollower from '../../../components/header/HeaderFollower';
 import { getFollower } from '../../../store/followSlice';
 
 const Follower = () => {
+  const location = useLocation();
+  const userInfo = { ...location.state };
   const dispatch = useDispatch();
   const getfollowerData = useSelector((state) => state.follow.followerData);
   useEffect(() => {
-    dispatch(getFollower());
+    dispatch(getFollower(userInfo.accountname));
   }, []);
   const followerList = getfollowerData.payload;
-
-  console.log(followerList);
 
   return (
     <>
@@ -27,5 +28,4 @@ const Follower = () => {
     </>
   );
 };
-
 export default Follower;

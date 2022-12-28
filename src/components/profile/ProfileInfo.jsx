@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PhotoUpload from '../../assets/icons/icon-photo-upload-black.svg';
 import PhotoUploadOn from '../../assets/icons/icon-photo-upload-white.svg';
-
 import {
   Img,
   Container,
@@ -19,7 +18,6 @@ import {
 const ProfileInfo = ({ info, isfollow, follow, unFollow }) => {
   const navigate = useNavigate();
   const [btnOn, setBtnOn] = useState(false);
-
   return (
     /* eslint-disable */
     <div>
@@ -30,14 +28,22 @@ const ProfileInfo = ({ info, isfollow, follow, unFollow }) => {
           <Follow>
             <Follower
               onClick={() => {
-                navigate(`/profile/follower`);
+                navigate(`/profile/follower`, {
+                  state: {
+                    accountname: `${info.accountname}`,
+                  },
+                });
               }}
             >
               팔로워 <span>{info.followerCount}</span>
             </Follower>
             <Following
               onClick={() => {
-                navigate(`/profile/following`);
+                navigate(`/profile/following`, {
+                  state: {
+                    accountname: `${info.accountname}`,
+                  },
+                });
               }}
             >
               팔로잉 <span>{info.followingCount}</span>
@@ -76,5 +82,4 @@ const ProfileInfo = ({ info, isfollow, follow, unFollow }) => {
     /* eslint-enable */
   );
 };
-
 export default ProfileInfo;

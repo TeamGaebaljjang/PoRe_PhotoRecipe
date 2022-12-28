@@ -10,38 +10,32 @@ const initialFollowState = {
 
 export const getFollowing = createAsyncThunk(
   'following/getFollowing',
-  async () => {
+  async (value) => {
     const URL = 'https://mandarin.api.weniv.co.kr';
     const authToken = localStorage.getItem('token');
-    const accountName = localStorage.getItem('accountname');
-    const res = await axios.get(
-      `${URL}/profile/${accountName}/following?limit=150`,
-      {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          'Content-type': 'application/json',
-        },
+    // const accountName = localStorage.getItem('accountname');
+    const res = await axios.get(`${URL}/profile/${value}/following?limit=150`, {
+      headers: {
+        Authorization: `Bearer ${authToken}`,
+        'Content-type': 'application/json',
       },
-    );
+    });
     return res.data;
   },
 );
 
 export const getFollower = createAsyncThunk(
   'follower/getFollower',
-  async () => {
+  async (value) => {
     const URL = 'https://mandarin.api.weniv.co.kr';
     const authToken = localStorage.getItem('token');
-    const accountName = localStorage.getItem('accountname');
-    const res = await axios.get(
-      `${URL}/profile/${accountName}/follower?limit=150`,
-      {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          'Content-type': 'application/json',
-        },
+    // const accountName = localStorage.getItem('accountname');
+    const res = await axios.get(`${URL}/profile/${value}/follower?limit=150`, {
+      headers: {
+        Authorization: `Bearer ${authToken}`,
+        'Content-type': 'application/json',
       },
-    );
+    });
     return res.data;
   },
 );
