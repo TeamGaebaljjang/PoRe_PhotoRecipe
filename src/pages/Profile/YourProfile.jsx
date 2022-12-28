@@ -108,7 +108,7 @@ const YourProFile = () => {
         unFollow={unFollow}
       />
       <PhotoZoneList accountname={userInfo.accountname} />
-      <FeedBar viewHandler={viewHandler} />
+      <FeedBar viewHandler={viewHandler} accountname={userInfo.accountname} />
       {posts?.length === 0 ? (
         <Nothing />
       ) : (

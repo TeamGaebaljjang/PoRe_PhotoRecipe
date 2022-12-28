@@ -55,7 +55,7 @@ const Profile = () => {
       <HeaderProfile modalHandler={modalHandler} />
       <ProfileInfo info={info} />
       <PhotoZoneList accountname={accountname} />
-      <FeedBar viewHandler={viewHandler} />
+      <FeedBar viewHandler={viewHandler} accountname={accountname} />
       {posts?.length === 0 ? (
         <Nothing />
       ) : (

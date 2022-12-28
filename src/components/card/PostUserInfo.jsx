@@ -20,7 +20,6 @@ const PostUserInfo = ({ posts }) => {
 
   const userCheck = () => {
     if (accountName === userInfo) {
-      console.log(userInfo);
       navigate('/profile', {
         state: {
           accountname: `${userInfo}`,

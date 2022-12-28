@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 200px;
   padding: 16px 0;
   width: 390px;
   height: 60px;
@@ -14,7 +13,6 @@ export const Container = styled.div`
   align-self: flex-start;
   top: -1px;
   z-index: 10;
-
   button {
     margin-right: 16px;
   }
@@ -24,4 +22,9 @@ export const WhoseFeed = styled.p`
   margin-left: 30px;
   font-size: 22px;
   font-weight: 500;
+`;
+
+export const UserIdTitle = styled.span`
+  color: var(--black);
+  font-size: 20px;
 `;

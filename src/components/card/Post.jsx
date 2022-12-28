@@ -5,7 +5,6 @@ import PostIcon from './PostIcon';
 import PostContent from './PostContent';
 
 const Post = ({ posts }) => {
-  console.log(posts);
   const navigate = useNavigate();
   const postDetailId = () => {
     navigate('/feed/feeddetail', {
