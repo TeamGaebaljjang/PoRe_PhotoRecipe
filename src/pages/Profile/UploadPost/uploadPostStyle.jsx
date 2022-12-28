@@ -46,3 +46,18 @@ export const PreviewImg = styled.img`
   object-fit: cover;
   flex-shrink: 0;
 `;
+
+export const PhotoWrap = styled.div`
+  position: relative;
+`;
+
+export const Button = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  line-height: 1px;
+  background-color: var(--light-gray);
+  border-radius: 3px;
+`;
