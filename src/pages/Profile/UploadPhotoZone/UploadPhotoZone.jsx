@@ -4,7 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import BtnUpload from '../../../components/button/BtnUpload';
 import { Input, Form, TextInput } from '../../../components/input/Input';
 import HeaderB from '../../../components/header/HeaderB';
-import { PreviewImg, SubmitImg } from './uploadPhotoZoneStyle';
+import {
+  PreviewImg,
+  SubmitImg,
+  Button,
+  PhotoWrap,
+} from './uploadPhotoZoneStyle';
 
 const UploadPhotoZone = () => {
   const [imgFile, setImgFile] = useState('');
@@ -61,17 +66,28 @@ const UploadPhotoZone = () => {
       <HeaderB />
       <Form action="submit">
         <label htmlFor="photo">포토존 등록</label>
-        <SubmitImg htmlFor="photo" />
-        <PreviewImg src={imgFile || null} alt="" />
-        <Input
-          id="photo"
-          type="file"
-          style={{ display: 'none' }}
-          onChange={() => {
-            imgApi();
-          }}
-          ref={imgRef}
-        />
+        <PhotoWrap>
+          {imgFile ? null : <SubmitImg htmlFor="photo" />}
+          <PreviewImg src={imgFile || null} alt="" />
+          {imgFile ? (
+            <Button
+              onClick={() => {
+                setImgFile('');
+              }}
+            >
+              x
+            </Button>
+          ) : null}
+          <Input
+            id="photo"
+            type="file"
+            style={{ display: 'none' }}
+            onChange={() => {
+              imgApi();
+            }}
+            ref={imgRef}
+          />
+        </PhotoWrap>
         <label htmlFor="address">포토존 주소</label>
         <Input
           id="address"
