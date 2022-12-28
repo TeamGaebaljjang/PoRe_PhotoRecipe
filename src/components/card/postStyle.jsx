@@ -56,13 +56,37 @@ export const More = styled.img`
   cursor: pointer;
 `;
 
+export const ImgWrap = styled.div`
+  display: flex;
+  width: 350px;
+  overflow: auto;
+
+  &.no-scroll {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: var(--gray);
+  }
+  &::-webkit-scrollbar-track {
+    background-color: white;
+  }
+`;
+
 export const PostImg = styled.img`
   width: 350px;
   height: 228px;
   object-fit: cover;
   border-radius: 10px;
-  margin-top: 20px;
-  flex-shrink: 0.02;
+  margin: 20px 0 5px;
+  flex-shrink: 0;
+  margin-right: 1px;
   cursor: pointer;
   &.detail-post-img {
     height: 350px;
@@ -104,15 +128,6 @@ export const PostDate = styled.p`
   margin: 0 7px;
   font-size: 10px;
   color: var(--super-gray);
-`;
-
-export const ImgWrap = styled.div`
-  display: flex;
-  width: 350px;
-  overflow: auto;
-  &::-webkit-scrollbar {
-    display: none;
-  }
 `;
 
 export const BackDrop = styled.div`

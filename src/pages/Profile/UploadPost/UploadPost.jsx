@@ -88,7 +88,7 @@ const UploadPost = () => {
                   <Button
                     type="button"
                     onClick={() => {
-                      setImgFile(imgFile.replace(img, ''));
+                      setImgFile(imgFile.replace(`${img},`, ''));
                     }}
                   >
                     x

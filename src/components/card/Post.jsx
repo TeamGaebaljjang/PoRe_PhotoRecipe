@@ -5,6 +5,7 @@ import PostIcon from './PostIcon';
 import PostContent from './PostContent';
 
 const Post = ({ posts }) => {
+  console.log(posts);
   const navigate = useNavigate();
   const postDetailId = () => {
     navigate('/feed/feeddetail', {
@@ -13,12 +14,13 @@ const Post = ({ posts }) => {
       },
     });
   };
+
   const imgList = posts.image.split(',').filter((value) => value !== '');
 
   return (
     <PostCard>
       <PostUserInfo posts={posts} />
-      <ImgWrap>
+      <ImgWrap className={posts.image.includes(',') ? 'scroll' : 'no-scroll'}>
         {imgList.map((v) => (
           <PostImg
             key={crypto.randomUUID()}
