@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import addPic from '../../../assets/icons/icon-photo-upload-white.svg';
+import closePic from '../../../assets/icons/icon-close.svg';
 
 export const SubmitImg = styled.label`
   width: 36px;
@@ -37,7 +38,5 @@ export const Button = styled.button`
   right: 8px;
   width: 15px;
   height: 15px;
-  line-height: 1px;
-  background-color: var(--light-gray);
-  border-radius: 3px;
+  background: url(${closePic}) no-repeat;
 `;

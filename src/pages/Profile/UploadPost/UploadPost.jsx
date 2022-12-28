@@ -90,9 +90,7 @@ const UploadPost = () => {
                     onClick={() => {
                       setImgFile(imgFile.replace(`${img},`, ''));
                     }}
-                  >
-                    x
-                  </Button>
+                  />
                 </PhotoWrap>
               ))}
             </SubmitImgWrap>

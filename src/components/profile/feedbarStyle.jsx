@@ -19,7 +19,7 @@ export const Container = styled.div`
 `;
 
 export const WhoseFeed = styled.p`
-  margin-left: 30px;
+  margin-left: 20px;
   font-size: 22px;
   font-weight: 500;
 `;

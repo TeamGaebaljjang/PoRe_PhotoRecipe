@@ -74,9 +74,7 @@ const UploadPhotoZone = () => {
               onClick={() => {
                 setImgFile('');
               }}
-            >
-              x
-            </Button>
+            />
           ) : null}
           <Input
             id="photo"

@@ -6,6 +6,7 @@ export const Img = styled.div`
   margin-top: 8px;
   margin-left: 38px;
   background: var(--gray) url(${(props) => props.src}) no-repeat center/ cover;
+  box-shadow: 1px 1px 4px var(--light-gray);
 `;
 
 export const Container = styled.div`

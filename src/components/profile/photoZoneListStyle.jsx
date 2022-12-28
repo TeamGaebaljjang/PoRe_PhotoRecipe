@@ -13,6 +13,7 @@ export const Photo = styled.div`
   height: 80px;
   background: var(--gray) url(${(props) => props.src}) no-repeat center / cover;
   border-radius: 50%;
+  outline: 1px solid var(--light-gray);
 `;
 
 export const Region = styled.p`

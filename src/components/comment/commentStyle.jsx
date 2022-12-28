@@ -13,6 +13,7 @@ export const ProfileImg = styled.img`
   height: 40px;
   object-fit: cover;
   border-radius: 50%;
+  outline: 1px solid var(--light-gray);
 `;
 export const UserName = styled.strong`
   display: flex;

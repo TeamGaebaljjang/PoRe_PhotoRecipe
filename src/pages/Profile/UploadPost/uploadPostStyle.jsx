@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import addPic from '../../../assets/icons/icon-photo-upload-white.svg';
+import closePic from '../../../assets/icons/icon-close.svg';
 
 export const Wrap = styled.div`
   margin: 0 20px;
@@ -57,7 +58,5 @@ export const Button = styled.button`
   right: 10px;
   width: 15px;
   height: 15px;
-  line-height: 1px;
-  background-color: var(--light-gray);
-  border-radius: 3px;
+  background: url(${closePic}) no-repeat;
 `;

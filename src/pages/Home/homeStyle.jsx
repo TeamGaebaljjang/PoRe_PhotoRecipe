@@ -56,6 +56,7 @@ export const Title = styled.h1`
   font-size: 1.25rem;
   font-weight: 700;
   color: white;
+  text-shadow: 1px 1px 2px var(--black);
 `;
 
 export const Thumbnail = styled.img`
@@ -127,7 +128,7 @@ export const SpotTab = styled.div`
 export const SpotBtn = styled.button`
   border: 2px solid var(--super-gray);
   border-radius: 50px;
-  padding: 12px 26px;
+  padding: 12px 22px;
   line-height: 16px;
   color: var(--super-gray);
   font-size: 1rem;

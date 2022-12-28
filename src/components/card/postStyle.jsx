@@ -32,6 +32,7 @@ export const UserProfile = styled.img`
   border-radius: 50%;
   margin-right: 12px;
   cursor: pointer;
+  outline: 1px solid var(--light-gray);
 `;
 
 export const UserInfo = styled.div`
@@ -88,6 +89,8 @@ export const PostImg = styled.img`
   flex-shrink: 0;
   margin-right: 1px;
   cursor: pointer;
+  border: 1px solid var(--light-gray);
+
   &.detail-post-img {
     height: 350px;
   }
