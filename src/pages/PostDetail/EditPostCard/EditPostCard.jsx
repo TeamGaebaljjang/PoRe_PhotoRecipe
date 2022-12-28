@@ -65,11 +65,10 @@ const EditPostCard = () => {
       formData.append('image', file);
       const res = await axios.post(`${URL}/image/uploadfile`, formData);
       const fileName = res.data.filename;
-      if (imgShow.length < 4) {
-        setImgFile(`${imgFile},${URL}/${fileName}`);
-        console.log(imgFile);
+      if (imgShow.length < 3) {
+        setImgFile(`${imgShow.join(',')}, ${URL}/${fileName}`);
       } else {
-        console.log('no - sir');
+        alert('이미지는 3장까지만 업로드 가능합니다.');
       }
     } catch (error) {
       console.log('에러입니다');
