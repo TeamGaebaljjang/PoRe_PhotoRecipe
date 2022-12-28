@@ -9,6 +9,8 @@ import {
   SubmitImg,
   SubmitImgWrap,
   Wrap,
+  PhotoWrap,
+  Button,
 } from './uploadPostStyle';
 
 const UploadPost = () => {
@@ -65,7 +67,6 @@ const UploadPost = () => {
       console.log('에러입니다');
     }
   };
-
   return (
     <>
       <HeaderB />
@@ -80,11 +81,21 @@ const UploadPost = () => {
             />
             <SubmitImgWrap>
               {imgShow.map((img) => (
-                <PreviewImg
-                  key={crypto.randomUUID()}
-                  src={img || null}
-                  alt=""
-                />
+                <PhotoWrap>
+                  <PreviewImg
+                    key={crypto.randomUUID()}
+                    src={img || null}
+                    alt=""
+                  />
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      setImgFile(imgFile.replace(img, ''));
+                    }}
+                  >
+                    x
+                  </Button>
+                </PhotoWrap>
               ))}
             </SubmitImgWrap>
           </div>
