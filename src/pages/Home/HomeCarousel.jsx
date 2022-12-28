@@ -1,20 +1,22 @@
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Carousel,
   Title,
   Search,
   ThumbnailWrap,
   Thumbnail,
-  MoveBtn,
+  IconWrap,
+  PageIcon,
 } from './homeStyle';
+import HomeCarouselPagination from './HomeCarouselPagination';
+import UseInterval from './UseInterval';
 import search from '../../assets/icons/icon-search-white.svg';
 
 const HomeCarousel = () => {
-  const TOTAL_SLIDES = 5;
-  const slideRef = useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const TOTAL_SLIDES = 4;
+  const [slideIndex, setSlideIndex] = useState(0);
   const [thumbnail, setThumbnail] = useState([]);
   const navigate = useNavigate();
 
@@ -37,7 +39,6 @@ const HomeCarousel = () => {
         );
 
         if (response) {
-          // console.log(response.data);
           setThumbnail(response.data.product);
         } else {
           console.log(response.data.message);
@@ -51,13 +52,11 @@ const HomeCarousel = () => {
 
   // 캐러셀 이미지 상세 페이지 이동
   const handleDetailPost = ({ item }) => {
-    console.log(slideRef.current);
     navigate('/photodetail', {
       state: {
         image: `${item.author.image}`,
         username: `${item.author.username}`,
         accountname: `${item.author.accountname}`,
-
         itemImage: `${item.itemImage}`,
         itemName: `${item.itemName}`,
         link: `${item.link}`,
@@ -66,52 +65,75 @@ const HomeCarousel = () => {
     });
   };
 
-  // 캐러셀
-  const handleLeft = () => {
-    if (currentSlide === 0) {
-      setCurrentSlide(TOTAL_SLIDES);
+  // 캐러셀 자동 슬라이드
+  UseInterval(() => {
+    if (slideIndex === 4) {
+      setSlideIndex(0);
     } else {
-      setCurrentSlide(currentSlide - 1);
+      setSlideIndex(slideIndex + 1);
+    }
+  }, 3500);
+
+  // 버튼 클릭시 슬라이드 이동
+  const nextSlide = () => {
+    if (slideIndex !== TOTAL_SLIDES) {
+      setSlideIndex(slideIndex + 1);
     }
   };
 
-  const handleRight = () => {
-    if (currentSlide >= TOTAL_SLIDES) {
-      setCurrentSlide(0);
-    } else {
-      setCurrentSlide(currentSlide + 1);
-      console.log(currentSlide);
+  const prevSlide = () => {
+    if (slideIndex !== 0) {
+      setSlideIndex(slideIndex - 1);
     }
   };
 
-  // useEffect(() => {
-  //   slideRef.current.style.transition = 'all 0.5s ease-in-out';
-  //   slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
-  // }, [currentSlide]);
-
-  const test = () => {
-    // console.log('마우스올림');
+  const movePage = (index) => {
+    setSlideIndex(index);
   };
 
   return (
     <Carousel>
-      {thumbnail.map((item) => (
-        <ThumbnailWrap key={item.id}>
+      {thumbnail.map((item, index) => (
+        <ThumbnailWrap
+          // eslint-disable-next-line react/no-array-index-key
+          key={index}
+          className={slideIndex === index ? 'active' : null}
+          style={
+            slideIndex === 5
+              ? { transform: 'translateX(0px)' }
+              : { transform: `translateX(-${slideIndex}00%)` }
+          }
+        >
           <Title>{item.itemName}</Title>
           <Thumbnail
-            ref={slideRef}
             src={item.itemImage}
-            alt={currentSlide}
-            onMouseOver={() => test()}
+            alt=""
             onClick={() => handleDetailPost({ item })}
           />
         </ThumbnailWrap>
       ))}
-      <MoveBtn className="left" type="button" onClick={() => handleLeft()} />
-      <MoveBtn className="right" type="button" onClick={() => handleRight()} />
+
+      {slideIndex !== 0 && (
+        <HomeCarouselPagination moveSlide={prevSlide} direction="prev" />
+      )}
+      {slideIndex !== TOTAL_SLIDES && (
+        <HomeCarouselPagination moveSlide={nextSlide} direction="next" />
+      )}
+
       <Search type="button" to="/feed/search">
         <img src={search} alt="검색" />
       </Search>
+
+      <IconWrap>
+        {Array.from({ length: 5 }).map((item, index) => (
+          <PageIcon
+            // eslint-disable-next-line react/no-array-index-key
+            key={index}
+            onClick={() => movePage(index)}
+            className={slideIndex === index ? 'icon active' : 'icon'}
+          />
+        ))}
+      </IconWrap>
     </Carousel>
   );
 };

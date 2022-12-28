@@ -7,6 +7,8 @@ import HeaderB from '../../../components/header/HeaderB';
 import {
   PreviewImg,
   SubmitImg,
+  PhotoWrap,
+  Button,
 } from '../../Profile/UploadPhotoZone/uploadPhotoZoneStyle';
 
 const UploadPhotoZone = () => {
@@ -72,17 +74,28 @@ const UploadPhotoZone = () => {
       <HeaderB />
       <Form action="submit">
         <label htmlFor="photo">포토존 수정</label>
-        <SubmitImg htmlFor="photo" />
-        <PreviewImg src={imgFile || null} alt="" />
-        <Input
-          id="photo"
-          type="file"
-          style={{ display: 'none' }}
-          onChange={() => {
-            imgApi();
-          }}
-          ref={imgRef}
-        />
+        <PhotoWrap>
+          {imgFile ? null : <SubmitImg htmlFor="photo" />}
+          <PreviewImg src={imgFile || null} alt="" />
+          {imgFile ? (
+            <Button
+              onClick={() => {
+                setImgFile('');
+              }}
+            >
+              x
+            </Button>
+          ) : null}
+          <Input
+            id="photo"
+            type="file"
+            style={{ display: 'none' }}
+            onChange={() => {
+              imgApi();
+            }}
+            ref={imgRef}
+          />
+        </PhotoWrap>
         <label htmlFor="address">포토존 주소</label>
         <Input
           id="address"

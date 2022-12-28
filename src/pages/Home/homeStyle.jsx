@@ -3,24 +3,12 @@ import { Link } from 'react-router-dom';
 import leftBtn from '../../assets/icons/icon-left-btn.svg';
 import rightBtn from '../../assets/icons/icon-right-btn.svg';
 
-export const Move = keyframes`
+const ani = keyframes`
   0% {
-    transform: translateX(0px);
-  }
-  20% {
-    transform: translateX(-100%);
-  }
-  40% {
-    transform: translateX(-200%);
-  }
-  60% {
-    transform: translateX(-300%);
-  }
-  80% {
-    transform: translateX(-400%);
+    opacity: 0.9;
   }
   100% {
-    transform: translateX(0px);
+    opacity: 1;
   }
 `;
 
@@ -37,9 +25,9 @@ export const Carousel = styled.article`
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  /* &::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     display: none;
-  } */
+  }
 `;
 
 export const Search = styled(Link)`
@@ -55,13 +43,16 @@ export const ThumbnailWrap = styled.div`
   height: 380px;
   overflow: hidden;
   border-radius: 0 0 30px 30px;
-  animation: ${Move} 15s 2s ease-in-out infinite;
+
+  &.active {
+    animation: ${ani} 1s ease-in-out;
+  }
 `;
 
 export const Title = styled.h1`
   position: absolute;
   width: 260px;
-  margin: 290px 0 0 30px;
+  margin: 300px 0 0 40px;
   font-size: 1.25rem;
   font-weight: 700;
   color: white;
@@ -71,6 +62,7 @@ export const Thumbnail = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 `;
 
 export const MoveBtn = styled.button`
@@ -87,6 +79,31 @@ export const MoveBtn = styled.button`
   &.right {
     background: url(${rightBtn}) no-repeat center;
     right: 0;
+  }
+`;
+
+export const IconWrap = styled.nav`
+  position: absolute;
+  bottom: 5px;
+  left: 155px;
+`;
+
+export const PageIcon = styled.div`
+  display: inline-block;
+  margin: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: ease-in 0.4s;
+
+  &.icon {
+    opacity: 0.4;
+  }
+
+  &.icon.active {
+    opacity: 0.8;
   }
 `;
 
