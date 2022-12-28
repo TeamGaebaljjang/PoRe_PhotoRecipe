@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { ConfirmModal, Btnwrap } from './confirmModalStyle';
 
 const ReportMiniModal = ({ closeModal }) => {

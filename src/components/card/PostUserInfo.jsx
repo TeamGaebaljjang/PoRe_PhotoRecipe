@@ -64,7 +64,7 @@ const PostUserInfo = ({ posts }) => {
           }}
         />
       ) : null}
-      {modal ? <FeedEditUnder posts={posts} /> : null}
+      {modal ? <FeedEditUnder posts={posts} closeModal={modalHandler} /> : null}
     </User>
   );
 };
