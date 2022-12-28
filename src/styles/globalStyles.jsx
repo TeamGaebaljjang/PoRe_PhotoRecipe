@@ -65,7 +65,6 @@ img{
     --success-green: #50c927;
 }
 
-
 html {
     max-width: 390px;
     height: 100vh;

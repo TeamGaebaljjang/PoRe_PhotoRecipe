@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import { useState } from 'react';
+import TimeCalc from './TimeCalc';
 import iconMore from '../../assets/icons/icon-more-vertical-gray.svg';
 import {
   UserComment,
@@ -17,6 +18,9 @@ const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
   const [modal, setModal] = useState(false);
   const [account, setAccount] = useState('');
   const accountName = localStorage.getItem('accountname');
+
+  const nowDate = TimeCalc(new Date(commentList.createdAt));
+
   const modalHandler = () => {
     setAccount(commentList.author.accountname);
     setModal(!modal);
@@ -33,7 +37,7 @@ const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <UserName>
             {commentList.author.username}
-            <AddTime>{commentList.createdAt}</AddTime>
+            <AddTime>{nowDate}</AddTime>
           </UserName>
           <CommentCont>{commentList.content}</CommentCont>
         </div>
