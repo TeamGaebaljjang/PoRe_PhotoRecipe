@@ -31,6 +31,12 @@ input, button {
     cursor: pointer;
 }
 
+textarea {
+  font-family: var(--font);
+  padding: 0;
+  margin: 0;
+}
+
 ::placeholder {
   font-family: var(--font);
 }

@@ -17,7 +17,8 @@ export const TextInput = styled.textarea`
   border: none;
   font-size: 14px;
   height: 24px;
-  margin-bottom: 15px;
+  margin-top: 6px;
+  line-height: 1.3;
   border-bottom: 1px solid var(--gray);
   outline: none;
 
