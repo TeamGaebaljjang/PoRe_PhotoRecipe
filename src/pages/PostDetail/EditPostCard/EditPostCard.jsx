@@ -9,6 +9,8 @@ import {
   SubmitImg,
   SubmitImgWrap,
   Wrap,
+  PhotoWrap,
+  Button,
 } from '../../Profile/UploadPost/uploadPostStyle';
 
 const EditPostCard = () => {
@@ -89,11 +91,21 @@ const EditPostCard = () => {
             />
             <SubmitImgWrap>
               {imgShow.map((img) => (
-                <PreviewImg
-                  key={crypto.randomUUID()}
-                  src={img || null}
-                  alt=""
-                />
+                <PhotoWrap>
+                  <PreviewImg
+                    key={crypto.randomUUID()}
+                    src={img || null}
+                    alt=""
+                  />
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      setImgFile(imgFile.replace(img, ''));
+                    }}
+                  >
+                    x
+                  </Button>
+                </PhotoWrap>
               ))}
             </SubmitImgWrap>
           </div>
