@@ -15,7 +15,7 @@ const DeleteEditUnder = ({
     try {
       const URL = 'https://mandarin.api.weniv.co.kr';
       const authToken = localStorage.getItem('token');
-      const res = await axios.delete(
+      await axios.delete(
         `${URL}/post/${postDetailId?.id}/comments/${commentList.id}`,
         {
           headers: {
@@ -24,7 +24,6 @@ const DeleteEditUnder = ({
           },
         },
       );
-      console.log('deleteComment 응답 : ', res);
       getComments();
       setComment('');
     } catch (error) {

@@ -20,6 +20,7 @@ const LogoutModal = ({ logoutHandler }) => {
           className="caution-option"
           onClick={() => {
             localStorage.removeItem('accountname');
+            localStorage.removeItem('myprofileImg');
             localStorage.removeItem('token');
             navigate('/login');
           }}
