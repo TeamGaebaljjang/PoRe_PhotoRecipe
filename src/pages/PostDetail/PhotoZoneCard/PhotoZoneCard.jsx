@@ -14,6 +14,8 @@ import {
   PostDate,
 } from '../../../components/card/postStyle';
 import NavBar from '../../../components/navBar/NavBar';
+import defaultProfileImg from '../../../assets/icons/basic-profile-round.svg';
+import defaultImg from '../../../assets/icons/basic-post-default.svg';
 
 const PhotoZoneCard = () => {
   const location = useLocation();
@@ -28,12 +30,26 @@ const PhotoZoneCard = () => {
     });
   };
 
+  const onErrorProfileImg = (e) => {
+    // eslint-disable-next-line no-param-reassign
+    e.target.src = defaultProfileImg;
+  };
+
+  const onErrorImg = (e) => {
+    // eslint-disable-next-line no-param-reassign
+    e.target.src = defaultImg;
+  };
+
   return (
     <Wrap>
       <HeaderB />
       <PostCard>
         <User onClick={() => handleProfile()}>
-          <UserProfile src={userInfo.image} alt="" />
+          <UserProfile
+            src={userInfo.image}
+            alt=""
+            onError={onErrorProfileImg}
+          />
           <UserInfo>
             <UserName>{userInfo.username}</UserName>
             <UserId>@ {userInfo.accountname}</UserId>
@@ -43,6 +59,7 @@ const PhotoZoneCard = () => {
           className="detail-post-img"
           src={userInfo.itemImage}
           alt="상세이미지"
+          onError={onErrorImg}
         />
         <PostTitle>{userInfo.itemName}</PostTitle>
         <PostCont>{userInfo.link}</PostCont>

@@ -11,6 +11,7 @@ import {
 } from './postStyle';
 import FeedEditUnder from '../modal/UnderModal/FeedEditUnder';
 import more from '../../assets/icons/icon-more-vertical-gray.svg';
+import defaultProfileImg from '../../assets/icons/basic-profile-round.svg';
 
 const PostUserInfo = ({ posts }) => {
   const [modal, setModal] = useState(false);
@@ -38,6 +39,11 @@ const PostUserInfo = ({ posts }) => {
     setModal(!modal);
   };
 
+  const onErrorImg = (e) => {
+    // eslint-disable-next-line no-param-reassign
+    e.target.src = defaultProfileImg;
+  };
+
   return (
     <User>
       <UserProfile
@@ -46,6 +52,7 @@ const PostUserInfo = ({ posts }) => {
         onClick={() => {
           userCheck();
         }}
+        onError={onErrorImg}
       />
       <UserInfo
         onClick={() => {

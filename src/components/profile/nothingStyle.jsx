@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: calc(100vh - 344px);
+  height: calc(100vh - 480px);
   margin: 30px 20px 0;
 `;
 

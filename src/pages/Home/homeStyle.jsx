@@ -5,10 +5,10 @@ import rightBtn from '../../assets/icons/icon-right-btn.svg';
 
 const ani = keyframes`
   0% {
-    opacity: 0.9;
+    opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0.9;
   }
 `;
 
@@ -45,7 +45,7 @@ export const ThumbnailWrap = styled.div`
   border-radius: 0 0 30px 30px;
 
   &.active {
-    animation: ${ani} 1s ease-in-out;
+    animation: ${ani} 4s 1s ease-in-out;
   }
 `;
 

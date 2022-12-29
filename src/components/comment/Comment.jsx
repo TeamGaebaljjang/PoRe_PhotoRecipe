@@ -14,6 +14,7 @@ import {
 import { BackDropWhite } from '../../pages/Profile/profileStyle';
 import DeleteUnder from '../modal/UnderModal/CommentDeleteModal';
 import ReportUnder from '../modal/UnderModal/CommentReportModal';
+import defaultProfileImg from '../../assets/icons/basic-profile-round.svg';
 
 const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
   // console.log(commentList);
@@ -50,10 +51,20 @@ const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
     }
   };
 
+  const onErrorImg = (e) => {
+    // eslint-disable-next-line no-param-reassign
+    e.target.src = defaultProfileImg;
+  };
+
   return (
     <>
       <UserComment>
-        <ProfileImg src={commentList.author.image} alt="" onClick={userCheck} />
+        <ProfileImg
+          src={commentList.author.image}
+          alt=""
+          onClick={userCheck}
+          onError={onErrorImg}
+        />
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <UserName onClick={userCheck}>
             {commentList.author.username}

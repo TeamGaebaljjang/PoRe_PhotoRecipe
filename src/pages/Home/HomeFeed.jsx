@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
+import defaultImg from '../../assets/icons/basic-post-default.svg';
 
 const HomeFeed = () => {
   const [btnActive, setBtnActive] = useState('');
@@ -20,6 +21,7 @@ const HomeFeed = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
+      // const accountRegex = /^[0-9a-zA-Z]([_\\.]?[0-9a-zA-Z])*_pore/gim;
       const res = await axios.get(`${URL}/product/?limit=10&skip=${numFeed}`, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -81,6 +83,11 @@ const HomeFeed = () => {
     });
   };
 
+  const onErrorImg = (e) => {
+    // eslint-disable-next-line no-param-reassign
+    e.target.src = defaultImg;
+  };
+
   return (
     <>
       <SpotTab>
@@ -110,6 +117,7 @@ const HomeFeed = () => {
                     src={item.itemImage}
                     alt=""
                     onClick={() => handleDetailPost({ item })}
+                    onError={onErrorImg}
                   />
                 </Feed>
               ))
@@ -123,6 +131,7 @@ const HomeFeed = () => {
                     src={item.itemImage}
                     alt=""
                     onClick={() => handleDetailPost({ item })}
+                    onError={onErrorImg}
                   />
                 </Feed>
               ),

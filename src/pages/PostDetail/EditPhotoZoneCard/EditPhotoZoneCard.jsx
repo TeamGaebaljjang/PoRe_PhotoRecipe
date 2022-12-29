@@ -10,6 +10,7 @@ import {
   PhotoWrap,
   Button,
 } from '../../Profile/UploadPhotoZone/uploadPhotoZoneStyle';
+import defaultImg from '../../../assets/icons/basic-post-default.svg';
 
 const UploadPhotoZone = () => {
   const location = useLocation();
@@ -69,6 +70,11 @@ const UploadPhotoZone = () => {
     }
   };
 
+  const onErrorImg = (e) => {
+    // eslint-disable-next-line no-param-reassign
+    e.target.src = defaultImg;
+  };
+
   return (
     <>
       <HeaderB />
@@ -76,7 +82,7 @@ const UploadPhotoZone = () => {
         <label htmlFor="photo">포토존 수정</label>
         <PhotoWrap>
           {imgFile ? null : <SubmitImg htmlFor="photo" />}
-          <PreviewImg src={imgFile || null} alt="" />
+          <PreviewImg src={imgFile || null} alt="" onError={onErrorImg} />
           {imgFile ? (
             <Button
               onClick={() => {

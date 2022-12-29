@@ -14,14 +14,21 @@ import {
   GoFollow,
   GoUnFollow,
 } from './profileInfoStyle';
+import defaultProfileImg from '../../assets/icons/basic-profile-rec.svg';
 
 const ProfileInfo = ({ info, isfollow, follow, unFollow }) => {
   const navigate = useNavigate();
   const [btnOn, setBtnOn] = useState(false);
+
+  const onErrorImg = (e) => {
+    // eslint-disable-next-line no-param-reassign
+    e.target.src = defaultProfileImg;
+  };
+
   return (
     /* eslint-disable */
     <div>
-      <Img src={info.image} />
+      <Img src={info.image} onError={onErrorImg} />
       <Container>
         <Info>
           <Name>{info.username}</Name>
