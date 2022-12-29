@@ -15,7 +15,7 @@ const KakaoMap = ({ text }) => {
         const latlng = new kakao.maps.LatLng(lat, lon);
         const options = {
           center: latlng,
-          level: 5,
+          level: 7,
         };
         const map = new kakao.maps.Map(container, options);
         console.log(map);
@@ -100,6 +100,14 @@ const KakaoMap = ({ text }) => {
           {
             title: '☕종로 북악스카이웨이',
             latlng: new kakao.maps.LatLng(37.6011259, 126.976345),
+          },
+          {
+            title: '🏊🏻제주 용머리해안',
+            latlng: new kakao.maps.LatLng(33.2337174, 126.314703),
+          },
+          {
+            title: '🐄제주 성이시돌목장',
+            latlng: new kakao.maps.LatLng(33.2337174, 126.314703),
           },
         ];
 
