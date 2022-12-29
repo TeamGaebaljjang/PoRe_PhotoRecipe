@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Wrapper, BackDrop } from './profileStyle';
 import HeaderBM from '../../components/header/HeaderBM';
@@ -12,6 +12,7 @@ import NavBar from '../../components/navBar/NavBar';
 import PostWrapper from '../../components/card/PostWrapper';
 import ProfileUnderModal from '../../components/modal/UnderModal/ProfileUnderModal';
 import { getFeed } from '../../store/feedSlice';
+import BtnTop from '../../components/button/BtnTop';
 
 const YourProFile = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ const YourProFile = () => {
   const [modal, setModal] = useState(false);
   const [view, setView] = useState(false);
   const URL = 'https://mandarin.api.weniv.co.kr';
+  const parent = useRef();
 
   const dispatch = useDispatch();
   const getPost = useSelector((state) => state.feed.feedData);
@@ -99,7 +101,7 @@ const YourProFile = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper ref={parent}>
       <HeaderBM modalHandler={modalHandler} />
       <ProfileInfo
         info={info}
@@ -122,6 +124,7 @@ const YourProFile = () => {
         />
       ) : null}
       {modal ? <ProfileUnderModal modalHandler={modalHandler} /> : null}
+      <BtnTop parent={parent} />
       <NavBar />
     </Wrapper>
   );
