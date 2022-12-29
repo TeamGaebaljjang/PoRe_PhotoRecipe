@@ -9,38 +9,41 @@ const HomeFeed = () => {
   const [name, setName] = useState('');
   const [btnOn, setBtnOn] = useState(false);
   const navigate = useNavigate();
-
-  // 무한 스크롤
   const [feedPost, setFeedPost] = useState([]);
-  const [numFeed, setNumFeed] = useState(20);
+  const [numFeed, setNumFeed] = useState(0);
   const [loading, setLoading] = useState(false);
   const [ref, inView] = useInView();
-
+  const [done, setDone] = useState(false);
   const URL = 'https://mandarin.api.weniv.co.kr';
 
-  // 썸네일 리스트 API
   const getFeed = useCallback(async () => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`${URL}/product/?limit=${numFeed}`, {
+      const res = await axios.get(`${URL}/product/?limit=10&skip=${numFeed}`, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-type': 'application/json',
         },
       });
-
-      if (response) {
-        setFeedPost(response.data.product);
+      if (res) {
+        setFeedPost(feedPost.concat(res.data.product));
         setLoading(false);
+        if (res.data.product.length < 10) {
+          setDone(true);
+        }
       }
+      // console.log(res.data.product);
+      // console.log(feedPost);
     } catch (error) {
-      console.log(error.response);
+      console.log(error.res);
     }
   }, [numFeed]);
 
   useEffect(() => {
-    getFeed();
+    if (!done) {
+      getFeed();
+    }
   }, [getFeed]);
 
   useEffect(() => {
