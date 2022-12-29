@@ -103,9 +103,7 @@ const EditPostCard = () => {
                       imgShow.splice(i, 1);
                       setImgFile(imgShow.join(','));
                     }}
-                  >
-                    x
-                  </Button>
+                  />
                 </PhotoWrap>
               ))}
             </SubmitImgWrap>
