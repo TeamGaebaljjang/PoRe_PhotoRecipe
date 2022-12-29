@@ -21,14 +21,13 @@ const Map = () => {
       } else {
         setText('');
       }
-    }, 400);
+    }, 200);
   };
 
   //   mandarin API*
   const [modals, setModals] = useState([]);
   const URL = 'https://mandarin.api.weniv.co.kr';
-  const authToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTMxZWRkMTdhZTY2NjU4MWU1NjY5NiIsImV4cCI6MTY3NjgxODkzNSwiaWF0IjoxNjcxNjM0OTM1fQ.Nm7Rc38FYzTTWAuRqWHiVpxLafCLFiNWzx29Q2jyp0g';
+  const authToken = localStorage.getItem('token');
   const accountName = 'pore_photozone';
   const getModal = async () => {
     try {
