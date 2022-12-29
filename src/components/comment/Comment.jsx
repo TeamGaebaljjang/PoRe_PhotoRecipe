@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TimeCalc from './TimeCalc';
 import iconMore from '../../assets/icons/icon-more-vertical-gray.svg';
 import {
@@ -15,6 +16,9 @@ import DeleteUnder from '../modal/UnderModal/CommentDeleteModal';
 import ReportUnder from '../modal/UnderModal/CommentReportModal';
 
 const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
+  // console.log(commentList);
+  const navigate = useNavigate();
+  const userInfo = commentList.author.accountname;
   const [modal, setModal] = useState(false);
   const [account, setAccount] = useState('');
   const accountName = localStorage.getItem('accountname');
@@ -30,12 +34,28 @@ const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
     setModal(!modal);
   };
 
+  const userCheck = () => {
+    if (accountName === userInfo) {
+      navigate('/profile', {
+        state: {
+          accountname: `${userInfo}`,
+        },
+      });
+    } else {
+      navigate('/otherProfile', {
+        state: {
+          accountname: `${userInfo}`,
+        },
+      });
+    }
+  };
+
   return (
     <>
       <UserComment>
-        <ProfileImg src={commentList.author.image} alt="" />
+        <ProfileImg src={commentList.author.image} alt="" onClick={userCheck} />
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <UserName>
+          <UserName onClick={userCheck}>
             {commentList.author.username}
             <AddTime>{nowDate}</AddTime>
           </UserName>

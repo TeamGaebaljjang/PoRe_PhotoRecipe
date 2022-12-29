@@ -14,12 +14,14 @@ export const ProfileImg = styled.img`
   object-fit: cover;
   border-radius: 50%;
   outline: 1px solid var(--light-gray);
+  cursor: pointer;
 `;
 export const UserName = styled.strong`
   display: flex;
   align-items: center;
   font-size: 14px;
   margin-bottom: 5px;
+  cursor: pointer;
 `;
 
 export const AddTime = styled.p`
@@ -41,4 +43,5 @@ export const CommentMoreBtn = styled.img`
   position: absolute;
   right: 0;
   top: 10px;
+  cursor: pointer;
 `;
