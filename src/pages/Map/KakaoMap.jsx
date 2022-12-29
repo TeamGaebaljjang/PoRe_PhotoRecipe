@@ -58,7 +58,7 @@ const KakaoMap = ({ text }) => {
             latlng: new kakao.maps.LatLng(37.519537, 127.024897),
           },
           {
-            title: '⛰서울 인왕산',
+            title: '⛰종로 인왕산',
             latlng: new kakao.maps.LatLng(37.584956, 126.957836),
           },
           {
@@ -72,6 +72,34 @@ const KakaoMap = ({ text }) => {
           {
             title: '☕군산 카페라파르',
             latlng: new kakao.maps.LatLng(35.8128296, 126.396951),
+          },
+          {
+            title: '☕군산 틈',
+            latlng: new kakao.maps.LatLng(35.9892728, 126.711485),
+          },
+          {
+            title: '☕인천 일광전구 라이트하우스',
+            latlng: new kakao.maps.LatLng(37.471962, 126.635135),
+          },
+          {
+            title: '☕인천 온음커피',
+            latlng: new kakao.maps.LatLng(37.4144097, 126.67329),
+          },
+          {
+            title: '☕인천 원인재 벚꽃로',
+            latlng: new kakao.maps.LatLng(37.4132289, 126.686365),
+          },
+          {
+            title: '☕인천 송도 센트럴파크',
+            latlng: new kakao.maps.LatLng(37.3924167, 126.639565),
+          },
+          {
+            title: '☕인천 현대프리미엄아울렛 송도점',
+            latlng: new kakao.maps.LatLng(37.3823549, 126.658537),
+          },
+          {
+            title: '☕종로 북악스카이웨이',
+            latlng: new kakao.maps.LatLng(37.6011259, 126.976345),
           },
         ];
 
