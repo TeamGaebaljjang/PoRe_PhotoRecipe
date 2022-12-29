@@ -8,14 +8,20 @@ import NavBar from '../../components/navBar/NavBar';
 
 const Map = () => {
   const [text, setText] = useState('');
-  const [input, setInput] = useState('');
+
+  let timer;
   const onChange = (e) => {
-    setText(e.target.value);
-  };
-  const onKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      setInput(text);
+    const search = e.target.value;
+    if (timer) {
+      clearTimeout(timer);
     }
+    timer = setTimeout(() => {
+      if (search) {
+        setText(search);
+      } else {
+        setText('');
+      }
+    }, 400);
   };
 
   //   mandarin API*
@@ -32,7 +38,7 @@ const Map = () => {
           'Content-type': 'application/json',
         },
       });
-      //   console.log(res.data.product);
+      console.log(res.data.product);
       setModals(res.data.product);
     } catch (error) {
       console.log(error);
@@ -43,10 +49,10 @@ const Map = () => {
 
   return (
     <Wrap>
-      <HeaderBSM text={text} onChange={onChange} onKeyPress={onKeyPress} />
+      <HeaderBSM text={text} onChange={onChange} />
       <MapCont>
-        <KakaoMap input={input} modals={modals} />
-        <ModalWrapper input={input} modals={modals} />
+        <KakaoMap text={text} />
+        <ModalWrapper text={text} modals={modals} />
       </MapCont>
       <NavBar />
     </Wrap>
