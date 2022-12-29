@@ -48,6 +48,7 @@ const UploadPost = () => {
     }
   };
   const imgShow = imgFile.split(',').filter((value) => value !== '');
+
   const imgApi = async () => {
     try {
       const file = imgRef.current.files[0];
@@ -56,11 +57,13 @@ const UploadPost = () => {
       const res = await axios.post(`${URL}/image/uploadfile`, formData);
       const fileName = res.data.filename;
       if (imgShow.length < 3) {
-        setImgFile(`${imgShow.join(',')}, ${URL}/${fileName}`);
+        imgShow.push(`${URL}/${fileName}`);
+        setImgFile(imgShow.join(','));
       } else {
         alert('이미지는 3장까지만 업로드 가능합니다.');
       }
     } catch (error) {
+      console.log(error);
       console.log('에러입니다');
     }
   };
@@ -78,7 +81,7 @@ const UploadPost = () => {
               onChange={(e) => setCont(e.target.value)}
             />
             <SubmitImgWrap>
-              {imgShow.map((img) => (
+              {imgShow.map((img, i) => (
                 <PhotoWrap>
                   <PreviewImg
                     key={crypto.randomUUID()}
@@ -88,7 +91,8 @@ const UploadPost = () => {
                   <Button
                     type="button"
                     onClick={() => {
-                      setImgFile(imgFile.replace(`${img},`, ''));
+                      imgShow.splice(i, 1);
+                      setImgFile(imgShow.join(','));
                     }}
                   />
                 </PhotoWrap>

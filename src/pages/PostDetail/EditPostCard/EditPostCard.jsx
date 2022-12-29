@@ -66,7 +66,8 @@ const EditPostCard = () => {
       const res = await axios.post(`${URL}/image/uploadfile`, formData);
       const fileName = res.data.filename;
       if (imgShow.length < 3) {
-        setImgFile(`${imgShow.join(',')}, ${URL}/${fileName}`);
+        imgShow.push(`${URL}/${fileName}`);
+        setImgFile(imgShow.join(','));
       } else {
         alert('이미지는 3장까지만 업로드 가능합니다.');
       }
@@ -89,7 +90,7 @@ const EditPostCard = () => {
               defaultValue={posts.content}
             />
             <SubmitImgWrap>
-              {imgShow.map((img) => (
+              {imgShow.map((img, i) => (
                 <PhotoWrap>
                   <PreviewImg
                     key={crypto.randomUUID()}
@@ -99,7 +100,8 @@ const EditPostCard = () => {
                   <Button
                     type="button"
                     onClick={() => {
-                      setImgFile(imgFile.replace(`${img},`, ''));
+                      imgShow.splice(i, 1);
+                      setImgFile(imgShow.join(','));
                     }}
                   >
                     x
