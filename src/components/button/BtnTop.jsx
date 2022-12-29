@@ -1,0 +1,36 @@
+import styled from 'styled-components';
+import iconTopHover from '../../assets/icons/icon-top-hover.svg';
+import iconTopDefault from '../../assets/icons/icon-top-default.svg';
+
+const BtnTop = ({ parent }) => {
+  const Button = styled.button`
+    position: fixed;
+    bottom: 70px;
+    left: calc(50% + 140px);
+    width: 38px;
+    height: 38px;
+    background-position: center;
+    background-image: url(${iconTopDefault});
+    :hover {
+      background-image: url(${iconTopHover});
+    }
+  `;
+
+  const scrollToTop = () => {
+    parent.current.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  return (
+    <Button
+      type="button"
+      onClick={() => {
+        scrollToTop();
+      }}
+    />
+  );
+};
+
+export default BtnTop;

@@ -1,11 +1,12 @@
 import { useInView } from 'react-intersection-observer';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
 import HeaderFeed from '../../components/header/HeaderFeed';
 import PostWrapper from '../../components/card/PostWrapper';
 import NavBar from '../../components/navBar/NavBar';
 import Search from '../Search/Search';
 import { Wrap } from '../../components/card/postStyle';
+import BtnTop from '../../components/button/BtnTop';
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -13,6 +14,7 @@ const Feed = () => {
   const [ref, inView] = useInView();
   const [loading, setLoading] = useState(false);
   const [numFeed, setNumFeed] = useState(0);
+  const parent = useRef();
 
   const getFeed = useCallback(async () => {
     const URL = 'https://mandarin.api.weniv.co.kr';
@@ -50,7 +52,7 @@ const Feed = () => {
   }, [inView, loading]);
 
   return (
-    <Wrap>
+    <Wrap ref={parent}>
       {posts?.length === 0 ? (
         <Search />
       ) : (
@@ -62,6 +64,7 @@ const Feed = () => {
           </div>
         </>
       )}
+      <BtnTop parent={parent} />
       <NavBar />
     </Wrap>
   );

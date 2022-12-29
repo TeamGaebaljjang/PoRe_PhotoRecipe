@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 // import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Wrapper, BackDrop } from './profileStyle';
@@ -12,12 +12,14 @@ import NavBar from '../../components/navBar/NavBar';
 import PostWrapper from '../../components/card/PostWrapper';
 import ProfileUnderModal from '../../components/modal/UnderModal/ProfileUnderModal';
 import { getFeed } from '../../store/feedSlice';
+import BtnTop from '../../components/button/BtnTop';
 
 const Profile = () => {
   const [info, setInfo] = useState('');
   const [modal, setModal] = useState(false);
   const [view, setView] = useState(false);
   const URL = 'https://mandarin.api.weniv.co.kr';
+  const parent = useRef();
 
   const dispatch = useDispatch();
   const getPost = useSelector((state) => state.feed.feedData);
@@ -51,7 +53,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper ref={parent}>
       <HeaderProfile modalHandler={modalHandler} />
       <ProfileInfo info={info} />
       <PhotoZoneList accountname={accountname} />
@@ -69,6 +71,7 @@ const Profile = () => {
         />
       ) : null}
       {modal ? <ProfileUnderModal modalHandler={modalHandler} /> : null}
+      <BtnTop parent={parent} />
       <NavBar />
     </Wrapper>
   );

@@ -1,15 +1,18 @@
+import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { ChatList, ChatName, ChatDate, ChatCont, ChatOn } from './chatStyle';
 import profile from '../../assets/img/profile.png';
 import HeaderBM from '../../components/header/HeaderBM';
 import NavBar from '../../components/navBar/NavBar';
+import BtnTop from '../../components/button/BtnTop';
 
 const Div = styled.div``;
 const Chat = () => {
+  const parent = useRef();
   const navigate = useNavigate();
   return (
-    <>
+    <div ref={parent}>
       <HeaderBM />
       <ChatList>
         <img src={profile} alt="" />
@@ -44,8 +47,9 @@ const Chat = () => {
         </div>
         <ChatDate>2020.10.26</ChatDate>
       </ChatList>
+      <BtnTop parent={parent} />
       <NavBar />
-    </>
+    </div>
   );
 };
 
