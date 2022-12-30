@@ -14,13 +14,13 @@ const Post = ({ posts }) => {
     });
   };
 
-  const imgList = posts.image.split(',').filter((value) => value !== '');
+  const imgList = posts.image?.split(',').filter((value) => value !== '');
 
   return (
     <PostCard>
       <PostUserInfo posts={posts} />
-      <ImgWrap className={posts.image.includes(',') ? 'scroll' : 'no-scroll'}>
-        {imgList.map((v) => (
+      <ImgWrap className={posts.image?.includes(',') ? 'scroll' : 'no-scroll'}>
+        {imgList?.map((v) => (
           <PostImg
             key={crypto.randomUUID()}
             style={posts.image ? { display: 'block' } : { display: 'none' }}
