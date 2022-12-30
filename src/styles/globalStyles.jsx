@@ -66,13 +66,14 @@ img{
 }
 
 html {
-    max-width: 390px;
+    width: 390px;
     height: 100vh;
     background-color: var(--light-gray);
     margin: 0 auto;
 }
 
 body {
+    width: 100%;
     position: relative;
     height: 100%;
     color: var(--black);
@@ -80,7 +81,6 @@ body {
     background-color: white;
     font-family: var(--font);
     box-shadow: 0 0 10px var(--deep-gray);
-    margin: 0;
 }
 
 .ir {
@@ -89,6 +89,12 @@ body {
     width: 1px;
     height: 1px;
     overflow: hidden;
+}
+
+@media all and (min-width: 768px) {
+  html {
+    width: 100vw;
+  }
 }
 `;
 
