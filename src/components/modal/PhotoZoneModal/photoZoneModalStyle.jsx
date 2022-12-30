@@ -27,7 +27,6 @@ const Container = styled.div`
   .region {
     width: 390px;
     height: 50px;
-    margin-bottom: 10px;
     border-bottom: 1px var(--light-gray) solid;
     box-shadow: 0 4px 7px -4px var(--gray);
   }
@@ -43,6 +42,7 @@ const Container = styled.div`
     gap: 20px;
     height: calc(100% - 60px);
     overflow: auto;
+    padding: 20px 0 10px;
     &::-webkit-scrollbar {
       display: none;
     }

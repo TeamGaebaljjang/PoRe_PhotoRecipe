@@ -6,15 +6,19 @@ import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
 import defaultImg from '../../assets/icons/basic-post-default.svg';
 
 const HomeFeed = () => {
+  const navigate = useNavigate();
   const [btnActive, setBtnActive] = useState('');
   const [name, setName] = useState('');
   const [btnOn, setBtnOn] = useState(false);
-  const navigate = useNavigate();
+  const [btnAll, setBtnAll] = useState(true);
   const [feedPost, setFeedPost] = useState([]);
+
+  // 무한 스크롤
   const [numFeed, setNumFeed] = useState(0);
   const [loading, setLoading] = useState(false);
   const [ref, inView] = useInView();
   const [done, setDone] = useState(false);
+
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   const getFeed = useCallback(async () => {
@@ -22,12 +26,15 @@ const HomeFeed = () => {
     try {
       const token = localStorage.getItem('token');
       // const accountRegex = /^[0-9a-zA-Z]([_\\.]?[0-9a-zA-Z])*_pore/gim;
-      const res = await axios.get(`${URL}/product/?limit=10&skip=${numFeed}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-type': 'application/json',
+      const res = await axios.get(
+        `${URL}/product/PoRe_Home/?limit=10&skip=${numFeed}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-type': 'application/json',
+          },
         },
-      });
+      );
       if (res) {
         setFeedPost(feedPost.concat(res.data.product));
         setLoading(false);
@@ -35,8 +42,6 @@ const HomeFeed = () => {
           setDone(true);
         }
       }
-      // console.log(res.data.product);
-      // console.log(feedPost);
     } catch (error) {
       console.log(error.res);
     }
@@ -91,6 +96,15 @@ const HomeFeed = () => {
   return (
     <>
       <SpotTab>
+        <SpotBtn
+          className={btnAll ? 'active' : ''}
+          onClick={() => {
+            setBtnAll(true);
+            setBtnActive('');
+          }}
+        >
+          전체
+        </SpotBtn>
         {placeFilter.map((item) => (
           <SpotBtn
             key={crypto.randomUUID()}
@@ -98,6 +112,7 @@ const HomeFeed = () => {
             className={item === btnActive ? 'active' : ''}
             onClick={(e) => {
               setName(item);
+              setBtnAll(false);
               handlePlace(e, { item });
               setBtnOn(true);
             }}
@@ -108,7 +123,7 @@ const HomeFeed = () => {
       </SpotTab>
 
       <FeedList>
-        {btnOn
+        {btnOn && !btnAll
           ? feedPost
               .filter((item) => item.itemName === name)
               .map((item) => (
