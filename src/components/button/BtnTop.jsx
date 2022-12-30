@@ -14,6 +14,13 @@ const BtnTop = ({ parent }) => {
     :hover {
       background-image: url(${iconTopHover});
     }
+    @media all and (min-width: 768px) {
+      & {
+        bottom: 34px;
+        left: initial;
+        right: 30px;
+      }
+    }
   `;
 
   const scrollToTop = () => {
