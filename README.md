@@ -24,6 +24,21 @@
 <br/>
 <br/>
 
+# Team ㄱㅂㅉ👊을 소개합니다!
+
+안녕하세요. 저희는 4명의 Front-end 개발자로 구성된 '**Team ㄱㅂㅉ**' 입니다. 팀원들의 초성인 ㄱ,ㅂ,ㅈ,ㅈ 을 하나로 모아 서로 도와주며 함께 성장하는 '**개발짱**' 이 되자는 의미를 담은 팀명입니다.
+
+<br/>
+
+|                                     김도영                                      |                                     배이솔                                      |                                     장희수                                      |                                     조민지                                      |
+| :-----------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
+| <img src="./src/assets/img/readme/RM%20profile-01.jpg" width="90" height="90"/> | <img src="./src/assets/img/readme/RM%20profile-02.jpg" width="90" height="90"/> | <img src="./src/assets/img/readme/RM%20profile-03.jpg" width="90" height="90"/> | <img src="./src/assets/img/readme/RM%20profile-04.jpg" width="90" height="90"/> |
+|                     [dyFlower](https://github.com/dyFlower)                     |                       [jjangi](https://github.com/jjangi)                       |                    [heesu0303](https://github.com/heesu0303)                    |                      [ming-Jo](https://github.com/ming-Jo)                      |
+|                                    개발 리더                                    |                              기획 & <br/>소통 리더                              |                           디자인 & <br/> 문서화 리더                            |                            팀장 & <br/> 디자인 리더                             |
+
+<br/>
+<br/>
+
 # ⚙️ 기술 및 개발 환경
 
 ### [ 사용 기술 ]
@@ -56,7 +71,7 @@ Git, GitHub, Notion, Figma, Discord (이미지 처리)
 
 <br/>
 
-### 프로젝트 목표
+### [ 프로젝트 목표 ]
 
 React로 SPA 웹 애플리케이션 개발...어쩌구 저쩌구?
 페어프로그래밍
@@ -107,6 +122,8 @@ React로 SPA 웹 애플리케이션 개발...어쩌구 저쩌구?
   - 포토존 위치 마커
   - 마커 클릭 시 해당 포토존 모달
 
+<br/>
+
 ## 프로젝트 구조
 
 - 폴더 트리
@@ -114,21 +131,6 @@ React로 SPA 웹 애플리케이션 개발...어쩌구 저쩌구?
 <br/>
 <br/>
 
-# Team ㄱㅂㅉ👊을 소개합니다!
-
-안녕하세요. 저희는 4명의 Front-end 개발자로 구성된 '**Team ㄱㅂㅉ**' 입니다. 팀원들의 초성인 ㄱ,ㅂ,ㅈ,ㅈ 을 하나로 모아 서로 도와주며 함께 성장하는 '**개발짱**' 이 되자는 의미를 담은 팀명입니다.
-
-<br/>
-
-|  Name  |                      Photo                       |                  GitHub                   | Position             |
-| :----: | :----------------------------------------------: | :---------------------------------------: | -------------------- |
-| 김도영 | ![](./src/assets/img/readme/RM%20profile-01.jpg) |  [dyFlower](https://github.com/dyFlower)  | 개발 리더            |
-| 배이솔 | ![](./src/assets/img/readme/RM%20profile-02.jpg) |    [jjangi](https://github.com/jjangi)    | 기획 & 소통 리더     |
-| 장희수 | ![](./src/assets/img/readme/RM%20profile-03.jpg) | [heesu0303](https://github.com/heesu0303) | 디자인 & 문서화 리더 |
-| 조민지 | ![](./src/assets/img/readme/RM%20profile-04.jpg) |   [ming-Jo](https://github.com/ming-Jo)   | 팀장 & 디자인 리더   |
-
-<br/>
-<br/>
 
 # 역할 분담
 
