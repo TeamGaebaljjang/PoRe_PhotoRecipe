@@ -9,6 +9,12 @@ export const Div = styled.div`
   background: url(${(props) => props.src}) no-repeat center / cover;
   border: 1px var(--gray) solid;
   position: relative;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 80%;
+      height: 100%;
+    }
+  }
 `;
 
 export const Cont = styled.div`
@@ -21,9 +27,15 @@ export const Cont = styled.div`
   opacity: 70%;
   color: white;
   text-align: center;
+  text-shadow: 1px 1px 2px var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      font-size: 22px;
+    }
+  }
 `;
 
 export const Desc = styled.p`
@@ -38,13 +50,30 @@ export const Date = styled.p`
   font-size: 14px;
   font-weight: 500;
   color: white;
+  text-shadow: 1px 1px 2px var(--black);
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      font-size: 16px;
+      right: 15px;
+      bottom: 10px;
+    }
+  }
 `;
 
 export const MoreBtn = styled.button`
   position: absolute;
-  right: 0;
-  width: 48px;
-  height: 48px;
-  background: no-repeat center;
+  top: 6px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  background: no-repeat center/cover;
   background-image: url(${moreIcon});
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      top: 15px;
+      right: 8px;
+      width: 32px;
+      height: 32px;
+    }
+  }
 `;

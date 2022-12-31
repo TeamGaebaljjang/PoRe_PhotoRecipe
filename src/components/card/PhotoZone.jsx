@@ -32,11 +32,6 @@ const PhotoZone = ({ props }) => {
 
       {modal ? (
         <BackDrop
-          style={{
-            backgroundColor: 'transparent',
-            position: 'fixed',
-            left: 'calc(50vw - 195px)',
-          }}
           onClick={() => {
             setModal(!modal);
           }}

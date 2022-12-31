@@ -6,6 +6,12 @@ export const Wrap = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin-left: 126px;
+      height: 100vh;
+    }
+  }
 `;
 
 export const SearchCont = styled.div`

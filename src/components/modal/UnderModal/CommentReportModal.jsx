@@ -34,7 +34,7 @@ const ReportUnder = ({ postDetailId, commentList, setComment, closeModal }) => {
 
   return (
     <>
-      <CommentModalWrap>
+      <CommentModalWrap className="comment-modal">
         <UnderModalCloseBtn />
         <UnderModalCont onClick={ReportComment}>
           <button type="button">신고하기</button>

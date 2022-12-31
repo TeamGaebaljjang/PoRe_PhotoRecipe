@@ -1,4 +1,5 @@
 import {
+  Wrap,
   ChatBallon,
   ChatInputWrap,
   ChatTime,
@@ -14,13 +15,7 @@ const ChatRoom = () => {
   return (
     <>
       <HeaderChat />
-      <div
-        style={{
-          height: '100vh',
-          backgroundColor: 'var(--gray)',
-          marginTop: '-48px',
-        }}
-      >
+      <Wrap>
         <ChatWrap>
           <ChatBallon>
             <div>
@@ -85,15 +80,61 @@ const ChatRoom = () => {
               꼭 써보세요<ChatTime>14:39</ChatTime>
             </Chatting>
           </ChatBallon>
+
+          <ChatBallon>
+            <div>
+              <img src={chatProfile} alt="" />
+            </div>
+            <Chatting>
+              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
+              꼭 써보세요<ChatTime>14:39</ChatTime>
+            </Chatting>
+          </ChatBallon>
+          <ChatBallon>
+            <div>
+              <img src={chatProfile} alt="" />
+            </div>
+            <Chatting>
+              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
+              꼭 써보세요<ChatTime>14:39</ChatTime>
+            </Chatting>
+          </ChatBallon>
+          <ChatBallon>
+            <div>
+              <img src={chatProfile} alt="" />
+            </div>
+            <Chatting>
+              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
+              꼭 써보세요<ChatTime>14:39</ChatTime>
+            </Chatting>
+          </ChatBallon>
+          <ChatBallon>
+            <div>
+              <img src={chatProfile} alt="" />
+            </div>
+            <Chatting>
+              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
+              꼭 써보세요<ChatTime>14:39</ChatTime>
+            </Chatting>
+          </ChatBallon>
+          <ChatBallon>
+            <div>
+              <img src={chatProfile} alt="" />
+            </div>
+            <Chatting>
+              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
+              꼭 써보세요<ChatTime>14:39</ChatTime>
+            </Chatting>
+          </ChatBallon>
         </ChatWrap>
         <ChatInputWrap>
           <input type="file" style={{ display: 'none' }} />
           <SubmitImg htmlFor="photo" />
-          <form action="submit">
+          <form action="submit" style={{ flexGrow: '1', marginLeft: '15px' }}>
             <input id="photo" type="file" style={{ display: 'none' }} />
-            <SubmitImg />
+            {/* <SubmitImg /> */}
             <InputChat
-              style={{ width: '270px', color: 'var(--super-gray)' }}
+              style={{ color: 'var(--super-gray)' }}
               type="text"
               placeholder="메시지 입력하기..."
             />
@@ -102,7 +143,7 @@ const ChatRoom = () => {
             전송
           </button>
         </ChatInputWrap>
-      </div>
+      </Wrap>
     </>
   );
 };

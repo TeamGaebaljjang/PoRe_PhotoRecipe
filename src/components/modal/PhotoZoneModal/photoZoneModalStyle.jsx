@@ -12,7 +12,6 @@ const Container = styled.div`
   box-shadow: 0 0 10px var(--deep-gray);
   overflow: hidden;
   z-index: 30;
-
   animation-name: appear;
   animation-duration: 0.8s;
   @keyframes appear {
@@ -23,7 +22,6 @@ const Container = styled.div`
       bottom: 0px;
     }
   }
-
   .region {
     width: 390px;
     height: 50px;
@@ -33,7 +31,6 @@ const Container = styled.div`
   .region p {
     padding: 15px 30px;
   }
-
   .scroll {
     display: flex;
     flex-direction: column;
@@ -45,6 +42,25 @@ const Container = styled.div`
     padding: 20px 0 10px;
     &::-webkit-scrollbar {
       display: none;
+    }
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      position: fixed;
+      width: calc(100vw - 126px);
+      margin-left: 126px;
+      margin-bottom: 0;
+      left: 0;
+    }
+    .region {
+      width: 100%;
+      height: fit-content;
+      margin-bottom: 20px;
+    }
+    .region p {
+      font-size: 20px;
+      font-weight: 700;
+      padding: 18px 30px;
     }
   }
 `;

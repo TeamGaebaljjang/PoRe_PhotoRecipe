@@ -1,7 +1,14 @@
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { ChatList, ChatName, ChatDate, ChatCont, ChatOn } from './chatStyle';
+import {
+  Wrapper,
+  ChatList,
+  ChatName,
+  ChatDate,
+  ChatCont,
+  ChatOn,
+} from './chatStyle';
 import profile from '../../assets/img/profile.png';
 import HeaderBM from '../../components/header/HeaderBM';
 import NavBar from '../../components/navBar/NavBar';
@@ -12,7 +19,7 @@ const Chat = () => {
   const parent = useRef();
   const navigate = useNavigate();
   return (
-    <div ref={parent}>
+    <Wrapper ref={parent}>
       <HeaderBM />
       <ChatList>
         <img src={profile} alt="" />
@@ -49,7 +56,7 @@ const Chat = () => {
       </ChatList>
       <BtnTop parent={parent} />
       <NavBar />
-    </div>
+    </Wrapper>
   );
 };
 

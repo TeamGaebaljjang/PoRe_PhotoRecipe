@@ -44,7 +44,7 @@ const FeedEditUnder = ({ posts, closeModal }) => {
       ) : null}
 
       {target === '/profile' ? (
-        <UnderModalWrap style={{ marginLeft: '-20px' }}>
+        <UnderModalWrap className="fd-under-modal">
           <UnderModalCloseBtn />
           <UnderModalCont>
             <button
@@ -71,7 +71,7 @@ const FeedEditUnder = ({ posts, closeModal }) => {
         </UnderModalWrap>
       ) : (
         <>
-          <CommentModalWrap style={{ marginLeft: '-20px', bottom: '50px' }}>
+          <CommentModalWrap>
             <UnderModalCloseBtn />
             <UnderModalCont onClick={ReportPost}>
               <button type="button">신고하기</button>

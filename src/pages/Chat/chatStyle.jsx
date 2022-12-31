@@ -1,14 +1,36 @@
 import styled from 'styled-components';
 import chatOn from '../../assets/img/chatOn.png';
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-bottom: 60px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin-left: 126px;
+      /* padding: 0 15px; */
+    }
+  }
+`;
+
 export const ChatList = styled.div`
-  margin: 0 10px;
-  position: relative;
-  height: 70px;
-  border-bottom: 0.5px solid var(--light-gray);
   display: flex;
   align-items: center;
+  height: 70px;
+  margin: 0 10px;
+  position: relative;
+  border-bottom: 0.5px solid var(--light-gray);
   gap: 10px;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin: 0 30px;
+    }
+  }
 `;
 export const ChatDate = styled.p`
   position: absolute;

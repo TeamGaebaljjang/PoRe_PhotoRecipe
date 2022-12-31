@@ -19,14 +19,6 @@ const NavBar = () => {
     <NavWrap>
       <NavUlStyle>
         <Link to="/home">
-          <img
-            src={
-              target === '/home' || target === '/photodetail'
-                ? iconHomeActive
-                : iconHome
-            }
-            alt=""
-          />
           <NavItemStyle
             style={
               target === '/home' || target === '/photodetail'
@@ -34,20 +26,18 @@ const NavBar = () => {
                 : { color: 'var(--gray)' }
             }
           >
+            <img
+              src={
+                target === '/home' || target === '/photodetail'
+                  ? iconHomeActive
+                  : iconHome
+              }
+              alt=""
+            />
             홈
           </NavItemStyle>
         </Link>
         <Link to="/feed">
-          <img
-            src={
-              target === '/feed' ||
-              target === '/feed/search' ||
-              target === '/otherProfile'
-                ? iconFeedActive
-                : iconFeed
-            }
-            alt=""
-          />
           <NavItemStyle
             style={
               target === '/feed' ||
@@ -57,34 +47,43 @@ const NavBar = () => {
                 : { color: 'var(--gray)' }
             }
           >
+            <img
+              src={
+                target === '/feed' ||
+                target === '/feed/search' ||
+                target === '/otherProfile'
+                  ? iconFeedActive
+                  : iconFeed
+              }
+              alt=""
+            />
             피드
           </NavItemStyle>
         </Link>
         <Link to="/map">
-          <img src={target === '/map' ? iconMapActive : iconMap} alt="" />
           <NavItemStyle
             style={
               target === '/map' ? { color: 'black' } : { color: 'var(--gray)' }
             }
           >
+            <img src={target === '/map' ? iconMapActive : iconMap} alt="" />
             지도
           </NavItemStyle>
         </Link>
         <Link to="/chat">
-          <img
-            src={target === '/chat' ? iconMessageActive : iconMessage}
-            alt=""
-          />
           <NavItemStyle
             style={
               target === '/chat' ? { color: 'black' } : { color: 'var(--gray)' }
             }
           >
+            <img
+              src={target === '/chat' ? iconMessageActive : iconMessage}
+              alt=""
+            />
             채팅
           </NavItemStyle>
         </Link>
         <Link to="/profile">
-          <img src={target === '/profile' ? iconUserActive : iconUser} alt="" />
           <NavItemStyle
             style={
               target === '/profile'
@@ -92,6 +91,10 @@ const NavBar = () => {
                 : { color: 'var(--gray)' }
             }
           >
+            <img
+              src={target === '/profile' ? iconUserActive : iconUser}
+              alt=""
+            />
             프로필
           </NavItemStyle>
         </Link>

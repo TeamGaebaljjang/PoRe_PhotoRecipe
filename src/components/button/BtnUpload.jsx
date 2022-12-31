@@ -9,9 +9,15 @@ const BtnUpload = styled.button`
   position: absolute;
   top: 8px;
   right: 16px;
-
   &:hover {
     background-color: black;
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 94px;
+      height: 36px;
+      top: 12px;
+    }
   }
 `;
 

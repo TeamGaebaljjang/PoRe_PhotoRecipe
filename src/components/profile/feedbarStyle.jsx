@@ -16,15 +16,40 @@ export const Container = styled.div`
   button {
     margin-right: 16px;
   }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 100%;
+    }
+  }
 `;
 
 export const WhoseFeed = styled.p`
   margin-left: 20px;
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 18px;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin-left: 48px;
+    }
+  }
 `;
 
 export const UserIdTitle = styled.span`
   color: var(--black);
   font-size: 20px;
+  font-weight: 500;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      font-size: 22px;
+    }
+  }
+`;
+
+export const BtnWrap = styled.div`
+  display: flex;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      gap: 10px;
+      margin-right: 20px;
+    }
+  }
 `;

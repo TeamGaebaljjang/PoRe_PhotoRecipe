@@ -3,9 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80px;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin-left: 26px;
+    }
+  }
 `;
 
 export const Photo = styled.div`
@@ -14,6 +19,13 @@ export const Photo = styled.div`
   background: var(--gray) url(${(props) => props.src}) no-repeat center / cover;
   border-radius: 50%;
   outline: 1px solid var(--light-gray);
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 110px;
+      height: 110px;
+      /* margin-left: 26px; */
+    }
+  }
 `;
 
 export const Region = styled.p`
@@ -28,9 +40,15 @@ export const Region = styled.p`
 export const List = styled.div`
   display: flex;
   margin: 35px 0px 20px 20px;
+  flex-shrink: 0;
   gap: 20px;
   overflow: auto;
   &::-webkit-scrollbar {
     display: none;
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin: 35px 0px 30px 20px;
+    }
   }
 `;

@@ -6,12 +6,29 @@ export const Wrap = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin-left: 126px;
+      height: 100vh;
+    }
+    &.no-Navbar {
+      margin-left: 0;
+    }
+  }
 `;
 
 export const PostCard = styled.article`
   display: flex;
   flex-direction: column;
-  margin: 20px 20px 40px;
+  margin: 25px 20px 40px;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin: 30px 80px 20px;
+      padding: 26px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px var(--gray);
+    }
+  }
 `;
 
 export const User = styled.div`
@@ -33,6 +50,12 @@ export const UserProfile = styled.img`
   margin-right: 12px;
   cursor: pointer;
   outline: 1px solid var(--light-gray);
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 50px;
+      height: 50px;
+    }
+  }
 `;
 
 export const UserInfo = styled.div`
@@ -42,32 +65,46 @@ export const UserInfo = styled.div`
 
 export const UserName = styled.p`
   font-size: 14px;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      font-size: 18px;
+    }
+  }
 `;
 
 export const UserId = styled.p`
   font-size: 12px;
   color: var(--super-gray);
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      font-size: 13px;
+    }
+  }
 `;
 
 export const More = styled.img`
   position: absolute;
   right: 0;
   width: 22px;
-  height: 20px;
   cursor: pointer;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 26px;
+    }
+  }
 `;
 
 export const ImgWrap = styled.div`
   display: flex;
-  width: 350px;
+  width: 100%;
+  /* margin-top: 16px; */
+  border-radius: 10px;
   overflow: auto;
-
   &.no-scroll {
     &::-webkit-scrollbar {
       display: none;
     }
   }
-
   &::-webkit-scrollbar {
     height: 5px;
   }
@@ -78,19 +115,21 @@ export const ImgWrap = styled.div`
   &::-webkit-scrollbar-track {
     background-color: white;
   }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      height: 450px;
+    }
+  }
 `;
 
 export const PostImg = styled.img`
-  width: 350px;
-  height: 228px;
+  width: 100%;
   object-fit: cover;
   border-radius: 10px;
   margin: 20px 0 5px;
-  flex-shrink: 0;
-  margin-right: 1px;
-  cursor: pointer;
+  border-radius: 10px;
   border: 1px solid var(--light-gray);
-
+  cursor: pointer;
   &.detail-post-img {
     height: 350px;
   }
@@ -111,7 +150,7 @@ export const IconCount = styled.button`
   align-items: center;
   gap: 6px;
   margin: 0 16px 0 0;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--super-gray);
 `;
 
@@ -119,18 +158,30 @@ export const PostTitle = styled.h1`
   font-size: 18px;
   font-weight: 700;
   margin-top: 14px;
+  margin-left: 7px;
 `;
 
 export const PostCont = styled.p`
   font-size: 14px;
-  margin: 14px 7px;
+  margin: 16px 7px;
   cursor: pointer;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      font-size: 16px;
+      margin: 20px 7px;
+    }
+  }
 `;
 
 export const PostDate = styled.p`
   margin: 0 7px;
   font-size: 10px;
   color: var(--super-gray);
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      font-size: 11px;
+    }
+  }
 `;
 
 export const BackDrop = styled.div`
@@ -140,6 +191,16 @@ export const BackDrop = styled.div`
   z-index: 20;
   width: 390px;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(2px);
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      position: fixed;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
 `;

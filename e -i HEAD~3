@@ -1,0 +1,2918 @@
+[33mcommit 15c0a1e88e62a6a37dcca08a195c7f4aadd74606[m[33m ([m[1;36mHEAD -> [m[1;32mdesign/반응형[m[33m)[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Sat Dec 31 20:07:41 2022 +0900
+
+    💄 Design : 지도 화면 중간 사이즈 반응형 적용
+    
+    #133
+
+[33mcommit d56b35c74e2d2cda875a17cb0350538000ba1e0f[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Sat Dec 31 20:03:53 2022 +0900
+
+    🎨 Style : 채팅화면 중간 사이즈 반응형 적용
+    
+    #136
+
+[33mcommit 59c1915acf5af297c7014cb62c4040afe34d4e2c[m[33m ([m[1;31morigin/design/반응형[m[33m)[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Sat Dec 31 00:31:15 2022 +0900
+
+    💄 Design : Top 버튼 반응형 style 적용
+
+[33mcommit 9d2779579886fdfaad100b171952c4de69ef1ae6[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Sat Dec 31 00:13:37 2022 +0900
+
+    💄 Design : 반응형 style 적용을 위한 globalStyles 추가
+    
+    기준 사이즈 768px
+
+[33mcommit d8821311f01a66a0591515cd05e58136cae7166b[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Sat Dec 31 00:09:48 2022 +0900
+
+    💄 Design : Navbar 반응형 style 적용
+    
+    기준 사이즈 768px로 반응형 적용해보았습니다.
+    
+    close #128
+
+[33mcommit b8b248299a134417453e6e27deb7296a3f02534e[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: minji.ji <mwinterj@daum.net>
+Date:   Fri Dec 30 19:58:50 2022 +0900
+
+    📝 Docs : README 초안 수정
+
+[33mcommit f104d608ce8c597686dc6bd837162fcc4e7147d6[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 30 18:28:12 2022 +0900
+
+    :bug: Fix : 게시물 불러오기 에러
+    
+    피드, 프로필 페이지에서 게시물을 불러오면서 생기는 오류 수정 #123
+
+[33mcommit 512d604e5d81c8b923ae86f33cebd0b9e243ade2[m
+Merge: a8429f5 c8d1658
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Thu Dec 29 17:20:12 2022 +0900
+
+    Merge pull request #122 from TeamGaebaljjang/feat/PhotoZoneModal
+    
+    🐛 Fix : 포토존 모달 axios url 수정
+
+[33mcommit c8d16584bc8271cb2f8741c6d92d87ce8c511130[m[33m ([m[1;31morigin/feat/PhotoZoneModal[m[33m)[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Thu Dec 29 17:17:44 2022 +0900
+
+    🐛 Fix : 포토존 모달 axios url 수정
+    
+    및 지도 데이터 추가 임시 완료
+
+[33mcommit a8429f5371b2af173cc456349fba65e449a5b5c7[m
+Author: minji.ji <mwinterj@daum.net>
+Date:   Thu Dec 29 17:14:42 2022 +0900
+
+    📝 Docs : README 수정
+    
+    README 초안 작성
+
+[33mcommit e3842a41b69c3927167d54eb08aeb61cf38a743b[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 29 16:58:28 2022 +0900
+
+    🐛 Fix : 오류 이미지 처리
+    
+    - 잘못된 이미지 오류 처리 onError 사용
+    
+    Close #121
+
+[33mcommit a9b69da47bd27b9bb82b5bcc6262929b9cc5068c[m
+Merge: 32e2977 b1c4abe
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Thu Dec 29 16:54:44 2022 +0900
+
+    Merge pull request #120 from TeamGaebaljjang/feat/페이지TOP버튼
+    
+    Feat/페이지top버튼
+
+[33mcommit b1c4abe983893ea55a137e520c444abb9332858a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 29 16:52:59 2022 +0900
+
+    :sparkles: Feat : 페이지 TOP 버튼
+    
+    페이지의 최상단으로 가는 버튼을 구현하였습니다. #118
+
+[33mcommit 32e29771ac2fed98bcbf59c015b7fbe51e7fff85[m
+Merge: e613cde 53962d4
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Thu Dec 29 16:12:30 2022 +0900
+
+    Merge pull request #119 from TeamGaebaljjang/feat/PhotoZoneModal
+    
+    🐛 Fix : 포토존 리스트 limit infinity
+
+[33mcommit 53962d45b8df554836f987a9288ed644663981df[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Thu Dec 29 16:09:57 2022 +0900
+
+    🐛 Fix : 포토존 리스트 limit infinity
+    
+    포토존 리스트 개수 무제한 설정
+    (포토존 위치와 title 객체 배열에 객체 추가중)
+
+[33mcommit ae20f43acbece85b151345ed7a5bee90c1129dd5[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 29 15:17:31 2022 +0900
+
+    :lipstick: Design : 페이지 탑버튼 디자인
+    
+    페이지 탑버튼 아이콘 디자인입니다. #118
+
+[33mcommit e613cde26e573ac983f6ed586ab4e8a7dbaeec93[m
+Merge: 669a49c e572bee
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Thu Dec 29 15:01:27 2022 +0900
+
+    Merge pull request #117 from TeamGaebaljjang/feat/PhotoZoneModal
+    
+    ✨ Feat :  검색 키워드에 따른 포토존 모달 표시
+
+[33mcommit e572bee2d0f44f8caf04e873cb419371d718d279[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Thu Dec 29 14:51:40 2022 +0900
+
+    ✨ Feat :  검색 키워드에 따른 포토존 모달 표시
+    
+    검색 디바운싱 구현했는데 검색 키워드 한 글자마다 지도가 렌더링되어버림
+    포토존 주소 키워드 보다 상세하게 설정해서 마커가 잘 보이게할 것.
+    #36
+
+[33mcommit 669a49cbd8c0077a136d4bb5e8c33ab95102c6dd[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 29 14:09:02 2022 +0900
+
+    :recycle: Refactor : 무한 스크롤 최적화 #116
+    
+    무한 스크롤 데이터 받아오기 관련 최적화
+
+[33mcommit 50d8de3fc49c72c599e6ba18babecffac2868f83[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 29 09:49:58 2022 +0900
+
+    🐛 Fix : 포토존, 게시글 수정할 때 x 텍스트 지움
+    
+    - 포토존, 게시글 수정시 x 텍스가 남아있었음
+
+[33mcommit 36bb948d44403fe794a5afa02f5982493e434758[m
+Merge: 04922da 7c6eae8
+Author: minji.ji <mwinterj@daum.net>
+Date:   Thu Dec 29 09:41:10 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into develop
+
+[33mcommit 04922da22b447aa16556bd4485319ccbe6be1797[m
+Author: minji.ji <mwinterj@daum.net>
+Date:   Thu Dec 29 09:37:00 2022 +0900
+
+    ✨ Feat : 댓글 유저 프로필 클릭 이동 구현
+    
+    댓글에 있는 유저 프로필사진과 유저이름을 클릭하면 해당 유저의 프로필로 이동합니다.
+    
+    close #115
+
+[33mcommit 7c6eae835860bfb8637616a9d21de008520aaa83[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 29 01:44:39 2022 +0900
+
+    :bug: Fix : 피드 업로드 오류 수정
+    
+    피드에 이미지 업로드 시, 스크롤이 생기는 오류 수정하였습니다.
+
+[33mcommit 3931cf524c2395d0dac30ca419862e5ba9f9952c[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 29 00:05:06 2022 +0900
+
+    💄 Design : 아이콘 및 라인 스타일 수정
+    
+    - 삭제 아이콘 추가
+    - 프로필, 포토존, 게시글 라인 추가
+    - 홈 지역명 버튼 스타일 수
+
+[33mcommit b3bf90365da363ab838266c26006b34fbe82c5fc[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 28 23:23:07 2022 +0900
+
+    ✨ Feat :  댓글 작성시간 표시 구현
+    
+    close #106
+
+[33mcommit 5b988bbc7f0a03b911a993e1c57b66b2b864bad2[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Wed Dec 28 22:27:50 2022 +0900
+
+    ♻️  Refactor : 프로필 피드 타이틀 수정
+    
+    - 피드 타이틀을 계정 아이디로 수정
+    
+    Close #114
+
+[33mcommit ad8d68da052fa0fa3633039a32e28076fb4e51e6[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Wed Dec 28 19:59:53 2022 +0900
+
+    ♻️  Refactor : 게시물 여러 장일 경우 스크롤바 구현
+    
+    - 여러장 있을 경우 스크롤 바, 한장일 경우 안보이게 처리
+    
+     #113
+
+[33mcommit a3cc00690d2631cdd28fe5e279d88d05275a6040[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 28 19:03:31 2022 +0900
+
+    :bug: Fix : 이미지 수정시에 ,가 남는 부분 수정
+    
+    사실 할 필요 없었는데, 서버를 같이 쓰는 분들을 위하여 수정합니다. #112
+
+[33mcommit 0edf56dc2e706549c669a707a738ac4d47ba07ca[m
+Merge: 82164bd 7735165
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Wed Dec 28 18:25:09 2022 +0900
+
+    Merge pull request #111 from TeamGaebaljjang/feat/피드무한스크롤
+    
+    :sparkles: Feat : 피드 화면 무한 스크롤
+
+[33mcommit 77351650aacd64b4587189fa31a5e60e68f08112[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 28 18:24:00 2022 +0900
+
+    :sparkles: Feat : 피드 화면 무한 스크롤
+    
+    피드 화면에서 무한 스크롤 구현 #110
+
+[33mcommit 82164bd01ad5bd01e3fa4a499219e2733a60ebf3[m
+Merge: 0a7356d 5f50149
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 28 15:31:12 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into develop
+
+[33mcommit 0a7356d8673ecba1b1acb539ebb43853a89bbcec[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 28 15:29:22 2022 +0900
+
+    💄 Design : 포토존 등록/수정의 textarea style 수정
+    
+    textarea 기본 폰트를 globalStyle에 적용
+    textarea 높이 조정
+
+[33mcommit 5f5014983e66529d0199ba8545b5466749ee63ec[m
+Merge: 3f25ada fe35388
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Wed Dec 28 15:27:23 2022 +0900
+
+    Merge pull request #109 from TeamGaebaljjang/feat/포토존등록시사진취소
+    
+    Feat/포토존등록시사진취소
+
+[33mcommit 3f25ada8c9598198fe4b0c8ad65beec95dde52fc[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Wed Dec 28 15:23:48 2022 +0900
+
+    ♻️  Refactor : 캐러셀 효과 구현
+    
+    - 좌우버튼 클릭시 캐러셀 이미지 슬라이드
+    - 자동 슬라이드
+    - 하단 네브바(동그라미) 추가
+    
+     #66
+
+[33mcommit fe3538842d3dd693ff54b12b0c6ae30d4c14066b[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 28 15:23:27 2022 +0900
+
+    :sparkles: Feat : 포토존 수정시 이미지 취소
+    
+    포토존 수정 시 이미지 취소가 가능합니다 #107
+
+[33mcommit 196904234bfc1f4c2c6a8ef7d32ad5b9383f7a7c[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 28 15:18:48 2022 +0900
+
+    :sparkles: Feat : 포토존 이미지 업로드 취소
+    
+    포토존 이미지 업로드를 취소할 수 있습니다. #107
+
+[33mcommit 3c8403a6853256cd22c557de246ee0738bf86aff[m
+Merge: bd263e6 10faf5c
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Wed Dec 28 14:17:31 2022 +0900
+
+    Merge pull request #108 from TeamGaebaljjang/feat/피드등록시사진삭제
+    
+    Feat/피드등록시사진삭제
+
+[33mcommit 10faf5c50acd5795c757bcda6d87dd0aa8530e90[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 28 14:16:16 2022 +0900
+
+    :sparkles: Feat : 피드 수정시 사진 취소
+    
+    피드에서 수정할 때 사진을 취소할 수 있습니다. #102
+
+[33mcommit 4df23369ff0941c8cbfd24ae2d24dcb1cc35c25c[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 28 14:13:13 2022 +0900
+
+    :sparkles: Feat : 사진 취소 버튼 기능
+    
+    버튼을 누르면 사진이 취소 됩니다. #102
+
+[33mcommit 316a8e8cc66196f619b95c6521d5bc9ed4502025[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 28 14:12:39 2022 +0900
+
+    :lipstick: Design : 사진 취소 버튼
+    
+    사진 취소 버튼 입니다. #102
+
+[33mcommit bd263e642acabc8e53e15890c904f2e8600789c3[m
+Merge: 42db9e3 4459537
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Wed Dec 28 13:49:57 2022 +0900
+
+    Merge pull request #105 from TeamGaebaljjang/feat/피드-게시글신고
+    
+    ✨ Feat :  피드 게시글 신고 기능 추가
+
+[33mcommit 4459537b2f40d5a5ed907679a693938a14975b11[m[33m ([m[1;31morigin/feat/피드-게시글신고[m[33m)[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 28 13:44:45 2022 +0900
+
+    ✨ Feat :  피드 게시글 신고 기능 추가
+    
+    게시글 신고 기능 구현
+    로그인할 때 유저 프로필 이미지를 로컬스토리지에 받아오도록 수정
+    로그아웃하면 유저 프로필 이미지 로컬스토리지에서 삭제되도록 수정
+    
+    close #103
+
+[33mcommit 42db9e3aab83e392a55126e7817b028502fbb3cb[m
+Merge: 484bdce d357004
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Wed Dec 28 11:29:44 2022 +0900
+
+    Merge pull request #104 from TeamGaebaljjang/feat/PhotoZoneModal
+    
+    ✨ Feat :  초기 지도 화면 유저 위치로 설정
+
+[33mcommit d357004585f5ef542e04688290d11c277fc14bea[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Wed Dec 28 11:21:26 2022 +0900
+
+    ✨ Feat :  초기 지도 화면 유저 위치로 설정
+    
+    geolocation API 이용, 유저의 현재 위치를 지도 초기 위도, 경도로.
+    키워드 검색까지 동작 확인 (포토존 마커, 모달 남음)
+    #29 #36
+
+[33mcommit 484bdceacd6f582e8d3e399147cfab3a0c14fed5[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 28 01:01:08 2022 +0900
+
+    ♻️  Refactor : 댓글 신고 modal 디벨롭
+    
+    댓글 신고 미니 모달 닫기 버튼 클릭하면 backdrop 같이 닫히기
+    
+    #63
+
+[33mcommit 30e895f581796233dd4dc6bdcf31b44b7b436940[m
+Merge: c5d1dde 246e0ef
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Wed Dec 28 00:19:44 2022 +0900
+
+    Merge pull request #101 from TeamGaebaljjang/feat/피드-댓글
+    
+    Feat/피드 댓글 신고 기능 추가
+
+[33mcommit 246e0efb038e38043259a5f07c52c038fa11d91e[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 28 00:09:29 2022 +0900
+
+    ✨ Feat :  피드 댓글 신고 기능 추가
+    
+    댓글을 신고하면 modal이 뜨게 구현 - close #63
+    
+    #63
+
+[33mcommit c5d1ddefeceae07323a347d359eb626be774faf3[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 18:07:40 2022 +0900
+
+    :bug: Fix : 타 유저 팔로잉, 팔로워 페이지
+    
+    타 유저의 팔로잉, 팔로워 페이지에서 내 팔로워,팔로잉이 나타나는 오류 수정
+
+[33mcommit f9be6684c56ea5cadc4ca0aa666dd053a1657e30[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Tue Dec 27 18:02:35 2022 +0900
+
+    💄 Design : 컨펌 모달창 위치 조정
+    
+    - 게시글, 포토존 삭제 클릭시 컨펌 모달창 위치 조정
+
+[33mcommit 39637b4f3bd21475352b8bb018fa22ad2d08bf8c[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 27 17:41:37 2022 +0900
+
+    ✨ Feat :  피드 댓글 삭제, 신고 modal 기능 구현
+    
+     본인의 댓글은 삭제 모달이 띄워지고 다른 유저의 댓글은 신고 모달이
+     띄워집니다.
+    
+    #63
+
+[33mcommit 9c39272e44698292437fddb8384b134e9e92591f[m
+Merge: 046c3e4 20a37ca
+Author: heesu <72817156+heesu0303@users.noreply.github.com>
+Date:   Tue Dec 27 17:30:14 2022 +0900
+
+    Merge pull request #100 from TeamGaebaljjang/feat/피드수정
+    
+    Feat/피드수정
+
+[33mcommit f7d8d7cca63c5003995fea8a6a255272accc0645[m
+Merge: 97d39f2 046c3e4
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 27 17:24:39 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into feat/피드-댓글
+
+[33mcommit 20a37cab001ae4f3cbd1b7f4a29964c6d13e0d51[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Tue Dec 27 17:01:30 2022 +0900
+
+    🔥 Remove : 불필요한 주석 제거
+    
+    - 불필요한 주석과 console.log 제거
+    
+     #90
+
+[33mcommit 9915013f052620b9c41fdff62106b08b8db1ccc9[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Tue Dec 27 16:52:12 2022 +0900
+
+    ♻️  Refactor : 이미지 프리뷰 수정
+    
+    - 이미지 프리뷰 filter 적용하여 이미지 프리뷰 보이게 수정
+    
+     #90
+
+[33mcommit 6fb5439a983ffcfcabfb7abc72fc5c410012fe39[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Tue Dec 27 16:28:17 2022 +0900
+
+    ✨ Feat : 수정 기능 구현(이미지 프리뷰 제외)
+    
+    - 수정할 때 이미지가 안보이는 현상 제외하고 수정 기능 구현
+    
+     #90
+
+[33mcommit 046c3e41845ee10134173f037015b31907d0c1e2[m
+Merge: 6f125f5 eea782a
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Tue Dec 27 14:34:11 2022 +0900
+
+    Merge pull request #99 from TeamGaebaljjang/feat/otherprofileFollow
+    
+    ✨ Feat :  타 유저 프로필 팔로우 토글 버튼
+
+[33mcommit 65762970e1019e2efbddc1388eda09ec8588ab4a[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Tue Dec 27 14:26:17 2022 +0900
+
+    ✨ Feat : 내 피드 게시물의 more 버튼 클릭시 모달
+    
+    - 내 피드 게시물의 more 버튼 클릭시 모달 띄
+    
+     #90
+
+[33mcommit eea782abc465e53808bd31f9079bb28eeb3ab30f[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Tue Dec 27 14:25:26 2022 +0900
+
+    ✨ Feat :  타 유저 프로필 팔로우 토글 버튼
+    
+    내 프로필에 필요한 포토존 등록 버튼이 이미 삼항연산자로 작성되어
+    결국 eslint 무시 주석 작성하고 기능 구현 완료함
+    #81
+
+[33mcommit 6f125f51fef38504264d6aef2764d9ccf83c3163[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 11:52:17 2022 +0900
+
+    :bug: Fix : otherProfile로 가는 현상
+    
+    나의 프로필을 클릭해도 otherprofile로 가는 현상 해결
+
+[33mcommit 97d39f2da6571b94c462041a782423cd5150ac99[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 27 11:46:49 2022 +0900
+
+    🐛 Fix : 피드 scrollBar 관련 수정
+    
+    피드에 스크롤이 생기면서  modal의 backdrop 높이가 변하는 문제
+    수정
+
+[33mcommit fbe02f357e4d0567a587de2b8cac90a3275f58bc[m
+Merge: e74697f 7795c86
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Tue Dec 27 11:10:36 2022 +0900
+
+    Merge pull request #98 from TeamGaebaljjang/feat/followToggle
+    
+    Feat/follow toggle
+
+[33mcommit 7795c8676827f59e601cbedb0d9952abf4c891cc[m
+Merge: a5f9a5e e74697f
+Author: jjangi <tesla2030@naver.com>
+Date:   Tue Dec 27 11:06:39 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into feat/followToggle
+
+[33mcommit a5f9a5e8fa05a7a88849d23a326758a7a34fd1e4[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Tue Dec 27 10:58:33 2022 +0900
+
+    🐛 Fix : 팔로워, 팔로잉 리스트 limit 수정
+    
+    기본 10개에서 limit 150개로 넉넉하게 수정해둠
+    (그 외 스타일 조금 수정)
+    #81
+
+[33mcommit e74697f8d29d63e118e9810b828ba3fd3dffd7a1[m
+Merge: 7e4a75a a6a2914
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Tue Dec 27 10:13:51 2022 +0900
+
+    Merge pull request #97 from TeamGaebaljjang/feat/피드-댓글
+    
+    Feat/피드 댓글작성란 기능 추가
+
+[33mcommit 2391535e7d45b854a0fafbb9a07a527c8f077c18[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Tue Dec 27 10:12:01 2022 +0900
+
+    🔥 Remove : userStyle 삭제 및 User 스타일 적용
+    
+    searchStyle 사용으로 onClick 이벤트 핸들러 적용
+    불필요한 userStyle 삭제 및 별도 필요 스타일 적용
+    #81
+
+[33mcommit a6a2914d5222cf9205736f72b72438c26ebb01f8[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 27 10:06:25 2022 +0900
+
+    ✨ Feat :  피드 댓글 작성란 유저프로필 이미지 적용
+    
+    댓글 작성란에 유저프로필 이미지를 로컬스토리지에서 불러왔습니다.
+    
+    #63
+
+[33mcommit 7e4a75a9c059356dfc38c632119aed9b9e7cf3ac[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Tue Dec 27 09:45:33 2022 +0900
+
+    💄 Design : 홈 피드 유저 마우스오법시 커서 포인터 적용
+    
+    - 홈 피드 -> 상세 페이지 -> 유저 마우스오버시 커서 포인터 적용
+
+[33mcommit 4d5eea84e618ce0a27da2fdc82534059df726f8a[m
+Merge: 43245ca 5c22489
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 27 09:40:34 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into feat/피드-댓글
+
+[33mcommit 5c22489f7cd16a8c67082822c42fc4d3bd1fa905[m
+Merge: 043885c 5f76a30
+Author: heesu <72817156+heesu0303@users.noreply.github.com>
+Date:   Tue Dec 27 09:38:52 2022 +0900
+
+    Merge pull request #96 from TeamGaebaljjang/feat/홈-유저이동
+    
+    ✨ Feat : 홈 포토존 상세페이지의 유저 클릭시 해당 프로필 이동
+
+[33mcommit 43245cab2d62d1a3d88ba9729887dd611659e8c6[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 27 09:37:47 2022 +0900
+
+    ✨ Feat :  피드 댓글 게시 버튼 active 기능 추가
+    
+    댓글 작성란에 텍스트가 있을 경우 사용 가능하도록 설정
+    
+    #63
+
+[33mcommit 5f76a3060f56d574196817856fab6f827e77f9d8[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Tue Dec 27 09:35:53 2022 +0900
+
+    ✨ Feat : 홈 포토존 상세페이지의 유저 클릭시 해당 프로필 이동
+    
+    - 홈 피드의 포토존 피드 -> 상세 페이지 -> 유저 클릭시 해당 유저 프로필로 이동
+    
+     #89
+
+[33mcommit bf6f32d5bddee4f51fb00973a7a5dc66d15351b6[m
+Merge: 8fafa6d 043885c
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 27 09:26:53 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into feat/피드-댓글
+
+[33mcommit 85c1b69adf9845e8de16ca8d73fa6183e2ab58b2[m
+Merge: 874291e 043885c
+Author: jjangi <tesla2030@naver.com>
+Date:   Tue Dec 27 09:22:12 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into feat/followToggle
+
+[33mcommit 874291e9d05b801e912f4c54a3f6ffbf481cf9e1[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Tue Dec 27 09:20:13 2022 +0900
+
+    ✨ Feat :  팔로워, 팔로잉 리스트 팔로우 토글 버튼
+    
+    isfollow state로 설정해서 팔로우, 취소 버튼 토글
+    
+    #81
+
+[33mcommit 043885c9ac71b0aebe327d228c48833c70fcdb42[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 05:16:56 2022 +0900
+
+    :sparkles: Feat : 홈 페이지 무한스크롤 구현 완료
+    
+    무한 스크롤 구현 완료입니다. #95
+
+[33mcommit 51c939efff96f5188251b1b43b0e830f8262b27e[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 05:13:35 2022 +0900
+
+    :hammer: Chore : 무한스크롤 라이브러리 설치
+    
+    무한스크롤 관련 라이브러리 설치 #95
+
+[33mcommit cafebe417518b71b29f419766def734e0577b66d[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 04:22:52 2022 +0900
+
+    :fire: Remove : 불필요한 코드 제거
+    
+    유저프로필에서 accountname으로 fetch를 진행하기 때문에 필요없는 코드를 제거하였습니다.
+
+[33mcommit 86af2938230329f126c913f614247b8aec0709b2[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 04:22:11 2022 +0900
+
+    :bug: Fix : 옳지 않은 변수명 변경
+    
+    props => userInfo로 변수명 변경하였습니다.
+
+[33mcommit 0309b9bf4ad6f414def701258614b91953cd5957[m
+Merge: a54ff31 cd78d88
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Tue Dec 27 04:13:45 2022 +0900
+
+    Merge pull request #94 from TeamGaebaljjang/feat/피드프로필연결
+    
+    :sparkles: Feat : 피드 프로필 연결 완료
+
+[33mcommit cd78d881ffd1f7a5999f912041e7a505cb447c93[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 04:11:48 2022 +0900
+
+    :sparkles: Feat : 피드 프로필 연결 완료
+    
+    피드에서 유저 정보를 클릭시 프로필로 연결 완료하였습니다. #93
+
+[33mcommit a54ff31ebad04b40577c75061e1bc02215c8e5cd[m
+Merge: f9e8c70 06cf0d9
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Tue Dec 27 03:30:38 2022 +0900
+
+    Merge pull request #92 from TeamGaebaljjang/feat/채팅방연결
+    
+    Feat/채팅방연결
+
+[33mcommit 06cf0d9b84a0e181ed54df8c916e9395ed70b155[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 03:29:27 2022 +0900
+
+    :sparkles: Feat : 채팅방 연결
+    
+    채팅방 연결 완 #91
+
+[33mcommit 60ce4b590a94532fd152028065141b8152f865c6[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 03:17:00 2022 +0900
+
+    :sparkles: Feat : 채팅방 라우트 연결
+    
+    라우트 연결하였습니다. #91
+
+[33mcommit f9e8c70e5f00b7f5ab455bfca2e02a30369a69f4[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Tue Dec 27 02:38:03 2022 +0900
+
+    🎨 Style : 홈 캐러셀 코드 개선
+    
+    - 줄일 수 있는 코드 줄임
+
+[33mcommit 1ae1fbe1d58b470abf3929edf2a9061304781df1[m
+Merge: 8b4fcf0 1215296
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Tue Dec 27 02:19:01 2022 +0900
+
+    Merge pull request #88 from TeamGaebaljjang/feat/피드-댓글
+    
+    ✨ Feat :  피드 댓글 삭제 기능 추가
+
+[33mcommit 8fafa6d3d42078d0b474cf3664c93d9a751e0b98[m
+Merge: 1215296 8b4fcf0
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 27 02:17:34 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into feat/피드-댓글
+
+[33mcommit 12152963bba0d920584dc9b2d7817d8087703589[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 27 02:15:58 2022 +0900
+
+    ✨ Feat :  피드 댓글 삭제 기능 추가
+    
+    #63
+
+[33mcommit 8b4fcf062a07cc308e3b642438c2845e7d0636bf[m
+Merge: 3e90a03 57e2f94
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Tue Dec 27 02:09:49 2022 +0900
+
+    Merge pull request #87 from TeamGaebaljjang/feat/포토존삭제
+    
+    Feat/포토존삭제
+
+[33mcommit 57e2f94a0684fa38ec5ba0e4f0c629c2db771e92[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 27 01:55:40 2022 +0900
+
+    :sparkles: Feat : 삭제 시 프로필 화면으로 이동
+    
+    포토존 삭제시 프로필 화면으로 이동 #84
+
+[33mcommit 3e90a0384069c89fd45e1a0b3c21a0b0c50696ce[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Tue Dec 27 01:03:08 2022 +0900
+
+    📝 Docs : 주석 삭제 및 key 설정
+    
+    - 주석 삭제 및 key 설정(프리티어)
+
+[33mcommit 29c7bcf02b690fab398c6acbef32647f7ee1a741[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 23:52:46 2022 +0900
+
+    :sparkles: Feat : 포토존 삭제 구현
+    
+    포토존 삭제기능 구현 완료 #84
+
+[33mcommit 3cf435e850f4e50ae21d31fbe841210982074d3f[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 23:52:11 2022 +0900
+
+    :bug: Fix : 버튼 속의 버튼 에러
+    
+    에러가 발생하여 div로 변경하였습니다. #84
+
+[33mcommit 3f77d49a8ef2196a2c82241093786fbd6593ad2a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 23:50:46 2022 +0900
+
+    :art: Style : 개행 수정
+    
+    conflict 처리 도중 생긴 개행 제거
+
+[33mcommit 816d6b0747e05672ffaa355e3badabe2fc56f72f[m
+Merge: 38fea48 defabe9
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 26 23:43:37 2022 +0900
+
+    Merge pull request #86 from TeamGaebaljjang/fix/key값지정
+    
+    :bug: Fix : key값 지정
+
+[33mcommit defabe9bf4a8012926210bff2522d2018330b78f[m
+Merge: f49ee53 38fea48
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 26 23:43:28 2022 +0900
+
+    Merge branch 'develop' into fix/key값지정
+
+[33mcommit 38fea48cf2985555e0ef5ba059ffa63cfebc80da[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Mon Dec 26 23:21:44 2022 +0900
+
+    ✨ Feat : 검색 하이라이팅 구현 추가
+    
+    - 검색할 시 검색한 입력과 같은 텍스트에 하이라이트 효과
+    
+     #85
+
+[33mcommit f49ee539592f037ccebecd9ff9600ca94617e20c[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 22:21:12 2022 +0900
+
+    :bug: Fix : key값 지정
+    
+    map을 사용하였을 때 key값이 생기도록 지정 #83
+
+[33mcommit b25012797e6e6991f848945c01a9369b88afd9c3[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 22:05:42 2022 +0900
+
+    :lipstick: Design : 포토존 업로드 버튼
+    
+    호버시에 색 반전 적용 #82
+
+[33mcommit 2341e29e031d53b2b1ef4df833a5613951a7bd7f[m
+Merge: 1a1e253 c7ec946
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Mon Dec 26 17:23:23 2022 +0900
+
+    Merge pull request #80 from TeamGaebaljjang/feat/피드-댓글
+    
+    Feat/팔로잉 리스트 없을 때 피드 화면 추가
+
+[33mcommit c7ec9462a8bd8b3f7789acaf3077dc13c30b512c[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Mon Dec 26 17:14:54 2022 +0900
+
+    ✨ Feat :  팔로잉 리스트가 없을 때 피드 화면 추가
+    
+    팔로잉 리스트가 없으면 유저 검색 화면 띄우기 구현
+    
+    #28
+
+[33mcommit 1a1e253f45010cf8002f0e2e18a1fc927c50c5cf[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 17:14:35 2022 +0900
+
+    :bug: Fix : 검색페이지 초기화면
+    
+    검색페이지 초기화면 설정 #79
+
+[33mcommit b10936ea56783e72b817342d62df127c3108754a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 17:11:17 2022 +0900
+
+    :sparkles: Feat : 프로필에서 검색화면 이동
+    
+    프로필화면 헤더에서 검색버튼을 누르면 헤더로 이동하게 하였습니다. #78
+
+[33mcommit 65f68986342cbb0589f53a3c8323deaebd49346a[m
+Merge: ccda5da cae4c81
+Author: minji.jo <mwinterj@daum.net>
+Date:   Mon Dec 26 16:32:49 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into feat/피드-댓글
+
+[33mcommit cae4c817160df478f0b59a993927fe4bdca560cb[m
+Merge: 38aa701 643ad31
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Mon Dec 26 16:29:47 2022 +0900
+
+    Merge pull request #77 from TeamGaebaljjang/feat/EditProfile
+    
+    Feat/edit profile
+
+[33mcommit 643ad31b01221977917495a9f33bb31478f42a03[m
+Merge: 0dc0283 38aa701
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Mon Dec 26 16:28:57 2022 +0900
+
+    Merge branch 'develop' into feat/EditProfile
+
+[33mcommit 0dc0283b589d10bd511f7e5ae49e7a43929190fe[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Mon Dec 26 16:07:00 2022 +0900
+
+    ✨ Feat :  내 프로필 - 프로필 수정
+    
+    내 프로필 정보를 불러와 수정할 수 있게 함
+    모달 버튼, 수정 완료 후 프로필 화면으로 라우팅도 완료
+    #73
+
+[33mcommit ccda5da4b012e0c88772de9f9478e1d678bef5fa[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Mon Dec 26 13:26:26 2022 +0900
+
+    ✨ Feat :  피드 댓글 클릭 시 상세피드 이동 추가
+    
+    - 상세 피드 내부 헤더에 more 버튼 제거
+    
+    #63
+
+[33mcommit 38aa7018a9c3cdda425fe81a7498b09e57377217[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 12:35:21 2022 +0900
+
+    :bug: Fix : 작은 피드 수정
+    
+    작은 피드에서 사진이 여러개일 때 대표사진이 보이도록 수정
+
+[33mcommit 88d94a9de84fc984f42712aaaf30420ebfa24066[m
+Merge: 89596af c60f349
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 26 12:25:35 2022 +0900
+
+    Merge pull request #76 from TeamGaebaljjang/refactor/피드사진여러개업로드
+    
+    Refactor/피드사진여러개업로드
+
+[33mcommit c60f349f0eb70efe249f7861cd2fdeefc9985937[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 12:21:52 2022 +0900
+
+    :recycle: Refactor : UX를 고려하여 수정
+    
+    flex-shirink값을 이용하여 여러장이 있다는 것을 명시적으로 나타냄 #74
+
+[33mcommit ef5e8f04f31a7e038d8423d9e50e09a2a26cc517[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 12:13:10 2022 +0900
+
+    :recycle: Refactor : 피드 사진 여러개 적용
+    
+    피드에서도 사진 여러개를 확인할 수 있음 #74
+
+[33mcommit 8fec8a600c49efee92af31a02f38319ae802b4ac[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 11:34:58 2022 +0900
+
+    :recycle: Refactor : 사진 업로드 호버 설정
+    
+    사진 업로드 버튼 호버 설정 #74
+
+[33mcommit 89596af655a66e97d18dab9d1adddc76ff558cbf[m
+Merge: e0770d7 964fb0f
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Mon Dec 26 11:33:59 2022 +0900
+
+    Merge pull request #75 from TeamGaebaljjang/feat/피드-댓글
+    
+    ✨ Feat :  피드 댓글 작성 기능 구현
+
+[33mcommit 1c795978f64d359a5e191869711f6b6e92f6fd21[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 11:33:36 2022 +0900
+
+    :recycle: Refactor : 미리보기 및 갯수제한
+    
+    업로드시 미리보기와 3장으로 갯수제한 설정 #74
+
+[33mcommit 964fb0fe725395809ac2433618bf6486a04a0f9c[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Mon Dec 26 11:29:47 2022 +0900
+
+    ✨ Feat :  피드 댓글 작성 기능 구현
+    
+    #63
+
+[33mcommit 0c68dd616ec5841ef7051f87acd51c03c1316051[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 11:01:58 2022 +0900
+
+    :recycle: Refactor : 업로드 파일 처리
+    
+    기존의 파일에 추가하는 식으로 변경 #74
+
+[33mcommit e0770d7eff59a30a8806fc0161c1323cddac180c[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 10:14:40 2022 +0900
+
+    :recycle: Refactor : 검색 최적화
+    
+    디바운싱을 이용해서 검색최적화를 진행 #67
+
+[33mcommit 501d0b4364fa7afac6df802ac4f94ccdb5ba47a3[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 04:34:12 2022 +0900
+
+    :bug: Fix : 포토 리스트 More버튼
+    
+    more버튼이 다른 사람의 포토리스트에도 나타나는 것을 수정하였습니다. #72
+
+[33mcommit a8c55eff757b2424273bb31b5661f554fd2b74a2[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 04:18:06 2022 +0900
+
+    :bug: Fix : 포토존리스트 하단모달
+    
+    하단 모달이 여러개 켜질 수 있는 버그를 수정하였습니다. #72
+
+[33mcommit 4c3a0ab091ef58bd4476d0f58bdc181cd8b2a9b3[m
+Merge: f7235cf 1736cb3
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 26 02:53:33 2022 +0900
+
+    Merge pull request #71 from TeamGaebaljjang/refactor/피드슬라이스
+    
+    Refactor/피드슬라이스
+
+[33mcommit 1736cb3a154d4a573804ac9229e55972dbefb5d0[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 02:46:53 2022 +0900
+
+    :recycle: Refactor : 상대 프로필 피드
+    
+    다른 사람의 프로필 피드를 슬라이스를 통해 불러오도록 수정 #70
+
+[33mcommit 8f79999bf3c7d972ec89c3c111596b5c70d6457e[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 02:36:28 2022 +0900
+
+    :recycle: Refactor : 프로필 피드
+    
+    리덕스 툴킷 슬라이스로 리팩토링 #70
+
+[33mcommit 704c91e1ee144de6f1f5c8566020f367b4ff76a4[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 02:31:02 2022 +0900
+
+    :sparkles: Feat : 피드 슬라이스
+    
+    피드를 불러오는 슬라이스를 구현했습니다. #70
+
+[33mcommit f7235cf0a4f11fc99617e9d6509b280ed23de521[m
+Merge: 6b62470 d430545
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 26 01:54:26 2022 +0900
+
+    Merge pull request #69 from TeamGaebaljjang/refactor/로그인밸리데이션
+    
+    Feat : 로그인버튼 활성/비활성 구현
+
+[33mcommit d430545e1d2fa3575eb77e9ecf63b41445d30072[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 01:50:42 2022 +0900
+
+    :sparkles: Feat : 로그인버튼 활성/비활성 구현
+    
+    로그인폼에서 메일과 비밀번호를 둘다 입력해야 버튼이 활성화되도록 구현 #32
+
+[33mcommit 6b624709b9659136a198fcc1e9ef58809cc28fbf[m
+Merge: e6d2336 43fb12e
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 26 00:41:50 2022 +0900
+
+    Merge pull request #68 from TeamGaebaljjang/feat/포토존수정
+    
+    Feat/포토존수정
+
+[33mcommit 43fb12efddd574779abb67c0e8eb4b505459094c[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 00:40:14 2022 +0900
+
+    :art: Style : 선언 순서 변경
+    
+    선언순서 정렬 #53
+
+[33mcommit c6196e9b66be76a0750cb660ac5d716433ce0c99[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 00:23:35 2022 +0900
+
+    :sparkles: Feat : deafault밸류값 설정
+    
+    수정시에 디폴트 밸류가 나타나도록 수정하였습니다. #53
+
+[33mcommit 5e39fb6d4ec608b394e923cb70cbb4eb5837b6b9[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 26 00:11:06 2022 +0900
+
+    :bug: Fix : 전체 정보 불러오기로 수정
+    
+    id값만 받아오던 것을 주소, 날짜, 설명값을 모두 불러오도록 수정 #53
+
+[33mcommit 1cae95c2b38fdb7e09408fc96a92eb1ce67eb5bf[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Sun Dec 25 23:16:45 2022 +0900
+
+    :sparkles: Feat : 포토존 수정
+    
+    기본적인 포토존 수정 구현 완료 #53
+
+[33mcommit c6466c4a6225005b6d9c55647a6d37c09fd4622d[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Sun Dec 25 23:16:02 2022 +0900
+
+    :sparkles: Feat : 하단 모달 기능 구현
+    
+    하단 모달의 수정버튼 클릭시 edit포토존으로 이동 #53
+
+[33mcommit e6d233682794248c6f41a94fead583f46b9aa66e[m
+Merge: 1de3247 3d2e5e7
+Author: heesu <72817156+heesu0303@users.noreply.github.com>
+Date:   Sun Dec 25 22:05:56 2022 +0900
+
+    Merge pull request #65 from TeamGaebaljjang/feat/검색
+    
+    Feat/검색
+
+[33mcommit 3d2e5e78534d60a3eee3324babca26cd116f9290[m
+Merge: 326e53d 1de3247
+Author: heesu <72817156+heesu0303@users.noreply.github.com>
+Date:   Sun Dec 25 22:05:31 2022 +0900
+
+    Merge branch 'develop' into feat/검색
+
+[33mcommit 326e53da9f99fc019a890c6ef1010c5718344805[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Sun Dec 25 21:59:19 2022 +0900
+
+    ✨ Feat : 해당 유저 페이지에서 포토존 가져오기 구현
+    
+    - props로 내려주어 구현
+    
+     #57
+
+[33mcommit aafdbb54d363058317d41178bf2fe93cff4293bf[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Sun Dec 25 21:09:43 2022 +0900
+
+    ✨ Feat : 검색한 유저 클릭시 해당 유저 페이지로 이동 구현
+    
+    - 해당 유저 페이지로 이동 구현(포토존 제외)
+    - 포토존 가져오기 구현 진행중
+    
+     #57
+
+[33mcommit 543e3124860d0674b3f1bd2b2a616611520722c3[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Sun Dec 25 05:21:15 2022 +0900
+
+    💡 Comment : 라이브러리 삭제 및 코드 작성
+    
+    전체 구상한 코드 작성 완료는 했으나, 실행 시 초기 화면이 안 뜸
+    타 브라우저에서도 동일  (,,,)
+    #36
+
+[33mcommit 3c0d714bdcec384b99fa1799ae380b6475a503df[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Sun Dec 25 03:20:11 2022 +0900
+
+    :lipstick: Design : 포토존 more 버튼 디자인
+    
+    포토존마다 more 버튼을 달아주었습니다. #53
+
+[33mcommit 1de32479d4594ed877d37efac32b07deebb63453[m
+Merge: 7482ebe a9e1076
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Sun Dec 25 03:01:02 2022 +0900
+
+    Merge pull request #64 from TeamGaebaljjang/feat/피드-댓글
+    
+    Feat/피드 댓글 리스트 불러오기 / 댓글 작성 기능(구현중)
+
+[33mcommit a9e1076d6bb71b02b5a625a5ae1efa339930b176[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Sun Dec 25 02:54:37 2022 +0900
+
+    ✨ Feat :  피드 댓글 작성 기능  구현중
+    
+    - 댓글 작성 API 연동(완료)
+    - 댓글 업로드는 되는데 렌더링이 실시간으로 되지 않음
+    #63
+
+[33mcommit b6e3a8f0d1cd96a4040e0a8b24712d6675f32df3[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Sat Dec 24 23:05:06 2022 +0900
+
+    ♻️  Refactor : 유저 검색시 엔터키 막기
+    
+    - 엔터키 누르게 되면 목록 초기화됨 -> onKeyDown을 이용하여 엔터키 막음
+    
+     #57
+
+[33mcommit 699374a411cefc25e366a8ec2b7846707631e9bc[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Sat Dec 24 21:04:50 2022 +0900
+
+    ✨ Feat : 유저 목록에 검색된 유저 렌더링 구현
+    
+    - 유저 이름, 계정ID 검색시 목록에 렌더링
+    
+     #57
+
+[33mcommit b4893e1bf0f7732b2588fa3dd9049f2539ca908f[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Sat Dec 24 20:44:36 2022 +0900
+
+    💡 Comment : 코드 백업
+    
+    이전 커밋 코드부터 다시 코딩하기로 결정
+    
+    #36
+
+[33mcommit 1fe6228914eb5fe7ed516aa8221813411e18c39d[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Sat Dec 24 20:37:20 2022 +0900
+
+    ✨ Feat :  Comment Form 컴포넌트로 분리
+    
+    PostCard 컴포넌트에 로직이 많아서 분리했습니다.
+    
+    #63
+
+[33mcommit a8299f3cf2657ffb50cef31a0c996ddcaaf565be[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Sat Dec 24 17:24:56 2022 +0900
+
+    ✨ Feat :  commentWrapper 컴포넌트로 분리
+    
+    댓글 API 연동하기 위해 컴포넌트 분리하였습니다.
+    
+    #63
+
+[33mcommit 2916824a2d4251cd26da4b680a83f1d2da9cae9c[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Sat Dec 24 17:05:14 2022 +0900
+
+    ✨ Feat :  피드 댓글리스트 API 연동 및 댓글리스트 불러오기 구현
+    
+    피드에 댓글리스트 불러오기 구현
+    
+    #63
+
+[33mcommit 7482ebe02bb7e938a401cb4733650ec40c08332e[m
+Merge: 414b0ab d899802
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Sat Dec 24 03:24:27 2022 +0900
+
+    Merge pull request #62 from TeamGaebaljjang/feat/로그인인증_라우팅
+    
+    Feat/로그인 인증 라우팅
+
+[33mcommit d899802a4a8b0dae23e7dc913210b8e6dd978c6a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Sat Dec 24 03:17:17 2022 +0900
+
+    :sparkles: Feat : 로그인 인증 라우팅 적용
+    
+    로그인 인증 라우팅을 Routes.jsx에 적용하였습니다. #61
+
+[33mcommit b10682566a754e14b16bd5b84ad61da69f77b81e[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Sat Dec 24 03:14:09 2022 +0900
+
+    :sparkles: Feat : 로그인 인증 라우팅 구현
+    
+    로그인 여부에 따라 페이지를 라우팅 해줍니다. #61
+
+[33mcommit 414b0ab43b56bd04217b3ccb4dcc845c551caf25[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 23 15:12:45 2022 +0900
+
+    :sparkles: Feat : 미니 포스트 상세 페이지 이동
+    
+    프로필에서 작은 포스트를 클릭 시 상세페이지로 이동하게 하였습니다.
+
+[33mcommit ff8fcf500a8f8186c60cdbb9415fa125f38c39a7[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Fri Dec 23 11:54:50 2022 +0900
+
+    ✨ Feat : 검색API로 유저 검색
+    
+    - HeaderBSU.jsx 에서 유저 검색하여 검색된 유저 배열에 넣기까지 구현
+    - 검색된 유저 목록에 렌더링은 구현 진행중
+    
+     #57
+
+[33mcommit 0a2fef534e2d8cafaa21e6d019c6afaa60b5c9e5[m
+Merge: 70e0984 a8706f8
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Fri Dec 23 03:42:41 2022 +0900
+
+    Merge pull request #60 from TeamGaebaljjang/feat/로그아웃
+    
+    Feat/로그아웃
+
+[33mcommit a8706f898f535b8c4aea298baf0b381fe4dfb682[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 23 03:40:14 2022 +0900
+
+    :lipstick: Design : 로그아웃 창 크기 수정
+    
+    로그아웃 창 크기 수정하였습니다. #59
+
+[33mcommit 04acb208ea6a605e0d8028a9259c360b0542d5e5[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 23 03:32:28 2022 +0900
+
+    :sparkles: Feat : 로그아웃 구현
+    
+    로그아웃 기능 구현 완료 #59
+
+[33mcommit 283a49725035839b956b29096969d72a3cf2a0d0[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 23 03:27:44 2022 +0900
+
+    :sparkles: Feat : 로그아웃 모달 표시
+    
+    로그아웃 모달이 등장할 수 있도록 구현 #59
+
+[33mcommit 70e098435250dfbffa2c4dad5ef1dc8327d19b01[m
+Merge: dd0bc12 1cb8c98
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Fri Dec 23 02:27:42 2022 +0900
+
+    Merge pull request #58 from TeamGaebaljjang/feat/프로필하단모달
+    
+    Feat/프로필하단모달
+
+[33mcommit 1cb8c981cb76155d3e5de12a85e4000e4804e795[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 23 02:24:24 2022 +0900
+
+    :lipstick: Design : 하단 모달 애니메이션
+    
+    등장 애니메이션 추가 #56
+
+[33mcommit 5f3d5b63016a2b19b0b6ef9a2da3970a864f0a0a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 23 02:23:00 2022 +0900
+
+    :sparkles: Feat : 닫기 버튼 구현
+    
+    닫기 버튼을 구현하였습니다. #56
+
+[33mcommit 3ff07f42bd588eb77a1f384379ecce99964ace84[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 23 02:17:07 2022 +0900
+
+    :sparkles: Feat : 백드롭 추가
+    
+    백드롭을 추가하였습니다. #56
+
+[33mcommit def27134496711f1e5a5bf4c036b9964eea26f5e[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 23 01:59:53 2022 +0900
+
+    :sparkles: Feat : 프로필 하단 모달 표시
+    
+    헤더 버튼을 누를시 프로필에 하단 모달이 표시됩니다. #56
+
+[33mcommit deca804e668fb9a06c558f6e952275c8f0b47292[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 23 01:57:41 2022 +0900
+
+    :lipstick: Design :  프로필 하단 모달 디자인
+    
+    백그라운드 컬러와 하단 마진을 수정하였습니다. #56
+
+[33mcommit dd0bc12df9dabfa0c752b68b8b581160b72feed3[m
+Merge: 873e03e 814774e
+Author: heesu <72817156+heesu0303@users.noreply.github.com>
+Date:   Fri Dec 23 01:44:37 2022 +0900
+
+    Merge pull request #55 from TeamGaebaljjang/feat/홈-피드
+    
+    Feat/홈 피드
+
+[33mcommit 814774ee777d3982166eb37fb373366763271c80[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Fri Dec 23 01:39:35 2022 +0900
+
+    ✨ feat : 지역별 피드 렌더링 구현
+    
+    - 지역 버튼 클릭시 해당 포토존 이미지 불러오기
+    
+     #43
+
+[33mcommit 873e03e21da0df2a0441e94efcd641a4ba8a7846[m
+Merge: 403f088 297e84b
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Fri Dec 23 01:06:06 2022 +0900
+
+    Merge pull request #54 from TeamGaebaljjang/feat/피드-상세
+    
+    ✨ Feat :  피드 상세페이지 API 연동 및 페이지 이동
+
+[33mcommit 297e84b5f446d0684abcf8966f4fa99c2bef067b[m[33m ([m[1;31morigin/feat/피드-상세[m[33m)[m
+Merge: 3a8ec9b 403f088
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Fri Dec 23 01:05:55 2022 +0900
+
+    Merge branch 'develop' into feat/피드-상세
+
+[33mcommit 3a8ec9bc62955bf581a266218dba17407afc7f42[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Fri Dec 23 00:37:29 2022 +0900
+
+    ✨ Feat :  피드 상세페이지 API 연동 및 페이지 이동
+    
+    useNavigate, useLocation 이용하여 페이지 이동 구현
+    
+    #50
+
+[33mcommit 84fde4663ba5fca1606ed81aefaab5bf35c2680f[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 18:21:55 2022 +0900
+
+    ♻️  Refactor : 포토존 상세페이지 스크롤바 적용
+    
+    - 포토존 상세페이지 height값 적용 및  스크롤바 적용
+    - 상세페이지 주소 변
+    
+     #43
+
+[33mcommit 695ad4f757cf283ec71f9d8ce559664910ec5e2f[m
+Merge: 1425a95 403f088
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 17:52:46 2022 +0900
+
+    Merge branch 'develop' of https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe into feat/홈-피드
+
+[33mcommit 403f08871b0b757ec25752e37af8dc8b74297d0a[m
+Merge: dee4676 6c9dbac
+Author: heesu <72817156+heesu0303@users.noreply.github.com>
+Date:   Thu Dec 22 17:39:48 2022 +0900
+
+    Merge pull request #52 from TeamGaebaljjang/feat/홈-캐러셀
+    
+    Feat/홈 캐러셀
+
+[33mcommit 6c9dbac82b15652518e20438df243d24a2c3e369[m[33m ([m[1;31morigin/feat/홈-캐러셀[m[33m)[m
+Merge: 6718cb6 dee4676
+Author: heesu <72817156+heesu0303@users.noreply.github.com>
+Date:   Thu Dec 22 17:39:40 2022 +0900
+
+    Merge branch 'develop' into feat/홈-캐러셀
+
+[33mcommit 6718cb653c2f78f04acd1f7861361d1e8aaf4996[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 17:24:36 2022 +0900
+
+    ♻️  Refactor : 캐러셀 생성일 정보 수정
+    
+    - 상세 페이지로 이동시 updateAt -> createdAt 로 변경
+    - 어드민 상세페이지로 파일명과 라우트를 지정했는데, 유저 상세페이지로도 같이 사용할 수 있어서 이름 변경과 라우트 변경
+    
+     #35
+
+[33mcommit 1425a95aa86f3aaac96083c641853d76a467a84e[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 17:19:50 2022 +0900
+
+    ✨ Feat : 유저 포토존 이미지 클릭시 상세 페이지 이동 구현
+    
+    - 유저 포토존 이미지 클릭시 navigate로 정보를 보내주어 상세 페이지로 이동
+    
+     #43
+
+[33mcommit dee4676821e2fdfe6e94ddc9d583e6cd60fb92ce[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 16:15:30 2022 +0900
+
+    :lipstick: Design : 포토존 말줄임표 추가
+
+[33mcommit 0cf3009e988091f730b4d4f4fa378a8f49a1a843[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 15:42:44 2022 +0900
+
+    ♻️  Refactor : 회원가입 완료 후 로그인 페이지로 이동
+    
+    - 회원가입 후 홈 화면 이동 ->  로그인 페이지로 이동으로 변경
+
+[33mcommit 9a0d3a94900a6503ed4f997835dc39caf4b1c77b[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 15:13:38 2022 +0900
+
+    :fire: Remove : 필요없는 주석, 코드 제거
+
+[33mcommit cd2436ed76a9f608a0eaa06dc09a6316727211bf[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 15:01:35 2022 +0900
+
+    :lipstick: Design : 프로필 페이지 기본 프로필 사진
+    
+    프로필 이미지가 없을 시, 기본 사진이 보이도록 설정
+
+[33mcommit 3a432fc20390ef701bff57f352599c18bdf1510b[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 14:58:53 2022 +0900
+
+    ✨ Feat : 홈 화면 지역명 중복 처리 구현
+    
+    - 지역명 같을 경우 중복 처리되도록 구현
+    
+     #43
+
+[33mcommit 8b8b4fc733cd517be78f71b016ba2f85525aa4bf[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 14:58:03 2022 +0900
+
+    :fire: Remove : 불필요한 log, 주석 삭제
+    
+    데이터 log찍은 내역과 주석처리된 임포트 삭제했습니다.
+
+[33mcommit f3bb08291aaf4e168ed4fd51e9702ec15d4ba37c[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 14:57:08 2022 +0900
+
+    :lipstick: Design : 게시물 없을 시 탑 보더 제거
+    
+    보더가 있으니까 미적으로 별로여서 삭제합니다.
+
+[33mcommit adb2ef4242ebc81c08cc4e19f8520b83d773f996[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Thu Dec 22 14:54:49 2022 +0900
+
+    ♻️  Refactor : keywordSearch 코드 간소화
+    
+    키워드 검색 후 기본적으로 제공되는 카카오맵 마커 찍는 코드 제거
+    초기 위치 위도, 경도 세팅
+    #36
+
+[33mcommit 1e03469a6c1898872a8540e3078685671330fa47[m
+Merge: ffeffa9 6572c8e
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Thu Dec 22 11:52:52 2022 +0900
+
+    Merge pull request #51 from TeamGaebaljjang/feat/게시글작성
+    
+    Feat/게시글 작성
+
+[33mcommit 6572c8e185c25ebce9055ef4185c5ab9ac3526e8[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 11:49:41 2022 +0900
+
+    :sparkles: Feat : 게시글 작성 구현
+    
+    게시글 작성 구현 완료 #49
+
+[33mcommit 3bc7e762be171f39b11119b1d9f90be22dd2adfc[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 11:39:04 2022 +0900
+
+    :fire: Remove : 불필요한 console.log 삭제
+    
+    console.log 제거
+
+[33mcommit e2f93992a3be97f6c5773f19da3568f7e563d2dc[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 11:30:13 2022 +0900
+
+    ✨ Feat : 홈 화면 버튼탭의 지역 이름 불러오기 구현
+    
+    - 버튼탭에 주소명 불러오기 구현
+    - 피드에 전체 유저 포토존 이미지 불러오기 구현
+    
+     #43
+
+[33mcommit d91d4077fb333cfdb54e3de8589b1dfcca0eb3a0[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 11:14:39 2022 +0900
+
+    :sparkles: Feat : 게시글 작성 라우트 설정
+    
+    uploadpost 링크로 설정하였습니다. #49
+
+[33mcommit ffeffa9179b34c8fe1959c5d51d700e729bf2520[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 11:01:50 2022 +0900
+
+    :lipstick: Design : 헤더 아이콘 정렬
+    
+    헤더 아이콘 중앙 정렬
+
+[33mcommit 8ca12e45b170741ad833ad3b37f5c2df6847cd49[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 10:52:28 2022 +0900
+
+    :lipstick: Design : 작은 피드 마진 수정
+    
+    프로필 피드에서 보여주는 작은 피드의 마진을 홈과 동일하게 수정
+
+[33mcommit 36e12b1e5230d4088964e2a6a53fa474cb3cfe28[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 10:51:05 2022 +0900
+
+    :lipstick: Design : 포토존 리스트 상하 마진 수정, 썸네일 사이즈 수정
+    
+    포토존 리스트의 상하 마진을 늘리고, 썸네일 사진 cover사이즈로 변경
+
+[33mcommit b8db9848448c96b7959704f0d11c03cff081886a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 10:50:09 2022 +0900
+
+    :lipstick: Design : 피드바 디자인 변경
+    
+    피드바 하단에 박스 쉐도우 추가
+
+[33mcommit fad0762cdb699a966696b1e1aa8a06c19753c336[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 10:47:39 2022 +0900
+
+    :lipstick: Design : 프로필 페이지 프로필 사이즈
+    
+    프로필 페이지에서 프로필 사진의 사이즈를 cover로 변경하였습니다.
+
+[33mcommit df1be1592318b9d51fa2546a378f8c04fd192957[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 06:05:08 2022 +0900
+
+    :bug: Fix : 좋아요 버그 수정
+    
+    피드 페이지에 접속 시에 모든 페이지에 좋아요가 눌리는 버그 수정하였습니다.
+
+[33mcommit c119032a2cc04a2c6cc87bc629afeda41a0955f2[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 05:54:17 2022 +0900
+
+    :sparkles: Feat : 피드 표시 변경 구현
+    
+    프로필 화면 피드바에 있는 버튼 클릭 시, 피드를 표시하는 방식이 바뀌는 것을 구현하였습니다. #48
+
+[33mcommit 48e205a610b3325f4e52b80342488b5fc3052e06[m
+Merge: db61d81 c767362
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Thu Dec 22 04:54:05 2022 +0900
+
+    Merge pull request #47 from TeamGaebaljjang/feat/프로필포토존리스트
+    
+    Feat/프로필포토존리스트
+
+[33mcommit c767362528f2f20f5d293ef0ea6720a5bc315c05[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 04:52:04 2022 +0900
+
+    :sparkles: Feat : 프로펠 포토존 리스트 구현
+    
+    구현 완료입니다. #45
+
+[33mcommit afda1e5b41e175a34a31654720bd9612b7c2856a[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 04:16:52 2022 +0900
+
+    ✨ Feat : 홈 화면의 피드 포토존 사진 불러오기 구현
+    
+    - 최신순으로 구현
+    
+     #43
+
+[33mcommit 8170ac3ca22424c3c9ff136c59fb40214217a0d9[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 22 04:12:35 2022 +0900
+
+    :sparkles: Feat : 포토존 모달 구현
+    
+    프로필의 포토존에서 클릭시 모달창 뜨는 것 구현 #45
+
+[33mcommit 0c9bed8cf957f9df06fef2500bc8c8789e9abb05[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 03:20:13 2022 +0900
+
+    ♻️  Refactor : 캐러셀 상세 페이지 보충 작업
+    
+    - 상세 이미지 크기 키움
+    - 네비바 수정
+    - 캐러셀 이미지에 onMouseOver 했을 때 멈추는 기능 구현중
+    
+     #35
+
+[33mcommit db61d81641553774b2b0f8ff46a5d0a259eda0a4[m
+Merge: c825902 3e5635a
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Thu Dec 22 02:15:53 2022 +0900
+
+    Merge pull request #46 from TeamGaebaljjang/feat/피드-좋아요
+    
+    Feat/피드 좋아요 기능 구현(완료)
+
+[33mcommit 3e5635a5a5105eda7d3391e037796d4359dba151[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Thu Dec 22 02:07:45 2022 +0900
+
+    ✨ Feat :  피드 좋아요/좋아요 취소 기능 구현
+    
+    - close #38
+    
+    #38
+
+[33mcommit 979be3c15871ba9ee910f5cc45675d3dc52395e8[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 01:53:58 2022 +0900
+
+    ✨ Feat : 캐러셀 상세 페이지 구현
+    
+    - 캐러셀 이미지 클릭시 포토존 상세페이지 구현
+    
+     #35
+
+[33mcommit f453706827c738441ee202bd67f49e7224b23866[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Thu Dec 22 01:47:34 2022 +0900
+
+    ✨ Feat :  좋아요 API get
+    
+    #38
+
+[33mcommit 91783682984e8c08d2fb6e4d18320c3a5b459d5f[m
+Author: heesu0303 <heesu0303@naver.com>
+Date:   Thu Dec 22 00:15:50 2022 +0900
+
+    🤔 Test : 푸시 테스트
+
+[33mcommit c825902216269e29edcea1070f377cc0d16b3085[m
+Merge: 5505b06 cbe7b3b
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Wed Dec 21 23:51:00 2022 +0900
+
+    Merge pull request #44 from TeamGaebaljjang/feat/프로필포토존리스트
+    
+    Feat/프로필 포토존 데이터, 팔로잉 팔로워 데이터
+
+[33mcommit cbe7b3b428291432706dc8a4d14ae3b60dc4cb39[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 21 23:47:58 2022 +0900
+
+    :sparkles: Feat : 포토존 폴더 리스트 구현
+    
+    포토존 주소별로 모아주도록 정리하였습니다.
+
+[33mcommit 5505b06571c8e4bfc1d66e0eacd5baa8aac332ab[m
+Author: heesu Jang <heesu@heesus-MacBook-Air.local>
+Date:   Wed Dec 21 22:51:36 2022 +0900
+
+    ♻️  Refactor : 회원가입 계정ID 유효성 검사 수정
+    
+    - '이미 가입된 계정ID 입니다.' 메세지가 뜰 때 벨리데이션 false와 빨간 문구로 변경
+
+[33mcommit df2d24bc241cbd01fbab6adc473822fd22dfc8e7[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Wed Dec 21 18:17:41 2022 +0900
+
+    ✨ Feat : 캐러셀 상세 페이지 구현 진행중
+    
+    - 캐러셀 이미지 클릭시 포토존 상세페이지 이동 구현 진행중
+    - PhotoZoneCard.jsx 로 상세페이지 구
+    
+     #35
+
+[33mcommit 02afb725c23488db72ad1581c0615a74680a7687[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 21 17:29:51 2022 +0900
+
+    :sparkles: Feat : 포토존 슬라이스
+    
+    리덕스툴킷용 포토존 슬라이스 구현
+
+[33mcommit 4993e6a2b382b87fb03152289e336d62332e8366[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 21 17:20:49 2022 +0900
+
+    💄 Design : Post 날짜 표기 및 아이콘 button 태그로 변경
+    
+    #38
+
+[33mcommit f17c0a0da00b6673cda3a1d4b706c94a687e8797[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 21 17:18:14 2022 +0900
+
+    :recycle: Refactor : 렌더링 성능 개선
+    
+    렌더링 시에 initialState를 따로 두어, 잠깐 나타나는 현상을 개선하였습니다. #42
+
+[33mcommit 6c870372adddfd9afdaf8e52c7f8ffdcf17a0f3f[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 21 16:48:25 2022 +0900
+
+    :sparkles: Feat : 팔로잉, 팔로워 페이지 데이터 가져오기
+    
+    리덕스 슬라이스로 뿌려주었습니다. #42
+
+[33mcommit 3f85fe0cd12b14d9cc76279af18324d1dc49dba4[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Wed Dec 21 16:12:35 2022 +0900
+
+    💄 Design : 캐러셀 좌우 버튼 추가
+    
+    - 캐러셀 효과 기능을 추가했지만 안됨
+    - 다른 기능 구현 후 리펙토링  예정
+    
+     #35
+
+[33mcommit 9e5623981e1329eb90f864ce265fc270d27a7133[m[33m ([m[1;31morigin/feat/MapAPI[m[33m)[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Wed Dec 21 14:58:44 2022 +0900
+
+    ✨ Feat :  전체 유저들이 등록한 포토존 모달 화면
+    
+    계정이름 빼고 실행해보니 전체 유저들이 등록한 거 다 뜨는 것 같음
+    스팟 키워드 필터링 구현 해낼 예정
+    #36
+
+[33mcommit c53884bc979c03a5f6fbfd8277294ed768af3ad3[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Wed Dec 21 02:54:10 2022 +0900
+
+    ✨ Feat : 캐러셀 애니메이션 효과 적용
+    
+    - 키프레임 활용하여 슬라이드 효과 적용
+    - 불안정하여 리팩토링 예정
+    
+     #35
+
+[33mcommit a39e4014ee03caef7bf47297381cf10877fa6368[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 21 02:11:01 2022 +0900
+
+    :sparkles: Feat : 뒤로가기 버튼 동작
+    
+    헤더이름에 B가 붙지 않아서 누락된 헤더들의 동작을 구현완료하였습니다.
+
+[33mcommit 39cbd832ac6135eb1b7ab718ec5ae3912b646227[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 21 02:08:22 2022 +0900
+
+    :sparkles: Feat : 팔로잉, 팔로워 라우터 추가
+    
+    팔로잉, 팔로워 버튼 클릭시 페이지 이동 #42
+
+[33mcommit e4f6ef56d1e3a840886a649e8cf958fcd4fe7709[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 21 01:26:57 2022 +0900
+
+    :fire: Remove : fetch 주석 삭제
+    
+    엑시오스도 보낼 때는 stringify를 해주어야 합니다.
+
+[33mcommit dc49f65014072dd4aa85ba2316b4378a0aef9de1[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 21 01:08:11 2022 +0900
+
+    :sparkles: Feat : 헤더 뒤로가기 버튼
+    
+    뒤로 가기 버튼입니다.
+
+[33mcommit ba4a8019b2e6a77fdb3206ced05987dd4b2e7d54[m
+Merge: 2fd7c94 2854a0f
+Author: heesu <72817156+heesu0303@users.noreply.github.com>
+Date:   Wed Dec 21 01:00:33 2022 +0900
+
+    Merge pull request #41 from TeamGaebaljjang/feat/회원가입
+    
+    Feat/회원가입
+
+[33mcommit 2854a0f6c8a7a1d7629e557e38b1d9a5ff075296[m
+Merge: e5ebe3f 2fd7c94
+Author: heesu <72817156+heesu0303@users.noreply.github.com>
+Date:   Wed Dec 21 01:00:12 2022 +0900
+
+    Merge branch 'develop' into feat/회원가입
+
+[33mcommit 2fd7c940a8f8b6afa4d6055247509244a99bcae8[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 21 00:56:54 2022 +0900
+
+    :lipstick: Design : 포토존 등록 설명 줄바꿈
+    
+    설명탭 textarea로 변경
+
+[33mcommit e5ebe3faf866c8221002d9dbf9854f1827dc5f00[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Wed Dec 21 00:54:17 2022 +0900
+
+    ✨ Feat : 이미지 업로드 API 적용
+    
+    - 이미지 업로드 API 적용하여 회원가입  구현 완료
+    
+     #27
+
+[33mcommit 15f2ae23e38df3396f015f734aa3b949e86b7fa1[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 20 23:59:41 2022 +0900
+
+    ✨ Feat : 홈 화면 캐러셀 구현
+    
+    - 상품 리스트 API 이용하여 캐러셀 적용
+    - 넘어가는 것 구현 예정
+    
+     #35
+
+[33mcommit 44cf304df4a9883df9255db40b628099e56d1453[m
+Merge: dda82b2 2d71110
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Tue Dec 20 23:04:32 2022 +0900
+
+    Merge pull request #40 from TeamGaebaljjang/feat/내프로필정보
+    
+    Feat/프로필, 포토존 업로드 구현
+
+[33mcommit 2d711108afaaa466a0ad474e52df3c07c172857a[m
+Merge: c563954 dda82b2
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Tue Dec 20 23:04:09 2022 +0900
+
+    Merge branch 'develop' into feat/내프로필정보
+
+[33mcommit c563954ed27d3691715d4518e83272181a6be6f6[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 20 22:43:23 2022 +0900
+
+    :sparkles: Feat : 포토존 등록 구현
+    
+    포토존 등록하는 것 구현 완료 #34
+
+[33mcommit f168b7ebb8dcbb5d988dbded786fc45b2c689cf3[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 20 22:42:20 2022 +0900
+
+    :bulb: Comment : 불필요한 주석 삭제
+    
+    ESLint관련 주석 삭제
+
+[33mcommit 8cdf0b458c997f807aad86bd843e78a06478631a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 20 22:39:18 2022 +0900
+
+    :bug: Fix : 프로필 화면 접속 에러
+    
+    프로필 화면 네비게이션 바를 통해 접속시 에러가 발생하는 것 수정 #39
+
+[33mcommit dda82b220e8034f2730388981c452c797da312ff[m
+Merge: 4668101 f0a4815
+Author: Minji.Jo <112460344+ming-Jo@users.noreply.github.com>
+Date:   Tue Dec 20 17:10:24 2022 +0900
+
+    Merge pull request #37 from TeamGaebaljjang/feat/피드-팔로잉피드
+    
+    Feat/피드 팔로잉피드
+
+[33mcommit f0a4815f8679b103f5d3f690680cf802dc518e7b[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 20 16:45:00 2022 +0900
+
+    ✨ Feat :  피드 날짜 표기 수정
+    
+    #33
+
+[33mcommit 18595bb6ea89694a647e9fdb39b03b4f4e377a4b[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 20 16:16:40 2022 +0900
+
+    ✨ Feat :  피드 API 전체 피드 불러오기로 수정
+    
+    무한 스크롤 새로고침 기능 추후 진행
+    
+    #33
+
+[33mcommit 6937bf397da476758930cb5c5ff9ba914e212d4d[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 20 15:49:37 2022 +0900
+
+    💄 Design : 피드 간격 수정
+
+[33mcommit 2452f0d2420e607334e41d8dbb5949e377a7cd5f[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 20 15:26:26 2022 +0900
+
+    ✨ Feat :  팔로잉 피드 렌더링
+    
+    API 이용해서 피드에 내용을 렌더링했습니다.
+    
+    #33
+
+[33mcommit 49cf1917ac2d20749546276f2ace7b7f185a84d9[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 20 13:46:51 2022 +0900
+
+    ✨ Feat : 회원가입 구현
+    
+    - 회원가입 API 이용하여 회원가입 구현
+    - 이미지 API 진행중
+    
+     #27
+
+[33mcommit aba2d908ae1ac9b6960d2c61d5b09068857ef84e[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 20 13:16:47 2022 +0900
+
+    ✨ Feat :  팔로잉 피드 API get
+    
+    Post 컴포넌트를 사용하는 다른 페이지와 통일하는 것이 좋을 것 같아
+    보류합니다.
+    
+    #33
+
+[33mcommit 44014af2475f90ab47a19fd5d432fce5375c7974[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 20 13:03:02 2022 +0900
+
+    ✨ Feat : 프로필 설정 이미지 업로드 구현
+    
+    - 이미지 업로드 구현
+    
+     #27
+
+[33mcommit 3722de0289a7cb5f60fbbdb0cee6e13eba814f30[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Tue Dec 20 11:03:27 2022 +0900
+
+    ♻️  Refactor : Header input에 입력한 값으로 키워드 장소 검색
+    
+    state 끌어올리기와 이벤트핸들러로 input에 키워드 입력 후 엔터키를
+    누르면 장소 검색되게 함
+    
+    #29
+
+[33mcommit 438359c60ad62d7b533a2dc911fd8309fac59197[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 20 02:29:36 2022 +0900
+
+    ✨ Feat : 회원가입 프로필 설정 구현
+    
+    - 계정ID API 이용하여 유효성 검사
+    - 사용자 이름, 계정ID 유효성 검사 구현
+    
+     #27
+
+[33mcommit e368a0e8a44a16f60f4d815d4f2ca78091e531e3[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 20 02:28:20 2022 +0900
+
+    :sparkles: Feat : 프로필 정보, 피드 받아오기
+    
+    마이 프로필 페이지에 정보와, 피드를 받아오는 것 완료 #34
+
+[33mcommit 0bc501faea3d019631895e4cbe1552ce6ec844c1[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 20 01:06:56 2022 +0900
+
+    🐛 Fix : 프로필 설정 화면에서 email 값 받아오기
+    
+    - 회원가입 초기 화면의 회원가입 버튼 클릭시 실행되는 조건문 변경
+    
+            #27
+
+[33mcommit abdc8a9f93a8f6931c02b396733ed089ec2b25e3[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 20 00:50:05 2022 +0900
+
+    ✨ Feat : 회원가입 구현 진행중
+    
+    - 이메일 검증 API 이용하여 유효성 검사
+    - 회원가입 첫 페이지의 이메일, 비밀번호 유효성 검사 구현
+    
+            #27
+
+[33mcommit 95c7629ce5b9aa82b0b70d05d8d2d7535cfa9a73[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Mon Dec 19 23:18:43 2022 +0900
+
+    ✨ Feat :  키워드로 장소 검색
+    
+    키워드로 장소 검색 코드, data는 우선 카카오맵으로 해두고 Recoil 공부
+    (Header에서 입력한 value를 내려받아야 함)
+    #29
+
+[33mcommit 4668101c16a5b201698b9c6a54cc0d279a3eb99d[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 21:08:41 2022 +0900
+
+    :art: Style : 프리티어 정렬(tabWidth)
+    
+    tabWidth 정렬
+
+[33mcommit 62fb91eb85da92d5a7686f4d1afacb4d741e1317[m
+Merge: 8ca963c f655b33
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 19 17:47:50 2022 +0900
+
+    Merge pull request #31 from TeamGaebaljjang/feat/로그인
+    
+    Feat/로그인
+
+[33mcommit f655b33ad0cdac352e0f92f0fe392b348a14d9ff[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 17:42:47 2022 +0900
+
+    :lipstick: Design : placeholder 설정
+    
+    로그인 인풋창 placeholder 설정하였습니다.
+
+[33mcommit 78cb84d86e8b9e0c6a1bd265fc23c3b65fea1571[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Mon Dec 19 17:22:00 2022 +0900
+
+    ♻️  Refactor : react-kakao-map-sdk 라이브러리 사용으로 전환
+    
+    Kakao Maps API를 React에 맞게 포팅한 라이브러리, react-kakao-map-sdk로
+    이후 구현해야할 여러 기능들도 해당 튜토리얼 참고해 구현해볼까함
+    #29
+
+[33mcommit 62793af6a84d7fca9e1bb357b8d9bd611104a170[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 15:53:46 2022 +0900
+
+    :lipstick: Design : input 포커싱 라인
+    
+    인풋 포커싱시에 바텀 라인 색 변경
+
+[33mcommit a6158dbfc2c36f92dfdb761e4d348bc811d6701a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 15:31:25 2022 +0900
+
+    :sparkles: Feat : 이메일로 회원가입 버튼 작동 구현
+    
+    이메일로 회원가입 클릭 시 SignUp 페이지로 이동
+
+[33mcommit e88ff7bb709b86a1e499c27505847a8e9c56a1ee[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 15:28:53 2022 +0900
+
+    :sparkles: Feat : 유저 토큰 Valid 체크
+    
+    로컬 스트로지에 있는 유저 토큰을 체크하여 자동로그인을 구현
+
+[33mcommit 7d284c33e74547f3c74589118e84257b3014d981[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Mon Dec 19 15:23:58 2022 +0900
+
+    ✨ Feat :  KakaoMap API로 지도 화면 생성
+    
+    포토존 모달창과 함께 MapCont 자식 요소로 컴포넌트 생성
+    (API KEY .env에 저장 및 .gitignore에 입력해 보이지 않게 함)
+    #29
+
+[33mcommit 8ca963c05bd2af15b34e39f2e13827739ad63de2[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Mon Dec 19 14:10:10 2022 +0900
+
+    🐛 Fix : 네비바 리렌더링 현상 해결
+    
+    - 리렌더링으로 상태값 초기화되는 현상 발생
+    - 라우팅된 주소로 아이콘 활성화되도록 수정
+
+[33mcommit 6894877b56e900b289011a8e0bb705908fe2cf24[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 11:24:29 2022 +0900
+
+    :sparkles: Feat : 로그인 토큰 로컬스토리지 저장
+    
+    토큰을 로컬스토리지에 저장하였습니다.
+
+[33mcommit 56ce26ec3a7bd8d0a177a27360b63961f8bf6588[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 10:57:53 2022 +0900
+
+    :sparkles: Feat : 로그인 에러메세지 출력
+    
+    에러발생 및 유효성 검사 실패시 에러 메세지 실패 출력
+
+[33mcommit fb0500a6d932dccacf10a28534a1a2f15cb9701b[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 10:23:21 2022 +0900
+
+    :sparkles: Feat : 로그인 API post
+    
+    axios로 로그인 API를 가져와서 기본적인 로그인만 가능하게 완료  #30
+
+[33mcommit afc2242ae15996394719e38980bf2f0e5b4f4b2e[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Mon Dec 19 02:47:07 2022 +0900
+
+    🔨 Chore : 피드 검색 페이지 연결
+    
+    - HeaderFeed에 useNavigate 적용
+    - Routes에 검색 페이지 연결
+
+[33mcommit f528cb9a62980c55a276fcf6dabef1e35f426a86[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Mon Dec 19 02:44:49 2022 +0900
+
+    🎨 Style : SplashStyle 변경
+    
+    - Animation 키프레임으로 통일
+    - 후레쉬 반복 횟수 4 -> 5로 변경
+
+[33mcommit 7866570a62bede17107e18d8576814695c208f5b[m
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 19 02:02:29 2022 +0900
+
+    📝 Docs : 파일명 변경
+
+[33mcommit b6bd2f9e0f038e5c69998a128dd8d9dc323bd8f9[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 01:57:34 2022 +0900
+
+    :memo: Docs : 파일명 변경
+    
+    formStyle
+
+[33mcommit a501d78ce199029e67264867e6f0a71599cb4026[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Mon Dec 19 01:51:20 2022 +0900
+
+    📝 Docs : Login폴더 내의 formStyle 경로 수정
+    
+    - import 경로에 FormStyle -> formStyle 로 변경
+
+[33mcommit e4ab795970ebdebbfd6930b3784efda7eafdf3fb[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 19 01:40:25 2022 +0900
+
+    :memo: Docs : 파일명 수정
+    
+    대소문자 수정
+
+[33mcommit c6c6b0e1b75e5fd485ff0cbea24c0fc500221ecc[m
+Merge: b778f17 6fb9e37
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 19 00:51:28 2022 +0900
+
+    Merge pull request #25 from TeamGaebaljjang/design
+    
+    Design Complete
+
+[33mcommit 6fb9e370100b63f5a50d81b0c01e76d225e85446[m
+Merge: afe0d73 b778f17
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Mon Dec 19 00:50:44 2022 +0900
+
+    Merge branch 'develop' into design
+
+[33mcommit afe0d734ef8f14465cc9c398d4748f57a051d5c2[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Sun Dec 18 15:49:28 2022 +0900
+
+    :art: 🤔 Test : 라우트 테스트
+    
+    라우팅 몇개 연결해서 테스트 했습니다. 네비게이션 바 두번 클릭해야 색이 변하는 오류가 있습니다.
+
+[33mcommit 83f6f04c6d2d77667ad962b238135f9a4a5af8a6[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Sun Dec 18 14:48:48 2022 +0900
+
+    쉐도우, 백드롭 블러 추가
+    
+    포토존 모달 화면 하단에서 상단으로 애니메이션 추가
+    모달창 위 지역 적는 div에 드롭 쉐도우 추가
+    백드롭 화면에 블러 추가
+    photozone 들어가는 파일명들 모두 z => Z
+
+[33mcommit cb2a896eab02772502d18df9e5c40470ded41348[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Sat Dec 17 10:35:50 2022 +0900
+
+    ♻️  Refactor : Feed 스크롤바 변경
+    
+    -  display: none으로 변경
+
+[33mcommit fb069a2574f6f2ecda1836a6ecfcbe2b526b9538[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Sat Dec 17 01:34:05 2022 +0900
+
+    ♻️  Refactor : UI 개선
+    
+    - 컨텐츠 영역의 height 값을 calc로 계산하여 개선
+
+[33mcommit f79962347d8102efe373c443d41a881a770be47f[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 16 17:53:00 2022 +0900
+
+    :recycle: Refactor : UI 개선(본문 참조)
+    
+    ChatOn 개선, Chatroom x축 스크롤, 탑 잘림 개선,  PostCard 댓글창 스크롤 삭제, Follow 관련 페이지 잘림 현상 개선
+
+[33mcommit 6c67f88ce1430be2b22d21200df39ffb83eaced2[m
+Author: minji.ji <mwinterj@daum.net>
+Date:   Fri Dec 16 17:22:55 2022 +0900
+
+    ♻️  Refactor : 전체 코드 검토
+    
+    전체 코드 검토하고 수정사항 체크하기 - close #24
+
+[33mcommit 8fa70a2d6afbacced4d869a37bfba66880312a19[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Fri Dec 16 14:54:19 2022 +0900
+
+    💄 Design : 프로필 화면 - 포토존 모달 생성
+    
+    기본적인 포토존 모달 화면 생성 후, 포토존 카드 클릭했을 때 포토존 설명이 보이게 함
+    
+    #3
+
+[33mcommit e149bc75910dbf8acfa1911084f6d39c5dd7e85f[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 12:12:59 2022 +0900
+
+    📝 Docs : HomeFeed.jsx 수정
+    
+    - import 이름 수정
+
+[33mcommit 1565ea1e7d7a4c593733b3257eccee4be2032d04[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 02:24:18 2022 +0900
+
+    🔥 Remove : HomeForm.jsx 파일 삭제
+    
+    - Home 컴포넌트화하여 필요없는 파일로 삭제
+
+[33mcommit 747c65bb2350919f249a012cba365648937d3078[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 02:19:05 2022 +0900
+
+    🔨 Chore : Search 컴포넌트화
+    
+    - Search.jsx, SearchDetail.jsx, SearchUser.jsx, searchStyle.jsx 파일로 컴포넌트화
+
+[33mcommit 5fe1d141d9bc7e0ff851ac58ffee4f5a1dbefa8e[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 02:08:16 2022 +0900
+
+    🔨 Chore : Map 컴포넌트화
+    
+    - Map.jsx, MapModal.jsx, mapStyle.jsx 파일로 컴포넌트화
+
+[33mcommit 40025b204409956a9b48edc4b10d08a756dea4c9[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 01:43:28 2022 +0900
+
+    🔨 Chore : postStyle.jsx 파일명 변경
+    
+    - PostStyle.jsx -> postStyle.jsx 로 변경
+
+[33mcommit f509353bd5876682981157c6c6f62dfaef9bd152[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 01:40:05 2022 +0900
+
+    🔨 Chore : Post 컴포넌트화
+    
+    - Post.jsx, PostUserInfo.jsx, PostIcon.jsx, PostContent.jsx, postStyle.jsx 파일로 컴포넌트화
+
+[33mcommit 04766bc9e6643816b27018f100034510a406e645[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 01:10:43 2022 +0900
+
+    📝 Docs : 컴포넌트명 수정
+    
+    - HeaderBSU 에서 HeaderBSM 으로 수정
+
+[33mcommit 076ba00d10de2589f49c562a466870402c0f38c6[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 01:08:13 2022 +0900
+
+    🔨 Chore : navBar 파일 변경
+    
+    - NavItem.jsx 파일 삭제
+    - NavBar.jsx 로 합침
+
+[33mcommit 4d97071589c0158eefcf3731553e0002c50bbc81[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 01:06:17 2022 +0900
+
+    🔨 Chore : Home 컴포넌트화
+    
+    - Home.jsx, HomeCarousel.jsx, HomeFeed.jsx, HomeSpotBtn.jsx, homeStyle.jsx 파일로 컴포넌트화
+
+[33mcommit 8fcd3a6dcd5805fb2f6d150dfcea97687396a5cf[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 16 01:01:51 2022 +0900
+
+    🔨 Chore : Splash 컴포넌트화
+    
+    - Splash.jsx, splashStyle.jsx 파일로 구성
+
+[33mcommit 526d23ff7b9b002db0a3f25952cb725839847d4a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 15 17:36:19 2022 +0900
+
+    :bug: Fix : 포토존 버튼 위치, 채팅방 스크롤, 채팅방 이미지 제출 버튼
+    
+    이미지 제출 버튼도 컴포넌트였으면 좋았을 것 같네요ㅎㅎ #23
+
+[33mcommit 0deb043a05941eb0302efe76741a2539062d0eae[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Thu Dec 15 16:37:38 2022 +0900
+
+    :bug: Fix : Header BackgroundColor : White 추가하였습니다.
+
+[33mcommit fcbca635223a17ab93975de7ed4b9719ef74e246[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Thu Dec 15 16:14:31 2022 +0900
+
+    💄 Design : 로그인, 회원가입, 프로필 설정 및 수정 style 컴포넌트 분리
+    
+    컴포넌트 3단계로 분리했습니다. - close #22
+    
+    #22
+
+[33mcommit 1b72e5b39e0867e3c97d6a92b66d9f39cfb14948[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Thu Dec 15 16:07:26 2022 +0900
+
+    💄 Design : Form 공통 버튼 컴포넌트 분리
+    
+    로그인, 회원가입, 프로필 설정 화면에서 공통으로 사용되는 버튼
+    컴포넌트입니다 - close #21
+    
+    #21
+
+[33mcommit 5bb8bcfd74fa5a9033880a29380ac87ecefe149a[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Thu Dec 15 15:09:21 2022 +0900
+
+    💄 Design : 로딩 화면 애니메이션 구현
+    
+    - 애니메이션 구현 완료
+    
+    Close #1
+
+[33mcommit 59a51e93569588914bee41b0008a3c77971ab613[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Thu Dec 15 09:57:50 2022 +0900
+
+    💄 Design : 로그아웃 모달 버튼 style 구현 close #16
+    
+    게시글 삭제 모달 버튼과 같은 style 적용
+    
+    #16
+
+[33mcommit 7bf36fa014ceb2d08e540ad97b3fe974e9fcd407[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Thu Dec 15 09:51:31 2022 +0900
+
+    💄 Design : 게시글 삭제 모달 버튼 style 구현
+    
+    #16
+
+[33mcommit 679d93951bfc1b6d7e8828d84766f1129b6783a7[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Thu Dec 15 00:59:59 2022 +0900
+
+    💄 Design : 지도 화면 구현
+    
+    - 지도 화면 구현, 모달 구현
+    
+      #18
+
+[33mcommit 733e797e50eb335a912652594b8c233f79931235[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 14 22:59:29 2022 +0900
+
+    :lipstick: Design : Header 컴포넌트 Style 구현 및 각 페이지에 헤더 삽입
+    
+    헤더 컴포넌트를 만들어서 넣어봤습니다. 수정 100% 가능 마음대로 하셔도 됩니다!! #20
+
+[33mcommit 22f0592b8a9bb20444d29bc50298d472bc7f2ec4[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 14 21:35:09 2022 +0900
+
+    :lipstick: Design : 하단 모달 style 구현
+    
+    more버튼 클릭시 나타나는 하단 창 스타일 구현 #19
+
+[33mcommit 62310e26d4f94f27e5d7a674ab2d70c062ba3734[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Wed Dec 14 17:24:14 2022 +0900
+
+    💄 Design : 피드의 검색 화면 구현
+    
+    - 피드의 검색 화면 구현
+    
+    Close #12
+
+[33mcommit 50dacc1c75bc7d9b0bc7735a76f781b4aac81043[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 14 17:15:35 2022 +0900
+
+    :lipstick: Design : 피드Card 디테일 style 구현
+    
+    피드게시물에 들어갔을 시에 나타나는 화면에 대한 스타일링을 진행하였습니다. #17
+
+[33mcommit 2e7362ec790a9ff205cf48d9eaf84fb90f404446[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 14 16:56:01 2022 +0900
+
+    💄 Design : 회원가입 페이지 style 구현
+    
+    Form style 컴포넌트로  로그인, 회원가입, 프로필 설정, 프로필 수정 페이지에 적용했습니다.
+    
+    #11
+
+[33mcommit 7e062b8ee1d1a8e41f1ebb4a2cf49ff9942ccae5[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 14 16:45:05 2022 +0900
+
+    💄 Design : Form 겹치는 style 컴포넌트 생성
+    
+    로그인, 회원가입, 프로필 설정, 수정 페이지에 겹치는 style 컴포넌트로
+    분리했습니다.
+    
+    #15
+
+[33mcommit 231b4070de0ebccc451ce53df9b5c4ac087dcbe8[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Wed Dec 14 14:38:06 2022 +0900
+
+    💄 Design : 피드의  검색 초기 화면 구현
+    
+    - 피드 화면의 검색 초기 화면 구현
+    - components/header 에 FeedHeader.jsx, SearchHeader.jsx 파일 추가하여 피드 상단바 컴포넌트화
+    
+     #12
+
+[33mcommit 27ec31166280f89ef2fdd45f1c6afb89c6438a1e[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 14 14:20:53 2022 +0900
+
+    💄 Design : 프로필 수정 화면 style 구현
+    
+    기능 구현 시 유저가 프로필 설정에서 입력한 값으로 띄우기, validation
+    구현 예정
+    
+    #10
+
+[33mcommit 2fdc13c86e99c6ebf53873167a66fa534f4141c4[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 14 13:58:25 2022 +0900
+
+    💄 Design : 프로필 설정 화면 style 구현
+    
+    상단 뒤로가기 버튼있는 헤더 바 추가
+    
+    #10
+
+[33mcommit 4fc135594590bee9bb2e20d83a9e6395a9df6a81[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 14 13:53:20 2022 +0900
+
+    💄 Design : 상단 바 컴포넌트 style 구현
+    
+    뒤로가기 버튼만 있는 상단 바 구현했습니다.
+    
+    #14
+
+[33mcommit 58f1ae81ca311c56634dea7e2f6c34ad13afc0e8[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Wed Dec 14 11:16:41 2022 +0900
+
+    프로필 화면에 피드 화면 앨범형, 리스트형 화면 추가했습니다.
+
+[33mcommit cc1a0bdbd11b4a9be073356ff7725a07e0e4e369[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 14 11:06:24 2022 +0900
+
+    :lipstick: Design : 피드 게시하기 Style 구현
+    
+    피드 게시하는 페이지 스타일을 구현하였습니다. text-area가 살짝 말썽이었지만 해결완료! #13
+
+[33mcommit fc6c737cb4d540582070f7bccc766694a616e959[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Wed Dec 14 10:35:27 2022 +0900
+
+    💄 Design : 프로필 설정 화면 style 구현
+    
+    상단 뒤로가기 바 추후 적용 예정
+    
+    #10
+
+[33mcommit 0b08ef566dffe54d288c152a12615d05c01e30e3[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Wed Dec 14 02:59:30 2022 +0900
+
+    💄 Design : 피드 화면 more 버튼 추가
+    
+    - 피드 화면 프로필 오른쪽 more 버튼 추가
+
+[33mcommit 3d4c163dae68cf7832b82ed4389a98cd2a99ec42[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Wed Dec 14 00:21:13 2022 +0900
+
+    💄 Design : 프로필 화면 - 게시글 없는 상태, 네비바 추가
+    
+    게시글 없을 때 상태 화면 생성, 네비바 import.
+
+[33mcommit 204fbd49711858ac7a6340bdb6a15ae18637e508[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 13 23:30:19 2022 +0900
+
+    💄 Design : 메인 화면 네비바 추가
+    
+    - 하단 네비바 추가하여 적용
+    
+    Close #7
+
+[33mcommit d45e941320eeec4f7c2b3a4e11e16a38fd4b3fbf[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 13 22:48:25 2022 +0900
+
+    💄 Design : 피드 화면 구현
+    
+    - 피드 화면 레이아웃 구현
+    - 피드 화면의 검색 레이아웃 진행중
+    
+    - #12
+
+[33mcommit 1df1058663375da8a791196a140635bee673ae46[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 13 21:57:04 2022 +0900
+
+    :lipstick: Style : PhotoZone 게시하기 Page 구현중
+    
+    포토존 게시하기 페이지 구현중입니다. 추가해야될 사항으로는 헤더가 생기면 저장버튼이랑 연동하기, 이미지삽입 버튼 색상 변환 , 설명 input 줄바꿈 가능하게 수정입니다.  #9
+
+[33mcommit 95eee89e2f4c0d0120c820fc795e87eb20e6af3a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 13 16:30:41 2022 +0900
+
+    :lipstick: Style : 네비게이션 바 스타일 & 라우터 테스트
+    
+    네비게이션 바 스타일과 라우터 연동 테스트 하였습니다. 추후 보강합시다!! #5
+
+[33mcommit b3398dbf30e3b4dc89b4feb5f47b6ac98ed20a3a[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 13 15:44:54 2022 +0900
+
+    💄 Design : 메인 페이지 구현
+    
+    - 메인 페이지 스타일 구현
+    - 하단의 네비바는 추후 적용 예정
+    
+    - #7
+
+[33mcommit 17ae57809e08193ce95aa72df5b1804b6588cb05[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Tue Dec 13 15:15:14 2022 +0900
+
+    💄 Design : 하단 네비게이션 바 style 구현
+    
+    Hover 기능 구현중
+    
+    #5
+
+[33mcommit 9c4407045d8f478cc36554251ac6de573c6d30dd[m
+Author: jjangi <tesla2030@naver.com>
+Date:   Tue Dec 13 13:46:53 2022 +0900
+
+    💄 Design : 개인 프로필 화면(피드 아이콘까지)
+    
+    개인 프로필 이미지, 팔로우, 포토존 등록 버튼, 포토존 가로 스크롤, 피드
+    네비바까지 구현
+
+[33mcommit e3e60886f05430bad2628891ddf3158ae12b6894[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 13 11:18:54 2022 +0900
+
+    :lipstick: Design : BtnAddPic버튼
+    
+    사진을 추가하는 버튼을 컴포넌트에 추가하였습니다.
+
+[33mcommit c00a1c9171237621c2826e7f79c65f345fc5e76c[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 13 10:52:31 2022 +0900
+
+    :lipstick: Design : 팔로잉, 팔로워 페이지 구현
+    
+    팔로잉 팔로워 페이지 디자인 완료하였습니다. #8
+
+[33mcommit e8f2f1b1fb5caa9071d46450faf95aca2ca0acbe[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 13 01:11:15 2022 +0900
+
+    💄 Design : 404 에러 페이지 구현
+    
+    - 404 에러 페이지 구현 완료
+    - 홈으로 버튼 링크는 기능 구현때 적용
+    
+    Close #6
+
+[33mcommit 4b343c7e27b10085f70e668e106d5f4a84fbd95e[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Tue Dec 13 00:28:16 2022 +0900
+
+    💄 Design : Splash 페이지 구현 진행중
+    
+    카메라로고  후레쉬 애니메이션 효과까지 적용
+
+[33mcommit 4722637bebfa037433dd91ebbef76b0b2f4cd2b4[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Tue Dec 13 00:07:51 2022 +0900
+
+    :lipstick: Design : 채팅방 리스트, 채팅방 style 구현
+    
+    채팅방 리스트와, 채팅방의 기본적인 스타일을 구현하였습니다. #4
+
+[33mcommit 1901da2bb11ff82b35294d903c64ebfecb7e8d6f[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Mon Dec 12 23:40:55 2022 +0900
+
+    💄 Design : 로그인 페이지 style 구현
+    
+    styled-component로 기본 레이아웃 구현
+    
+    #2
+
+[33mcommit 53e9baa460aa83ce726e5cfbb78f51d529d5ef56[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Mon Dec 12 16:40:56 2022 +0900
+
+    🎨 Style : logo svg 파일 추가
+    
+    - assets/icons 폴더에 logo svg 파일 추가
+
+[33mcommit ada5f2a4fcf8470b2937d28593f74652e96c5b4f[m
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Mon Dec 12 15:49:48 2022 +0900
+
+    🔨 Chore : 이슈 템플릿 생성
+
+[33mcommit 744f4f7384193e0e0572caef7f7e140bf1e8fdaa[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Mon Dec 12 15:39:12 2022 +0900
+
+    🎨 Style : icon 에셋 추가
+
+[33mcommit 2b8243fd422d1c521858b8f85cfe4bdbb0faca5d[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 12 15:31:55 2022 +0900
+
+    :lipstick: Style : reset 속성 추가
+
+[33mcommit 08e3167bc53aeff63374099d22cba3ae3efd6511[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 12 15:24:15 2022 +0900
+
+    :hammer: Chore : assets 폴더 추가
+
+[33mcommit 9e2a5f0627ca61fe403441a0cc2fbb67d773ab4f[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Mon Dec 12 15:06:16 2022 +0900
+
+    💄 Design : globalStyles 설정
+    
+    기본 레이아웃 설정
+
+[33mcommit 985e6d32e5b55ff5f1f87517cb5ee42713c733c8[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Mon Dec 12 14:20:47 2022 +0900
+
+    🤔 Test : design 브랜치 적용 확인
+
+[33mcommit 68605aa4aa0513745e099dc45ebab1e6c00b4804[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Mon Dec 12 14:11:43 2022 +0900
+
+    🎨 Style : design 브랜치 생성
+    
+    - design 브랜치 생성
+    - globalStyles.jsx 세미콜론 누락 수정
+
+[33mcommit b778f170afb193eea2f1978fee693462bcabaeac[m
+Author: minji.jo <mwinterj@daum.net>
+Date:   Mon Dec 12 14:07:00 2022 +0900
+
+    🤔 Test : 커밋 컨벤션 적용 테스트
+
+[33mcommit e7e66bfc040737ffd15552ec65dc8fe0adb8f9c9[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 12 13:49:21 2022 +0900
+
+    :lipstick: Design : color변수 설정
+    
+    컬러 변수 설정하였습니다.
+
+[33mcommit 1dec878a4a66f9c487527dd82a5a74457f4f8545[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Mon Dec 12 11:34:33 2022 +0900
+
+    :lipstick: Design : styled-reset, ir 추가
+    
+    styled-reset과 ir을 추가하였습니다.
+
+[33mcommit a94154a6088f819253c4aa56e8cffd878709067a[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Sun Dec 11 20:39:15 2022 +0900
+
+    🤔Test : store 예시
+
+[33mcommit 97f4483950cf8bc70a72c654d585606374c9176c[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Sun Dec 11 20:30:46 2022 +0900
+
+    :hammer: Chore : 프로젝트 설정ing(본문참조)
+    
+    eslint에서 state 사용시 매개변수재할당 오류 발생 제거, react-router-dom 설치, index.jsx 설정
+
+[33mcommit 95168b6da156dbcff2e0da4135d6f75a89f6b094[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Sun Dec 11 19:21:33 2022 +0900
+
+    :hammer: Chore : redux, axios, styled-components 관련 패키지 설치
+    
+    react-redux, @reduxjs/toolkit, styled-components, axios를 설치하였습니다.
+
+[33mcommit 2262729064a174376e808256bba08b68a801bdd7[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 9 15:00:54 2022 +0900
+
+    :hammer: Chore : components, pages 생성
+    
+    develop 브랜치에 컴포넌트와 페이지 폴더를 생성하였습니다. 앞으로의 작업은 develop 브랜치를 통해서 진행할 것이며, 폴더명 또는 구조는 필요에 의해 추가 및 수정하셔도 됩니다.
+
+[33mcommit b2e3d1f64436b062674f683741cd45af6bd8afb4[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: minji.ji <mwinterj@daum.net>
+Date:   Fri Dec 9 14:46:32 2022 +0900
+
+    🔨 Chore : PR 템플릿 생성
+
+[33mcommit d78f885af9b77ee0b53df327047e3a04ec125cfb[m
+Author: isol.bae <65801741+jjangi@users.noreply.github.com>
+Date:   Fri Dec 9 14:44:30 2022 +0900
+
+    🔨 Chore : 이슈 템플릿 생성
+
+[33mcommit 6cfc1172e8b0690d45bdd67db143e6d0d9d9b763[m
+Author: minji.ji <mwinterj@daum.net>
+Date:   Fri Dec 9 14:31:15 2022 +0900
+
+    🤔 Test : 커밋 템플릿 테스트
+    
+    테스트입니다.
+
+[33mcommit 668bfd12956d649c82e93f2983bf237199f01269[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 9 13:37:02 2022 +0900
+
+    📝 Docs : 커밋 템플릿 수정
+    
+    커밋 템플릿 들여쓰기 수정
+
+[33mcommit 8a5012e70831a7b08c8a6793daafbf48e8d814f4[m
+Author: Heesu <heesu0303@naver.com>
+Date:   Fri Dec 9 12:55:15 2022 +0900
+
+    🔨 Chore : 커밋 템플릿 생성
+    
+    - .gitmessage.txt 파일 생성
+    - 커밋 컨벤션 적용하여 작성
+
+[33mcommit a16fc7b85db2fb47f9984c7329325681e6844234[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Fri Dec 9 10:17:52 2022 +0900
+
+    :hammer: Chore : 초기 세팅 진행
+    
+    폴더트리를 크게 나누었습니다. 프로젝트를 진행하면서 지속적으로 수정예정입니다.
+
+[33mcommit de88f126353b927f51bfff95f22b50f389c0b837[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 7 23:20:32 2022 +0900
+
+    :hammer: Chore : .eslintrc.js 추가
+    
+    ESLint 설정을 위한 파일을 추가하였습니다. 작업을 진행하며 rules를 지속적인 수정 예정입니다.
+
+[33mcommit d30a49efacb83e720e6dd003236054c991942894[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 7 22:26:30 2022 +0900
+
+    :hammer: Chore : .prettierrc 추가
+    
+    Prettier 세팅파일 .prettierrc 파일을 추가하였습니다. 회의를 통해 추후 수정될 수 있습니다.
+
+[33mcommit fe8498e9ad69136e4a2dc514d856fdf6eee310ec[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 7 20:18:16 2022 +0900
+
+    :hammer: Chore : prettier, eslint(airbnb) 관련 패키지 추가
+    
+    ESLint(airbnb), Prettier 기본 설정에 필요한 패키지를 설치하였습니다.
+
+[33mcommit c87823aa193930fdba6b072981543b503f392a04[m
+Author: Doyoung.Kim <dyflower@nate.com>
+Date:   Wed Dec 7 20:05:12 2022 +0900
+
+    :tada: Initialize project
+    
+    프로젝트 시작!
+
+[33mcommit 7f07d756eea4c620bf819f294dff511e5430cdb6[m
+Author: Doyoung.Kim <112444362+dyFlower@users.noreply.github.com>
+Date:   Wed Dec 7 17:33:35 2022 +0900
+
+    Initial commit

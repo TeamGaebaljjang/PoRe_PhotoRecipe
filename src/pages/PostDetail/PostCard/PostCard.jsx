@@ -5,6 +5,7 @@ import Post from '../../../components/card/Post';
 import { CardWrap } from './postCardStyle';
 import HeaderB from '../../../components/header/HeaderB';
 import CommentWrapper from '../../../components/comment/CommentWrapper';
+import { Wrap } from '../../../components/card/postStyle';
 
 const PostCard = () => {
   const location = useLocation();
@@ -34,13 +35,13 @@ const PostCard = () => {
   useEffect(() => getPostDetail, []);
 
   return (
-    <>
+    <Wrap className="no-Navbar">
       <HeaderB />
       <CardWrap>
         {posts && <Post posts={posts} />}
         <CommentWrapper posts={posts} postDetailId={postDetailId} />
       </CardWrap>
-    </>
+    </Wrap>
   );
 };
 

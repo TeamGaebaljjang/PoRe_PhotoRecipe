@@ -10,17 +10,20 @@ const ConfirmModal = styled.article`
   background-color: white;
   box-shadow: 0 0 10px var(--deep-gray);
   z-index: 20;
-
   h3 {
     font-size: 16px;
     padding: 22px 20px;
     border-bottom: 0.5px solid var(--gray);
   }
-
   span {
     display: block;
     margin-top: 10px;
     font-size: 14px;
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      left: calc((100vw - 126px) / 2);
+    }
   }
 `;
 
