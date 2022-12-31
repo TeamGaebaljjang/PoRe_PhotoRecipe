@@ -6,7 +6,7 @@ const ModalWrapper = ({ modals, input }) => {
     <ModalWrap>
       {modals &&
         modals.map((v) =>
-          v?.itemName === input ? <MapModal v={v} key={v.id} /> : null,
+          v?.itemName.includes(input) ? <MapModal v={v} key={v.id} /> : null,
         )}
     </ModalWrap>
   );
