@@ -130,7 +130,7 @@ const KakaoMap = ({ text }) => {
   }, [text]);
 
   return (
-    <div id="map" style={{ width: '390px', height: '100%', zIndex: '0' }} />
+    <div id="map" style={{ width: '100%', height: '100%', zIndex: '0' }} />
   );
 };
 

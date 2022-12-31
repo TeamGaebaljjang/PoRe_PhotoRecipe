@@ -6,6 +6,12 @@ export const Wrap = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin-left: 126px;
+      height: 100vh;
+    }
+  }
 `;
 
 export const MapCont = styled.div`
@@ -13,6 +19,12 @@ export const MapCont = styled.div`
   width: 390px;
   height: calc(100vh - 108px);
   overflow: hidden;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
 `;
 
 export const ModalWrap = styled.article`
