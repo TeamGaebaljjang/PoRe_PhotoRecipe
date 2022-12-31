@@ -2,13 +2,13 @@ import { HeaderContainer, SearchInp } from './headerStyle';
 
 const HeaderBSM = ({ text, onChange }) => {
   return (
-    <HeaderContainer>
+    <HeaderContainer style={{ justifyContent: 'center' }}>
       <SearchInp
         type="text"
-        placeholder="지역 검색"
+        className="map-searchBar"
+        placeholder="지역을 검색해보세요!"
         value={text}
         onChange={onChange}
-        style={{ width: '350px' }}
       />
     </HeaderContainer>
   );

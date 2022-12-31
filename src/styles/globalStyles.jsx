@@ -91,7 +91,13 @@ body {
     overflow: hidden;
 }
 
-@media all and (min-width: 768px) {
+/* @media all and (min-width: 720px) and (max-width: 940px) {
+  html {
+    width: 100vw;
+  }
+} */
+
+@media all and (min-width: 720px) {
   html {
     width: 100vw;
   }

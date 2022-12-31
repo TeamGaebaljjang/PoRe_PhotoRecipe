@@ -1,16 +1,21 @@
 import { useNavigate } from 'react-router-dom';
-import { BtnWrapper, HeaderContainer, SearchBtn, Title } from './headerStyle';
+import {
+  BtnWrapper,
+  HeaderFeedContainer,
+  SearchBtn,
+  Title,
+} from './headerStyle';
 
 const HeaderFeed = () => {
   const navigate = useNavigate();
 
   return (
-    <HeaderContainer>
+    <HeaderFeedContainer>
       <Title>포레 피드</Title>
       <BtnWrapper>
         <SearchBtn onClick={() => navigate('/feed/search')} />
       </BtnWrapper>
-    </HeaderContainer>
+    </HeaderFeedContainer>
   );
 };
 

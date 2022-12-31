@@ -7,28 +7,66 @@ import editIcon from '../../assets/icons/icon-edit-post.svg';
 export const HeaderContainer = styled.article`
   height: 48px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: relative;
-  border-bottom: 1px solid var(--light-gray);
+  box-shadow: 0 4px 7px -4px var(--gray);
   background-color: white;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      height: 60px;
+    }
+  }
 `;
-export const HeaderProfileContainer = styled.article`
+
+export const HeaderFeedContainer = styled.article`
   height: 48px;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 7px -4px var(--gray);
+  background-color: white;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      height: 60px;
+    }
+  }
+`;
+
+export const HeaderProfileContainer = styled.article`
+  height: 48px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   position: relative;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      height: 60px;
+      margin-top: 10px;
+    }
+  }
 `;
 
 export const BtnWrapper = styled.div`
-  position: absolute;
-  right: 0;
-  top: 0;
+  display: flex;
+  height: 100%;
 `;
 
 export const Title = styled.h1`
   font-size: 18px;
   font-weight: 600px;
   margin-left: 20px;
+  flex-grow: 1;
+  font-weight: 700;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      font-size: 20px;
+      margin-left: initial;
+      text-align: center;
+    }
+  }
 `;
 
 export const SearchBtn = styled.button`
@@ -36,6 +74,12 @@ export const SearchBtn = styled.button`
   height: 48px;
   background: no-repeat center;
   background-image: url(${searchIcon});
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 60px;
+      height: 60px;
+    }
+  }
 `;
 
 export const MoreBtn = styled.button`
@@ -43,6 +87,12 @@ export const MoreBtn = styled.button`
   height: 48px;
   background: no-repeat center;
   background-image: url(${moreIcon});
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 60px;
+      height: 60px;
+    }
+  }
 `;
 
 export const BackBtn = styled.button`
@@ -51,6 +101,13 @@ export const BackBtn = styled.button`
   background: no-repeat center;
   background-image: url(${backIcon});
   margin-right: -15px;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 60px;
+      height: 60px;
+      margin-left: 20px;
+    }
+  }
 `;
 
 export const UploadPostBtn = styled.button`
@@ -58,18 +115,51 @@ export const UploadPostBtn = styled.button`
   height: 48px;
   background: no-repeat center;
   background-image: url(${editIcon});
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 60px;
+      height: 60px;
+    }
+  }
 `;
 
 export const SearchInp = styled.input`
-  width: 310px;
+  width: 80px;
   height: 32px;
-  margin-left: 20px;
+  margin: 0 20px;
+  text-indent: 16px;
   background-color: var(--light-gray);
   border-radius: 32px;
-  text-indent: 16px;
-
+  transition: 0.6s;
   &::placeholder {
     color: var(--deep-gray);
     text-indent: 16px;
+  }
+  &:hover {
+    width: 310px;
+  }
+  &:focus {
+    width: 310px;
+    border: 1.5px solid var(--gray);
+  }
+  &.map-searchBar {
+    width: 144px;
+    transition: 0.8s;
+  }
+  &.map-searchBar:hover {
+    width: 350px;
+    @media all and (min-width: 720px) and (max-width: 940px) {
+      & {
+        width: calc(100% - 120px);
+      }
+    }
+  }
+  &.map-searchBar:focus {
+    width: 350px;
+    @media all and (min-width: 720px) and (max-width: 940px) {
+      & {
+        width: calc(100% - 120px);
+      }
+    }
   }
 `;

@@ -20,7 +20,7 @@ const DeleteEditUnder = ({ props }) => {
         <PZDeleteModal deleteHandler={deleteHandler} props={props} />
       ) : null}
 
-      <UnderModalWrap style={{ marginLeft: '-26px' }}>
+      <UnderModalWrap className="pz-under-modal">
         <UnderModalCloseBtn />
         <UnderModalCont>
           <button

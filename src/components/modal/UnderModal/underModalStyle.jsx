@@ -21,19 +21,47 @@ export const UnderModalWrap = styled.ul`
       bottom: 0px;
     }
   }
+  &.pz-under-modal {
+    margin-left: -26px;
+  }
+  &.fd-under-modal {
+    margin-left: -20px;
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      position: fixed;
+      width: calc(100vw - 126px);
+      margin-left: 126px;
+      margin-bottom: 0;
+      left: 0;
+    }
+    &.pz-under-modal {
+      margin-left: 126px;
+    }
+    &.fd-under-modal {
+      margin-left: 126px;
+    }
+  }
 `;
 export const UnderModalCloseBtn = styled.button`
   width: 340px;
   height: 20px;
   border-radius: 10px 10px 0 0;
+  margin: 0 auto;
   &::after {
-    display: flex;
     content: '';
+    display: block;
     border-radius: 5px;
     margin: 0 auto;
     background-color: var(--gray);
     width: 50px;
     height: 4px;
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 100%;
+      padding-bottom: 10px;
+    }
   }
 `;
 export const UnderModalCont = styled.li`
@@ -41,6 +69,11 @@ export const UnderModalCont = styled.li`
   line-height: 55px;
   color: black;
   cursor: pointer;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      text-align: center;
+    }
+  }
 `;
 
 export const CommentModalWrap = styled.ul`
@@ -61,6 +94,23 @@ export const CommentModalWrap = styled.ul`
     }
     100% {
       bottom: 0px;
+    }
+  }
+  &.comment-modal {
+    margin-left: -20px;
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      position: fixed;
+      /* width: calc(100vw - 126px); */
+      width: 100vw;
+      margin-bottom: 0;
+      /* margin-left: 126px; */
+      left: 0;
+    }
+    &.comment-modal {
+      margin-left: 0;
+      width: 100vw;
     }
   }
 `;

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, WhoseFeed, UserIdTitle } from './feedbarStyle';
+import { Container, WhoseFeed, UserIdTitle, BtnWrap } from './feedbarStyle';
 
 import AlbumOn from '../../assets/icons/icon-post-album-on.svg';
 import AlbumOff from '../../assets/icons/icon-post-album-off.svg';
@@ -15,9 +15,9 @@ const FeedBar = ({ viewHandler, accountname }) => {
   return (
     <Container>
       <WhoseFeed>
-        <UserIdTitle>@ {accountname}</UserIdTitle>
+        @ <UserIdTitle>{accountname}</UserIdTitle>
       </WhoseFeed>
-      <div>
+      <BtnWrap>
         <button
           type="button"
           onClick={() => {
@@ -36,7 +36,7 @@ const FeedBar = ({ viewHandler, accountname }) => {
         >
           <img src={click ? ListOn : ListOff} alt="리스트형으로 보기 아이콘" />
         </button>
-      </div>
+      </BtnWrap>
     </Container>
   );
 };
