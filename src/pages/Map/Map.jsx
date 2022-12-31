@@ -8,20 +8,15 @@ import NavBar from '../../components/navBar/NavBar';
 
 const Map = () => {
   const [text, setText] = useState('');
+  const [input, setInput] = useState('');
 
-  let timer;
   const onChange = (e) => {
-    const search = e.target.value;
-    if (timer) {
-      clearTimeout(timer);
+    setText(e.target.value);
+  };
+  const onKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      setInput(text);
     }
-    timer = setTimeout(() => {
-      if (search) {
-        setText(search);
-      } else {
-        setText('');
-      }
-    }, 200);
   };
 
   //   mandarin API*
@@ -48,10 +43,10 @@ const Map = () => {
 
   return (
     <Wrap>
-      <HeaderBSM text={text} onChange={onChange} />
+      <HeaderBSM text={text} onChange={onChange} onKeyPress={onKeyPress} />
       <MapCont>
-        <KakaoMap text={text} />
-        <ModalWrapper text={text} modals={modals} />
+        <KakaoMap input={input} />
+        <ModalWrapper input={input} modals={modals} />
       </MapCont>
       <NavBar />
     </Wrap>
