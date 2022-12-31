@@ -119,8 +119,8 @@ export const SpotTab = styled.div`
   position: sticky;
   display: flex;
   top: 0;
-  gap: 20px;
-  padding: 20px;
+  gap: 18px;
+  padding: 18px 20px;
   background-color: white;
   box-shadow: 0 4px 7px -4px var(--gray);
   overflow: auto;

@@ -1,4 +1,4 @@
-import { useInView } from 'react-intersection-observer';
+// import { useInView } from 'react-intersection-observer';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
@@ -6,23 +6,27 @@ import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
 import defaultImg from '../../assets/icons/basic-post-default.svg';
 
 const HomeFeed = () => {
+  const navigate = useNavigate();
   const [btnActive, setBtnActive] = useState('');
   const [name, setName] = useState('');
   const [btnOn, setBtnOn] = useState(false);
-  const navigate = useNavigate();
+  const [btnAll, setBtnAll] = useState(true);
   const [feedPost, setFeedPost] = useState([]);
-  const [numFeed, setNumFeed] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [ref, inView] = useInView();
-  const [done, setDone] = useState(false);
+
+  // 무한 스크롤
+  // const [numFeed, setNumFeed] = useState(0);
+  // const [loading, setLoading] = useState(false);
+  // const [ref, inView] = useInView();
+  // const [done, setDone] = useState(false);
+
   const URL = 'https://mandarin.api.weniv.co.kr';
 
   const getFeed = useCallback(async () => {
-    setLoading(true);
+    // setLoading(true);
     try {
       const token = localStorage.getItem('token');
       // const accountRegex = /^[0-9a-zA-Z]([_\\.]?[0-9a-zA-Z])*_pore/gim;
-      const res = await axios.get(`${URL}/product/?limit=10&skip=${numFeed}`, {
+      const res = await axios.get(`${URL}/product/PoRe_Home/?limit=infinite`, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-type': 'application/json',
@@ -30,29 +34,27 @@ const HomeFeed = () => {
       });
       if (res) {
         setFeedPost(feedPost.concat(res.data.product));
-        setLoading(false);
+        // setLoading(false);
         if (res.data.product.length < 10) {
-          setDone(true);
+          // setDone(true);
         }
       }
-      // console.log(res.data.product);
-      // console.log(feedPost);
     } catch (error) {
       console.log(error.res);
     }
-  }, [numFeed]);
+  });
 
   useEffect(() => {
-    if (!done) {
-      getFeed();
-    }
-  }, [getFeed]);
+    // if (!done) {
+    getFeed();
+    // }
+  }, []);
 
-  useEffect(() => {
-    if (inView && !loading) {
-      setNumFeed((current) => current + 10);
-    }
-  }, [inView, loading]);
+  // useEffect(() => {
+  //   if (inView && !loading) {
+  //     setNumFeed((current) => current + 10);
+  //   }
+  // }, [inView, loading]);
 
   // 포토존 이미지 클릭시 상세 페이지로 이동
   const handleDetailPost = ({ item }) => {
@@ -91,6 +93,15 @@ const HomeFeed = () => {
   return (
     <>
       <SpotTab>
+        <SpotBtn
+          className={btnAll ? 'active' : ''}
+          onClick={() => {
+            setBtnAll(true);
+            setBtnActive('');
+          }}
+        >
+          전체
+        </SpotBtn>
         {placeFilter.map((item) => (
           <SpotBtn
             key={crypto.randomUUID()}
@@ -98,6 +109,7 @@ const HomeFeed = () => {
             className={item === btnActive ? 'active' : ''}
             onClick={(e) => {
               setName(item);
+              setBtnAll(false);
               handlePlace(e, { item });
               setBtnOn(true);
             }}
@@ -108,7 +120,7 @@ const HomeFeed = () => {
       </SpotTab>
 
       <FeedList>
-        {btnOn
+        {btnOn && !btnAll
           ? feedPost
               .filter((item) => item.itemName === name)
               .map((item) => (
@@ -121,21 +133,20 @@ const HomeFeed = () => {
                   />
                 </Feed>
               ))
-          : feedPost.map((item, i) =>
-              feedPost.length - 1 === i ? (
-                <div ref={ref} />
-              ) : (
-                <Feed key={crypto.randomUUID()}>
-                  <FeedImg
-                    key={item.id}
-                    src={item.itemImage}
-                    alt=""
-                    onClick={() => handleDetailPost({ item })}
-                    onError={onErrorImg}
-                  />
-                </Feed>
-              ),
-            )}
+          : feedPost.map((item) => (
+              // feedPost.length - 1 === i ? (
+              //   <div ref={ref} />
+              // ) :
+              <Feed key={crypto.randomUUID()}>
+                <FeedImg
+                  key={item.id}
+                  src={item.itemImage}
+                  alt=""
+                  onClick={() => handleDetailPost({ item })}
+                  onError={onErrorImg}
+                />
+              </Feed>
+            ))}
       </FeedList>
     </>
   );

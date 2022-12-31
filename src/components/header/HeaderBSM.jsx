@@ -1,6 +1,6 @@
 import { HeaderContainer, SearchInp } from './headerStyle';
 
-const HeaderBSM = ({ text, onChange }) => {
+const HeaderBSM = ({ text, onChange, onKeyPress }) => {
   return (
     <HeaderContainer style={{ justifyContent: 'center' }}>
       <SearchInp
@@ -9,6 +9,7 @@ const HeaderBSM = ({ text, onChange }) => {
         placeholder="지역을 검색해보세요!"
         value={text}
         onChange={onChange}
+        onKeyPress={onKeyPress}
       />
     </HeaderContainer>
   );

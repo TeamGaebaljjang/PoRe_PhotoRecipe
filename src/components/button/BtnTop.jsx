@@ -7,10 +7,12 @@ const BtnTop = ({ parent }) => {
     position: fixed;
     bottom: 70px;
     left: calc(50% + 140px);
-    width: 38px;
-    height: 38px;
+    width: 50px;
+    height: 50px;
     background-position: center;
+    background-repeat: no-repeat;
     background-image: url(${iconTopDefault});
+
     :hover {
       background-image: url(${iconTopHover});
     }
