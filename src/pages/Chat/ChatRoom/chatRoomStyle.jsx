@@ -1,14 +1,20 @@
 import styled, { css } from 'styled-components';
 import addPic from '../../../assets/icons/icon-photo-upload-white.svg';
 
-export const ChatWrap = styled.div`
+export const Wrap = styled.div`
   width: 100%;
-  height: 100%;
-  padding-top: 108px;
-  position: absolute;
-  bottom: 60px;
+  height: calc(100vh - 108px);
+  background-color: var(--light-gray);
   overflow: auto;
-  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+export const ChatWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 `;
 export const ChatBallon = styled.div`
   margin: 10px;
@@ -27,7 +33,8 @@ export const Chatting = styled.p`
   padding: 10px;
   word-wrap: break-word;
   background-color: white;
-  border: 1px solid var(--deep-gray);
+  box-shadow: 1px 2px 5px -2px var(--deep-gray);
+  /* border: 1px solid var(--deep-gray); */
   border-radius: 0 10px 10px 10px;
   max-width: 250px;
   font-size: 14px;
@@ -62,8 +69,14 @@ export const ChatInputWrap = styled.div`
   justify-content: space-between;
   bottom: 0;
   background-color: white;
+  box-shadow: 0 -4px 7px -4px var(--gray);
   width: 390px;
   height: 60px;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 100%;
+    }
+  }
 `;
 
 export const InputChat = styled.input``;
