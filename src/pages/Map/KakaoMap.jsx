@@ -3,7 +3,7 @@ import iconMarker from '../../assets/icons/icon-marker.svg';
 
 const { kakao } = window;
 
-const KakaoMap = ({ text }) => {
+const KakaoMap = ({ input }) => {
   // 초기 지도 생성
   const [kmap, setKmap] = useState(null);
   useEffect(() => {
@@ -38,14 +38,13 @@ const KakaoMap = ({ text }) => {
       if (kmap) {
         // 키워드 검색
         const ps = new kakao.maps.services.Places();
-        console.log(text);
         const placeSearchCB = (data, status) => {
           if (status === kakao.maps.services.Status.OK) {
             const coords = new kakao.maps.LatLng(data[0].y, data[0].x);
             kmap.setCenter(coords);
           }
         };
-        ps.keywordSearch(`${text}`, placeSearchCB);
+        ps.keywordSearch(`${input}`, placeSearchCB);
 
         // 포토존 위치와 title 객체 배열
         const positions = [
@@ -127,7 +126,7 @@ const KakaoMap = ({ text }) => {
     } catch (error) {
       console.log(error);
     }
-  }, [text]);
+  }, [input]);
 
   return (
     <div id="map" style={{ width: '390px', height: '100%', zIndex: '0' }} />
