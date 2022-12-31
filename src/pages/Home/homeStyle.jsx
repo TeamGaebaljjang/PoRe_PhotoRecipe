@@ -18,6 +18,12 @@ export const Wrap = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin-left: 126px;
+      height: 100vh;
+    }
+  }
 `;
 
 export const Carousel = styled.article`
@@ -43,9 +49,13 @@ export const ThumbnailWrap = styled.div`
   height: 380px;
   overflow: hidden;
   border-radius: 0 0 30px 30px;
-
   &.active {
     animation: ${ani} 4s 1s ease-in-out;
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 614px;
+    }
   }
 `;
 
@@ -72,7 +82,6 @@ export const MoveBtn = styled.button`
   height: 50px;
   top: 160px;
   opacity: 0.8;
-
   &.left {
     background: url(${leftBtn}) no-repeat center;
     left: 0;
@@ -98,11 +107,9 @@ export const PageIcon = styled.div`
   border-radius: 4px;
   cursor: pointer;
   transition: ease-in 0.4s;
-
   &.icon {
     opacity: 0.4;
   }
-
   &.icon.active {
     opacity: 0.8;
   }
@@ -119,9 +126,13 @@ export const SpotTab = styled.div`
   overflow: auto;
   white-space: nowrap;
   z-index: 10;
-
   &::-webkit-scrollbar {
     display: none;
+  }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      padding: 20px 30px;
+    }
   }
 `;
 
@@ -133,7 +144,6 @@ export const SpotBtn = styled.button`
   color: var(--super-gray);
   font-size: 1rem;
   background-color: white;
-
   &.active {
     background-color: var(--black);
     border-color: var(--black);
@@ -146,6 +156,12 @@ export const FeedList = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin: 20px;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 30px;
+    }
+  }
 `;
 
 export const Feed = styled.li`
@@ -155,6 +171,12 @@ export const Feed = styled.li`
   border: 1px solid var(--gray);
   border-radius: 10px;
   overflow: auto;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
 `;
 
 export const FeedImg = styled.img`

@@ -12,6 +12,7 @@ export const CardWrap = styled.div`
 
 export const Comments = styled.div`
   border-top: 1px solid var(--gray);
+  padding-top: 5px;
   padding-bottom: 60px;
   background-color: white;
   overflow: auto;
@@ -26,8 +27,13 @@ export const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--gray);
+  box-shadow: 0 -4px 7px -4px var(--gray);
   background-color: white;
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      width: 100%;
+    }
+  }
 `;
 
 export const Input = styled.textarea`
@@ -41,6 +47,11 @@ export const Input = styled.textarea`
   &:focus {
     outline: none;
   }
+  @media all and (min-width: 720px) and (max-width: 940px) {
+    & {
+      flex-grow: 1;
+    }
+  }
 `;
 
 export const ProfileImg = styled.div`
@@ -50,7 +61,6 @@ export const ProfileImg = styled.div`
   overflow: hidden;
   background-image: url(${imageProfile});
   background-size: 36px;
-
   img {
     width: 100%;
     height: 100%;

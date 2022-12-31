@@ -57,7 +57,7 @@ const Feed = () => {
         <Search />
       ) : (
         <>
-          <HeaderFeed />
+          <HeaderFeed style={{ position: 'sticky' }} />
           <PostWrapper posts={posts} />
           <div ref={ref} style={{ color: 'transparent' }}>
             더보기
