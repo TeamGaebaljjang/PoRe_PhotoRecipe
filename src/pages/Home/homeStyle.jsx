@@ -15,6 +15,7 @@ const ani = keyframes`
 export const Wrap = styled.div`
   height: calc(100vh - 60px);
   overflow: auto;
+  background-color: ${(props) => props.theme.bgColor};
   &::-webkit-scrollbar {
     display: none;
   }
@@ -160,7 +161,7 @@ export const SpotTab = styled.div`
   top: 0;
   gap: 18px;
   padding: 18px 20px;
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
   box-shadow: 0 4px 7px -4px var(--gray);
   overflow: auto;
   white-space: nowrap;
@@ -187,9 +188,10 @@ export const SpotBtn = styled.button`
   line-height: 16px;
   color: var(--super-gray);
   font-size: 1rem;
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
+
   &.active {
-    background-color: var(--black);
+    background-color: ${(props) => props.theme.active};
     border-color: var(--black);
     color: white;
   }

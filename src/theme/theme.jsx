@@ -1,10 +1,12 @@
 export const darkMode = {
   color: '#ffffff',
   bgColor: '#1C1C1C',
+  active: '#FF5757',
 };
 export const lightMode = {
   color: '#1C1C1C',
   bgColor: '#ffffff',
+  active: '#1C1C1C',
 };
 // :root {
 //     --black: #1C1C1C;
