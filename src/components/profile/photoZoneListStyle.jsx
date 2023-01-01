@@ -6,16 +6,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media all and (min-width: 720px) {
-    & {
-      margin-left: 26px;
-    }
-  }
-  @media all and (min-width: 941px) {
-    & {
-      margin-left: 80px;
-    }
-  }
 `;
 
 export const Photo = styled.div`
@@ -53,7 +43,12 @@ export const List = styled.div`
   }
   @media all and (min-width: 720px) {
     & {
-      margin: 35px 0px 30px 20px;
+      margin: 35px 0px 30px 26px;
+    }
+  }
+  @media all and (min-width: 720px) {
+    & {
+      margin: 35px 0px 30px 80px;
     }
   }
 `;
