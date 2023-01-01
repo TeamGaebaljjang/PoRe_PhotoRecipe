@@ -62,6 +62,9 @@ export const PreviewImg = styled.img`
   border-radius: 10px;
   object-fit: cover;
   flex-shrink: 0;
+  &.edit-img {
+    height: 100%;
+  }
 `;
 
 export const PhotoWrap = styled.div`
