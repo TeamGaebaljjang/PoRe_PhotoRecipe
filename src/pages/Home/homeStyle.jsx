@@ -18,10 +18,15 @@ export const Wrap = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       margin-left: 126px;
       height: 100vh;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      margin-left: 240px;
     }
   }
 `;
@@ -52,9 +57,14 @@ export const ThumbnailWrap = styled.div`
   &.active {
     animation: ${ani} 4s 1s ease-in-out;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
-      width: 614px;
+      width: 100%;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: 100%;
     }
   }
 `;
@@ -67,6 +77,12 @@ export const Title = styled.h1`
   font-weight: 700;
   color: white;
   text-shadow: 1px 1px 2px var(--black);
+  @media all and (min-width: 941px) {
+    & {
+      font-size: 1.4rem;
+      width: fit-content;
+    }
+  }
 `;
 
 export const Thumbnail = styled.img`
@@ -96,6 +112,16 @@ export const IconWrap = styled.nav`
   position: absolute;
   bottom: 5px;
   left: 155px;
+  @media all and (min-width: 720px) {
+    & {
+      left: calc(50vw - 110px);
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      left: calc(50vw - 165px);
+    }
+  }
 `;
 
 export const PageIcon = styled.div`
@@ -104,6 +130,7 @@ export const PageIcon = styled.div`
   width: 8px;
   height: 8px;
   background-color: white;
+  box-shadow: 1px 1px 2px var(--black);
   border-radius: 4px;
   cursor: pointer;
   transition: ease-in 0.4s;
@@ -112,6 +139,18 @@ export const PageIcon = styled.div`
   }
   &.icon.active {
     opacity: 0.8;
+  }
+  @media all and (min-width: 720px) {
+    & {
+      margin: 5px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: 9px;
+      height: 9px;
+      margin: 6px;
+    }
   }
 `;
 
@@ -129,9 +168,14 @@ export const SpotTab = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
-      padding: 20px 30px;
+      padding: 20px 40px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      padding: 20px 60px;
     }
   }
 `;
@@ -154,27 +198,39 @@ export const SpotBtn = styled.button`
 export const FeedList = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 8px;
   margin: 20px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       grid-template-columns: repeat(3, 1fr);
       margin: 30px;
+      padding: 0 12px;
+      gap: 10px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      padding: 0 34px;
     }
   }
 `;
 
 export const Feed = styled.li`
   position: relative;
-  width: 170px;
+  min-width: 170px;
   height: 190px;
   border: 1px solid var(--gray);
   border-radius: 10px;
   overflow: auto;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       margin: 0 auto;
       width: 100%;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      min-height: fit-content;
     }
   }
 `;

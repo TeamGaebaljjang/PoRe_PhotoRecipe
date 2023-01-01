@@ -2,14 +2,19 @@ import styled from 'styled-components';
 
 export const Wrap = styled.div`
   height: calc(100vh - 60px);
-  overflow: auto;
+  overflow: hidden;
   &::-webkit-scrollbar {
     display: none;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       margin-left: 126px;
       height: 100vh;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      margin-left: 240px;
     }
   }
 `;
@@ -19,7 +24,7 @@ export const MapCont = styled.div`
   width: 390px;
   height: calc(100vh - 108px);
   overflow: hidden;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 100vw;
       height: 100vh;
@@ -37,6 +42,12 @@ export const ModalWrap = styled.article`
   overflow: auto;
   &::-webkit-scrollbar {
     display: none;
+  }
+  @media all and (min-width: 720px) {
+    & {
+      width: 100vw;
+      bottom: 80px;
+    }
   }
 `;
 

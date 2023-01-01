@@ -7,11 +7,16 @@ export const Img = styled.div`
   margin-left: 38px;
   background: var(--gray) url(${(props) => props.src}) no-repeat center/ cover;
   box-shadow: 1px 1px 4px var(--light-gray);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 120px;
       height: 120px;
       margin-left: 48px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      margin-left: 100px;
     }
   }
 `;
@@ -26,9 +31,14 @@ export const Container = styled.div`
 
 export const Info = styled.div`
   margin-left: 38px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
-      margin-left: 48px;
+      margin-left: 50px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      margin-left: 100px;
     }
   }
 `;
@@ -37,7 +47,7 @@ export const Name = styled.p`
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 26px;
       margin-bottom: 12px;
@@ -53,7 +63,7 @@ export const Follower = styled.button`
   padding-right: 6px;
   border-right: 2px solid var(--light-gray);
   font-size: 14px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 16px;
       padding-right: 10px;
@@ -64,7 +74,7 @@ export const Follower = styled.button`
 export const Following = styled.button`
   padding-left: 6px;
   font-size: 14px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 16px;
       padding-left: 10px;
@@ -90,15 +100,26 @@ export const AddPhotoZone = styled.button`
     background-color: var(--black);
     color: white;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: fit-content;
       height: fit-content;
       padding: 10px 15px;
-      margin-right: 30px;
+      margin-right: 32px;
     }
     & p {
-      font-size: 16px;
+      font-size: 18px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: fit-content;
+      height: fit-content;
+      padding: 10px 15px;
+      margin-right: 80px;
+    }
+    & p {
+      font-size: 20px;
     }
   }
 `;
@@ -119,15 +140,26 @@ export const GoFollow = styled.button`
     font-size: 14px;
     font-weight: 500;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: fit-content;
       height: fit-content;
       padding: 10px 15px;
-      margin-right: 30px;
+      margin-right: 32px;
     }
     & p {
-      font-size: 16px;
+      font-size: 18px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: fit-content;
+      height: fit-content;
+      padding: 10px 15px;
+      margin-right: 80px;
+    }
+    & p {
+      font-size: 20px;
     }
   }
 `;
@@ -142,20 +174,30 @@ export const GoUnFollow = styled.button`
   margin-right: 20px;
   border: 1px var(--black) solid;
   border-radius: 80px;
-
   p {
     font-size: 14px;
     font-weight: 500;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: fit-content;
       height: fit-content;
       padding: 10px 15px;
-      margin-right: 30px;
+      margin-right: 32px;
     }
     & p {
-      font-size: 16px;
+      font-size: 18px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: fit-content;
+      height: fit-content;
+      padding: 10px 15px;
+      margin-right: 80px;
+    }
+    & p {
+      font-size: 20px;
     }
   }
 `;

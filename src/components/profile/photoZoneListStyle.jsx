@@ -6,9 +6,14 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       margin-left: 26px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      margin-left: 80px;
     }
   }
 `;
@@ -19,7 +24,7 @@ export const Photo = styled.div`
   background: var(--gray) url(${(props) => props.src}) no-repeat center / cover;
   border-radius: 50%;
   outline: 1px solid var(--light-gray);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 110px;
       height: 110px;
@@ -46,7 +51,7 @@ export const List = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       margin: 35px 0px 30px 20px;
     }

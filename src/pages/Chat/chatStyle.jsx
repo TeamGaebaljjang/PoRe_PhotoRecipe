@@ -10,10 +10,14 @@ export const Wrapper = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       margin-left: 126px;
-      /* padding: 0 15px; */
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      margin-left: 240px;
     }
   }
 `;
@@ -26,7 +30,7 @@ export const ChatList = styled.div`
   position: relative;
   border-bottom: 0.5px solid var(--light-gray);
   gap: 10px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       margin: 0 30px;
     }

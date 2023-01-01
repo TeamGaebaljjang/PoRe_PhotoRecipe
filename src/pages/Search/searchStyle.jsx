@@ -6,10 +6,15 @@ export const Wrap = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
-      margin-left: 126px;
       height: 100vh;
+      width: calc(100vw - 126px);
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: calc(100vw - 240px);
     }
   }
 `;
@@ -25,6 +30,21 @@ export const SearchCont = styled.div`
 export const SearchMsg = styled.p`
   font-size: 14px;
   color: var(--super-gray);
+`;
+
+export const UserWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 350px;
+  height: 70px;
+  margin: 0 auto;
+  border-bottom: 0.5px solid var(--light-gray);
+  @media all and (min-width: 720px) {
+    & {
+      width: 100%;
+    }
+  }
 `;
 
 export const User = styled.div`

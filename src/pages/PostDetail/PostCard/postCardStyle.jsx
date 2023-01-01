@@ -29,7 +29,7 @@ export const Form = styled.form`
   justify-content: space-between;
   box-shadow: 0 -4px 7px -4px var(--gray);
   background-color: white;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 100%;
     }
@@ -47,7 +47,7 @@ export const Input = styled.textarea`
   &:focus {
     outline: none;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       flex-grow: 1;
     }

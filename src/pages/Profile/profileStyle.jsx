@@ -9,17 +9,7 @@ export const BackDrop = styled.div`
   height: 100vh;
   background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(2px);
-  @media all and (min-width: 720px) and (max-width: 940px) {
-    & {
-      position: fixed;
-      width: 100vw;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-  }
-  @media all and (min-width: 941px) {
+  @media all and (min-width: 720px) {
     & {
       position: fixed;
       width: 100vw;
@@ -40,7 +30,7 @@ export const BackDropWhite = styled.div`
   min-height: 100vh;
   background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(2px);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       position: fixed;
       width: 100vw;
@@ -61,10 +51,16 @@ export const Wrapper = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: calc(100vw - 126px);
       margin-left: 126px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: calc(100vw - 240px);
+      margin-left: 240px;
     }
   }
 `;

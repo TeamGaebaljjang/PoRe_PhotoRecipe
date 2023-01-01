@@ -6,6 +6,12 @@ export const Wrap = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media all and (min-width: 720px) {
+    & {
+      width: calc(100vw - 10%);
+      margin: 0 auto;
+    }
+  }
 `;
 // 제거예정
 export const Li = styled.li`

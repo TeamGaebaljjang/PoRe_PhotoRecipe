@@ -34,7 +34,6 @@ export const Chatting = styled.p`
   word-wrap: break-word;
   background-color: white;
   box-shadow: 1px 2px 5px -2px var(--deep-gray);
-  /* border: 1px solid var(--deep-gray); */
   border-radius: 0 10px 10px 10px;
   max-width: 250px;
   font-size: 14px;
@@ -72,7 +71,7 @@ export const ChatInputWrap = styled.div`
   box-shadow: 0 -4px 7px -4px var(--gray);
   width: 390px;
   height: 60px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 100%;
     }

@@ -6,7 +6,7 @@ export const Wrap = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       margin-left: 126px;
       height: 100vh;
@@ -15,18 +15,30 @@ export const Wrap = styled.div`
       margin-left: 0;
     }
   }
+  @media all and (min-width: 941px) {
+    & {
+      margin-left: 240px;
+    }
+  }
 `;
 
 export const PostCard = styled.article`
   display: flex;
   flex-direction: column;
   margin: 25px 20px 40px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
-      margin: 30px 80px 20px;
+      width: calc(100vw - 30%);
+      margin: 40px auto;
       padding: 26px;
       border-radius: 20px;
       box-shadow: 0 0 10px var(--gray);
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      max-width: calc(100vw - 60%);
+      margin: 40px auto;
     }
   }
 `;
@@ -50,7 +62,7 @@ export const UserProfile = styled.img`
   margin-right: 12px;
   cursor: pointer;
   outline: 1px solid var(--light-gray);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 50px;
       height: 50px;
@@ -65,7 +77,7 @@ export const UserInfo = styled.div`
 
 export const UserName = styled.p`
   font-size: 14px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 18px;
     }
@@ -75,7 +87,7 @@ export const UserName = styled.p`
 export const UserId = styled.p`
   font-size: 12px;
   color: var(--super-gray);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 13px;
     }
@@ -87,7 +99,7 @@ export const More = styled.img`
   right: 0;
   width: 22px;
   cursor: pointer;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 26px;
     }
@@ -97,7 +109,6 @@ export const More = styled.img`
 export const ImgWrap = styled.div`
   display: flex;
   width: 100%;
-  /* margin-top: 16px; */
   border-radius: 10px;
   overflow: auto;
   &.no-scroll {
@@ -115,11 +126,6 @@ export const ImgWrap = styled.div`
   &::-webkit-scrollbar-track {
     background-color: white;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
-    & {
-      height: 450px;
-    }
-  }
 `;
 
 export const PostImg = styled.img`
@@ -131,7 +137,7 @@ export const PostImg = styled.img`
   border: 1px solid var(--light-gray);
   cursor: pointer;
   &.detail-post-img {
-    height: 350px;
+    /* min-height: 350px; */
   }
 `;
 
@@ -165,7 +171,7 @@ export const PostCont = styled.p`
   font-size: 14px;
   margin: 16px 7px;
   cursor: pointer;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 16px;
       margin: 20px 7px;
@@ -177,7 +183,7 @@ export const PostDate = styled.p`
   margin: 0 7px;
   font-size: 10px;
   color: var(--super-gray);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 11px;
     }
@@ -193,7 +199,7 @@ export const BackDrop = styled.div`
   height: 100vh;
   background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(2px);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       position: fixed;
       width: 100vw;
