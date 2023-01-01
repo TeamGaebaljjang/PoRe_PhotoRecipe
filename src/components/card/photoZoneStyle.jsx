@@ -9,7 +9,7 @@ export const Div = styled.div`
   background: url(${(props) => props.src}) no-repeat center / cover;
   border: 1px var(--gray) solid;
   position: relative;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 80%;
       height: 100%;
@@ -31,7 +31,7 @@ export const Cont = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 22px;
     }
@@ -51,7 +51,7 @@ export const Date = styled.p`
   font-weight: 500;
   color: white;
   text-shadow: 1px 1px 2px var(--black);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 16px;
       right: 15px;
@@ -68,7 +68,7 @@ export const MoreBtn = styled.button`
   height: 20px;
   background: no-repeat center/cover;
   background-image: url(${moreIcon});
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       top: 15px;
       right: 8px;

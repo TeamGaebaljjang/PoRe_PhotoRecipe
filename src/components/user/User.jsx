@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BtnFollow } from '../../pages/Profile/Follow/followStyle';
 import {
+  UserWrap,
   User,
   UserProfile,
   UserInfo,
@@ -65,17 +66,7 @@ const Userfoll = ({ item }) => {
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignContent: 'center',
-        width: '350px',
-        height: '70px',
-        margin: '0 auto',
-        borderBottom: '0.5px solid var(--light-gray)',
-      }}
-    >
+    <UserWrap>
       <User
         onClick={() => handleProfile()}
         style={{
@@ -108,7 +99,7 @@ const Userfoll = ({ item }) => {
       ) : (
         <BtnFollow onClick={Follow}>팔로우</BtnFollow>
       )}
-    </div>
+    </UserWrap>
   );
 };
 

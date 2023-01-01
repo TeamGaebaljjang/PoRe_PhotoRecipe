@@ -12,7 +12,7 @@ export const HeaderContainer = styled.article`
   position: relative;
   box-shadow: 0 4px 7px -4px var(--gray);
   background-color: white;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       height: 60px;
     }
@@ -28,7 +28,7 @@ export const HeaderFeedContainer = styled.article`
   z-index: 10;
   box-shadow: 0 4px 7px -4px var(--gray);
   background-color: white;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       height: 60px;
     }
@@ -41,7 +41,7 @@ export const HeaderProfileContainer = styled.article`
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       height: 60px;
       margin-top: 10px;
@@ -52,6 +52,16 @@ export const HeaderProfileContainer = styled.article`
 export const BtnWrapper = styled.div`
   display: flex;
   height: 100%;
+  @media all and (min-width: 720px) {
+    & {
+      margin-right: 10px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      margin-right: 50px;
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -60,7 +70,7 @@ export const Title = styled.h1`
   margin-left: 20px;
   flex-grow: 1;
   font-weight: 700;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       font-size: 20px;
       margin-left: initial;
@@ -74,7 +84,7 @@ export const SearchBtn = styled.button`
   height: 48px;
   background: no-repeat center;
   background-image: url(${searchIcon});
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 60px;
       height: 60px;
@@ -87,7 +97,7 @@ export const MoreBtn = styled.button`
   height: 48px;
   background: no-repeat center;
   background-image: url(${moreIcon});
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 60px;
       height: 60px;
@@ -101,7 +111,7 @@ export const BackBtn = styled.button`
   background: no-repeat center;
   background-image: url(${backIcon});
   margin-right: -15px;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 60px;
       height: 60px;
@@ -115,7 +125,7 @@ export const UploadPostBtn = styled.button`
   height: 48px;
   background: no-repeat center;
   background-image: url(${editIcon});
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 60px;
       height: 60px;
@@ -148,7 +158,7 @@ export const SearchInp = styled.input`
   }
   &.map-searchBar:hover {
     width: 350px;
-    @media all and (min-width: 720px) and (max-width: 940px) {
+    @media all and (min-width: 720px) {
       & {
         width: calc(100% - 120px);
       }
@@ -156,7 +166,7 @@ export const SearchInp = styled.input`
   }
   &.map-searchBar:focus {
     width: 350px;
-    @media all and (min-width: 720px) and (max-width: 940px) {
+    @media all and (min-width: 720px) {
       & {
         width: calc(100% - 120px);
       }

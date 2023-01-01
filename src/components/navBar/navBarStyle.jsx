@@ -6,11 +6,18 @@ export const NavWrap = styled.nav`
   width: 390px;
   bottom: 0;
   z-index: 30;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       top: 0;
       left: 0;
       width: fit-content;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      top: 0;
+      left: 0;
+      width: 240px;
     }
   }
 `;
@@ -23,7 +30,7 @@ export const NavUlStyle = styled.ul`
   background-color: white;
   border-radius: 10px 10px 0 0;
   box-shadow: 0 0 7px 0 var(--gray);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       flex-direction: column;
       justify-content: center;
@@ -53,6 +60,21 @@ export const NavUlStyle = styled.ul`
       background-color: var(--gray);
     }
   }
+  @media all and (min-width: 941px) {
+    & {
+      gap: 25px;
+    }
+    &:before {
+      top: 42px;
+      left: 60px;
+      width: 120px;
+      height: 120px;
+    }
+    & > a + a:before {
+      top: -15px;
+      width: 210px;
+    }
+  }
 `;
 
 export const NavItemStyle = styled.li`
@@ -63,11 +85,18 @@ export const NavItemStyle = styled.li`
   gap: 4px;
   font-size: 10px;
   color: var(--gray);
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       flex-direction: row;
       justify-content: flex-start;
       font-size: 16px;
+      gap: 10px;
+      padding: 10px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      font-size: 18px;
       gap: 10px;
       padding: 10px;
     }

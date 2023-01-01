@@ -12,7 +12,7 @@ const BtnUpload = styled.button`
   &:hover {
     background-color: black;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 94px;
       height: 36px;

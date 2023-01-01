@@ -16,7 +16,7 @@ const BtnTop = ({ parent }) => {
     :hover {
       background-image: url(${iconTopHover});
     }
-    @media all and (min-width: 720px) and (max-width: 940px) {
+    @media all and (min-width: 720px) {
       & {
         bottom: 34px;
         left: initial;
