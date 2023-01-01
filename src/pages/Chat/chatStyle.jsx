@@ -7,6 +7,9 @@ export const Wrapper = styled.div`
   height: 100vh;
   padding-bottom: 60px;
   overflow: auto;
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.color};
+
   &::-webkit-scrollbar {
     display: none;
   }
