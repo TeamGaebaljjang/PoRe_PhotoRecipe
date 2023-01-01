@@ -226,11 +226,13 @@ export const Feed = styled.li`
     & {
       margin: 0 auto;
       width: 100%;
+      /* min-height: fit-content; */
+      height: 240px;
     }
   }
   @media all and (min-width: 941px) {
     & {
-      min-height: fit-content;
+      height: 300px;
     }
   }
 `;
