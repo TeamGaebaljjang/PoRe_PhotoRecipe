@@ -43,12 +43,12 @@ export const List = styled.div`
   }
   @media all and (min-width: 720px) {
     & {
-      margin: 35px 0px 30px 26px;
+      margin: 35px 0px 30px 40px;
     }
   }
-  @media all and (min-width: 720px) {
+  @media all and (min-width: 941px) {
     & {
-      margin: 35px 0px 30px 80px;
+      margin: 35px 0px 30px 94px;
     }
   }
 `;
