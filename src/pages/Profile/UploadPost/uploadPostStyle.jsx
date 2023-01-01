@@ -11,7 +11,6 @@ export const Input = styled.textarea`
   max-height: 400px;
   resize: none;
   border: none;
-
   &::placeholder {
     color: var(--light-gray);
   }
@@ -38,7 +37,24 @@ export const SubmitImgWrap = styled.div`
   display: flex;
   width: 350px;
   max-height: 230px;
-  overflow: auto;
+  padding-bottom: 10px;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: var(--gray);
+  }
+  &::-webkit-scrollbar-track {
+    background-color: white;
+  }
+  @media all and (min-width: 720px) {
+    & {
+      width: calc(100vw - 6%);
+      margin: 0 20px;
+    }
+  }
 `;
 export const PreviewImg = styled.img`
   width: 350px;
