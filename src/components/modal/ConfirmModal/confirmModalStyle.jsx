@@ -20,7 +20,7 @@ const ConfirmModal = styled.article`
     margin-top: 10px;
     font-size: 14px;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       left: calc((100vw - 126px) / 2);
     }

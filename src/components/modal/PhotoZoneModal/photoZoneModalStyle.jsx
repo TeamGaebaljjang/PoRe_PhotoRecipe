@@ -44,7 +44,7 @@ const Container = styled.div`
       display: none;
     }
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       position: fixed;
       width: calc(100vw - 126px);
@@ -61,6 +61,12 @@ const Container = styled.div`
       font-size: 20px;
       font-weight: 700;
       padding: 18px 30px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: calc(100vw - 240px);
+      margin-left: 240px;
     }
   }
 `;

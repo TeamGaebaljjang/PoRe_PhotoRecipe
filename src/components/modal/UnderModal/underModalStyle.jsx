@@ -27,7 +27,7 @@ export const UnderModalWrap = styled.ul`
   &.fd-under-modal {
     margin-left: -20px;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       position: fixed;
       width: calc(100vw - 126px);
@@ -40,6 +40,18 @@ export const UnderModalWrap = styled.ul`
     }
     &.fd-under-modal {
       margin-left: 126px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: calc(100vw - 240px);
+      margin-left: 240px;
+    }
+    &.pz-under-modal {
+      margin-left: 240px;
+    }
+    &.fd-under-modal {
+      margin-left: 240px;
     }
   }
 `;
@@ -57,7 +69,7 @@ export const UnderModalCloseBtn = styled.button`
     width: 50px;
     height: 4px;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       width: 100%;
       padding-bottom: 10px;
@@ -69,7 +81,7 @@ export const UnderModalCont = styled.li`
   line-height: 55px;
   color: black;
   cursor: pointer;
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       text-align: center;
     }
@@ -99,13 +111,13 @@ export const CommentModalWrap = styled.ul`
   &.comment-modal {
     margin-left: -20px;
   }
-  @media all and (min-width: 720px) and (max-width: 940px) {
+  @media all and (min-width: 720px) {
     & {
       position: fixed;
       /* width: calc(100vw - 126px); */
+      /* margin-left: 126px; */
       width: 100vw;
       margin-bottom: 0;
-      /* margin-left: 126px; */
       left: 0;
     }
     &.comment-modal {
