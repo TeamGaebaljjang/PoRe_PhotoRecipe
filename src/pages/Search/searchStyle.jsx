@@ -10,11 +10,13 @@ export const Wrap = styled.div`
     & {
       height: 100vh;
       width: calc(100vw - 126px);
+      margin-left: 126px;
     }
   }
   @media all and (min-width: 941px) {
     & {
       width: calc(100vw - 240px);
+      margin-left: 240px;
     }
   }
 `;
