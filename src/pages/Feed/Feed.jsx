@@ -59,9 +59,7 @@ const Feed = () => {
         <>
           <HeaderFeed style={{ position: 'sticky' }} />
           <PostWrapper posts={posts} />
-          <div ref={ref} style={{ color: 'transparent' }}>
-            더보기
-          </div>
+          <div ref={ref} />
         </>
       )}
       <BtnTop parent={parent} />
