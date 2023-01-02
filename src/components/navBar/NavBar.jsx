@@ -12,6 +12,12 @@ import iconMessage from '../../assets/icons/icon-message.svg';
 import iconMessageActive from '../../assets/icons/icon-message-active.svg';
 import iconUser from '../../assets/icons/icon-user.svg';
 import iconUserActive from '../../assets/icons/icon-user-active.svg';
+
+import iconHomeActiveDark from '../../assets/icons/icon-home-dark.svg';
+import iconFeedActiveDark from '../../assets/icons/icon-feed-dark.svg';
+import iconMapActiveDark from '../../assets/icons/icon-map-dark.svg';
+import iconMessageActiveDark from '../../assets/icons/icon-message-dark.svg';
+import iconUserActiveDark from '../../assets/icons/icon-user-dark.svg';
 import { ThemeContext } from '../../store/ThemeProvider';
 
 const NavBar = () => {
@@ -35,7 +41,9 @@ const NavBar = () => {
             <img
               src={
                 target === '/home' || target === '/photodetail'
-                  ? iconHomeActive
+                  ? isDarkMode
+                    ? iconHomeActiveDark
+                    : iconHomeActive
                   : iconHome
               }
               alt=""
@@ -60,7 +68,9 @@ const NavBar = () => {
                 target === '/feed' ||
                 target === '/feed/search' ||
                 target === '/otherProfile'
-                  ? iconFeedActive
+                  ? isDarkMode
+                    ? iconFeedActiveDark
+                    : iconFeedActive
                   : iconFeed
               }
               alt=""
@@ -78,7 +88,16 @@ const NavBar = () => {
                 : { color: 'var(--gray)' }
             }
           >
-            <img src={target === '/map' ? iconMapActive : iconMap} alt="" />
+            <img
+              src={
+                target === '/map'
+                  ? isDarkMode
+                    ? iconMapActiveDark
+                    : iconMapActive
+                  : iconMap
+              }
+              alt=""
+            />
             지도
           </NavItemStyle>
         </Link>
@@ -93,7 +112,13 @@ const NavBar = () => {
             }
           >
             <img
-              src={target === '/chat' ? iconMessageActive : iconMessage}
+              src={
+                target === '/chat'
+                  ? isDarkMode
+                    ? iconMessageActiveDark
+                    : iconMessageActive
+                  : iconMessage
+              }
               alt=""
             />
             채팅
@@ -110,7 +135,13 @@ const NavBar = () => {
             }
           >
             <img
-              src={target === '/profile' ? iconUserActive : iconUser}
+              src={
+                target === '/profile'
+                  ? isDarkMode
+                    ? iconUserActiveDark
+                    : iconUserActive
+                  : iconUser
+              }
               alt=""
             />
             프로필
