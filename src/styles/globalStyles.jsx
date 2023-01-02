@@ -78,7 +78,7 @@ body {
     height: 100%;
     color: var(--black);
     line-height: 1.4;
-    background-color: white;
+    background-color: ${(props) => props.theme.bgColor};
     font-family: var(--font);
     box-shadow: 0 0 10px var(--deep-gray);
 }
