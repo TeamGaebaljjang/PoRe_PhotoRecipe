@@ -34,27 +34,19 @@ export const UnderModalWrap = styled.ul`
   @media all and (min-width: 720px) {
     & {
       width: calc(100vw - 126px);
-      margin-left: 126px;
       margin-bottom: 0;
-      left: 0;
+      right: 0;
     }
     &.pz-under-modal {
       margin-left: 126px;
     }
-    &.fd-under-modal {
-      margin-left: 126px;
+    &.fd-under-modal.detail {
+      width: 100vw;
     }
   }
   @media all and (min-width: 941px) {
     & {
       width: calc(100vw - 240px);
-      margin-left: 240px;
-    }
-    &.pz-under-modal {
-      margin-left: 240px;
-    }
-    &.fd-under-modal {
-      margin-left: 240px;
     }
   }
 `;
