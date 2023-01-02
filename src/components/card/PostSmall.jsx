@@ -18,7 +18,7 @@ const Post = styled.img`
   display: inline-block;
   width: 170px;
   height: 190px;
-  border: 1px solid ${(props) => props.theme.postBorder};
+  border: 1px solid ${(props) => props.theme.realBlack};
   border-radius: 10px;
   margin: 0 5px 5px;
   object-fit: cover;

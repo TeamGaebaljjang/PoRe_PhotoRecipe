@@ -14,7 +14,7 @@ export const Photo = styled.div`
   height: 80px;
   background: var(--gray) url(${(props) => props.src}) no-repeat center / cover;
   border-radius: 50%;
-  outline: 1px solid ${(props) => props.theme.postBorder};
+  outline: 1px solid ${(props) => props.theme.realBlack};
   @media all and (min-width: 720px) {
     & {
       width: 110px;
