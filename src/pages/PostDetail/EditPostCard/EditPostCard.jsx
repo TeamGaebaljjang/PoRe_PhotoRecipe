@@ -94,7 +94,6 @@ const EditPostCard = () => {
               {imgShow.map((img, i) => (
                 <PhotoWrap>
                   <PreviewImg
-                    className="edit-img"
                     key={crypto.randomUUID()}
                     src={img || null}
                     alt=""

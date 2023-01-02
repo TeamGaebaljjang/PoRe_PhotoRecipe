@@ -5,7 +5,7 @@ const BtnUpload = styled.button`
   height: 32px;
   border-radius: 32px;
   color: white;
-  background-color: var(--gray);
+  background-color: ${(props) => props.theme.button};
   position: absolute;
   top: 8px;
   right: 16px;

@@ -4,24 +4,29 @@ import closePic from '../../../assets/icons/icon-close.svg';
 
 export const Wrap = styled.div`
   margin: 0 20px;
+  background-color: ${(props) => props.theme.bgColor};
 `;
+
 export const Input = styled.textarea`
   margin-top: 20px;
   width: 100%;
   max-height: 400px;
   resize: none;
   border: none;
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.color};
   &::placeholder {
-    color: var(--light-gray);
+    color: ${(props) => props.theme.font};
   }
   &:focus {
     outline: none;
   }
 `;
+
 export const SubmitImg = styled.label`
   width: 36px;
   height: 36px;
-  background-color: var(--gray);
+  background-color: ${(props) => props.theme.button};
   border-radius: 50%;
   background-image: url(${addPic});
   background-repeat: no-repeat;
@@ -33,21 +38,23 @@ export const SubmitImg = styled.label`
     background-color: var(--black);
   }
 `;
+
 export const SubmitImgWrap = styled.div`
   display: flex;
   width: 350px;
   max-height: 230px;
   padding-bottom: 10px;
   overflow-x: auto;
+
   &::-webkit-scrollbar {
     height: 5px;
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 3px;
-    background-color: var(--gray);
+    background-color: ${(props) => props.theme.scroll};
   }
   &::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: transparent;
   }
   @media all and (min-width: 720px) {
     & {
@@ -56,15 +63,14 @@ export const SubmitImgWrap = styled.div`
     }
   }
 `;
+
 export const PreviewImg = styled.img`
   width: 350px;
   max-height: 228px;
   border-radius: 10px;
   object-fit: cover;
   flex-shrink: 0;
-  &.edit-img {
-    height: 100%;
-  }
+  height: 100%;
 `;
 
 export const PhotoWrap = styled.div`

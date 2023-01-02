@@ -114,6 +114,7 @@ export const ImgWrap = styled.div`
   width: 100%;
   border-radius: 10px;
   overflow: auto;
+
   &.no-scroll {
     &::-webkit-scrollbar {
       display: none;
@@ -124,19 +125,21 @@ export const ImgWrap = styled.div`
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 3px;
-    background-color: var(--gray);
+    background-color: ${(props) => props.theme.scroll};
   }
   &::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: transparent;
   }
 `;
 
 export const PostImg = styled.img`
   width: 100%;
+  height: 350px;
   object-fit: cover;
   border-radius: 10px;
   margin: 20px 0 5px;
   border-radius: 10px;
+  flex-shrink: 0;
   border: 1px solid ${(props) => props.theme.realBlack};
   cursor: pointer;
   &.detail-post-img {
