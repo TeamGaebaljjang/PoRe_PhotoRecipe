@@ -11,6 +11,14 @@ export const Form = styled.form`
   input + label {
     margin-top: 16px;
   }
+  @media (min-width: 720px) {
+    width: 60%;
+    margin: 0 auto;
+  }
+  @media (min-width: 941px) {
+    width: 50%;
+    margin: 0 auto;
+  }
 `;
 export const TextInput = styled.textarea`
   resize: none;
