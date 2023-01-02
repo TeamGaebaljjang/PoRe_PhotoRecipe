@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import PhotoUpload from '../../assets/icons/icon-photo-upload-gray.svg';
 import {
   Img,
   Container,
@@ -60,7 +59,6 @@ const ProfileInfo = ({ info, isfollow, follow, unFollow }) => {
               navigate(`/profile/uploadphotozone`);
             }}
           >
-            <img src={PhotoUpload} alt="포토존 등록 버튼 이미지" />
             <p>포토존 등록</p>
           </AddPhotoZone>
         ) : isfollow ? (

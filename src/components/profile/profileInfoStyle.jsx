@@ -98,11 +98,15 @@ export const AddPhotoZone = styled.button`
   border-radius: 80px;
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.color};
+  background: ${(props) => props.theme.PhotoUpload} no-repeat 14px;
   p {
     font-size: 14px;
     font-weight: 500;
+    line-height: 40px;
+    padding-left: 28px;
   }
   :hover {
+    background: ${(props) => props.theme.PhotoUploadHover} no-repeat 14px;
     color: ${(props) => props.theme.bgColor};
     background-color: ${(props) => props.theme.color};
   }

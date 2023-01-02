@@ -6,6 +6,8 @@ import searchIconDark from '../assets/icons/icon-search-white.svg';
 import moreIconDark from '../assets/icons/icon-more-vertical-white.svg';
 import backIconDark from '../assets/icons/icon-arrow-left-dark.svg';
 import editIconDark from '../assets/icons/icon-edit-post-white.svg';
+import PhotoUpload from '../assets/icons/icon-photo-upload-black.svg';
+import PhotoUploadDark from '../assets/icons/icon-photo-upload-white.svg';
 
 export const darkMode = {
   color: '#ffffff',
@@ -23,6 +25,8 @@ export const darkMode = {
   moreIcon: `url(${moreIconDark})`,
   backIcon: `url(${backIconDark})`,
   editIcon: `url(${editIconDark})`,
+  PhotoUpload: `url(${PhotoUploadDark})`,
+  PhotoUploadHover: `url(${PhotoUpload})`,
   line: 'var(--super-gray)',
 };
 
@@ -42,6 +46,8 @@ export const lightMode = {
   moreIcon: `url(${moreIcon})`,
   backIcon: `url(${backIcon})`,
   editIcon: `url(${editIcon})`,
+  PhotoUpload: `url(${PhotoUpload})`,
+  PhotoUploadHover: `url(${PhotoUploadDark})`,
   line: 'var(--gray)',
 };
 
