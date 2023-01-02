@@ -7,8 +7,8 @@ export const UserComment = styled.li`
   border-bottom: 0.5px solid ${(props) => props.theme.realBlack};
   display: flex;
   gap: 10px;
-  @media (min-width: 770px) {
-    width: 770px;
+  @media (min-width: 720px) {
+    width: 720px;
     margin: 0 auto;
   }
 `;
@@ -39,8 +39,11 @@ export const CommentCont = styled.p`
   font-size: 12px;
   color: var(--super-gray);
   white-space: auto;
-
   word-break: break-all;
+  @media (min-width: 720px) {
+    width: 100%;
+    padding-right: 10px;
+  }
 `;
 
 export const CommentMoreBtn = styled.img`
