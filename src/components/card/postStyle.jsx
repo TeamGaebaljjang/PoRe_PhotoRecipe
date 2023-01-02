@@ -173,6 +173,7 @@ export const PostTitle = styled.h1`
 export const PostCont = styled.p`
   font-size: 14px;
   margin: 16px 7px;
+  overflow-wrap: anywhere;
   cursor: pointer;
   @media all and (min-width: 720px) {
     & {
