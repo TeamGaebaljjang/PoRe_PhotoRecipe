@@ -80,52 +80,6 @@ const ChatRoom = () => {
               꼭 써보세요<ChatTime>14:39</ChatTime>
             </Chatting>
           </ChatBallon>
-
-          <ChatBallon>
-            <div>
-              <img src={chatProfile} alt="" />
-            </div>
-            <Chatting>
-              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
-              꼭 써보세요<ChatTime>14:39</ChatTime>
-            </Chatting>
-          </ChatBallon>
-          <ChatBallon>
-            <div>
-              <img src={chatProfile} alt="" />
-            </div>
-            <Chatting>
-              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
-              꼭 써보세요<ChatTime>14:39</ChatTime>
-            </Chatting>
-          </ChatBallon>
-          <ChatBallon>
-            <div>
-              <img src={chatProfile} alt="" />
-            </div>
-            <Chatting>
-              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
-              꼭 써보세요<ChatTime>14:39</ChatTime>
-            </Chatting>
-          </ChatBallon>
-          <ChatBallon>
-            <div>
-              <img src={chatProfile} alt="" />
-            </div>
-            <Chatting>
-              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
-              꼭 써보세요<ChatTime>14:39</ChatTime>
-            </Chatting>
-          </ChatBallon>
-          <ChatBallon>
-            <div>
-              <img src={chatProfile} alt="" />
-            </div>
-            <Chatting>
-              반가워요 CSS 진짜 쉽네요 ESLint도 정말 편한 것 같아요 여러분들도
-              꼭 써보세요<ChatTime>14:39</ChatTime>
-            </Chatting>
-          </ChatBallon>
         </ChatWrap>
         <ChatInputWrap>
           <input type="file" style={{ display: 'none' }} />
