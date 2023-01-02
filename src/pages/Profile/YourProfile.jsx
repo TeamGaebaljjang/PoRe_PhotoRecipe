@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Wrapper, BackDrop } from './profileStyle';
 import HeaderBM from '../../components/header/HeaderBM';
@@ -13,6 +13,10 @@ import PostWrapper from '../../components/card/PostWrapper';
 import ProfileUnderModal from '../../components/modal/UnderModal/ProfileUnderModal';
 import { getFeed } from '../../store/feedSlice';
 import BtnTop from '../../components/button/BtnTop';
+import { ThemeContext } from '../../store/ThemeProvider';
+import { ModeBtn } from '../../components/button/BtnNight';
+import btnDark from '../../assets/icons/icon-btn-dark.svg';
+import btnLight from '../../assets/icons/icon-btn-light.svg';
 
 const YourProFile = () => {
   const location = useLocation();
@@ -22,6 +26,7 @@ const YourProFile = () => {
   const [view, setView] = useState(false);
   const URL = 'https://mandarin.api.weniv.co.kr';
   const parent = useRef();
+  const { isDarkMode, toggleMode } = useContext(ThemeContext);
 
   const dispatch = useDispatch();
   const getPost = useSelector((state) => state.feed.feedData);
@@ -102,6 +107,17 @@ const YourProFile = () => {
 
   return (
     <Wrapper ref={parent}>
+      <ModeBtn
+        type="button"
+        onClick={() => {
+          toggleMode();
+        }}
+        style={
+          isDarkMode
+            ? { backgroundImage: `url(${btnDark})` }
+            : { backgroundImage: `url(${btnLight})` }
+        }
+      />
       <HeaderBM modalHandler={modalHandler} />
       <ProfileInfo
         info={info}
