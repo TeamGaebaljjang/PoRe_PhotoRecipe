@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const ModeBtn = styled.button`
   width: 45px;
   height: 45px;
-  position: fixed;
+  position: absolute;
   bottom: 120px;
-  right: 88px;
+  right: 7px;
   z-index: 40;
   background-repeat: no-repeat;
   background-size: 43px;
