@@ -31,7 +31,7 @@ export const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 -4px 7px -4px var(--gray);
+  box-shadow: 0 -4px 7px -4px ${(props) => props.theme.realBlack};
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.color};
   @media all and (min-width: 720px) {

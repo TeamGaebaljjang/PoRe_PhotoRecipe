@@ -8,6 +8,7 @@ export const darkMode = {
   postBorder: 'black',
   chatShadow: '1px 2px 5px -2px black',
   font: '#E8E8E8',
+  realBlack: 'black',
 };
 export const lightMode = {
   color: '#1C1C1C',
@@ -19,6 +20,7 @@ export const lightMode = {
   postBorder: '#CDCDCD',
   chatShadow: '1px 2px 5px -2px var(--deep-gray)',
   font: '#767676',
+  realBlack: '#CDCDCD',
 };
 
 // :root {
