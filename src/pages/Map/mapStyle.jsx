@@ -47,6 +47,12 @@ export const ModalWrap = styled.article`
     & {
       width: 100vw;
       bottom: 80px;
+      padding-right: 160px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      padding-right: 260px;
     }
   }
 `;
