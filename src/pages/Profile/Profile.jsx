@@ -13,11 +13,9 @@ import ProfileUnderModal from '../../components/modal/UnderModal/ProfileUnderMod
 import { getFeed } from '../../store/feedSlice';
 import BtnTop from '../../components/button/BtnTop';
 import { ThemeContext } from '../../store/ThemeProvider';
-import { ModeBtn, ModeBtnLarge } from '../../components/button/BtnNight';
+import { ModeBtn } from '../../components/button/BtnNight';
 import btnDark from '../../assets/icons/icon-btn-dark.svg';
 import btnLight from '../../assets/icons/icon-btn-light.svg';
-import btnDarkLarge from '../../assets/icons/icon-btn-dark-big.svg';
-import btnLightLarge from '../../assets/icons/icon-btn-light-big.svg';
 
 const Profile = () => {
   const [info, setInfo] = useState('');
@@ -71,17 +69,6 @@ const Profile = () => {
           isDarkMode
             ? { backgroundImage: `url(${btnDark})` }
             : { backgroundImage: `url(${btnLight})` }
-        }
-      />
-      <ModeBtnLarge
-        type="button"
-        onClick={() => {
-          toggleMode();
-        }}
-        style={
-          isDarkMode
-            ? { backgroundImage: `url(${btnDarkLarge})` }
-            : { backgroundImage: `url(${btnLightLarge})` }
         }
       />
       <HeaderProfile modalHandler={modalHandler} />

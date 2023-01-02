@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import {
@@ -13,11 +13,18 @@ import profile from '../../assets/img/profile.png';
 import HeaderBM from '../../components/header/HeaderBM';
 import NavBar from '../../components/navBar/NavBar';
 import BtnTop from '../../components/button/BtnTop';
+import { ThemeContext } from '../../store/ThemeProvider';
+import { ModeBtn } from '../../components/button/BtnNight';
+import btnDark from '../../assets/icons/icon-btn-dark.svg';
+import btnLight from '../../assets/icons/icon-btn-light.svg';
 
 const Div = styled.div``;
 const Chat = () => {
   const parent = useRef();
   const navigate = useNavigate();
+  const { isDarkMode, toggleMode } = useContext(ThemeContext);
+  console.log(isDarkMode);
+
   return (
     <Wrapper ref={parent}>
       <HeaderBM />
@@ -54,6 +61,17 @@ const Chat = () => {
         </div>
         <ChatDate>2020.10.26</ChatDate>
       </ChatList>
+      <ModeBtn
+        type="button"
+        onClick={() => {
+          toggleMode();
+        }}
+        style={
+          isDarkMode
+            ? { backgroundImage: `url(${btnDark})` }
+            : { backgroundImage: `url(${btnLight})` }
+        }
+      />
       <BtnTop parent={parent} />
       <NavBar />
     </Wrapper>

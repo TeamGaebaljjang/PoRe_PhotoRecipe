@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const ModeBtn = styled.button`
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  top: 8px;
-  left: 10px;
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  bottom: 120px;
+  right: 88px;
   z-index: 40;
   background-repeat: no-repeat;
-  background-size: 36px;
+  background-size: 43px;
   @media all and (min-width: 720px) {
     & {
       display: none;
@@ -17,8 +17,10 @@ export const ModeBtn = styled.button`
 `;
 
 export const ModeBtnLarge = styled.button`
+  display: none;
   @media all and (min-width: 720px) {
     & {
+      display: block;
       width: 55px;
       height: 35px;
       position: absolute;

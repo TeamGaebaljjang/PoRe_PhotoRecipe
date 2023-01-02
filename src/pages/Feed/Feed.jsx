@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, useContext } from 'react';
 import axios from 'axios';
 import HeaderFeed from '../../components/header/HeaderFeed';
 import PostWrapper from '../../components/card/PostWrapper';
@@ -7,6 +7,10 @@ import NavBar from '../../components/navBar/NavBar';
 import Search from '../Search/Search';
 import { Wrap } from '../../components/card/postStyle';
 import BtnTop from '../../components/button/BtnTop';
+import { ThemeContext } from '../../store/ThemeProvider';
+import { ModeBtn } from '../../components/button/BtnNight';
+import btnDark from '../../assets/icons/icon-btn-dark.svg';
+import btnLight from '../../assets/icons/icon-btn-light.svg';
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -15,6 +19,8 @@ const Feed = () => {
   const [loading, setLoading] = useState(false);
   const [numFeed, setNumFeed] = useState(0);
   const parent = useRef();
+  const { isDarkMode, toggleMode } = useContext(ThemeContext);
+  console.log(isDarkMode);
 
   const getFeed = useCallback(async () => {
     const URL = 'https://mandarin.api.weniv.co.kr';
@@ -53,6 +59,17 @@ const Feed = () => {
 
   return (
     <Wrap ref={parent}>
+      <ModeBtn
+        type="button"
+        onClick={() => {
+          toggleMode();
+        }}
+        style={
+          isDarkMode
+            ? { backgroundImage: `url(${btnDark})` }
+            : { backgroundImage: `url(${btnLight})` }
+        }
+      />
       {posts?.length === 0 ? (
         <Search />
       ) : (
