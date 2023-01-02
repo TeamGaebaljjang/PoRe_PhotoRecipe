@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import ReportMiniModal from '../ConfirmModal/ReportMiniModal';
 import {
   CommentModalWrap,
@@ -9,6 +10,8 @@ import {
 
 const ReportUnder = ({ postDetailId, commentList, setComment, closeModal }) => {
   const [confirm, setConfirm] = useState(false);
+  const location = useLocation();
+  const target = location.pathname;
 
   const ReportComment = async () => {
     try {
@@ -34,7 +37,13 @@ const ReportUnder = ({ postDetailId, commentList, setComment, closeModal }) => {
 
   return (
     <>
-      <CommentModalWrap className="comment-modal">
+      <CommentModalWrap
+        className={
+          target === '/feed' || target === '/otherProfile'
+            ? 'comment-modal'
+            : 'comment-modal detail'
+        }
+      >
         <UnderModalCloseBtn />
         <UnderModalCont onClick={ReportComment}>
           <button type="button">신고하기</button>
