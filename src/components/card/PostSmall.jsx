@@ -18,13 +18,13 @@ const Post = styled.img`
   display: inline-block;
   width: 170px;
   height: 190px;
-  border: 1px solid var(--gray);
+  border: 1px solid ${(props) => props.theme.postBorder};
   border-radius: 10px;
   margin: 0 5px 5px;
   object-fit: cover;
-  :nth-child(2n-1) {
+  /* :nth-child(2n-1) {
     margin-left: 20px;
-  }
+  } */
   @media all and (min-width: 720px) {
     & {
       /* margin-top: 20px; */

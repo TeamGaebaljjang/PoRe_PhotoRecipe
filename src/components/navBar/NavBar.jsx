@@ -1,3 +1,5 @@
+/* eslint-disable no-nested-ternary */
+import { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NavWrap, NavUlStyle, NavItemStyle } from './navBarStyle';
 import iconHome from '../../assets/icons/icon-home.svg';
@@ -10,10 +12,12 @@ import iconMessage from '../../assets/icons/icon-message.svg';
 import iconMessageActive from '../../assets/icons/icon-message-active.svg';
 import iconUser from '../../assets/icons/icon-user.svg';
 import iconUserActive from '../../assets/icons/icon-user-active.svg';
+import { ThemeContext } from '../../store/ThemeProvider';
 
 const NavBar = () => {
   const location = useLocation();
   const target = location.pathname;
+  const { isDarkMode } = useContext(ThemeContext);
 
   return (
     <NavWrap>
@@ -22,7 +26,9 @@ const NavBar = () => {
           <NavItemStyle
             style={
               target === '/home' || target === '/photodetail'
-                ? { color: 'black' }
+                ? isDarkMode
+                  ? { color: '#FF5757' }
+                  : { color: 'black' }
                 : { color: 'var(--gray)' }
             }
           >
@@ -43,7 +49,9 @@ const NavBar = () => {
               target === '/feed' ||
               target === '/feed/search' ||
               target === '/otherProfile'
-                ? { color: 'black' }
+                ? isDarkMode
+                  ? { color: '#FF5757' }
+                  : { color: 'black' }
                 : { color: 'var(--gray)' }
             }
           >
@@ -63,7 +71,11 @@ const NavBar = () => {
         <Link to="/map">
           <NavItemStyle
             style={
-              target === '/map' ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/map'
+                ? isDarkMode
+                  ? { color: '#FF5757' }
+                  : { color: 'black' }
+                : { color: 'var(--gray)' }
             }
           >
             <img src={target === '/map' ? iconMapActive : iconMap} alt="" />
@@ -73,7 +85,11 @@ const NavBar = () => {
         <Link to="/chat">
           <NavItemStyle
             style={
-              target === '/chat' ? { color: 'black' } : { color: 'var(--gray)' }
+              target === '/chat'
+                ? isDarkMode
+                  ? { color: '#FF5757' }
+                  : { color: 'black' }
+                : { color: 'var(--gray)' }
             }
           >
             <img
@@ -87,7 +103,9 @@ const NavBar = () => {
           <NavItemStyle
             style={
               target === '/profile'
-                ? { color: 'black' }
+                ? isDarkMode
+                  ? { color: '#FF5757' }
+                  : { color: 'black' }
                 : { color: 'var(--gray)' }
             }
           >

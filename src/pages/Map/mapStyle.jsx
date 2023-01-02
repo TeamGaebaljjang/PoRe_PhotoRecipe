@@ -55,7 +55,8 @@ export const MapCard = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.color};
   border-radius: 15px;
   margin-left: 24px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);

@@ -27,9 +27,9 @@ export const NavUlStyle = styled.ul`
   justify-content: space-around;
   align-items: flex-end;
   padding: 12px 0 8px 0;
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
   border-radius: 10px 10px 0 0;
-  box-shadow: 0 0 7px 0 var(--gray);
+  box-shadow: ${(props) => props.theme.shadow};
   @media all and (min-width: 720px) {
     & {
       flex-direction: column;
@@ -84,7 +84,7 @@ export const NavItemStyle = styled.li`
   align-items: center;
   gap: 4px;
   font-size: 10px;
-  color: var(--gray);
+
   @media all and (min-width: 720px) {
     & {
       flex-direction: row;

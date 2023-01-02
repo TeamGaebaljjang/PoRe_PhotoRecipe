@@ -10,8 +10,8 @@ export const HeaderContainer = styled.article`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  box-shadow: 0 4px 7px -4px var(--gray);
-  background-color: white;
+  box-shadow: ${(props) => props.theme.barShadow};
+  background-color: ${(props) => props.theme.bgColor};
   @media all and (min-width: 720px) {
     & {
       height: 60px;
@@ -26,8 +26,8 @@ export const HeaderFeedContainer = styled.article`
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 4px 7px -4px var(--gray);
-  background-color: white;
+  box-shadow: ${(props) => props.theme.barShadow};
+  background-color: ${(props) => props.theme.bgColor};
   @media all and (min-width: 720px) {
     & {
       height: 60px;
@@ -41,6 +41,7 @@ export const HeaderProfileContainer = styled.article`
   justify-content: flex-end;
   align-items: center;
   position: relative;
+  background-color: ${(props) => props.theme.bgColor};
   @media all and (min-width: 720px) {
     & {
       height: 60px;
@@ -70,6 +71,8 @@ export const Title = styled.h1`
   margin-left: 20px;
   flex-grow: 1;
   font-weight: 700;
+  color: ${(props) => props.theme.color};
+
   @media all and (min-width: 720px) {
     & {
       font-size: 20px;
@@ -138,11 +141,12 @@ export const SearchInp = styled.input`
   height: 32px;
   margin: 0 20px;
   text-indent: 16px;
-  background-color: var(--light-gray);
+  background-color: ${(props) => props.theme.chat};
   border-radius: 32px;
   transition: 0.6s;
   &::placeholder {
-    color: var(--deep-gray);
+    color: ${(props) => props.theme.font};
+
     text-indent: 16px;
   }
   &:hover {

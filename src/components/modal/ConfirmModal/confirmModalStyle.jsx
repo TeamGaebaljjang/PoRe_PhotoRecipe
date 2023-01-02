@@ -7,8 +7,8 @@ const ConfirmModal = styled.article`
   width: 220px;
   text-align: center;
   border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 0 10px var(--deep-gray);
+  background-color: ${(props) => props.theme.bgColor};
+  box-shadow: ${(props) => props.theme.shadow};
   z-index: 20;
   h3 {
     font-size: 16px;
@@ -34,6 +34,7 @@ const Btnwrap = styled.div`
   width: 100%;
 
   button {
+    color: ${(props) => props.theme.color};
     flex-grow: 1;
     padding: 14px 0;
     font-size: 14px;

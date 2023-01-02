@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
-  height: calc(100vh - 60px);
+  height: calc(100vh - 55px);
   overflow: auto;
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.color};

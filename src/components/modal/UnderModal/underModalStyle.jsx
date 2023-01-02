@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const UnderModalWrap = styled.ul`
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.color};
   position: fixed;
   bottom: 0;
-  margin-bottom: 50px;
-  padding: 0 25px;
+  margin-bottom: 45px;
+  padding: 10px 25px;
   width: 390px;
   border-radius: 10px 10px 0 0;
-  box-shadow: 0 0 7px 0 var(--gray);
+  box-shadow: ${(props) => props.theme.shadow};
   z-index: 30;
   border-bottom: 10px solid white;
   animation-name: appear;
@@ -29,7 +30,6 @@ export const UnderModalWrap = styled.ul`
   }
   @media all and (min-width: 720px) {
     & {
-      position: fixed;
       width: calc(100vw - 126px);
       margin-left: 126px;
       margin-bottom: 0;
@@ -79,23 +79,26 @@ export const UnderModalCloseBtn = styled.button`
 export const UnderModalCont = styled.li`
   font-size: 14px;
   line-height: 55px;
-  color: black;
   cursor: pointer;
   @media all and (min-width: 720px) {
     & {
       text-align: center;
     }
   }
+  button {
+    color: ${(props) => props.theme.color};
+  }
 `;
 
 export const CommentModalWrap = styled.ul`
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.color};
   position: fixed;
   bottom: 0;
   padding: 15px 25px;
   width: 390px;
   border-radius: 10px 10px 0 0;
-  box-shadow: 0 0 7px 0 var(--gray);
+  box-shadow: ${(props) => props.theme.shadow};
   z-index: 30;
   border-bottom: 10px solid white;
   animation-name: appear;
@@ -113,7 +116,6 @@ export const CommentModalWrap = styled.ul`
   }
   @media all and (min-width: 720px) {
     & {
-      position: fixed;
       /* width: calc(100vw - 126px); */
       /* margin-left: 126px; */
       width: 100vw;

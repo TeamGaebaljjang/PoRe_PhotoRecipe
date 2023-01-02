@@ -13,7 +13,7 @@ const ani = keyframes`
 `;
 
 export const Wrap = styled.div`
-  height: calc(100vh - 60px);
+  height: calc(100vh - 55px);
   overflow: auto;
   background-color: ${(props) => props.theme.bgColor};
   &::-webkit-scrollbar {
@@ -162,7 +162,7 @@ export const SpotTab = styled.div`
   gap: 18px;
   padding: 18px 20px;
   background-color: ${(props) => props.theme.bgColor};
-  box-shadow: 0 4px 7px -4px var(--gray);
+  box-shadow: ${(props) => props.theme.shadow};
   overflow: auto;
   white-space: nowrap;
   z-index: 10;
@@ -221,7 +221,7 @@ export const Feed = styled.li`
   position: relative;
   min-width: 170px;
   height: 190px;
-  border: 1px solid var(--gray);
+  border: 1px solid ${(props) => props.theme.postBorder};
   border-radius: 10px;
   overflow: auto;
   @media all and (min-width: 720px) {

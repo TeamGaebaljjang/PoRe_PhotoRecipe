@@ -63,6 +63,8 @@ export const Follower = styled.button`
   padding-right: 6px;
   border-right: 2px solid var(--light-gray);
   font-size: 14px;
+  color: ${(props) => props.theme.color};
+
   @media all and (min-width: 720px) {
     & {
       font-size: 16px;
@@ -74,6 +76,8 @@ export const Follower = styled.button`
 export const Following = styled.button`
   padding-left: 6px;
   font-size: 14px;
+  color: ${(props) => props.theme.color};
+
   @media all and (min-width: 720px) {
     & {
       font-size: 16px;
@@ -90,15 +94,17 @@ export const AddPhotoZone = styled.button`
   width: 120px;
   height: 40px;
   margin-right: 20px;
-  border: 1px var(--black) solid;
+  border: 1px ${(props) => props.theme.color} solid;
   border-radius: 80px;
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.color};
   p {
     font-size: 14px;
     font-weight: 500;
   }
   :hover {
-    background-color: var(--black);
-    color: white;
+    color: ${(props) => props.theme.bgColor};
+    background-color: ${(props) => props.theme.color};
   }
   @media all and (min-width: 720px) {
     & {
@@ -132,10 +138,10 @@ export const GoFollow = styled.button`
   width: 100px;
   height: 40px;
   margin-right: 20px;
-  border: 1px var(--black) solid;
   border-radius: 80px;
-  background-color: black;
-  color: white;
+  background-color: ${(props) => props.theme.bgColor};
+  border: 1px ${(props) => props.theme.color} solid;
+  color: ${(props) => props.theme.color};
   p {
     font-size: 14px;
     font-weight: 500;
@@ -172,7 +178,9 @@ export const GoUnFollow = styled.button`
   width: 100px;
   height: 40px;
   margin-right: 20px;
-  border: 1px var(--black) solid;
+  background-color: ${(props) => props.theme.bgColor};
+  border: 1px ${(props) => props.theme.color} solid;
+  color: ${(props) => props.theme.color};
   border-radius: 80px;
   p {
     font-size: 14px;

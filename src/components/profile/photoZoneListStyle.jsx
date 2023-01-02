@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  margin: 1px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -13,7 +14,7 @@ export const Photo = styled.div`
   height: 80px;
   background: var(--gray) url(${(props) => props.src}) no-repeat center / cover;
   border-radius: 50%;
-  outline: 1px solid var(--light-gray);
+  outline: 1px solid ${(props) => props.theme.postBorder};
   @media all and (min-width: 720px) {
     & {
       width: 110px;
@@ -24,12 +25,19 @@ export const Photo = styled.div`
 `;
 
 export const Region = styled.p`
+  width: 80px;
   margin-top: 6px;
   font-size: 16px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-weight: 500;
+  text-align: center;
+  @media all and (min-width: 720px) {
+    & {
+      width: 110px;
+    }
+  }
 `;
 
 export const List = styled.div`

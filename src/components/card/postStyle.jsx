@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrap = styled.div`
-  height: calc(100vh - 60px);
+  height: calc(100vh - 55px);
   overflow: auto;
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.color};
@@ -35,7 +35,7 @@ export const PostCard = styled.article`
       margin: 40px auto;
       padding: 26px;
       border-radius: 20px;
-      box-shadow: 0 0 10px var(--gray);
+      box-shadow: ${(props) => props.theme.shadow};
     }
   }
   @media all and (min-width: 941px) {
@@ -137,7 +137,7 @@ export const PostImg = styled.img`
   border-radius: 10px;
   margin: 20px 0 5px;
   border-radius: 10px;
-  border: 1px solid var(--light-gray);
+  border: 1px solid ${(props) => props.theme.postBorder};
   cursor: pointer;
   &.detail-post-img {
     /* min-height: 350px; */

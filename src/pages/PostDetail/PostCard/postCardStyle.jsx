@@ -13,9 +13,13 @@ export const CardWrap = styled.div`
 export const Comments = styled.div`
   border-top: 1px solid var(--gray);
   padding-top: 5px;
-  padding-bottom: 60px;
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
   overflow: auto;
+  @media all and (min-width: 720px) {
+    & {
+      padding-bottom: 60px;
+    }
+  }
 `;
 
 export const Form = styled.form`
@@ -28,7 +32,8 @@ export const Form = styled.form`
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 -4px 7px -4px var(--gray);
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.color};
   @media all and (min-width: 720px) {
     & {
       width: 100%;
@@ -41,6 +46,8 @@ export const Input = styled.textarea`
   resize: none;
   border: none;
   overflow: hidden;
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.color};
   &::placeholder {
     color: var(--gray);
   }
@@ -72,6 +79,6 @@ export const BtnSubmit = styled.button`
   color: var(--gray);
 
   &:enabled {
-    color: var(--black);
+    color: ${(props) => props.theme.active};
   }
 `;

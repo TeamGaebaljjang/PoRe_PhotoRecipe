@@ -3,13 +3,14 @@ import styled, { css } from 'styled-components';
 export const Wrap = styled.div`
   height: calc(100vh - 48px);
   overflow: auto;
+  background-color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.color};
   &::-webkit-scrollbar {
     display: none;
   }
   @media all and (min-width: 720px) {
     & {
-      width: calc(100vw - 10%);
-      margin: 0 auto;
+      padding: 0 10%;
     }
   }
 `;

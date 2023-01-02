@@ -5,6 +5,8 @@ export const Wrap = styled.div`
   width: 100%;
   height: calc(100vh - 108px);
   background-color: var(--light-gray);
+  background-color: ${(props) => props.theme.chat};
+
   overflow: auto;
   &::-webkit-scrollbar {
     display: none;
@@ -33,7 +35,7 @@ export const Chatting = styled.p`
   padding: 10px;
   word-wrap: break-word;
   background-color: white;
-  box-shadow: 1px 2px 5px -2px var(--deep-gray);
+  box-shadow: ${(props) => props.theme.chatShadow};
   border-radius: 0 10px 10px 10px;
   max-width: 250px;
   font-size: 14px;
@@ -67,8 +69,9 @@ export const ChatInputWrap = styled.div`
   padding: 10px;
   justify-content: space-between;
   bottom: 0;
-  background-color: white;
-  box-shadow: 0 -4px 7px -4px var(--gray);
+  background-color: ${(props) => props.theme.bgColor};
+
+  box-shadow: ${(props) => props.theme.barShadow};
   width: 390px;
   height: 60px;
   @media all and (min-width: 720px) {

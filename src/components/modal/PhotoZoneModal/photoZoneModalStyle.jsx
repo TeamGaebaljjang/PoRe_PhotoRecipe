@@ -6,10 +6,10 @@ const Container = styled.div`
   bottom: 0;
   width: 390px;
   height: calc(100vh - (100vh / 3));
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
   padding-bottom: 60px;
   border-radius: 20px 20px 0px 0px;
-  box-shadow: 0 0 10px var(--deep-gray);
+  box-shadow: ${(props) => props.theme.shadow};
   overflow: hidden;
   z-index: 30;
   animation-name: appear;
@@ -26,7 +26,7 @@ const Container = styled.div`
     width: 390px;
     height: 50px;
     border-bottom: 1px var(--light-gray) solid;
-    box-shadow: 0 4px 7px -4px var(--gray);
+    box-shadow: ${(props) => props.theme.shadow};
   }
   .region p {
     padding: 15px 30px;

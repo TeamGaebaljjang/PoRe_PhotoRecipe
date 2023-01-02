@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PhotoUpload from '../../assets/icons/icon-photo-upload-black.svg';
-import PhotoUploadOn from '../../assets/icons/icon-photo-upload-white.svg';
+import PhotoUpload from '../../assets/icons/icon-photo-upload-gray.svg';
 import {
   Img,
   Container,
@@ -18,7 +16,6 @@ import defaultProfileImg from '../../assets/icons/basic-profile-rec.svg';
 
 const ProfileInfo = ({ info, isfollow, follow, unFollow }) => {
   const navigate = useNavigate();
-  const [btnOn, setBtnOn] = useState(false);
 
   const onErrorImg = (e) => {
     // eslint-disable-next-line no-param-reassign
@@ -59,20 +56,11 @@ const ProfileInfo = ({ info, isfollow, follow, unFollow }) => {
         </Info>
         {localStorage.getItem('accountname') === info.accountname ? (
           <AddPhotoZone
-            onMouseOver={() => {
-              setBtnOn(true);
-            }}
-            onMouseOut={() => {
-              setBtnOn(false);
-            }}
             onClick={() => {
               navigate(`/profile/uploadphotozone`);
             }}
           >
-            <img
-              src={btnOn ? PhotoUploadOn : PhotoUpload}
-              alt="포토존 등록 버튼 이미지"
-            />
+            <img src={PhotoUpload} alt="포토존 등록 버튼 이미지" />
             <p>포토존 등록</p>
           </AddPhotoZone>
         ) : isfollow ? (

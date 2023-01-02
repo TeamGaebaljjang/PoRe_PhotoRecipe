@@ -7,8 +7,8 @@ export const Container = styled.div`
   width: 390px;
   height: 60px;
   margin-bottom: 10px;
-  background-color: white;
-  box-shadow: 0 4px 7px -4px var(--light-gray);
+  background-color: ${(props) => props.theme.bgColor};
+  box-shadow: ${(props) => props.theme.barShadow};
   position: sticky;
   align-self: flex-start;
   top: -1px;
@@ -39,7 +39,7 @@ export const WhoseFeed = styled.p`
 `;
 
 export const UserIdTitle = styled.span`
-  color: var(--black);
+  color: ${(props) => props.theme.color};
   font-size: 20px;
   font-weight: 500;
   @media all and (min-width: 720px) {
