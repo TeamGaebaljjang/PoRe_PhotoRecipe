@@ -2,11 +2,15 @@ import styled from 'styled-components';
 
 export const UserComment = styled.li`
   margin: 0 20px;
-  padding: 10px 0;
+  padding: 10px 0px;
   position: relative;
-  border-bottom: 0.5px solid var(--light-gray);
+  border-bottom: 0.5px solid ${(props) => props.theme.realBlack};
   display: flex;
   gap: 10px;
+  @media (min-width: 770px) {
+    width: 770px;
+    margin: 0 auto;
+  }
 `;
 export const ProfileImg = styled.img`
   width: 40px;

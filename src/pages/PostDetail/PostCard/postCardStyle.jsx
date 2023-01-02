@@ -15,6 +15,7 @@ export const Comments = styled.div`
   padding-top: 5px;
   background-color: ${(props) => props.theme.bgColor};
   overflow: auto;
+  margin: 0 auto;
   @media all and (min-width: 720px) {
     & {
       padding-bottom: 60px;

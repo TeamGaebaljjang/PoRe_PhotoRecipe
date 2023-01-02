@@ -137,7 +137,7 @@ export const PostImg = styled.img`
   border-radius: 10px;
   margin: 20px 0 5px;
   border-radius: 10px;
-  border: 1px solid ${(props) => props.theme.postBorder};
+  border: 1px solid ${(props) => props.theme.realBlack};
   cursor: pointer;
   &.detail-post-img {
     /* min-height: 350px; */
