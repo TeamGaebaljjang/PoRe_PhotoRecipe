@@ -17,7 +17,7 @@ export const darkMode = {
   shadow: '0 0 10px black',
   barShadow: '0 4px 7px -4px black',
   chatShadow: '1px 2px 5px -2px black',
-  font: '#E8E8E8',
+  font: 'var(--light-gray)',
   realBlack: 'black',
   scroll: 'var(--super-gray)',
   button: 'var(--super-gray)',

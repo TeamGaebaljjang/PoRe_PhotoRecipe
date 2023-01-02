@@ -10,7 +10,7 @@ import {
   BackDrop,
 } from './postStyle';
 import FeedEditUnder from '../modal/UnderModal/FeedEditUnder';
-import CommentReportModal from '../modal/UnderModal/CommentReportModal';
+import PostReportModal from '../modal/UnderModal/PostReportModal';
 import more from '../../assets/icons/icon-more-vertical-gray.svg';
 import defaultProfileImg from '../../assets/icons/basic-profile-round.svg';
 
@@ -19,7 +19,6 @@ const PostUserInfo = ({ posts }) => {
   const navigate = useNavigate();
   const accountName = localStorage.getItem('accountname');
   const userInfo = posts.author.accountname;
-  console.log(posts.content);
 
   const userCheck = () => {
     if (accountName === userInfo) {
@@ -77,12 +76,7 @@ const PostUserInfo = ({ posts }) => {
         accountName === userInfo ? (
           <FeedEditUnder posts={posts} />
         ) : (
-          <CommentReportModal
-            postDetailId={posts.id}
-            commentList={userInfo}
-            setComment={posts.content}
-            closeModal={modalHandler}
-          />
+          <PostReportModal postDetailId={posts} closeModal={modalHandler} />
         )
       ) : null}
     </User>
