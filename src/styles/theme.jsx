@@ -2,11 +2,13 @@ export const darkMode = {
   color: '#ffffff',
   bgColor: '#1C1C1C',
   active: '#FF5757',
+  shadow: '0 0 5px var(--deep-gray)',
 };
 export const lightMode = {
   color: '#1C1C1C',
   bgColor: '#ffffff',
   active: '#1C1C1C',
+  shadow: '0 0 5px var(--deep-gray)',
 };
 // :root {
 //     --black: #1C1C1C;
