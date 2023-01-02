@@ -25,7 +25,6 @@ const Container = styled.div`
   .region {
     width: 390px;
     height: 50px;
-    border-bottom: 1px var(--light-gray) solid;
     box-shadow: ${(props) => props.theme.shadow};
   }
   .region p {

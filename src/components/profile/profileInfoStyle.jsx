@@ -60,8 +60,8 @@ export const Follow = styled.div`
 `;
 
 export const Follower = styled.button`
-  padding-right: 6px;
-  border-right: 2px solid var(--light-gray);
+  padding-right: 8px;
+  border-right: 2px solid ${(props) => props.theme.button};
   font-size: 14px;
   color: ${(props) => props.theme.color};
 
@@ -74,7 +74,7 @@ export const Follower = styled.button`
 `;
 
 export const Following = styled.button`
-  padding-left: 6px;
+  padding-left: 8px;
   font-size: 14px;
   color: ${(props) => props.theme.color};
 

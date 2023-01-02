@@ -44,7 +44,7 @@ export const UserWrap = styled.div`
   width: 350px;
   height: 70px;
   margin: 0 auto;
-  border-bottom: 0.5px solid var(--light-gray);
+  border-bottom: 0.5px solid ${(props) => props.theme.realBlack};
   @media all and (min-width: 720px) {
     & {
       width: 100%;
