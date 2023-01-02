@@ -120,19 +120,25 @@ export const CommentModalWrap = styled.ul`
     margin-left: -20px;
   }
   &.comment-modal.detail {
-    /* margin-left: -20px; */
     margin-bottom: 0;
   }
   @media all and (min-width: 720px) {
     & {
-      /* width: calc(100vw - 126px); */
-      /* margin-left: 126px; */
-      width: 100vw;
+      width: calc(100vw - 126px);
       margin-bottom: 0;
-      left: 0;
+      right: 0;
     }
-    &.comment-modal {
-      margin-left: 0;
+    &.detail-modal.detail {
+      width: 100vw;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: calc(100vw - 240px);
+      margin-bottom: 0;
+      right: 0;
+    }
+    &.detail-modal.detail {
       width: 100vw;
     }
   }

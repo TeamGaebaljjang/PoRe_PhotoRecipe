@@ -38,10 +38,9 @@ const ReportUnder = ({ postDetailId, commentList, setComment, closeModal }) => {
   return (
     <>
       <CommentModalWrap
+        style={{ marginBottom: '0' }}
         className={
-          target === '/feed' || target === '/otherProfile'
-            ? 'comment-modal'
-            : 'comment-modal detail'
+          target === '/feed/feeddetail' ? 'detail-modal detail' : 'detail-modal'
         }
       >
         <UnderModalCloseBtn />

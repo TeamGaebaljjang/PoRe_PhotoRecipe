@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 import {
   CommentModalWrap,
   UnderModalCont,
@@ -11,6 +12,9 @@ const DeleteEditUnder = ({
   setComment,
   getComments,
 }) => {
+  const location = useLocation();
+  const target = location.pathname;
+
   const deleteComment = async () => {
     try {
       const URL = 'https://mandarin.api.weniv.co.kr';
@@ -32,7 +36,12 @@ const DeleteEditUnder = ({
   };
 
   return (
-    <CommentModalWrap>
+    <CommentModalWrap
+      style={{ marginBottom: '0' }}
+      className={
+        target === '/feed/feeddetail' ? 'detail-modal detail' : 'detail-modal'
+      }
+    >
       <UnderModalCloseBtn />
       <UnderModalCont
         onClick={() => {

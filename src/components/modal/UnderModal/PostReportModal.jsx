@@ -40,8 +40,8 @@ const PostReportModal = ({ postDetailId, closeModal }) => {
       <CommentModalWrap
         className={
           target === '/feed' || target === '/otherProfile'
-            ? 'comment-modal'
-            : 'comment-modal detail'
+            ? 'detail-modal comment-modal'
+            : 'detail-modal detail comment-modal detail'
         }
       >
         <UnderModalCloseBtn />
