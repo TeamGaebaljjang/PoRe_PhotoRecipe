@@ -7,7 +7,7 @@ export const Div = styled.div`
   flex-shrink: 0;
   border-radius: 10px;
   background: url(${(props) => props.src}) no-repeat center / cover;
-  border: 1px var(--gray) solid;
+  border: 1px solid ${(props) => props.theme.realBlack};
   position: relative;
   @media all and (min-width: 720px) {
     & {
