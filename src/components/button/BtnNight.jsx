@@ -17,8 +17,10 @@ export const ModeBtn = styled.button`
 `;
 
 export const ModeBtnLarge = styled.button`
+  display: none;
   @media all and (min-width: 720px) {
     & {
+      display: block;
       width: 55px;
       height: 35px;
       position: absolute;
