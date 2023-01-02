@@ -69,6 +69,7 @@ const EditPostCard = () => {
         imgShow.push(`${URL}/${fileName}`);
         setImgFile(imgShow.join(','));
       } else {
+        // eslint-disable-next-line no-alert
         alert('이미지는 3장까지만 업로드 가능합니다.');
       }
     } catch (error) {

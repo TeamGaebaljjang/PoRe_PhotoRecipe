@@ -8,6 +8,7 @@ import {
   ProfileImgWrap,
   ProfileImg,
   ProfileImgLabel,
+  Wrapper,
 } from '../../Login/SetProfile/setProfileStyle';
 
 const EditProfileForm = () => {
@@ -101,10 +102,12 @@ const EditProfileForm = () => {
   return (
     <EditProfileContDiv>
       <h2>프로필 수정</h2>
-      <ProfileImgWrap>
-        <ProfileImg src={image} alt="프로필 이미지" />
-      </ProfileImgWrap>
-      <ProfileImgLabel style={{ top: '210px' }} htmlFor="profileImg" />
+      <Wrapper>
+        <ProfileImgWrap>
+          <ProfileImg src={image} alt="프로필 이미지" />
+        </ProfileImgWrap>
+        <ProfileImgLabel htmlFor="profileImg" />
+      </Wrapper>
       <input
         id="profileImg"
         type="file"

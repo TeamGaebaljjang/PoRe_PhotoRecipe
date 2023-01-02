@@ -7,6 +7,7 @@ import {
   ProfileImgWrap,
   ProfileImg,
   ProfileImgLabel,
+  Wrapper,
 } from './setProfileStyle';
 import StyledButton from '../../../components/button/BtnForm';
 import profileBasicImg from '../../../assets/icons/basic-profile-round.svg';
@@ -147,10 +148,12 @@ const SetProfileForm = () => {
       <FormStyle>
         <h2>프로필 설정</h2>
         <p>나중에 언제든지 변경할 수 있습니다.</p>
-        <ProfileImgWrap>
-          <ProfileImg src={profileImg} alt="프로필 이미지" />
-        </ProfileImgWrap>
-        <ProfileImgLabel htmlFor="profileImg" />
+        <Wrapper>
+          <ProfileImgWrap>
+            <ProfileImg src={profileImg} alt="프로필 이미지" />
+          </ProfileImgWrap>
+          <ProfileImgLabel className="set-profile" htmlFor="profileImg" />
+        </Wrapper>
         <input
           id="profileImg"
           type="file"

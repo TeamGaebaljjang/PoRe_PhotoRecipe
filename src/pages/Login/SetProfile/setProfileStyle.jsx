@@ -20,6 +20,12 @@ export const ProfileContDiv = styled.div`
   }
 `;
 
+export const Wrapper = styled.div`
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+`;
+
 export const ProfileImgWrap = styled.div`
   position: relative;
   width: 116px;
@@ -38,8 +44,8 @@ export const ProfileImg = styled.img`
 
 export const ProfileImgLabel = styled.label`
   position: absolute;
-  top: 230px;
-  right: 130px;
+  top: 80px;
+  right: -6px;
   width: 36px;
   height: 36px;
   background-color: var(--black);
@@ -47,4 +53,8 @@ export const ProfileImgLabel = styled.label`
   background-image: url(${addPic});
   background-repeat: no-repeat;
   background-position: center;
+
+  &.set-profile {
+    top: 100px;
+  }
 `;
