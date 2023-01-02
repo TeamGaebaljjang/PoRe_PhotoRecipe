@@ -31,7 +31,7 @@ export const ChatList = styled.div`
   height: 70px;
   margin: 0 10px;
   position: relative;
-  border-bottom: 0.5px solid var(--light-gray);
+  border-bottom: 0.5px solid ${(props) => props.theme.realBlack};
   gap: 10px;
   @media all and (min-width: 720px) {
     & {

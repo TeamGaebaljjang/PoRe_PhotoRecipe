@@ -57,7 +57,7 @@ export const NavUlStyle = styled.ul`
       top: -15px;
       width: 90px;
       height: 1px;
-      background-color: var(--gray);
+      background-color: ${(props) => props.theme.realBlack};
     }
   }
   @media all and (min-width: 941px) {
