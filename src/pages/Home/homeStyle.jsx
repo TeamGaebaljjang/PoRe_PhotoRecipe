@@ -221,7 +221,7 @@ export const Feed = styled.li`
   position: relative;
   min-width: 170px;
   height: 190px;
-  border: 1px solid ${(props) => props.theme.postBorder};
+  border: 1px solid ${(props) => props.theme.realBlack};
   border-radius: 10px;
   overflow: auto;
   @media all and (min-width: 720px) {
