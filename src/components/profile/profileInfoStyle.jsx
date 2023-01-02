@@ -143,9 +143,9 @@ export const GoFollow = styled.button`
   height: 40px;
   margin-right: 20px;
   border-radius: 80px;
-  background-color: ${(props) => props.theme.bgColor};
-  border: 1px ${(props) => props.theme.color} solid;
-  color: ${(props) => props.theme.color};
+  background-color: ${(props) => props.theme.color};
+  border: 1.5px solid ${(props) => props.theme.color};
+  color: ${(props) => props.theme.bgColor};
   p {
     font-size: 14px;
     font-weight: 500;
@@ -183,7 +183,7 @@ export const GoUnFollow = styled.button`
   height: 40px;
   margin-right: 20px;
   background-color: ${(props) => props.theme.bgColor};
-  border: 1px ${(props) => props.theme.color} solid;
+  border: 1.5px solid ${(props) => props.theme.color};
   color: ${(props) => props.theme.color};
   border-radius: 80px;
   p {
