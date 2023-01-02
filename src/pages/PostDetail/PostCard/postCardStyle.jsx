@@ -11,7 +11,7 @@ export const CardWrap = styled.div`
 `;
 
 export const Comments = styled.div`
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid ${(props) => props.theme.realBlack};
   padding-top: 5px;
   background-color: ${(props) => props.theme.bgColor};
   overflow: auto;

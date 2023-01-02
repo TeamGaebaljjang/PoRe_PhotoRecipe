@@ -1,8 +1,4 @@
 import styled from 'styled-components';
-import searchIcon from '../../assets/icons/icon-search.svg';
-import moreIcon from '../../assets/icons/icon-more-vertical.svg';
-import backIcon from '../../assets/icons/icon-arrow-left.svg';
-import editIcon from '../../assets/icons/icon-edit-post.svg';
 
 export const HeaderContainer = styled.article`
   height: 48px;
@@ -86,7 +82,7 @@ export const SearchBtn = styled.button`
   width: 48px;
   height: 48px;
   background: no-repeat center;
-  background-image: url(${searchIcon});
+  background-image: ${(props) => props.theme.searchIcon};
   @media all and (min-width: 720px) {
     & {
       width: 60px;
@@ -99,7 +95,7 @@ export const MoreBtn = styled.button`
   width: 48px;
   height: 48px;
   background: no-repeat center;
-  background-image: url(${moreIcon});
+  background-image: ${(props) => props.theme.moreIcon};
   @media all and (min-width: 720px) {
     & {
       width: 60px;
@@ -112,7 +108,7 @@ export const BackBtn = styled.button`
   width: 48px;
   height: 48px;
   background: no-repeat center;
-  background-image: url(${backIcon});
+  background-image: ${(props) => props.theme.backIcon};
   margin-right: -15px;
   @media all and (min-width: 720px) {
     & {
@@ -127,7 +123,7 @@ export const UploadPostBtn = styled.button`
   width: 48px;
   height: 48px;
   background: no-repeat center;
-  background-image: url(${editIcon});
+  background-image: ${(props) => props.theme.editIcon};
   @media all and (min-width: 720px) {
     & {
       width: 60px;
