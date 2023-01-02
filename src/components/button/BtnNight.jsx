@@ -21,14 +21,14 @@ export const ModeBtnLarge = styled.button`
   @media all and (min-width: 720px) {
     & {
       display: block;
-      width: 55px;
-      height: 35px;
+      width: 70px;
+      height: 40px;
       position: absolute;
       left: 15px;
-      bottom: 10px;
+      bottom: 15px;
       z-index: 40;
       background-repeat: no-repeat;
-      background-size: 55px;
+      background-size: 70px;
     }
   }
 `;
