@@ -17,7 +17,7 @@ export const ProfileImg = styled.img`
   height: 40px;
   object-fit: cover;
   border-radius: 50%;
-  outline: 1px solid var(--light-gray);
+  outline: 1px solid ${(props) => props.theme.realBlack};
   cursor: pointer;
 `;
 export const UserName = styled.strong`

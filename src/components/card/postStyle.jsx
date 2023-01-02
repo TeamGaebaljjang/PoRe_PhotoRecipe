@@ -64,7 +64,7 @@ export const UserProfile = styled.img`
   border-radius: 50%;
   margin-right: 12px;
   cursor: pointer;
-  outline: 1px solid var(--light-gray);
+  outline: 1px solid ${(props) => props.theme.realBlack};
   @media all and (min-width: 720px) {
     & {
       width: 50px;
