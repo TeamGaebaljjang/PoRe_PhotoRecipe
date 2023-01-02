@@ -44,7 +44,7 @@ export const Carousel = styled.article`
 
 export const Search = styled(Link)`
   position: absolute;
-  top: 20px;
+  top: 14px;
   right: 20px;
 `;
 
