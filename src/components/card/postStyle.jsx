@@ -145,6 +145,16 @@ export const PostImg = styled.img`
   &.detail-post-img {
     /* min-height: 350px; */
   }
+  @media all and (min-width: 720px) {
+    & {
+      height: 500px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      height: 570px;
+    }
+  }
 `;
 
 export const Icon = styled.div`
