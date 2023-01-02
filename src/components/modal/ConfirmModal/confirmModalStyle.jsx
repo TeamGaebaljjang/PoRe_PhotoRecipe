@@ -13,7 +13,7 @@ const ConfirmModal = styled.article`
   h3 {
     font-size: 16px;
     padding: 22px 20px;
-    border-bottom: 0.5px solid var(--gray);
+    border-bottom: 0.5px solid ${(props) => props.theme.line};
   }
   span {
     display: block;

@@ -10,6 +10,7 @@ import {
   BackDrop,
 } from './postStyle';
 import FeedEditUnder from '../modal/UnderModal/FeedEditUnder';
+import PostReportModal from '../modal/UnderModal/PostReportModal';
 import more from '../../assets/icons/icon-more-vertical-gray.svg';
 import defaultProfileImg from '../../assets/icons/basic-profile-round.svg';
 
@@ -70,7 +71,14 @@ const PostUserInfo = ({ posts }) => {
           }}
         />
       ) : null}
-      {modal ? <FeedEditUnder posts={posts} closeModal={modalHandler} /> : null}
+      {/* eslint-disable-next-line no-nested-ternary */}
+      {modal ? (
+        accountName === userInfo ? (
+          <FeedEditUnder posts={posts} />
+        ) : (
+          <PostReportModal postDetailId={posts} closeModal={modalHandler} />
+        )
+      ) : null}
     </User>
   );
 };

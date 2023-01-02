@@ -5,13 +5,12 @@ export const UnderModalWrap = styled.ul`
   color: ${(props) => props.theme.color};
   position: fixed;
   bottom: 0;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
   padding: 10px 25px;
   width: 390px;
   border-radius: 10px 10px 0 0;
   box-shadow: ${(props) => props.theme.shadow};
   z-index: 30;
-  border-bottom: 10px solid white;
   animation-name: appear;
   animation-duration: 0.5s;
   @keyframes appear {
@@ -28,33 +27,30 @@ export const UnderModalWrap = styled.ul`
   &.fd-under-modal {
     margin-left: -20px;
   }
+  &.fd-under-modal.detail {
+    margin-bottom: 0;
+  }
+
   @media all and (min-width: 720px) {
     & {
       width: calc(100vw - 126px);
-      margin-left: 126px;
       margin-bottom: 0;
-      left: 0;
+      right: 0;
     }
     &.pz-under-modal {
       margin-left: 126px;
     }
-    &.fd-under-modal {
-      margin-left: 126px;
+    &.fd-under-modal.detail {
+      width: 100vw;
     }
   }
   @media all and (min-width: 941px) {
     & {
       width: calc(100vw - 240px);
-      margin-left: 240px;
-    }
-    &.pz-under-modal {
-      margin-left: 240px;
-    }
-    &.fd-under-modal {
-      margin-left: 240px;
     }
   }
 `;
+
 export const UnderModalCloseBtn = styled.button`
   width: 340px;
   height: 20px;
@@ -76,17 +72,18 @@ export const UnderModalCloseBtn = styled.button`
     }
   }
 `;
+
 export const UnderModalCont = styled.li`
   font-size: 14px;
   line-height: 55px;
   cursor: pointer;
+  button {
+    color: ${(props) => props.theme.color};
+  }
   @media all and (min-width: 720px) {
     & {
       text-align: center;
     }
-  }
-  button {
-    color: ${(props) => props.theme.color};
   }
 `;
 
@@ -95,12 +92,12 @@ export const CommentModalWrap = styled.ul`
   color: ${(props) => props.theme.color};
   position: fixed;
   bottom: 0;
+  margin-bottom: 50px;
   padding: 15px 25px;
   width: 390px;
   border-radius: 10px 10px 0 0;
   box-shadow: ${(props) => props.theme.shadow};
   z-index: 30;
-  border-bottom: 10px solid white;
   animation-name: appear;
   animation-duration: 0.5s;
   @keyframes appear {
@@ -114,16 +111,26 @@ export const CommentModalWrap = styled.ul`
   &.comment-modal {
     margin-left: -20px;
   }
+  &.comment-modal.detail {
+    margin-bottom: 0;
+  }
   @media all and (min-width: 720px) {
     & {
-      /* width: calc(100vw - 126px); */
-      /* margin-left: 126px; */
-      width: 100vw;
+      width: calc(100vw - 126px);
       margin-bottom: 0;
-      left: 0;
+      right: 0;
     }
-    &.comment-modal {
-      margin-left: 0;
+    &.detail-modal.detail {
+      width: 100vw;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: calc(100vw - 240px);
+      margin-bottom: 0;
+      right: 0;
+    }
+    &.detail-modal.detail {
       width: 100vw;
     }
   }
