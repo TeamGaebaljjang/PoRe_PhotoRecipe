@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Wrapper, BackDrop } from './profileStyle';
 import HeaderProfile from '../../components/header/HeaderProfile';
@@ -12,6 +12,8 @@ import PostWrapper from '../../components/card/PostWrapper';
 import ProfileUnderModal from '../../components/modal/UnderModal/ProfileUnderModal';
 import { getFeed } from '../../store/feedSlice';
 import BtnTop from '../../components/button/BtnTop';
+import { ThemeContext } from '../../store/ThemeProvider';
+import BtnNight from '../../components/button/BtnNight';
 
 const Profile = () => {
   const [info, setInfo] = useState('');
@@ -27,6 +29,9 @@ const Profile = () => {
     dispatch(getFeed(accountname));
   }, []);
   const posts = getPost.payload?.post;
+
+  const { isDarkMode, toggleMode } = useContext(ThemeContext);
+  console.log(isDarkMode);
 
   const modalHandler = () => {
     setModal(!modal);
@@ -53,6 +58,14 @@ const Profile = () => {
 
   return (
     <Wrapper ref={parent}>
+      <BtnNight
+        type="button"
+        onClick={() => {
+          toggleMode();
+        }}
+      >
+        다크모드
+      </BtnNight>
       <HeaderProfile modalHandler={modalHandler} />
       <ProfileInfo info={info} />
       <PhotoZoneList accountname={accountname} />

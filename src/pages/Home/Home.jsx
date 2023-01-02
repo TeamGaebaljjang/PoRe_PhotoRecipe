@@ -6,6 +6,7 @@ import HomeFeed from './HomeFeed';
 import NavBar from '../../components/navBar/NavBar';
 import BtnTop from '../../components/button/BtnTop';
 import { ThemeContext } from '../../store/ThemeProvider';
+import BtnNight from '../../components/button/BtnNight';
 
 const Home = () => {
   const parent = useRef();
@@ -14,23 +15,14 @@ const Home = () => {
 
   return (
     <Wrap ref={parent}>
-      <button
+      <BtnNight
         type="button"
         onClick={() => {
           toggleMode();
         }}
-        style={{
-          width: '30px',
-          height: '30px',
-          backgroundColor: 'red',
-          position: 'absolute',
-          top: '16px',
-          left: '16px',
-          zIndex: '9999',
-        }}
       >
         다크모드
-      </button>
+      </BtnNight>
       <HomeCarousel />
       <HomeFeed />
       <NavBar />

@@ -2,14 +2,25 @@ export const darkMode = {
   color: '#ffffff',
   bgColor: '#1C1C1C',
   active: '#FF5757',
-  shadow: '0 0 5px var(--deep-gray)',
+  chat: '#767676',
+  shadow: '0 0 10px black',
+  barShadow: '0 4px 7px -4px black',
+  postBorder: 'black',
+  chatShadow: '1px 2px 5px -2px black',
+  font: '#E8E8E8',
 };
 export const lightMode = {
   color: '#1C1C1C',
   bgColor: '#ffffff',
   active: '#1C1C1C',
-  shadow: '0 0 5px var(--deep-gray)',
+  chat: '#E8E8E8',
+  shadow: '0 0 10px var(--gray)',
+  barShadow: '0 4px 7px -4px var(--light-gray)',
+  postBorder: '#CDCDCD',
+  chatShadow: '1px 2px 5px -2px var(--deep-gray)',
+  font: '#767676',
 };
+
 // :root {
 //     --black: #1C1C1C;
 //     --light-red: #FF5757;
@@ -21,11 +32,4 @@ export const lightMode = {
 //     --success-green: #50c927;
 // }
 
-// const Test = styled.p`
-//   color: ${(props) => props.theme.color};
-//   position: absolute;
-//   top: 200px;
-// `;
-
-// background-color: ${(props) => props.theme.bgColor};
-// color: ${(props) => props.theme.color};
+// ${(props) => props.theme.bgColor};
