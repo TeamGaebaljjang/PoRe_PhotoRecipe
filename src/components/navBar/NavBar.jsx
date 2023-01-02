@@ -19,11 +19,15 @@ import iconMapActiveDark from '../../assets/icons/icon-map-dark.svg';
 import iconMessageActiveDark from '../../assets/icons/icon-message-dark.svg';
 import iconUserActiveDark from '../../assets/icons/icon-user-dark.svg';
 import { ThemeContext } from '../../store/ThemeProvider';
+import { ModeBtnLarge } from '../button/BtnNight';
+import btnDarkLarge from '../../assets/icons/icon-btn-dark-big.svg';
+import btnLightLarge from '../../assets/icons/icon-btn-light-big.svg';
 
 const NavBar = () => {
   const location = useLocation();
   const target = location.pathname;
-  const { isDarkMode } = useContext(ThemeContext);
+  const { isDarkMode, toggleMode } = useContext(ThemeContext);
+  console.log(isDarkMode);
 
   return (
     <NavWrap>
@@ -148,6 +152,17 @@ const NavBar = () => {
           </NavItemStyle>
         </Link>
       </NavUlStyle>
+      <ModeBtnLarge
+        type="button"
+        onClick={() => {
+          toggleMode();
+        }}
+        style={
+          isDarkMode
+            ? { backgroundImage: `url(${btnDarkLarge})` }
+            : { backgroundImage: `url(${btnLightLarge})` }
+        }
+      />
     </NavWrap>
   );
 };
