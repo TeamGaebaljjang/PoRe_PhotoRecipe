@@ -23,6 +23,7 @@ export const darkMode = {
   moreIcon: `url(${moreIconDark})`,
   backIcon: `url(${backIconDark})`,
   editIcon: `url(${editIconDark})`,
+  line: 'var(--super-gray)',
 };
 
 export const lightMode = {
@@ -41,6 +42,7 @@ export const lightMode = {
   moreIcon: `url(${moreIcon})`,
   backIcon: `url(${backIcon})`,
   editIcon: `url(${editIcon})`,
+  line: 'var(--gray)',
 };
 
 // :root {
