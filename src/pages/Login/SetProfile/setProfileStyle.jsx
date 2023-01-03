@@ -48,7 +48,7 @@ export const ProfileImgLabel = styled.label`
   right: -6px;
   width: 36px;
   height: 36px;
-  background-color: var(--black);
+  background-color: var(--super-gray);
   border-radius: 50%;
   background-image: url(${addPic});
   background-repeat: no-repeat;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import BtnAddPic from '../../../components/button/BtnAddPic';
 
 const EditProfileContDiv = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
   min-height: 614px;
   margin-top: 20px;
   padding: 0 20px;
@@ -10,6 +10,7 @@ const EditProfileContDiv = styled.div`
   h2 {
     font-size: 24px;
     text-align: center;
+    color: ${(props) => props.theme.color};
   }
 
   .profile-img-wrap {
@@ -23,6 +24,10 @@ const EditProfileContDiv = styled.div`
 
   .profile-img-wrap img {
     width: 100%;
+  }
+
+  input {
+    color: ${(props) => props.theme.color};
   }
 `;
 
