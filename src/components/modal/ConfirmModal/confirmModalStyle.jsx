@@ -34,6 +34,7 @@ const Btnwrap = styled.div`
   width: 100%;
 
   button {
+    width: 50%;
     color: ${(props) => props.theme.color};
     flex-grow: 1;
     padding: 14px 0;
@@ -41,7 +42,7 @@ const Btnwrap = styled.div`
   }
 
   button + button {
-    border-left: 0.5px solid var(--gray);
+    border-left: 0.5px solid ${(props) => props.theme.line};
   }
 
   .caution-option {
