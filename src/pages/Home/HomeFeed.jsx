@@ -1,7 +1,6 @@
-// import { useInView } from 'react-intersection-observer';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
 import defaultImg from '../../assets/icons/basic-post-default.svg';
 
@@ -12,49 +11,30 @@ const HomeFeed = () => {
   const [btnOn, setBtnOn] = useState(false);
   const [btnAll, setBtnAll] = useState(true);
   const [feedPost, setFeedPost] = useState([]);
-
-  // 무한 스크롤
-  // const [numFeed, setNumFeed] = useState(0);
-  // const [loading, setLoading] = useState(false);
-  // const [ref, inView] = useInView();
-  // const [done, setDone] = useState(false);
-
   const URL = 'https://mandarin.api.weniv.co.kr';
 
-  const getFeed = useCallback(async () => {
-    // setLoading(true);
-    try {
-      const token = localStorage.getItem('token');
-      // const accountRegex = /^[0-9a-zA-Z]([_\\.]?[0-9a-zA-Z])*_pore/gim;
-      const res = await axios.get(`${URL}/product/PoRe_Home/?limit=infinite`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-type': 'application/json',
-        },
-      });
-      if (res) {
-        setFeedPost(feedPost.concat(res.data.product));
-        // setLoading(false);
-        if (res.data.product.length < 10) {
-          // setDone(true);
-        }
-      }
-    } catch (error) {
-      console.log(error.res);
-    }
-  });
-
   useEffect(() => {
-    // if (!done) {
+    const getFeed = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const res = await axios.get(
+          `${URL}/product/PoRe_Home/?limit=infinite`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              'Content-type': 'application/json',
+            },
+          },
+        );
+        if (res) {
+          setFeedPost(feedPost.concat(res.data.product));
+        }
+      } catch (error) {
+        console.log(error.res);
+      }
+    };
     getFeed();
-    // }
   }, []);
-
-  // useEffect(() => {
-  //   if (inView && !loading) {
-  //     setNumFeed((current) => current + 10);
-  //   }
-  // }, [inView, loading]);
 
   // 포토존 이미지 클릭시 상세 페이지로 이동
   const handleDetailPost = ({ item }) => {
@@ -77,8 +57,7 @@ const HomeFeed = () => {
   ];
 
   // 지역 버튼 클릭시 해당 게시글 렌더링
-  const handlePlace = (e, { item }) => {
-    console.log(item);
+  const handlePlace = (e) => {
     setBtnActive(() => {
       return e.target.value;
     });
@@ -109,7 +88,7 @@ const HomeFeed = () => {
             onClick={(e) => {
               setName(item);
               setBtnAll(false);
-              handlePlace(e, { item });
+              handlePlace(e);
               setBtnOn(true);
             }}
           >
@@ -133,9 +112,6 @@ const HomeFeed = () => {
                 </Feed>
               ))
           : feedPost.map((item) => (
-              // feedPost.length - 1 === i ? (
-              //   <div ref={ref} />
-              // ) :
               <Feed key={crypto.randomUUID()}>
                 <FeedImg
                   key={item.id}
