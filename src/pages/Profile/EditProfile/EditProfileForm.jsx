@@ -159,6 +159,7 @@ const EditProfileForm = () => {
           type="submit"
           disabled={!isValidUserName}
           onClick={editProfile}
+          className="edit-save"
         >
           저장
         </StyledButton>
