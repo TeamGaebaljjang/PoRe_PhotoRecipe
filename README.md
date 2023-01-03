@@ -5,11 +5,7 @@
 
 <br/>
 
-메인 이미지 넣기!!!!!
-<br/>
-메인 이미지 넣기!!!!!
-<br/>
-메인 이미지 넣기!!!!!
+![Frame 29](https://user-images.githubusercontent.com/112460344/210323379-bd97fbdc-902f-4c03-94a0-6627565f0d15.png)
 
 <br/>
 
