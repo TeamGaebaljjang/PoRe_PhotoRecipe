@@ -1,6 +1,4 @@
 # <span id="top">📷 PoRe_PhotoRecipe</span>
-📎 프로젝트 기간 : 2022.12.09 - 2023.01.05
-<br/>
 📎 배포 URL : 링크
 <br/>
 🔓 계정 : (회원가입, 포토존, 게시글 등록, 팔로우와 같은 과정 없이 전반적으로 우리 프로젝트를 살펴보실 수 있는 계정 하나 만들어두고 여기에 입력하기!)
@@ -15,7 +13,7 @@
 
 <br/>
 
-### [ 프로젝트 설명 ]
+#### [ 프로젝트 설명 ]
 
 - 당신이 있는 곳이 포토존입니다.
   '포토레시피 PORE'는 포토스팟을 공유할 수 있는 SNS형 웹 애플리케이션 입니다.
@@ -32,19 +30,19 @@
 
 1. [Team 소개](#teamsogae)
 2. [기술 및 개발 환경](#gisul)
-3. [주요 기능 및 코드 포인트](#juyogineung)
-4. [역할분담](#role)
-5. [UI](#UI)
-6. [페이지 기능](#pagegineung)
-7. [버전 계획](#versionplan)
-8. [팀 활동](#whatwedid)
+3. [개발 기간 및 작업 관리](#task)
+4. [주요 기능 및 코드 포인트](#juyogineung)
+5. [역할분담](#role)
+6. [UI](#UI)
+7. [페이지 기능](#pagegineung)
+8. [버전 계획](#versionplan)
+9. [팀 활동](#whatwedid)
 <br/>
 
 </div>
 </details>
 
-
-# <span id="teamsogae">Team ㄱㅂㅉ👊을 소개합니다!</span>
+## <span id="teamsogae">Team ㄱㅂㅉ👊을 소개합니다!</span>
 
 안녕하세요. 저희는 4명의 Front-end 개발자로 구성된 '**Team ㄱㅂㅉ**' 입니다. 팀원들의 초성인 ㄱ,ㅂ,ㅈ,ㅈ 을 하나로 모아 서로 도와주며 함께 성장하는 '**개발짱**' 이 되자는 의미를 담은 팀명입니다.
 
@@ -56,13 +54,17 @@
 |                      [dyFlower](https://github.com/dyFlower)                      |                        [jjangi](https://github.com/jjangi)                        |                     [heesu0303](https://github.com/heesu0303)                     |                       [ming-Jo](https://github.com/ming-Jo)                       |
 |                                     개발 리더                                     |                               기획 & <br/>소통 리더                               |                            디자인 & <br/> 문서화 리더                             |                             팀장 & <br/> 디자인 리더                              |
 
+### [ 프로젝트 목표 ]
+- 학습한 React와 여러 라이브러리를 활용해 SPA 웹 어플리케이션 개발
+- 페어프로그래밍, 협업 툴 사용해보기
+- 프로젝트 구현을 위한 팀원 간 소통, 상의 경험 쌓기
+- 디자인, 기능 추가 등 제공된 API와 디자인을 넘어 팀만의 프로젝트로 구현 완료해내기
 <br/>
-<br/>
+<p align="right"><a href="#top">(Top)</a></p>
 
-# <span id="gisul">⚙️ 기술 및 개발 환경
+## <span id="gisul">⚙️ 기술 및 개발 환경</span>
 
 ### [ 사용 기술 ]
-
 - FrontEnd
   <br/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/>
@@ -73,38 +75,38 @@
   <br/>
   제공된 API 사용
 
-<br/>
-
 ### [ 개발 환경 ]
 
-> > <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> <img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/> <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/> <img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=Discord&logoColor=white"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> <img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/> <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/> <img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=Discord&logoColor=white"/>
 
 - [GitHub Projects](https://github.com/orgs/TeamGaebaljjang/projects/2) : GitHub Issues와 함께 프로젝트 진행상황 총괄보드 관리
 - [Notion](링크) : 회의록, 정보 공유, 트러블 슈팅 작성
 - [Figma](링크) : 디자인 시안 제작
 
-<br/>
+### [컨벤션]
 
+- 코딩 컨벤션 : eslint, prettier
+- 커밋 컨벤션 : 
+  
 ### [ 서비스 배포 ]
->><img src="https://img.shields.io/badge/이름-색상코드?style=flat-square&logo=로고명&logoColor=로고색"/>
-
+<img src="https://img.shields.io/badge/이름-색상코드?style=flat-square&logo=로고명&logoColor=로고색"/>
 <br/>
+<p align="right"><a href="#top">(Top)</a></p>
 
-- 코딩 컨벤션 : 
-- 커밋 컨벤션 :
-
+## <span id='task'>⏱ 개발 기간 및 작업 관리</span>
+📎 프로젝트 기간 : 2022.12.09 - 2023.01.05
+### 일일회의
+매일 시작 전 20분 정도 개인 진행 상황 공유 및 상의, 이를 노션 회의록 페이지에 기록했습니다.
 <br/>
-
-### [ 프로젝트 목표 ]
-학습한 React와 여러 라이브러리를 활용해 SPA 웹 어플리케이션 개발
-페어프로그래밍, 협업 툴 사용해보기
-프로젝트 구현을 위한 팀원 간 소통, 상의 경험 쌓기
-디자인, 기능 추가 등 제공된 API와 디자인을 넘어 팀만의 프로젝트로 구현 완료해내기
-
+[회의록](회의록 페이지 링크!)
+### 트러블슈팅
+개인 파트 개발 중에 생긴 여러 문제, 해결 과정을 노션 트러블슈팅 페이지에 기록해 공유했습니다. 이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해결까지 편리하게 해낼 수 있었습니다.
 <br/>
+[트러블슈팅](트러블슈팅 페이지 링크!)
 <br/>
+<p align="right"><a href="#top">(Top)</a></p>
 
-# <span id='juyogineung'>주요 기능</span>
+## <span id='juyogineung'>🗸 주요 기능</span>
 
 - 🔐 계정
 
@@ -150,10 +152,7 @@
 
 <br/>
 
-## 프로젝트 구조
-
-_폴더트리 관련 간단 설명_
-
+### 프로젝트 구조
 - assets/ : 아이콘, 파비콘
 - components/ :
 - pages/ :
@@ -205,35 +204,34 @@ _폴더트리 관련 간단 설명_
 └─ README.md
 ```
 
-## 코드 포인트
+### 코드 포인트
 - 코드 중에서도 기술하고 싶은 부분 몇 개 추려서 기술해보기?
 <br/>
-<br/>
 
-## 스페셜 포인트
+### 스페셜 포인트
 - 기능이나 디자인 등 코드 외 포인트로 설명하고 싶은 부분 몇 개 추려 기술해보기?
 <br/>
+<p align="right"><a href="#top">(Top)</a></p>
+
+## <span id="role">🙋‍♀️ 역할 분담</span>
+
+### 김도영
+
+### 배이솔
+
+### 장희수
+
+### 조민지
+
 <br/>
+<p align="right"><a href="#top">(Top)</a></p>
 
-# <span id="role">역할 분담</span>
-
-## 김도영
-
-## 배이솔
-
-## 장희수
-
-## 조민지
-
-<br/>
-<br/>
-
-# <span id="UI">UI</span>
+## <span id="UI">🧭 UI</span>
 <img src="https://user-images.githubusercontent.com/89337955/153887850-b1199e73-15a8-474a-a7b9-e11155ad7168.jpg">
 <br/>
-<br/>
+<p align="right"><a href="#top">(Top)</a></p>
 
-# <span id="pagegineung">페이지 기능</span>
+## <span id="pagegineung">💻️ 페이지 기능</span>
 - 상세 기능 설명은 각 페이지별 링크 연결해두었습니다.
 ### 1) Start
 |🔗[splash](링크)|🔗[로그인](링크)|🔗[회원가입](링크)|
@@ -263,13 +261,16 @@ _폴더트리 관련 간단 설명_
 ### + 다크모드/반응형
 
 <br/>
+<p align="right"><a href="#top">(Top)</a></p>
+
+## <span id="versionplan">📚 버전 계획</span>
 <br/>
+<p align="right"><a href="#top">(Top)</a></p>
 
-
-# <span id="versionplan">버전 계획</span>
-
-# <span id="whatwedid">+</span>
-- 뭔가 개발짱만의 팀플 기간 동안의 여러 활동들을 기록해둬서 모두 팀플을 위해 소프트적으로도 노력을 했다~ 요런 느낌으로 남겨보고 싶은데에~..
-- (공동 계정 생성 후 피그마 함께 접속해 디자인 시안 제작? 함께함~, 거의 일일회의록, 옷 컬러 맞춰 입기, 새벽 디코 모임, 퇴실 후 맛저!)
+## <span id="whatwedid">👨‍👩‍👧‍👧 팀 활동</span>
+- 'ㄱㅂㅉ'은 팀 프로젝트 기간 동안, 위에서 기술한 내용 이외 다양한 시간을 보냈습니다. 이러한 시간 보냄으로써 개발하는 동안에 보다 원활한 소통이 가능했습니다!
+- 오프라인 모임 (드레스코드 맞춰 단체 사진 찍기)
+- 퇴실 후 주변 맛집에서 맛저!
+- *(뭔가 개발짱만의 팀플 기간 동안의 여러 활동들을 기록해둬서 모두 팀플을 위해 소프트적으로도 노력을 했다~ 요런 느낌으로 남겨보고 싶어서 일단 이렇게 적어봅니다아~)*
 
 <p align="right"><a href="#top">(Top)</a></p>
