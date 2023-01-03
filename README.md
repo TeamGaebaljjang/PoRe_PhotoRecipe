@@ -1,5 +1,5 @@
 # <span id="top">📷 PoRe_PhotoRecipe</span>
-📎 배포 URL : 링크
+📎 배포 URL : https://pore.netlify.app
 <br/>
 🔓 계정 : (회원가입, 포토존, 게시글 등록, 팔로우와 같은 과정 없이 전반적으로 우리 프로젝트를 살펴보실 수 있는 계정 하나 만들어두고 여기에 입력하기!)
 
@@ -50,7 +50,7 @@
 |                      [dyFlower](https://github.com/dyFlower)                      |                        [jjangi](https://github.com/jjangi)                        |                     [heesu0303](https://github.com/heesu0303)                     |                       [ming-Jo](https://github.com/ming-Jo)                       |
 |                                     개발 리더                                     |                               기획 & <br/>소통 리더                               |                            디자인 & <br/> 문서화 리더                             |                             팀장 & <br/> 디자인 리더                              |
 
-### [ 프로젝트 목표 ]
+#### [ 프로젝트 목표 ]
 - 학습한 React와 여러 라이브러리를 활용해 SPA 웹 어플리케이션 개발
 - 페어프로그래밍, 협업 툴 사용해보기
 - 프로젝트 구현을 위한 팀원 간 소통, 상의 경험 쌓기
@@ -60,7 +60,7 @@
 
 ## <span id="gisul">⚙️ 기술 및 개발 환경</span>
 
-### [ 사용 기술 ]
+#### [ 사용 기술 ]
 - FrontEnd
   <br/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/>
@@ -71,7 +71,7 @@
   <br/>
   제공된 API 사용
 
-### [ 개발 환경 ]
+#### [ 개발 환경 ]
 
 <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> <img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=Notion&logoColor=white"/> <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/> <img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=Discord&logoColor=white"/>
 
@@ -79,14 +79,13 @@
 - [Notion](링크) : 회의록, 정보 공유, 트러블 슈팅 작성
 - [Figma](링크) : 디자인 시안 제작
 
-### [컨벤션]
+#### [컨벤션]
 
 - 코딩 컨벤션 : eslint, prettier
 - 커밋 컨벤션 : 
   
-### [ 서비스 배포 ]
-<img src="https://img.shields.io/badge/이름-색상코드?style=flat-square&logo=로고명&logoColor=로고색"/>
-<br/>
+#### [ 서비스 배포 ]
+<img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=Netlify&logoColor=white"/>
 <p align="right"><a href="#top">(Top)</a></p>
 
 ## <span id='task'>⏱ 개발 기간 및 작업 관리</span>
