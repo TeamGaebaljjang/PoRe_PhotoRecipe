@@ -28,7 +28,9 @@ const PostCard = () => {
       console.log(error.res);
     }
   };
-  useEffect(() => getPostDetail, []);
+  useEffect(() => {
+    getPostDetail();
+  }, []);
 
   return (
     <Wrap className="no-Navbar">

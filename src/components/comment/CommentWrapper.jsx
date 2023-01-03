@@ -27,7 +27,9 @@ const CommentWrapper = ({ postDetailId }) => {
     }
   };
 
-  useEffect(() => getComments, []);
+  useEffect(() => {
+    getComments();
+  }, []);
 
   const postComment = async () => {
     try {
