@@ -17,8 +17,6 @@ const SetProfileForm = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { email, password } = { ...location.state };
-  console.log(`이메일: ${email}`);
-  console.log(`비번: ${password}`);
 
   // API 서버
   const URL = 'https://mandarin.api.weniv.co.kr';
@@ -57,11 +55,9 @@ const SetProfileForm = () => {
 
       if (response) {
         navigate('/login');
-      } else {
-        console.log(response.data.message);
       }
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error.response);
     }
   };
 
@@ -107,7 +103,7 @@ const SetProfileForm = () => {
         setIsValidUserId(false);
       }
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error.response);
     }
   };
 
@@ -139,7 +135,7 @@ const SetProfileForm = () => {
 
       setProfileImg(`${URL}/${fileName}`);
     } catch (error) {
-      console.log('에러입니다');
+      console.log(error.res);
     }
   };
 

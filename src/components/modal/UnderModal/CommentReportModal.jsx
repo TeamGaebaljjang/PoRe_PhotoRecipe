@@ -27,11 +27,12 @@ const ReportUnder = ({ postDetailId, commentList, setComment, closeModal }) => {
           },
         },
       );
-      console.log('ReportComment 응답 : ', res);
-      setConfirm(!confirm);
-      setComment('');
+      if (res) {
+        setConfirm(!confirm);
+        setComment('');
+      }
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
 

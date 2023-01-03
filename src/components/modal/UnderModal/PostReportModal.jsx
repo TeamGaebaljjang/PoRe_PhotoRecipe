@@ -28,10 +28,11 @@ const PostReportModal = ({ postDetailId, closeModal }) => {
           },
         },
       );
-      console.log('ReportPost 응답 : ', res);
-      setReport(!report);
+      if (res) {
+        setReport(!report);
+      }
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
 

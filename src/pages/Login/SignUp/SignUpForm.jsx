@@ -49,7 +49,7 @@ const SignUpForm = () => {
         setIsValidEmail(false);
       }
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error.response);
     }
   };
 

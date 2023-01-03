@@ -16,10 +16,11 @@ const FeedDeleteModal = ({ deleteHandler, posts }) => {
           'Content-type': 'application/json',
         },
       });
-      navigate(0);
-      console.log(res);
+      if (res) {
+        navigate(0);
+      }
     } catch (error) {
-      console.log('error입니다.');
+      console.log(error.res);
     }
   }
 

@@ -49,15 +49,15 @@ const EditPostCard = () => {
           },
         },
       );
-      console.log(res);
-      navigate(`/profile`);
+      if (res) {
+        navigate(`/profile`);
+      }
     } catch (error) {
-      console.log('에러입니다');
+      console.log(error.res);
     }
   };
 
   const imgShow = imgFile.split(',').filter((value) => value !== '');
-  console.log(imgShow);
   const imgApi = async () => {
     try {
       const file = imgRef.current.files[0];
@@ -73,7 +73,7 @@ const EditPostCard = () => {
         alert('이미지는 3장까지만 업로드 가능합니다.');
       }
     } catch (error) {
-      console.log('에러입니다');
+      console.log(error.res);
     }
   };
 

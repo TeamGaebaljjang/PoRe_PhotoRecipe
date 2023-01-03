@@ -17,7 +17,6 @@ import ReportUnder from '../modal/UnderModal/CommentReportModal';
 import defaultProfileImg from '../../assets/icons/basic-profile-round.svg';
 
 const Comment = ({ commentList, setComment, getComments, postDetailId }) => {
-  // console.log(commentList);
   const navigate = useNavigate();
   const userInfo = commentList.author.accountname;
   const [modal, setModal] = useState(false);

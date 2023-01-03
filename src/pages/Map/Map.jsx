@@ -32,10 +32,9 @@ const Map = () => {
           'Content-type': 'application/json',
         },
       });
-      console.log(res.data.product);
       setModals(res.data.product);
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
   useEffect(() => getModal, []);

@@ -20,7 +20,6 @@ const Feed = () => {
   const [numFeed, setNumFeed] = useState(0);
   const parent = useRef();
   const { isDarkMode, toggleMode } = useContext(ThemeContext);
-  console.log(isDarkMode);
 
   const getFeed = useCallback(async () => {
     const URL = 'https://mandarin.api.weniv.co.kr';
@@ -35,13 +34,11 @@ const Feed = () => {
       });
       setPosts(posts.concat(res.data.posts));
       setLoading(false);
-      // console.log(posts);
-      console.log(res.data.posts);
       if (res.data.posts.length < 10) {
         setDone(true);
       }
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   }, [numFeed]);
 

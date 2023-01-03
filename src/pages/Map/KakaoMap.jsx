@@ -18,7 +18,6 @@ const KakaoMap = ({ input }) => {
           level: 6,
         };
         const map = new kakao.maps.Map(container, options);
-        console.log(map);
         setKmap(map);
       });
     } else {
@@ -28,7 +27,6 @@ const KakaoMap = ({ input }) => {
         level: 6,
       };
       const map = new kakao.maps.Map(container, options);
-      console.log(`!${map}`);
       setKmap(map);
     }
   }, []);
@@ -124,7 +122,7 @@ const KakaoMap = ({ input }) => {
         });
       }
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   }, [input]);
 

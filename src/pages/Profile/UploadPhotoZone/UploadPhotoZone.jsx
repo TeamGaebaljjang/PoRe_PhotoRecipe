@@ -42,10 +42,11 @@ const UploadPhotoZone = () => {
           'Content-type': 'application/json',
         },
       });
-      console.log(res);
-      navigate(`/profile`);
+      if (res) {
+        navigate(`/profile`);
+      }
     } catch (error) {
-      console.log('에러입니다');
+      console.log(error.res);
     }
   };
 
@@ -58,7 +59,7 @@ const UploadPhotoZone = () => {
       const fileName = res.data.filename;
       setImgFile(`${URL}/${fileName}`);
     } catch (error) {
-      console.log('에러입니다');
+      console.log(error.res);
     }
   };
   return (

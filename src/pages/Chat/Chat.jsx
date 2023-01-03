@@ -23,7 +23,6 @@ const Chat = () => {
   const parent = useRef();
   const navigate = useNavigate();
   const { isDarkMode, toggleMode } = useContext(ThemeContext);
-  console.log(isDarkMode);
 
   return (
     <Wrapper ref={parent}>

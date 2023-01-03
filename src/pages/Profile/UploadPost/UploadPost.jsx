@@ -41,10 +41,11 @@ const UploadPost = () => {
           'Content-type': 'application/json',
         },
       });
-      console.log(res);
-      navigate(`/profile`);
+      if (res) {
+        navigate(`/profile`);
+      }
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
   const imgShow = imgFile.split(',').filter((value) => value !== '');
@@ -63,8 +64,7 @@ const UploadPost = () => {
         alert('이미지는 3장까지만 업로드 가능합니다.');
       }
     } catch (error) {
-      console.log(error);
-      console.log('에러입니다');
+      console.log(error.res);
     }
   };
 

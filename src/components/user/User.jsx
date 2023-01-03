@@ -39,10 +39,9 @@ const Userfoll = ({ item }) => {
           },
         },
       );
-      console.log(res.data.profile);
       setIsFollow(res.data.profile.isfollow);
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
 
@@ -58,10 +57,9 @@ const Userfoll = ({ item }) => {
           },
         },
       );
-      console.log(res.data.profile);
       setIsFollow(res.data.profile.isfollow);
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
 

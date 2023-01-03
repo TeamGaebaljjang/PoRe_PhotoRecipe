@@ -30,13 +30,12 @@ const EditProfileForm = () => {
       const res = await axios.get(`${URL}/user/myinfo`, {
         headers: { Authorization: `Bearer ${authToken}` },
       });
-      console.log(res.data.user);
       setUsername(res.data.user.username);
       setAccountname(res.data.user.accountname);
       setIntro(res.data.user.intro);
       setImage(res.data.user.image);
     } catch (error) {
-      console.log('에러입니다');
+      console.log(error.res);
     }
   };
   useEffect(() => getProfile, []);
@@ -54,7 +53,7 @@ const EditProfileForm = () => {
 
       setImage(`${URL}/${fileName}`);
     } catch (error) {
-      console.log('에러입니다');
+      console.log(error.res);
     }
   };
 
@@ -92,10 +91,11 @@ const EditProfileForm = () => {
           'Content-type': 'application/json',
         },
       });
-      console.log(res.data);
-      navigate('/profile');
+      if (res) {
+        navigate('/profile');
+      }
     } catch (error) {
-      console.log('에러입니다');
+      console.log(error.res);
     }
   };
 

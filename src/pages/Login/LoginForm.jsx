@@ -26,7 +26,6 @@ const LoginForm = () => {
         localStorage.setItem('token', res.data.user.token);
         localStorage.setItem('myprofileImg', res.data.user.image);
         navigate('/home');
-        console.log(res.data);
       }
     } catch (error) {
       setErrorMsg(error.response.data);

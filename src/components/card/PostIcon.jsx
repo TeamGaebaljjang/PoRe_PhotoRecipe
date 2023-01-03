@@ -22,8 +22,6 @@ const PostIcon = ({ posts, postDetailId }) => {
             'Content-type': 'application/json',
           },
         });
-        // console.log('좋아요 res : ', res);
-        // console.log('좋아요 data : ', res.data);
         setHeartCount(res.data.post.heartCount);
         setLike(true);
       } else {
@@ -33,13 +31,11 @@ const PostIcon = ({ posts, postDetailId }) => {
             'Content-type': 'application/json',
           },
         });
-        // console.log('좋아요취소 res : ', res);
-        // console.log('좋아요취소 data : ', res.data);
         setHeartCount(res.data.post.heartCount);
         setLike(false);
       }
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
 

@@ -28,7 +28,6 @@ const NavBar = () => {
   const target = location.pathname;
   const { isDarkMode, toggleMode } = useContext(ThemeContext);
   const navigate = useNavigate();
-  console.log(isDarkMode);
 
   return (
     <NavWrap>

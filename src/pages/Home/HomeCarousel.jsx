@@ -40,8 +40,6 @@ const HomeCarousel = () => {
 
         if (response) {
           setThumbnail(response.data.product);
-        } else {
-          console.log(response.data.message);
         }
       } catch (error) {
         console.log(error.response);

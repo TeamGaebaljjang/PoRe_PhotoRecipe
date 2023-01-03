@@ -58,7 +58,6 @@ const HomeFeed = () => {
 
   // 포토존 이미지 클릭시 상세 페이지로 이동
   const handleDetailPost = ({ item }) => {
-    console.log(item);
     navigate('/photodetail', {
       state: {
         image: `${item.author.image}`,

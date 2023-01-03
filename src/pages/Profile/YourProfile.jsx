@@ -59,10 +59,9 @@ const YourProFile = () => {
           },
         },
       );
-      console.log(res.data.profile);
       setIsFollow(res.data.profile.isfollow);
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
 
@@ -78,10 +77,9 @@ const YourProFile = () => {
           },
         },
       );
-      console.log(res.data.profile);
       setIsFollow(res.data.profile.isfollow);
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
 

@@ -33,7 +33,6 @@ const Profile = () => {
   const posts = getPost.payload?.post;
 
   const { isDarkMode, toggleMode } = useContext(ThemeContext);
-  console.log(isDarkMode);
 
   const modalHandler = () => {
     setModal(!modal);
@@ -53,7 +52,7 @@ const Profile = () => {
         });
         setInfo(res.data.user);
       } catch (error) {
-        console.log('error입니다.');
+        console.log(error.res);
       }
     })();
   }, []);

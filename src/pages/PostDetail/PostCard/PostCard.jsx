@@ -12,8 +12,6 @@ const PostCard = () => {
   const postDetailId = { ...location.state };
   const [posts, setPosts] = useState('');
 
-  // console.log('getPostDetail 데이터 : ', posts);
-
   const getPostDetail = async () => {
     const URL = 'https://mandarin.api.weniv.co.kr';
     const authToken = localStorage.getItem('token');
@@ -26,10 +24,8 @@ const PostCard = () => {
         },
       });
       setPosts(res?.data.post);
-      // console.log('getPostDetail 응답 : ', res);
-      // console.log(postDetailId);
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
   useEffect(() => getPostDetail, []);

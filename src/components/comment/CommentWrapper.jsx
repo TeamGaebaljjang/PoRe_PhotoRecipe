@@ -5,7 +5,6 @@ import { Comments } from '../../pages/PostDetail/PostCard/postCardStyle';
 import CommentForm from './CommentForm';
 
 const CommentWrapper = ({ postDetailId }) => {
-  // console.log('posts : ', posts);
   const [commentList, setCommentList] = useState([]);
   const [comment, setComment] = useState('');
 
@@ -23,10 +22,8 @@ const CommentWrapper = ({ postDetailId }) => {
         },
       );
       setCommentList(res.data.comments);
-      // console.log('comment 응답 : ', res);
-      // console.log('comment 데이터 : ', res.data.comments);
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
 
@@ -47,11 +44,10 @@ const CommentWrapper = ({ postDetailId }) => {
         },
       );
       setComment(res.data.comment.content);
-      // console.log('postComments 응답 : ', res);
       getComments();
       setComment('');
     } catch (error) {
-      console.log(error);
+      console.log(error.res);
     }
   };
 
@@ -59,7 +55,6 @@ const CommentWrapper = ({ postDetailId }) => {
     <>
       <Comments>
         {commentList.map((item) => {
-          // console.log('commentList : ', item);
           return commentList ? (
             <Comment
               key={item.id}
