@@ -76,7 +76,7 @@ const Feed = () => {
         <>
           <HeaderFeed style={{ position: 'sticky' }} />
           <PostWrapper posts={posts} />
-          <div ref={ref} />
+          <div ref={ref} style={{ marginBottom: '10px' }} />
         </>
       )}
       <BtnTop parent={parent} />
