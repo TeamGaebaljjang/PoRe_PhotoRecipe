@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import { useContext } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { NavWrap, NavUlStyle, NavItemStyle } from './navBarStyle';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { NavWrap, NavUlStyle, NavItemStyle, Logo } from './navBarStyle';
 import iconHome from '../../assets/icons/icon-home.svg';
 import iconHomeActive from '../../assets/icons/icon-home-active.svg';
 import iconFeed from '../../assets/icons/icon-feed.svg';
@@ -27,11 +27,17 @@ const NavBar = () => {
   const location = useLocation();
   const target = location.pathname;
   const { isDarkMode, toggleMode } = useContext(ThemeContext);
+  const navigate = useNavigate();
   console.log(isDarkMode);
 
   return (
     <NavWrap>
       <NavUlStyle>
+        <Logo
+          onClick={() => {
+            navigate('/home');
+          }}
+        />
         <Link to="/home">
           <NavItemStyle
             style={

@@ -21,6 +21,26 @@ export const NavWrap = styled.nav`
     }
   }
 `;
+export const Logo = styled.button`
+  display: none;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background: url(${logo}) no-repeat center / cover;
+
+  @media all and (min-width: 720px) {
+    & {
+      display: block;
+      margin-bottom: 100px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      width: 120px;
+      height: 120px;
+    }
+  }
+`;
 
 export const NavUlStyle = styled.ul`
   display: flex;
@@ -39,17 +59,9 @@ export const NavUlStyle = styled.ul`
       height: 100vh;
       padding: 0 15px;
       border-radius: initial;
+      padding-bottom: 140px;
     }
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 25px;
-      left: 22px;
-      width: 80px;
-      height: 80px;
-      background: url(${logo}) no-repeat center / cover;
-    }
+
     & > a + a:before {
       content: '';
       display: block;
@@ -63,12 +75,6 @@ export const NavUlStyle = styled.ul`
   @media all and (min-width: 941px) {
     & {
       gap: 25px;
-    }
-    &:before {
-      top: 42px;
-      left: 60px;
-      width: 120px;
-      height: 120px;
     }
     & > a + a:before {
       top: -15px;
