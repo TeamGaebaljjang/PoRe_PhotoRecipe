@@ -7,7 +7,7 @@ export const ModeBtn = styled.button`
   bottom: 120px;
   left: calc(50% + 144px);
 
-  z-index: 40;
+  z-index: 20;
   background-repeat: no-repeat;
   background-size: 43px;
   @media all and (min-width: 720px) {
