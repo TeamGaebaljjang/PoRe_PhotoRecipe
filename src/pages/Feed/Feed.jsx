@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
 import { useState, useEffect, useCallback, useRef, useContext } from 'react';
 import axios from 'axios';
@@ -11,6 +12,19 @@ import { ThemeContext } from '../../store/ThemeProvider';
 import { ModeBtn } from '../../components/button/BtnNight';
 import btnDark from '../../assets/icons/icon-btn-dark.svg';
 import btnLight from '../../assets/icons/icon-btn-light.svg';
+
+const FeedWrap = styled.div`
+  @media all and (min-width: 720px) {
+    & {
+      margin-left: 126px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      margin-left: 240px;
+    }
+  }
+`;
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -71,8 +85,10 @@ const Feed = () => {
         <Search />
       ) : (
         <>
-          <HeaderFeed style={{ position: 'sticky' }} />
-          <PostWrapper posts={posts} />
+          <FeedWrap>
+            <HeaderFeed className="header" style={{ position: 'sticky' }} />
+            <PostWrapper posts={posts} />
+          </FeedWrap>
           <div ref={ref} style={{ marginBottom: '10px' }} />
         </>
       )}

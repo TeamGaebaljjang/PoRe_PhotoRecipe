@@ -11,16 +11,10 @@ export const Wrap = styled.div`
   }
   @media all and (min-width: 720px) {
     & {
-      margin-left: 126px;
       height: 100vh;
     }
     &.no-Navbar {
       margin-left: 0;
-    }
-  }
-  @media all and (min-width: 941px) {
-    & {
-      margin-left: 240px;
     }
   }
 `;
