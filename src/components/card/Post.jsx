@@ -3,6 +3,7 @@ import { PostCard, PostImg, PostDate, ImgWrap } from './postStyle';
 import PostUserInfo from './PostUserInfo';
 import PostIcon from './PostIcon';
 import PostContent from './PostContent';
+import defaultImg from '../../assets/icons/basic-post-default.svg';
 
 const Post = ({ posts }) => {
   const navigate = useNavigate();
@@ -16,6 +17,11 @@ const Post = ({ posts }) => {
 
   const imgList = posts.image?.split(',').filter((value) => value !== '');
 
+  const onErrorImg = (e) => {
+    // eslint-disable-next-line no-param-reassign
+    e.target.src = defaultImg;
+  };
+
   return (
     <PostCard>
       <PostUserInfo posts={posts} />
@@ -27,6 +33,7 @@ const Post = ({ posts }) => {
             src={v}
             alt=""
             onClick={() => postDetailId()}
+            onError={onErrorImg}
           />
         ))}
       </ImgWrap>
