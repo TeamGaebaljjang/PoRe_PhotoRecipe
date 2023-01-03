@@ -38,7 +38,9 @@ const EditProfileForm = () => {
       console.log(error.res);
     }
   };
-  useEffect(() => getProfile, []);
+  useEffect(() => {
+    getProfile();
+  }, []);
 
   // 한 개의 이미지(프로필)
   const profileChange = async () => {

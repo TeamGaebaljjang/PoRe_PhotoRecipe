@@ -37,8 +37,9 @@ const Map = () => {
       console.log(error.res);
     }
   };
-  useEffect(() => getModal, []);
-  //
+  useEffect(() => {
+    getModal();
+  }, []);
 
   return (
     <Wrap>
