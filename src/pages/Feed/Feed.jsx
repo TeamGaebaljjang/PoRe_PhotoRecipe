@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
 import { useState, useEffect, useCallback, useRef, useContext } from 'react';
 import axios from 'axios';
@@ -6,25 +5,12 @@ import HeaderFeed from '../../components/header/HeaderFeed';
 import PostWrapper from '../../components/card/PostWrapper';
 import NavBar from '../../components/navBar/NavBar';
 import Search from '../Search/Search';
-import { Wrap } from '../../components/card/postStyle';
+import { Wrap, FeedWrap } from '../../components/card/postStyle';
 import BtnTop from '../../components/button/BtnTop';
 import { ThemeContext } from '../../store/ThemeProvider';
 import { ModeBtn } from '../../components/button/BtnNight';
 import btnDark from '../../assets/icons/icon-btn-dark.svg';
 import btnLight from '../../assets/icons/icon-btn-light.svg';
-
-const FeedWrap = styled.div`
-  @media all and (min-width: 720px) {
-    & {
-      margin-left: 126px;
-    }
-  }
-  @media all and (min-width: 941px) {
-    & {
-      margin-left: 240px;
-    }
-  }
-`;
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);

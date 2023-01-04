@@ -221,3 +221,16 @@ export const BackDrop = styled.div`
     }
   }
 `;
+
+export const FeedWrap = styled.div`
+  @media all and (min-width: 720px) {
+    & {
+      margin-left: 126px;
+    }
+  }
+  @media all and (min-width: 941px) {
+    & {
+      margin-left: 240px;
+    }
+  }
+`;

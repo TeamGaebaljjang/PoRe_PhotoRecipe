@@ -12,6 +12,7 @@ import {
   PostTitle,
   PostCont,
   PostDate,
+  FeedWrap,
 } from '../../../components/card/postStyle';
 import NavBar from '../../../components/navBar/NavBar';
 import defaultProfileImg from '../../../assets/icons/basic-profile-round.svg';
@@ -43,32 +44,34 @@ const PhotoZoneCard = () => {
   return (
     <Wrap>
       <HeaderB />
-      <PostCard>
-        <User onClick={() => handleProfile()}>
-          <UserProfile
-            src={userInfo.image}
-            alt=""
-            onError={onErrorProfileImg}
+      <FeedWrap>
+        <PostCard>
+          <User onClick={() => handleProfile()}>
+            <UserProfile
+              src={userInfo.image}
+              alt=""
+              onError={onErrorProfileImg}
+            />
+            <UserInfo>
+              <UserName>{userInfo.username}</UserName>
+              <UserId>@ {userInfo.accountname}</UserId>
+            </UserInfo>
+          </User>
+          <PostImg
+            className="detail-post-img"
+            src={userInfo.itemImage}
+            alt="상세이미지"
+            onError={onErrorImg}
           />
-          <UserInfo>
-            <UserName>{userInfo.username}</UserName>
-            <UserId>@ {userInfo.accountname}</UserId>
-          </UserInfo>
-        </User>
-        <PostImg
-          className="detail-post-img"
-          src={userInfo.itemImage}
-          alt="상세이미지"
-          onError={onErrorImg}
-        />
-        <PostTitle>{userInfo.itemName}</PostTitle>
-        <PostCont>{userInfo.link}</PostCont>
-        <PostDate>
-          {userInfo.createdAt.substring(0, 4)}년&nbsp;
-          {userInfo.createdAt.substring(5, 7)}월&nbsp;
-          {userInfo.createdAt.substring(8, 10)}일
-        </PostDate>
-      </PostCard>
+          <PostTitle>{userInfo.itemName}</PostTitle>
+          <PostCont>{userInfo.link}</PostCont>
+          <PostDate>
+            {userInfo.createdAt.substring(0, 4)}년&nbsp;
+            {userInfo.createdAt.substring(5, 7)}월&nbsp;
+            {userInfo.createdAt.substring(8, 10)}일
+          </PostDate>
+        </PostCard>
+      </FeedWrap>
       <NavBar />
     </Wrap>
   );
