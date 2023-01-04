@@ -1,14 +1,8 @@
 # <span id="top">📷 PoRe_PhotoRecipe</span>
 📎 배포 URL : https://pore.netlify.app
 <br/>
-🔓 계정 : (회원가입, 포토존, 게시글 등록, 팔로우와 같은 과정 없이 전반적으로 우리 프로젝트를 살펴보실 수 있는 계정 하나 만들어두고 여기에 입력하기!)
-
-<br/>
-
+🔓 계정 : 
 ![Frame 29](https://user-images.githubusercontent.com/112460344/210323379-bd97fbdc-902f-4c03-94a0-6627565f0d15.png)
-
-<br/>
-
 #### [ 프로젝트 설명 ]
 
 - 당신이 있는 곳이 포토존입니다.
@@ -80,9 +74,9 @@
 - [Figma](링크) : 디자인 시안 제작
 
 #### [컨벤션]
-
-- 코딩 컨벤션 : eslint, prettier
-- 커밋 컨벤션 : 
+- [ ] <a> 태그로 노션 페이지 링크 추가하기!
+- 코딩 컨벤션 : <img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=ESLint&logoColor=white"/> <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=Prettier&logoColor=white"/> (airbnb Style Guide)
+- 커밋 컨벤션 : Git Commit Message
   
 #### [ 서비스 배포 ]
 <img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=Netlify&logoColor=white"/>
@@ -263,9 +257,8 @@
 <p align="right"><a href="#top">(Top)</a></p>
 
 ## <span id="whatwedid">👨‍👩‍👧‍👧 팀 활동</span>
-- 'ㄱㅂㅉ'은 팀 프로젝트 기간 동안, 위에서 기술한 내용 이외 다양한 시간을 보냈습니다. 이러한 시간 보냄으로써 개발하는 동안에 보다 원활한 소통이 가능했습니다!
+- 'ㄱㅂㅉ'은 팀 프로젝트 기간 동안, 위에서 기술한 내용 이외 다양한 시간을 보냈습니다. 이러한 시간 보냄으로서 팀워크를 단단히 다질 수 있었습니다!
 - 오프라인 모임 (드레스코드 맞춰 단체 사진 찍기)
 - 퇴실 후 주변 맛집에서 맛저!
-- *(뭔가 개발짱만의 팀플 기간 동안의 여러 활동들을 기록해둬서 모두 팀플을 위해 소프트적으로도 노력을 했다~ 요런 느낌으로 남겨보고 싶어서 일단 이렇게 적어봅니다아~)*
 
 <p align="right"><a href="#top">(Top)</a></p>
