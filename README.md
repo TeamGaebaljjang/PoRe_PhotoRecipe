@@ -185,17 +185,18 @@ module.exports = {
 ### 총괄보드
 팀 노션 워크스페이스에서 [총괄보드](https://www.notion.so/6dc02b29f9944cba8c1fddacfccd84d8#5b2b036fd3e54e83955958d0ddc6bc98)를 생성해 팀 스케줄(오프라인/구현/발표/정기회의)을 세우고 이를 따랐습니다.
 <br/>
-![화면 캡처 2023-01-07 184041](https://user-images.githubusercontent.com/65801741/211144227-2939518f-1d56-4901-956e-f3164248edc7.png)
+<img width="1552" alt="스크린샷 2023-01-08 오후 9 17 11" src="https://user-images.githubusercontent.com/72817156/211740045-727be481-f143-4984-ad57-f1fa7fad0770.png">
+
 ### 일일회의
 매일 시작 전 20분 정도 개인 진행 상황 공유 및 상의, 이를 팀 노션 워크스페이스 [회의록 페이지](https://www.notion.so/463f96c0915544928d7e8b88e1f946f3)에 기록했습니다.
 <br/>
-![image](https://user-images.githubusercontent.com/65801741/211144552-4eaa697b-654f-4093-9a28-5dcf14da45dd.png)
+<img width="1552" alt="스크린샷 2023-01-08 오후 9 19 12" src="https://user-images.githubusercontent.com/72817156/211740182-6e217e38-7746-498c-9f7f-167751485685.png">
 
 ### 트러블슈팅
 개인 파트 개발 중에 생긴 여러 문제, 해결 과정을 팀 노션 워크스페이스 [트러블슈팅 페이지](https://www.notion.so/dca9a9c0648f4aba99f9f34fb0f165fb)에 기록해 공유했습니다. <br/>
 _이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해결까지 편리하게 해낼 수 있었습니다.
 <br/>
-![image](https://user-images.githubusercontent.com/65801741/211144695-27a4d1eb-52c5-431e-9b5c-078879b5186c.png)
+<img width="1552" alt="스크린샷 2023-01-08 오후 9 19 51" src="https://user-images.githubusercontent.com/72817156/211740251-6d74c76a-8763-4db0-b46d-34fc5b6f7cba.png">
 <br/>
 <p align="right"><a href="#top">(Top)</a></p>
 
