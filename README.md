@@ -328,27 +328,28 @@ _이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해�
 ## <span id="pagegineung">💻️ 페이지 기능</span>
 - 상세 기능 설명은 각 페이지별 링크 연결해두었습니다.
 ### 1) Start
-|🔗[splash](링크)|🔗[로그인](링크)|🔗[회원가입](링크)|
+|🔗[splash](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-splash)|🔗[로그인](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EB%A1%9C%EA%B7%B8%EC%9D%B8)|🔗[회원가입](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85)|
 |:-:|:-:|:-:|
 |짤|짤|짤|
 
 ### 2) 홈
-|🔗[캐러셀](링크)|🔗[검색](링크)|🔗[지역필터](링크)|🔗[포토존 스크롤](링크)|
+|🔗[캐러셀](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%BA%90%EB%9F%AC%EC%85%80)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89)|🔗[지역 필터](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%A7%80%EC%97%AD-%ED%95%84%ED%84%B0)|🔗[포토존 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EC%8A%A4%ED%81%AC%EB%A1%A4)|
 |:-:|:-:|:-:|:-:|
 |짤|짤|짤|짤|
 
 ### 3) 피드
-|🔗[피드 스크롤](링크)|🔗[검색](링크)|🔗[피드 상세](링크)|🔗[좋아요와 댓글](링크)|
+|🔗[피드 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EC%8A%A4%ED%81%AC%EB%A1%A4)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89-1)|🔗[피드 상세](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EC%83%81%EC%84%B8)|🔗[좋아요와 댓글](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80-%EB%8C%93%EA%B8%80-%EC%8B%A0%EA%B3%A0%EC%99%80-%EC%88%98%EC%A0%95-%EC%82%AD%EC%A0%9C%EA%B9%8C%EC%A7%80)|
 |:-:|:-:|:-:|:-:|
+|짤|짤|짤|짤|짤|
 
 ### 4) 지도
-|🔗[포토존 모달 스크롤](링크)|🔗[검색](링크)|🔗[마커 hover](링크)|
+|🔗[포토존 모달 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EB%AA%A8%EB%8B%AC-%EC%8A%A4%ED%81%AC%EB%A1%A4)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89-2)|🔗[마커 hover](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EB%A7%88%EC%BB%A4-hover)|
 |:-:|:-:|:-:|
 |짤|짤|짤|
 
 
 ### 5) 프로필
-|🔗[팔로워](링크)|🔗[팔로잉](링크)|🔗[포토존 등록](링크)|🔗[게시글 등록](링크)|🔗[프로필 수정](링크)|🔗[검색](링크)|🔗[포토존 모달](링크)|🔗[게시글 앨범형&리스트형](링크)|
+|🔗[팔로워](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8C%94%EB%A1%9C%EC%9B%8C)|🔗[팔로잉](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8C%94%EB%A1%9C%EC%9E%89)|🔗[포토존 등록](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EB%93%B1%EB%A1%9D)|🔗[게시글 등록](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%8C%EC%8B%9C%EA%B8%80-%EB%93%B1%EB%A1%9D)|🔗[프로필 수정](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%84%EB%A1%9C%ED%95%84-%EC%88%98%EC%A0%95)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89-3)|🔗[포토존 모달](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EB%AA%A8%EB%8B%AC)|🔗[피드 보기](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EB%B3%B4%EA%B8%B0)|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |짤|짤|짤|짤|짤|짤|짤|짤|
 
