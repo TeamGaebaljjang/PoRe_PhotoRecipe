@@ -183,7 +183,7 @@ module.exports = {
 ## <span id='task'>⏱ 개발 기간 및 작업 관리</span>
 * 프로젝트 기간 : 2022.12.09 - 2023.01.05
 ### 총괄보드
-팀 노션 워크스페이스에서 [총괄보드](https://grizzled-crib-db0.notion.site/1f7a58eedf1c42ae99b8343c41d0f686)를 생성해 팀 스케줄(오프라인/구현/발표/정기회의)을 세우고 이를 따랐습니다.
+팀 노션 워크스페이스에서 [총괄보드](https://www.notion.so/124d64ea15f2471eba5351aa2a5fa829?v=2d54626e41da47bda2bf9c6eb1fa9ec9)를 생성해 팀 스케줄(오프라인/구현/발표/정기회의)을 세우고 이를 따랐습니다.
 <br/>
 <img width="1552" alt="스크린샷 2023-01-08 오후 9 17 11" src="https://user-images.githubusercontent.com/72817156/211740045-727be481-f143-4984-ad57-f1fa7fad0770.png">
 
