@@ -320,7 +320,8 @@ _이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해�
 <p align="right"><a href="#top">(Top)</a></p>
 
 ## <span id="UI">🧭 UI</span>
-<img src="https://user-images.githubusercontent.com/89337955/153887850-b1199e73-15a8-474a-a7b9-e11155ad7168.jpg">
+![UI](https://user-images.githubusercontent.com/72817156/211751023-26d374e4-a7d0-4f07-8b5e-14dcb757f07c.png)
+
 <br/>
 <p align="right"><a href="#top">(Top)</a></p>
 
