@@ -183,17 +183,17 @@ module.exports = {
 ## <span id='task'>⏱ 개발 기간 및 작업 관리</span>
 * 프로젝트 기간 : 2022.12.09 - 2023.01.05
 ### 총괄보드
-팀 노션 워크스페이스에서 [총괄보드](https://www.notion.so/6dc02b29f9944cba8c1fddacfccd84d8#5b2b036fd3e54e83955958d0ddc6bc98)를 생성해 팀 스케줄(오프라인/구현/발표/정기회의)을 세우고 이를 따랐습니다.
+팀 노션 워크스페이스에서 [총괄보드](https://grizzled-crib-db0.notion.site/1f7a58eedf1c42ae99b8343c41d0f686)를 생성해 팀 스케줄(오프라인/구현/발표/정기회의)을 세우고 이를 따랐습니다.
 <br/>
 <img width="1552" alt="스크린샷 2023-01-08 오후 9 17 11" src="https://user-images.githubusercontent.com/72817156/211740045-727be481-f143-4984-ad57-f1fa7fad0770.png">
 
 ### 일일회의
-매일 시작 전 20분 정도 개인 진행 상황 공유 및 상의, 이를 팀 노션 워크스페이스 [회의록 페이지](https://www.notion.so/463f96c0915544928d7e8b88e1f946f3)에 기록했습니다.
+매일 시작 전 20분 정도 개인 진행 상황 공유 및 상의, 이를 팀 노션 워크스페이스 [회의록 페이지](https://www.notion.so/cda525f5ca7a4a06b4ad76d6cfa3e3e1)에 기록했습니다.
 <br/>
 <img width="1552" alt="스크린샷 2023-01-08 오후 9 19 12" src="https://user-images.githubusercontent.com/72817156/211740182-6e217e38-7746-498c-9f7f-167751485685.png">
 
 ### 트러블슈팅
-개인 파트 개발 중에 생긴 여러 문제, 해결 과정을 팀 노션 워크스페이스 [트러블슈팅 페이지](https://www.notion.so/dca9a9c0648f4aba99f9f34fb0f165fb)에 기록해 공유했습니다. <br/>
+개인 파트 개발 중에 생긴 여러 문제, 해결 과정을 팀 노션 워크스페이스 [트러블슈팅 페이지](https://www.notion.so/c982788909a247e2b52634daf1f44497)에 기록해 공유했습니다. <br/>
 _이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해결까지 편리하게 해낼 수 있었습니다.
 <br/>
 <img width="1552" alt="스크린샷 2023-01-08 오후 9 19 51" src="https://user-images.githubusercontent.com/72817156/211740251-6d74c76a-8763-4db0-b46d-34fc5b6f7cba.png">
@@ -366,7 +366,7 @@ _이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해�
 
 ## <span id="whatwedid">👨‍👩‍👧‍👧 팀 활동</span>
 &nbsp;'ㄱㅂㅉ'은 팀 프로젝트 기간 동안, 개발 이외 팀 친목 시간을 많이 가졌습니다. 이러한 시간 보냄으로서 팀워크를 단단히 다질 수 있었습니다!  ('추억 보따리'라는 이름의 팀 노션 워크스페이스의 페이지를 생성해 사진들을 기록했고, 프로젝트 중간에 꺼내보며 추억을 회상하고 많이 웃을 수 있었습니다☺) <br/> <br/>
-<img width="700" height="700" src="https://user-images.githubusercontent.com/65801741/211146555-88f5e796-d03e-45b5-b9e5-c401197e16c7.png">
+<img width="1552" alt="스크린샷 2023-01-08 오후 9 43 58" src="https://user-images.githubusercontent.com/72817156/211741340-9e88eacf-ef61-4e15-b383-980c33877f6f.png">
 
 - 오프라인 모임 (드레스코드 맞춰 단체 사진 찍기) <br/>
 <img width="650" height="500" src="https://user-images.githubusercontent.com/65801741/211146724-f1e3e335-bf22-4a52-a991-d8e4accadb78.jpeg">
