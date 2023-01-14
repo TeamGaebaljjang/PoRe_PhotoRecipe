@@ -327,33 +327,50 @@ _이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해�
 
 ## <span id="pagegineung">💻️ 페이지 기능</span>
 - 상세 기능 설명은 각 페이지별 링크 연결해두었습니다.
+
 ### 1) Start
 |🔗[splash](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-splash)|🔗[로그인](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EB%A1%9C%EA%B7%B8%EC%9D%B8)|🔗[회원가입](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85)|
 |:-:|:-:|:-:|
-|짤|짤|짤|
+|<img src="https://user-images.githubusercontent.com/112460344/212477531-75ad71b4-6c0a-4a68-899c-0aa89adf8dba.gif">|<img src="https://user-images.githubusercontent.com/112460344/212478111-02429e95-46dc-44db-81a0-1f158de3925d.gif">|<img src="https://user-images.githubusercontent.com/112460344/212478122-95e92e1b-7398-42e1-b2ae-b6ac8694a724.gif">|
 
 ### 2) 홈
-|🔗[캐러셀](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%BA%90%EB%9F%AC%EC%85%80)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89)|🔗[지역 필터](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%A7%80%EC%97%AD-%ED%95%84%ED%84%B0)|🔗[포토존 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EC%8A%A4%ED%81%AC%EB%A1%A4)|
-|:-:|:-:|:-:|:-:|
-|짤|짤|짤|짤|
+|🔗[캐러셀](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%BA%90%EB%9F%AC%EC%85%80)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89)|
+|:-:|:-:|
+|<img src="https://user-images.githubusercontent.com/112460344/212478270-2f2c4962-d5a6-4f08-b1a6-7b72fab0e455.gif">|<img src="https://user-images.githubusercontent.com/112460344/212478290-a22fa1c1-7776-423d-83c4-ade04e0021d9.gif">|
+|🔗[지역 필터](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%A7%80%EC%97%AD-%ED%95%84%ED%84%B0)|🔗[포토존 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EC%8A%A4%ED%81%AC%EB%A1%A4)|
+|<img src="https://user-images.githubusercontent.com/112460344/212478314-5ed1ed59-e079-4c5a-8ebd-14ca2ffb4626.gif">|<img src="https://user-images.githubusercontent.com/112460344/212478324-573f6093-2cb6-4a08-a70d-3fa07f6da965.gif">|
 
 ### 3) 피드
-|🔗[피드 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EC%8A%A4%ED%81%AC%EB%A1%A4)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89-1)|🔗[피드 상세](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EC%83%81%EC%84%B8)|🔗[좋아요와 댓글](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80-%EB%8C%93%EA%B8%80-%EC%8B%A0%EA%B3%A0%EC%99%80-%EC%88%98%EC%A0%95-%EC%82%AD%EC%A0%9C%EA%B9%8C%EC%A7%80)|
-|:-:|:-:|:-:|:-:|
-|짤|짤|짤|짤|짤|
+|🔗[피드 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EC%8A%A4%ED%81%AC%EB%A1%A4)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89-1)|
+|:-:|:-:|
+|<img src="https://user-images.githubusercontent.com/112460344/212479456-e8200e37-f6c8-4b73-94f1-67f9ba668df2.gif">|<img src="https://user-images.githubusercontent.com/112460344/212479464-940b3a7c-60f2-4aed-9cd6-475e0ba45fd0.gif">|
+|🔗[피드 상세](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EC%83%81%EC%84%B8)|🔗[좋아요와 댓글](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80-%EB%8C%93%EA%B8%80-%EC%8B%A0%EA%B3%A0%EC%99%80-%EC%88%98%EC%A0%95-%EC%82%AD%EC%A0%9C%EA%B9%8C%EC%A7%80)|
+|<img src="https://user-images.githubusercontent.com/112460344/212480246-1c44d45b-d766-4f05-9e80-b0e0015f4c46.gif">|<img src="https://user-images.githubusercontent.com/112460344/212480267-f5e3f63f-359e-4ef1-8e0b-d9ac3c2a28d9.gif">|
 
 ### 4) 지도
 |🔗[포토존 모달 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EB%AA%A8%EB%8B%AC-%EC%8A%A4%ED%81%AC%EB%A1%A4)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89-2)|🔗[마커 hover](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EB%A7%88%EC%BB%A4-hover)|
 |:-:|:-:|:-:|
-|짤|짤|짤|
-
+|<img src="https://user-images.githubusercontent.com/112460344/212480351-bd52c747-4325-48e9-bd00-7137738bb127.gif">|<img src="https://user-images.githubusercontent.com/112460344/212480361-af86962c-2bb3-441d-b420-2f1f8ccab4d9.gif">|<img src="https://user-images.githubusercontent.com/112460344/212480366-f4dfc4ca-cb7f-4962-aee8-57acc04c3f96.gif">|
 
 ### 5) 프로필
-|🔗[팔로워](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8C%94%EB%A1%9C%EC%9B%8C)|🔗[팔로잉](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8C%94%EB%A1%9C%EC%9E%89)|🔗[포토존 등록](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EB%93%B1%EB%A1%9D)|🔗[게시글 등록](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%8C%EC%8B%9C%EA%B8%80-%EB%93%B1%EB%A1%9D)|🔗[프로필 수정](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%84%EB%A1%9C%ED%95%84-%EC%88%98%EC%A0%95)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89-3)|🔗[포토존 모달](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EB%AA%A8%EB%8B%AC)|🔗[피드 보기](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EB%B3%B4%EA%B8%B0)|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|짤|짤|짤|짤|짤|짤|짤|짤|
+|🔗[팔로워](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8C%94%EB%A1%9C%EC%9B%8C)|🔗[팔로잉](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8C%94%EB%A1%9C%EC%9E%89)|
+|:-:|:-:|
+|<img src="https://user-images.githubusercontent.com/112460344/212480539-7b4b046c-3366-4480-8512-1c3a5a1b9428.gif">|<img src="https://user-images.githubusercontent.com/112460344/212480545-2bed759a-c471-47f0-aca5-a91a2ef0f309.gif">|
+|🔗[포토존 등록](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EB%93%B1%EB%A1%9D)|🔗[게시글 등록](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%8C%EC%8B%9C%EA%B8%80-%EB%93%B1%EB%A1%9D)|
+|<img src="https://user-images.githubusercontent.com/112460344/212480598-8205eed9-e45e-43ba-a883-ed1ba8bf6fc4.gif">|<img src="https://user-images.githubusercontent.com/112460344/212480605-66418363-b2c9-4fec-b4d5-45a4ccac0f66.gif">|
+|🔗[프로필 수정](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%84%EB%A1%9C%ED%95%84-%EC%88%98%EC%A0%95)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89-3)|
+|<img src="https://user-images.githubusercontent.com/112460344/212480940-b2da8bc5-696c-4b0a-af4a-2c8c4a699262.gif">|<img src="https://user-images.githubusercontent.com/112460344/212480943-a157924b-96f9-48cb-a00f-ff249a7601fd.gif">|
+|🔗[포토존 모달](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EB%AA%A8%EB%8B%AC)|🔗[피드 보기](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EB%B3%B4%EA%B8%B0)|
+|<img src="https://user-images.githubusercontent.com/112460344/212480975-5a162785-649f-4246-9b08-06c8c725eb81.gif">|<img src="https://user-images.githubusercontent.com/112460344/212480978-1413d39e-056b-46d8-9849-67bb0cf308fe.gif">|
 
 ### + 다크모드/반응형
+|다크모드|반응형(테블릿)|
+|:-:|:-:|
+|<img src="https://user-images.githubusercontent.com/112460344/212481456-81c6eac0-874e-470e-9f00-81e2c18c3cd2.gif">|<img src="https://user-images.githubusercontent.com/112460344/212481480-69d7147c-c40e-4957-970f-13d43fc5d2ff.gif">|
+
+|반응형(데스크탑)|
+|:-:|
+|<img src="https://user-images.githubusercontent.com/112460344/212481486-4f80a3f3-1091-4aa2-9133-627e5c66b70a.gif">|
 
 <br/>
 <p align="right"><a href="#top">(Top)</a></p>
@@ -398,6 +415,6 @@ super thx,,
 젝트를 만들었다고 생각해요! 팀명처럼 개발짱이 되어 만나는 그날까지 항상 함께해욧💖
 <br/>
 🦁 **ㅈ민지** <br/>
-서로의 부족한 점을 채워줄 수 있는 팀원들을 만나 정말 좋은 시너지와 함께 행복하게 프로젝트를 할 수 있었습니다! 팀원이 막히는 부분이 있을 때 다함께 모여서 문제에 대해 고민하고 서로의 의견을 편하게 이야기하고 협의해가는 과정이 정말 환상적인 팀워크였다고 생각합니다~~! 프로젝트 하는 동안 정말 행복했고 앞으로도 함께 개발짱이 되어보아요👊 드레스코드 맞춰입고 맛있는거 먹으면서 즐겁게 코딩한 우리팀 진짜 최고🧡💛💚💙💜<br/>
+서로의 부족한 점을 채워줄 수 있는 팀원들을 만나 정말 좋은 시너지와 함께 행복하게 프로젝트를 할 수 있었습니다! 팀원이 막히는 부분이 있을 때 다함께 모여서 문제에 대해 고민하고 서로의 의견을 편하게 이야기하고 협의해가는 과정이 정말 환상적인 팀워크였다고 생각합니다~! 프로젝트 하는 동안 정말 행복했고 앞으로도 함께 개발짱이 되어보아요👊 드레스코드 맞춰입고 맛있는거 먹으면서 즐겁게 코딩한 우리팀 진짜 최고🧡💛💚💙💜 <br/>
 <p align="right"><a href="#top">(Top)</a></p>
 
