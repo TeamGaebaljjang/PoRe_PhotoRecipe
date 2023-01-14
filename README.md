@@ -338,7 +338,7 @@ _이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해�
 |:-:|:-:|
 |<img src="https://user-images.githubusercontent.com/112460344/212478270-2f2c4962-d5a6-4f08-b1a6-7b72fab0e455.gif">|<img src="https://user-images.githubusercontent.com/112460344/212478290-a22fa1c1-7776-423d-83c4-ade04e0021d9.gif">|
 |🔗[지역 필터](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EC%A7%80%EC%97%AD-%ED%95%84%ED%84%B0)|🔗[포토존 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%8F%AC%ED%86%A0%EC%A1%B4-%EC%8A%A4%ED%81%AC%EB%A1%A4)|
-|<img src="https://user-images.githubusercontent.com/112460344/212478314-5ed1ed59-e079-4c5a-8ebd-14ca2ffb4626.gif">|<img src="https://user-images.githubusercontent.com/112460344/212478324-573f6093-2cb6-4a08-a70d-3fa07f6da965.gif">|
+|<img src="https://user-images.githubusercontent.com/112460344/212478314-5ed1ed59-e079-4c5a-8ebd-14ca2ffb4626.gif">|<img src="https://user-images.githubusercontent.com/112460344/212483724-9526ebf0-5d08-44e8-bbac-8d41097d3439.gif">|
 
 ### 3) 피드
 |🔗[피드 스크롤](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%ED%94%BC%EB%93%9C-%EC%8A%A4%ED%81%AC%EB%A1%A4)|🔗[검색](https://github.com/TeamGaebaljjang/PoRe_PhotoRecipe/wiki/PORE_%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EF%B8%8F-%EA%B2%80%EC%83%89-1)|
@@ -366,11 +366,11 @@ _이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해�
 ### + 다크모드/반응형
 |다크모드|반응형(테블릿)|
 |:-:|:-:|
-|<img src="https://user-images.githubusercontent.com/112460344/212481456-81c6eac0-874e-470e-9f00-81e2c18c3cd2.gif">|<img src="https://user-images.githubusercontent.com/112460344/212481480-69d7147c-c40e-4957-970f-13d43fc5d2ff.gif">|
+|<img src="https://user-images.githubusercontent.com/112460344/212481456-81c6eac0-874e-470e-9f00-81e2c18c3cd2.gif">|<img src="https://user-images.githubusercontent.com/112460344/212482270-758a0789-9d2e-44c4-b533-b201705ec497.gif">|
 
 |반응형(데스크탑)|
 |:-:|
-|<img src="https://user-images.githubusercontent.com/112460344/212481486-4f80a3f3-1091-4aa2-9133-627e5c66b70a.gif">|
+|<img src="https://user-images.githubusercontent.com/112460344/212483912-05e61819-e5e9-40cf-a2eb-49fed9ba8e2d.gif">|
 
 <br/>
 <p align="right"><a href="#top">(Top)</a></p>
