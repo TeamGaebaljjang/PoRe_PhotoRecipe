@@ -371,10 +371,10 @@ _이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해�
 <img width="1552" alt="스크린샷 2023-01-08 오후 9 43 58" src="https://user-images.githubusercontent.com/72817156/211741340-9e88eacf-ef61-4e15-b383-980c33877f6f.png">
 
 - 오프라인 모임 (드레스코드 맞춰 단체 사진 찍기) <br/>
-<img width="400" src="https://user-images.githubusercontent.com/65801741/211146724-f1e3e335-bf22-4a52-a991-d8e4accadb78.jpeg">
+<p align="center"><img width="400" src="https://user-images.githubusercontent.com/65801741/211146724-f1e3e335-bf22-4a52-a991-d8e4accadb78.jpeg"></p>
 
 - 퇴실 후 주변 맛집 찾아 맛저! <br/>
-![image](https://user-images.githubusercontent.com/65801741/211146858-2674939d-8ed1-4828-90c0-ce1625de60e6.png)
+<p align="center"><img src="https://user-images.githubusercontent.com/65801741/211146858-2674939d-8ed1-4828-90c0-ce1625de60e6.png"></p>
 
 <p align="right"><a href="#top">(Top)</a></p>
 
