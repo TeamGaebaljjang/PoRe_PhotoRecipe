@@ -11,7 +11,7 @@ import {
   PageIcon,
 } from './homeStyle';
 import HomeCarouselPagination from './HomeCarouselPagination';
-import UseInterval from './UseInterval';
+import useInterval from '../../hooks/useInterval';
 import search from '../../assets/icons/icon-search-white.svg';
 
 const HomeCarousel = () => {
@@ -64,7 +64,7 @@ const HomeCarousel = () => {
   };
 
   // 캐러셀 자동 슬라이드
-  UseInterval(() => {
+  useInterval(() => {
     if (slideIndex === 4) {
       setSlideIndex(0);
     } else {
