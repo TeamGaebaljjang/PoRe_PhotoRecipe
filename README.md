@@ -19,13 +19,13 @@
 
 1. [팀 소개](#teamsogae)
 2. [기술 및 개발 환경](#gisul)
-3. [주요 기능](#juyogineung)
-4. [프로젝트 구조](#gujo)
-5. [역할분담](#role)
+3. [역할분담](#role)
+4. [주요 기능](#juyogineung)
+5. [프로젝트 구조](#gujo)
 6. [UI](#UI)
 7. [페이지 기능](#pagegineung)
-8. [리팩토링 계획](#versionplan)
-9. [작업 관리](#task)
+8. [작업 관리](#task)
+9. [리팩토링 계획](#versionplan)
 10. [팀 활동](#whatwedid)
 11. [느낀점](#sogam)
 
@@ -48,8 +48,6 @@ _(🦁멋쟁이사자처럼 프론트엔드스쿨 3기 프로젝트 23팀)_
 ### [ 프로젝트 기간 ]
 
 2022.12.09 - 2023.01.05
-
-<br/>
 
 ### [ 프로젝트 목표 ]
 
@@ -228,117 +226,6 @@ module.exports = {
   
 <p align="right"><a href="#top">(Top)</a></p>
 
-## <span id='juyogineung'>🗸 주요 기능</span>
-
-- 🔐 계정
-
-  - 로그인 / 로그아웃
-  - 회원가입
-  - 회원 정보 설정
-  - 유효성 검증
-  - 토큰 검증
-
-- 🏡 홈 / 피드
-
-  - 유저 검색
-  - 게시물 목록
-  - 무한 스크롤 / Top 버튼
-  - 캐러셀 배너
-  - 지역별 필터 버튼
-
-- 👤 프로필
-
-  - 팔로우 / 언팔로우
-  - 게시물 등록 / 수정 / 삭제 / 신고
-  - 프로필 수정
-
-- 💬 게시물 / 댓글
-
-  - 게시물 작성 / 수정 / 삭제 / 신고
-  - 댓글 작성 / 삭제 / 신고
-  - 이미지 업로드 / 수정
-  - 다중 이미지 표시
-  - 게시물 표시 방식(앨범형 / 리스트형)
-  - 좋아요 / 좋아요 취소
-
-- 📸 포토존
-
-  - 포토존 등록 / 수정 / 삭제 / 신고
-  - 지역별 포토존 목록
-
-- 📍 지도
-  - 카카오맵 API 연동
-  - 포토존 위치 마커
-  - 키워드 검색
-  - 마커 클릭 시 해당 포토존 이름 표시
-
-<br/>
-<p align="right"><a href="#top">(Top)</a></p>
-
-## <span id='gujo'>🗂 프로젝트 구조</span>
-
-- assets/ : 아이콘, 파비콘
-- components/ : 컴포넌트
-- pages/ : 생성한 컴포넌트들을 조합해 각 페이지 구현
-- styles/ : globalStyle, 라이트/다크 모드 색상 적용
-
-<details>
-<summary>폴더트리</summary>
-<div markdown="1">
-
-```
-📦 PoRe_PhotoRecipe
-├─ 📁.github
-├─ 📁node_modules
-├─ 📁public
-├─ 📁src
-│  ├─ 📁assets
-│  │  ├─ 📁icons
-│  │  └─ 📁img
-│  ├─ 📁components
-│  │  ├─ 📁button
-│  │  ├─ 📁card
-│  │  ├─ 📁comment
-│  │  ├─ 📁errorMessage
-│  │  ├─ 📁header
-│  │  ├─ 📁input
-│  │  ├─ 📁modal
-│  │  ├─ 📁navBar
-│  │  ├─ 📁profile
-│  │  └─ 📁user
-│  ├─ 📁pages
-│  │  ├─ 📁Chat
-│  │  ├─ 📁Feed
-│  │  ├─ 📁Home
-│  │  ├─ 📁Login
-│  │  ├─ 📁Map
-│  │  ├─ 📁NotFound
-│  │  ├─ 📁PostDetail
-│  │  ├─ 📁Profile
-│  │  ├─ 📁Search
-│  │  └─ 📁Splash
-│  ├─ 📁routes
-│  ├─ 📁store
-│  ├─ 📁styles
-│  ├─ App.jsx
-│  └─ index.jsx
-├─ .env
-├─ .eslintrc.js
-├─ .gitignore
-├─ .gitmessage.txt
-├─ .prettierrc
-├─ package-lock.json
-├─ package.json
-└─ README.md
-```
-
-</div>
-</details>
-
-<br/>
-
-<p align="right"><a href="#top">(Top)</a></p>
-
 ## <span id="role">🙋‍♀️ 역할 분담</span>
 
 ### ✨ 공통
@@ -460,6 +347,8 @@ module.exports = {
 - 기타
   - 이미지 오류 처리 (onError 이용)
 
+<br/>
+
 ### ⭐️ 조민지
 
 #### 세팅
@@ -493,6 +382,117 @@ module.exports = {
   - 댓글 작성 시간 표시 구현
 - 댓글 더보기 버튼 클릭 시 모달
 - 댓글 유저 프로필 클릭 시 해당 유저 프로필로 라우팅
+
+<br/>
+
+<p align="right"><a href="#top">(Top)</a></p>
+
+## <span id='juyogineung'>✨ 주요 기능</span>
+
+- 🔐 계정
+
+  - 로그인 / 로그아웃
+  - 회원가입
+  - 회원 정보 설정
+  - 유효성 검증
+  - 토큰 검증
+
+- 🏡 홈 / 피드
+
+  - 유저 검색
+  - 게시물 목록
+  - 무한 스크롤 / Top 버튼
+  - 캐러셀 배너
+  - 지역별 필터 버튼
+
+- 👤 프로필
+
+  - 팔로우 / 언팔로우
+  - 게시물 등록 / 수정 / 삭제 / 신고
+  - 프로필 수정
+
+- 💬 게시물 / 댓글
+
+  - 게시물 작성 / 수정 / 삭제 / 신고
+  - 댓글 작성 / 삭제 / 신고
+  - 이미지 업로드 / 수정
+  - 다중 이미지 표시
+  - 게시물 표시 방식(앨범형 / 리스트형)
+  - 좋아요 / 좋아요 취소
+
+- 📸 포토존
+
+  - 포토존 등록 / 수정 / 삭제 / 신고
+  - 지역별 포토존 목록
+
+- 📍 지도
+  - 카카오맵 API 연동
+  - 포토존 위치 마커
+  - 키워드 검색
+  - 마커 클릭 시 해당 포토존 이름 표시
+
+<br/>
+<p align="right"><a href="#top">(Top)</a></p>
+
+## <span id='gujo'>🗂 프로젝트 구조</span>
+
+- assets/ : 아이콘, 파비콘
+- components/ : 컴포넌트
+- pages/ : 생성한 컴포넌트들을 조합해 각 페이지 구현
+- styles/ : globalStyle, 라이트/다크 모드 색상 적용
+
+<details>
+<summary>폴더트리</summary>
+<div markdown="1">
+
+```
+📦 PoRe_PhotoRecipe
+├─ 📁.github
+├─ 📁node_modules
+├─ 📁public
+├─ 📁src
+│  ├─ 📁assets
+│  │  ├─ 📁icons
+│  │  └─ 📁img
+│  ├─ 📁components
+│  │  ├─ 📁button
+│  │  ├─ 📁card
+│  │  ├─ 📁comment
+│  │  ├─ 📁errorMessage
+│  │  ├─ 📁header
+│  │  ├─ 📁input
+│  │  ├─ 📁modal
+│  │  ├─ 📁navBar
+│  │  ├─ 📁profile
+│  │  └─ 📁user
+│  ├─ 📁pages
+│  │  ├─ 📁Chat
+│  │  ├─ 📁Feed
+│  │  ├─ 📁Home
+│  │  ├─ 📁Login
+│  │  ├─ 📁Map
+│  │  ├─ 📁NotFound
+│  │  ├─ 📁PostDetail
+│  │  ├─ 📁Profile
+│  │  ├─ 📁Search
+│  │  └─ 📁Splash
+│  ├─ 📁routes
+│  ├─ 📁store
+│  ├─ 📁styles
+│  ├─ App.jsx
+│  └─ index.jsx
+├─ .env
+├─ .eslintrc.js
+├─ .gitignore
+├─ .gitmessage.txt
+├─ .prettierrc
+├─ package-lock.json
+├─ package.json
+└─ README.md
+```
+
+</div>
+</details>
 
 <br/>
 
@@ -560,37 +560,39 @@ module.exports = {
 | <img src="https://user-images.githubusercontent.com/112460344/212483912-05e61819-e5e9-40cf-a2eb-49fed9ba8e2d.gif"> |
 
 <br/>
-<p align="right"><a href="#top">(Top)</a></p>
-
-## <span id="versionplan">📚 리팩토링 계획</span>
-
-- 포토존 등록 시, 사진 촬영 일자 Date 적용
-- 이미지 압축 라이브러리 적용
-- 리덕스 툴킷 전체 적용
-  <br/>
 
 <p align="right"><a href="#top">(Top)</a></p>
 
 ## <span id='task'>⏱ 작업 관리</span>
 
-### 총괄보드
+### [ 총괄보드 ]
 
 팀 노션 워크스페이스에서 [총괄보드](https://www.notion.so/124d64ea15f2471eba5351aa2a5fa829?v=2d54626e41da47bda2bf9c6eb1fa9ec9)를 생성해 팀 스케줄(오프라인/구현/발표/정기회의)을 세우고 이를 따랐습니다.
 <br/>
 <img width="1552" alt="스크린샷 2023-01-08 오후 9 17 11" src="https://user-images.githubusercontent.com/72817156/211740045-727be481-f143-4984-ad57-f1fa7fad0770.png">
 
-### 일일회의
+### [ 일일회의 ]
 
 매일 시작 전 20분 정도 개인 진행 상황 공유 및 상의, 이를 팀 노션 워크스페이스 [회의록 페이지](https://www.notion.so/cda525f5ca7a4a06b4ad76d6cfa3e3e1)에 기록했습니다.
 <br/>
 <img width="1552" alt="스크린샷 2023-01-08 오후 9 19 12" src="https://user-images.githubusercontent.com/72817156/211740182-6e217e38-7746-498c-9f7f-167751485685.png">
 
-### 트러블슈팅
+### [ 트러블슈팅 ]
 
 개인 파트 개발 중에 생긴 여러 문제, 해결 과정을 팀 노션 워크스페이스 [트러블슈팅 페이지](https://www.notion.so/c982788909a247e2b52634daf1f44497)에 기록해 공유했습니다. <br/>
 \_이를 통해 동일한 트러블 발생 시 정확하게 이유를 알고 해결까지 편리하게 해낼 수 있었습니다.
 <br/>
 <img width="1552" alt="스크린샷 2023-01-08 오후 9 19 51" src="https://user-images.githubusercontent.com/72817156/211740251-6d74c76a-8763-4db0-b46d-34fc5b6f7cba.png">
+<br/>
+
+<p align="right"><a href="#top">(Top)</a></p>
+
+## <span id="versionplan">📚 개선 사항</span>
+
+- 포토존 등록 시, 사진 촬영 일자 Date 적용
+- 이미지 압축 라이브러리 적용
+- 리덕스 툴킷 전체 적용
+
 <br/>
 
 <p align="right"><a href="#top">(Top)</a></p>
