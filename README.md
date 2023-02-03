@@ -25,7 +25,7 @@
 6. [UI](#UI)
 7. [페이지 기능](#pagegineung)
 8. [작업 관리](#task)
-9. [리팩토링 계획](#versionplan)
+9. [개선사항](#versionplan)
 10. [팀 활동](#whatwedid)
 11. [느낀점](#sogam)
 
