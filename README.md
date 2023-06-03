@@ -3,7 +3,7 @@
 <img src="src\assets\img\readme\Mockup.png">
 
 > 📎 배포 URL : https://pore.netlify.app <br/>
-> 🔓 계정 : `kbjj23@pore.com` | `123123`
+> 🔓 계정 : `kbjj23@pore.com` | `123123` <br/>
 > ⛔️ API 주소 변경으로 인하여 기존 DB의 이미지는 출력되지 않고 있습니다.
 
 <br/>
