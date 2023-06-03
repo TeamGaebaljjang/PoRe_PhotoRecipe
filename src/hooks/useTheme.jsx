@@ -4,14 +4,17 @@ const useTheme = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMode = useCallback(() => {
-    setIsDarkMode((current) => !current);
-    localStorage.setItem('mode', isDarkMode);
-  }, [isDarkMode]);
+    setIsDarkMode((current) => {
+      const updatedMode = !current;
+      localStorage.setItem('mode', updatedMode);
+      return updatedMode;
+    });
+  }, []);
 
   useLayoutEffect(() => {
     const savedMode = localStorage.getItem('mode');
     if (savedMode) {
-      setIsDarkMode(savedMode);
+      setIsDarkMode(savedMode === 'true');
     }
   }, []);
 
