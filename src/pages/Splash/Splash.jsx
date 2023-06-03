@@ -1,25 +1,18 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { Wrap, Logo } from './splashStyle';
 import logo from '../../assets/icons/logo-camera.svg';
 import logoPore from '../../assets/icons/logo-pore.svg';
+import { api } from '../../axiosInstance';
 
 const Splash = () => {
   const [animation, setAnimation] = useState(false);
   const navigate = useNavigate();
-  const URL = 'https://mandarin.api.weniv.co.kr';
 
   useEffect(() => {
     (async function tokenCheck() {
       try {
-        const authToken = localStorage.getItem('token');
-        const res = await axios.get(`${URL}/user/checktoken`, {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        });
+        const res = await api.get(`/user/checktoken`);
         if (res.data.isValid) {
           setTimeout(() => {
             navigate('/home');

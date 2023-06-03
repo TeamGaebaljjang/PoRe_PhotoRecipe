@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {
@@ -13,6 +12,7 @@ import {
 import HomeCarouselPagination from './HomeCarouselPagination';
 import useInterval from '../../hooks/useInterval';
 import search from '../../assets/icons/icon-search-white.svg';
+import { api } from '../../axiosInstance';
 
 const HomeCarousel = () => {
   const TOTAL_SLIDES = 4;
@@ -20,23 +20,11 @@ const HomeCarousel = () => {
   const [thumbnail, setThumbnail] = useState([]);
   const navigate = useNavigate();
 
-  // API 서버
-  const URL = 'https://mandarin.api.weniv.co.kr';
-
   // 썸네일 리스트 API
   useEffect(() => {
     const getThumbnail = async () => {
       try {
-        const token = localStorage.getItem('token');
-        const response = await axios.get(
-          `${URL}/product/PoRe_PhotoRecipe/?limit=5`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              'Content-type': 'application/json',
-            },
-          },
-        );
+        const response = await api.get(`/product/PoRe_PhotoRecipe/?limit=5`);
 
         if (response) {
           setThumbnail(response.data.product);

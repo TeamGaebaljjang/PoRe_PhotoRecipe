@@ -1,20 +1,13 @@
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { ConfirmModal, Btnwrap } from './confirmModalStyle';
+import { api } from '../../../axiosInstance';
 
 const PZDeleteModal = ({ deleteHandler, props }) => {
   const productId = props.id;
   const navigate = useNavigate();
   async function deletePZ(value) {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
-      const authToken = localStorage.getItem('token');
-      const res = await axios.delete(`${URL}/product/${value}`, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          'Content-type': 'application/json',
-        },
-      });
+      const res = await api.delete(`/product/${value}`);
       if (res) {
         navigate(0);
       }

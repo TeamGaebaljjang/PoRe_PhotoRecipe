@@ -1,8 +1,8 @@
-import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Comment from './Comment';
 import { Comments } from '../../pages/PostDetail/PostCard/postCardStyle';
 import CommentForm from './CommentForm';
+import { api } from '../../axiosInstance';
 
 const CommentWrapper = ({ postDetailId }) => {
   const [commentList, setCommentList] = useState([]);
@@ -10,17 +10,7 @@ const CommentWrapper = ({ postDetailId }) => {
 
   const getComments = async () => {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
-      const authToken = localStorage.getItem('token');
-      const res = await axios.get(
-        `${URL}/post/${postDetailId.id}/comments?limit=30`,
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        },
-      );
+      const res = await api.get(`/post/${postDetailId.id}/comments?limit=30`);
       setCommentList(res.data.comments);
     } catch (error) {
       console.log(error.res);
@@ -33,18 +23,9 @@ const CommentWrapper = ({ postDetailId }) => {
 
   const postComment = async () => {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
-      const authToken = localStorage.getItem('token');
-      const res = await axios.post(
-        `${URL}/post/${postDetailId?.id}/comments`,
-        { comment: { content: `${comment}` } },
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        },
-      );
+      const res = await api.post(`/post/${postDetailId?.id}/comments`, {
+        comment: { content: `${comment}` },
+      });
       setComment(res.data.comment.content);
       getComments();
       setComment('');

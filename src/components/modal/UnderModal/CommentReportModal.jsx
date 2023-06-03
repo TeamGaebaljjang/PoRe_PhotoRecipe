@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ReportMiniModal from '../ConfirmModal/ReportMiniModal';
@@ -7,6 +6,7 @@ import {
   UnderModalCont,
   UnderModalCloseBtn,
 } from './underModalStyle';
+import { api } from '../../../axiosInstance';
 
 const ReportUnder = ({ postDetailId, commentList, setComment, closeModal }) => {
   const [confirm, setConfirm] = useState(false);
@@ -15,17 +15,9 @@ const ReportUnder = ({ postDetailId, commentList, setComment, closeModal }) => {
 
   const ReportComment = async () => {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
-      const authToken = localStorage.getItem('token');
-      const res = await axios.post(
-        `${URL}/post/${postDetailId?.id}/comments/${commentList.id}/report`,
+      const res = await api.post(
+        `/post/${postDetailId?.id}/comments/${commentList.id}/report`,
         [],
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        },
       );
       if (res) {
         setConfirm(!confirm);

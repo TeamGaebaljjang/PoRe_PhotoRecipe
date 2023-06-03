@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Wrap, MapCont } from './mapStyle';
 import HeaderBSM from '../../components/header/HeaderBSM';
 import KakaoMap from './KakaoMap';
 import ModalWrapper from './ModalWrapper';
 import NavBar from '../../components/navBar/NavBar';
+import { api } from '../../axiosInstance';
 
 const Map = () => {
   const [text, setText] = useState('');
@@ -21,17 +21,10 @@ const Map = () => {
 
   //   mandarin API*
   const [modals, setModals] = useState([]);
-  const URL = 'https://mandarin.api.weniv.co.kr';
-  const authToken = localStorage.getItem('token');
   const accountName = 'pore_photozone';
   const getModal = async () => {
     try {
-      const res = await axios.get(`${URL}/product/${accountName}?limit=150`, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          'Content-type': 'application/json',
-        },
-      });
+      const res = await api.get(`/product/${accountName}?limit=150`);
       setModals(res.data.product);
     } catch (error) {
       console.log(error.res);

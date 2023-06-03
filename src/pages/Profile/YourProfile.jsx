@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useRef, useState, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -17,6 +16,7 @@ import { ThemeContext } from '../../store/ThemeProvider';
 import { ModeBtn } from '../../components/button/BtnNight';
 import btnDark from '../../assets/icons/icon-btn-dark.svg';
 import btnLight from '../../assets/icons/icon-btn-light.svg';
+import { api, tokenApi } from '../../axiosInstance';
 
 const YourProFile = () => {
   const location = useLocation();
@@ -24,7 +24,6 @@ const YourProFile = () => {
   const [info, setInfo] = useState('');
   const [modal, setModal] = useState(false);
   const [view, setView] = useState(false);
-  const URL = 'https://mandarin.api.weniv.co.kr';
   const parent = useRef();
   const { isDarkMode, toggleMode } = useContext(ThemeContext);
 
@@ -43,22 +42,11 @@ const YourProFile = () => {
     setView(!view);
   };
 
-  const authToken = localStorage.getItem('token');
-
   const [isfollow, setIsFollow] = useState(info.isfollow);
   // 팔로우
   const follow = async () => {
     try {
-      const res = await axios.post(
-        `${URL}/profile/${info.accountname}/follow`,
-        [],
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        },
-      );
+      const res = await api.post(`/profile/${info.accountname}/follow`, []);
       setIsFollow(res.data.profile.isfollow);
     } catch (error) {
       console.log(error.res);
@@ -68,15 +56,7 @@ const YourProFile = () => {
   // 언팔로우
   const unFollow = async () => {
     try {
-      const res = await axios.delete(
-        `${URL}/profile/${info.accountname}/unfollow`,
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        },
-      );
+      const res = await api.delete(`/profile/${info.accountname}/unfollow`);
       setIsFollow(res.data.profile.isfollow);
     } catch (error) {
       console.log(error.res);
@@ -86,15 +66,7 @@ const YourProFile = () => {
   useEffect(() => {
     (async function getUserInfo() {
       try {
-        const token = localStorage.getItem('token');
-        const response = await axios.get(
-          `${URL}/profile/${userInfo.accountname}`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          },
-        );
+        const response = await tokenApi.get(`/profile/${userInfo.accountname}`);
         setInfo(response.data.profile);
         setIsFollow(response.data.profile.isfollow);
       } catch (error) {

@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { FormStyle, InvalidSpan } from '../formStyle';
 import {
   ProfileContDiv,
@@ -11,15 +10,14 @@ import {
 } from './setProfileStyle';
 import StyledButton from '../../../components/button/BtnForm';
 import profileBasicImg from '../../../assets/icons/basic-profile-round.svg';
+import { headerApi, urlApi } from '../../../axiosInstance';
+import { BASE_URL } from '../../../axiosInstance/constants';
 
 const SetProfileForm = () => {
   // 이메일, 비밀번호 가져오기
   const location = useLocation();
   const navigate = useNavigate();
   const { email, password } = { ...location.state };
-
-  // API 서버
-  const URL = 'https://mandarin.api.weniv.co.kr';
 
   // 사용자 이미지, 사용자 이름, 계정ID
   const [profileImg, setProfileImg] = useState(profileBasicImg);
@@ -39,7 +37,7 @@ const SetProfileForm = () => {
   // 회원가입 API
   const handleSingUp = async () => {
     try {
-      const response = await axios.post(`${URL}/user`, {
+      const response = await headerApi.post(`/user`, {
         user: {
           username: `${userName}`,
           email: `${email}`,
@@ -47,9 +45,6 @@ const SetProfileForm = () => {
           accountname: `${userId}`,
           intro: `${userIntro}`,
           image: `${profileImg}`,
-        },
-        headers: {
-          'Content-type': 'application/json',
         },
       });
 
@@ -81,12 +76,9 @@ const SetProfileForm = () => {
   // 계정ID 유효성 검사
   const validUserId = async () => {
     try {
-      const response = await axios.post(`${URL}/user/accountnamevalid`, {
+      const response = await headerApi.post(`/user/accountnamevalid`, {
         user: {
           accountname: `${userId}`,
-        },
-        headers: {
-          'Content-type': 'application/json',
         },
       });
 
@@ -130,10 +122,10 @@ const SetProfileForm = () => {
 
       formData.append('image', file);
 
-      const res = await axios.post(`${URL}/image/uploadfile`, formData);
+      const res = await urlApi.post(`/image/uploadfile`, formData);
       const fileName = res.data.filename;
 
-      setProfileImg(`${URL}/${fileName}`);
+      setProfileImg(`${BASE_URL}/${fileName}`);
     } catch (error) {
       console.log(error.res);
     }

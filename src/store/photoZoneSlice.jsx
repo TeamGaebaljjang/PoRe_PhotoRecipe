@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { api } from '../axiosInstance';
 
 const initialZoneState = {
   photoZoneData: [],
@@ -10,18 +10,8 @@ const initialZoneState = {
 export const getPhotoZone = createAsyncThunk(
   'photoZone/getPhotoZone',
   async (accountname) => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
-    const authToken = localStorage.getItem('token');
     // const accountName = localStorage.getItem('accountname');
-    const res = await axios.get(
-      `${URL}/product/${accountname}?limit=infinity`,
-      {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          'Content-type': 'application/json',
-        },
-      },
-    );
+    const res = await api.get(`/product/${accountname}?limit=infinity`);
     return res.data;
   },
 );

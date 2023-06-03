@@ -1,6 +1,6 @@
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { ConfirmModal, Btnwrap } from './confirmModalStyle';
+import { api } from '../../../axiosInstance';
 
 const FeedDeleteModal = ({ deleteHandler, posts }) => {
   const feedId = posts.id;
@@ -8,14 +8,7 @@ const FeedDeleteModal = ({ deleteHandler, posts }) => {
 
   async function deleteFeed(value) {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
-      const authToken = localStorage.getItem('token');
-      const res = await axios.delete(`${URL}/post/${value}`, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          'Content-type': 'application/json',
-        },
-      });
+      const res = await api.delete(`/post/${value}`);
       if (res) {
         navigate(0);
       }

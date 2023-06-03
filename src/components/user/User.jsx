@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BtnFollow } from '../../pages/Profile/Follow/followStyle';
@@ -10,11 +9,10 @@ import {
   UserName,
   UserId,
 } from '../../pages/Search/searchStyle';
+import { api } from '../../axiosInstance';
 
 const Userfoll = ({ item }) => {
   const [isfollow, setIsFollow] = useState(item.isfollow);
-  const URL = 'https://mandarin.api.weniv.co.kr';
-  const authToken = localStorage.getItem('token');
   const navigate = useNavigate();
 
   // 유저 프로필 이동
@@ -29,16 +27,7 @@ const Userfoll = ({ item }) => {
   // 팔로우
   const Follow = async () => {
     try {
-      const res = await axios.post(
-        `${URL}/profile/${item.accountname}/follow`,
-        [],
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        },
-      );
+      const res = await api.post(`/profile/${item.accountname}/follow`, []);
       setIsFollow(res.data.profile.isfollow);
     } catch (error) {
       console.log(error.res);
@@ -48,15 +37,7 @@ const Userfoll = ({ item }) => {
   // 언팔로우
   const UnFollow = async () => {
     try {
-      const res = await axios.delete(
-        `${URL}/profile/${item.accountname}/unfollow`,
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        },
-      );
+      const res = await api.delete(`/profile/${item.accountname}/unfollow`);
       setIsFollow(res.data.profile.isfollow);
     } catch (error) {
       console.log(error.res);

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Wrapper, BackDrop } from './profileStyle';
@@ -16,12 +15,12 @@ import { ThemeContext } from '../../store/ThemeProvider';
 import { ModeBtn } from '../../components/button/BtnNight';
 import btnDark from '../../assets/icons/icon-btn-dark.svg';
 import btnLight from '../../assets/icons/icon-btn-light.svg';
+import { tokenApi } from '../../axiosInstance';
 
 const Profile = () => {
   const [info, setInfo] = useState('');
   const [modal, setModal] = useState(false);
   const [view, setView] = useState(false);
-  const URL = 'https://mandarin.api.weniv.co.kr';
   const parent = useRef();
 
   const dispatch = useDispatch();
@@ -44,12 +43,7 @@ const Profile = () => {
   useEffect(() => {
     (async function getMyInfo() {
       try {
-        const authToken = localStorage.getItem('token');
-        const res = await axios.get(`${URL}/user/myinfo`, {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-          },
-        });
+        const res = await tokenApi.get(`/user/myinfo`);
         setInfo(res.data.user);
       } catch (error) {
         console.log(error.res);

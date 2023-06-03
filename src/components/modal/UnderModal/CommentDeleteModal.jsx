@@ -1,10 +1,10 @@
-import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import {
   CommentModalWrap,
   UnderModalCont,
   UnderModalCloseBtn,
 } from './underModalStyle';
+import { api } from '../../../axiosInstance';
 
 const DeleteEditUnder = ({
   postDetailId,
@@ -17,17 +17,7 @@ const DeleteEditUnder = ({
 
   const deleteComment = async () => {
     try {
-      const URL = 'https://mandarin.api.weniv.co.kr';
-      const authToken = localStorage.getItem('token');
-      await axios.delete(
-        `${URL}/post/${postDetailId?.id}/comments/${commentList.id}`,
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        },
-      );
+      await api.delete(`/post/${postDetailId?.id}/comments/${commentList.id}`);
       getComments();
       setComment('');
     } catch (error) {

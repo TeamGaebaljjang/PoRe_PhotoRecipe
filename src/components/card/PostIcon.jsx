@@ -1,36 +1,24 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Icon, IconImg, IconCount } from './postStyle';
 import heartOn from '../../assets/icons/icon-heart-on.svg';
 import heartOff from '../../assets/icons/icon-heart-off.svg';
 import chat from '../../assets/icons/icon-chat.svg';
+import { api } from '../../axiosInstance';
 
 const PostIcon = ({ posts, postDetailId }) => {
   const [like, setLike] = useState('');
   const [heartCount, setHeartCount] = useState(posts.heartCount);
 
   const handleLike = async () => {
-    const URL = 'https://mandarin.api.weniv.co.kr';
-    const authToken = localStorage.getItem('token');
     const postId = posts?.id;
 
     try {
       if (!like) {
-        const res = await axios.post(`${URL}/post/${postId}/heart`, [], {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        });
+        const res = await api.post(`/post/${postId}/heart`, []);
         setHeartCount(res.data.post.heartCount);
         setLike(true);
       } else {
-        const res = await axios.delete(`${URL}/post/${postId}/unheart`, {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-            'Content-type': 'application/json',
-          },
-        });
+        const res = await api.delete(`/post/${postId}/unheart`);
         setHeartCount(res.data.post.heartCount);
         setLike(false);
       }

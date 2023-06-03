@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useCallback, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BtnUpload from '../../../components/button/BtnUpload';
@@ -12,6 +11,8 @@ import {
   PhotoWrap,
   Button,
 } from './uploadPostStyle';
+import { api, urlApi } from '../../../axiosInstance';
+import { BASE_URL } from '../../../axiosInstance/constants';
 
 const UploadPost = () => {
   const [imgFile, setImgFile] = useState('');
@@ -19,7 +20,6 @@ const UploadPost = () => {
   const imgRef = useRef();
   const textRef = useRef();
   const navigate = useNavigate();
-  const URL = 'https://mandarin.api.weniv.co.kr';
 
   const handleResizeHeight = useCallback(() => {
     textRef.current.style.height = '1px';
@@ -28,19 +28,13 @@ const UploadPost = () => {
 
   const uploadPost = async () => {
     try {
-      const authToken = localStorage.getItem('token');
       const body = {
         post: {
           content: cont,
           image: imgFile,
         },
       };
-      const res = await axios.post(`${URL}/post`, JSON.stringify(body), {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          'Content-type': 'application/json',
-        },
-      });
+      const res = await api.post(`/post`, JSON.stringify(body));
       if (res) {
         navigate(`/profile`);
       }
@@ -55,12 +49,13 @@ const UploadPost = () => {
       const file = imgRef.current.files[0];
       const formData = new FormData();
       formData.append('image', file);
-      const res = await axios.post(`${URL}/image/uploadfile`, formData);
+      const res = await urlApi.post(`/image/uploadfile`, formData);
       const fileName = res.data.filename;
       if (imgShow.length < 3) {
-        imgShow.push(`${URL}/${fileName}`);
+        imgShow.push(`${BASE_URL}/${fileName}`);
         setImgFile(imgShow.join(','));
       } else {
+        // eslint-disable-next-line no-alert
         alert('이미지는 3장까지만 업로드 가능합니다.');
       }
     } catch (error) {

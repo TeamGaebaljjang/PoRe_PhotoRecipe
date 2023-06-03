@@ -1,8 +1,8 @@
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { SpotTab, SpotBtn, FeedList, Feed, FeedImg } from './homeStyle';
 import defaultImg from '../../assets/icons/basic-post-default.svg';
+import { api } from '../../axiosInstance';
 
 const HomeFeed = () => {
   const navigate = useNavigate();
@@ -11,21 +11,11 @@ const HomeFeed = () => {
   const [btnOn, setBtnOn] = useState(false);
   const [btnAll, setBtnAll] = useState(true);
   const [feedPost, setFeedPost] = useState([]);
-  const URL = 'https://mandarin.api.weniv.co.kr';
 
   useEffect(() => {
     const getFeed = async () => {
       try {
-        const token = localStorage.getItem('token');
-        const res = await axios.get(
-          `${URL}/product/PoRe_Home/?limit=infinite`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              'Content-type': 'application/json',
-            },
-          },
-        );
+        const res = await api.get(`/product/PoRe_Home/?limit=infinite`);
         if (res) {
           setFeedPost(feedPost.concat(res.data.product));
         }
